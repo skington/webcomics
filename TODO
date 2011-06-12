@@ -1,0 +1,20 @@
+Working out the image (and therefore knowing whether the page has changed):
+
+1) Look at the largest image. This works most of the time.
+
+2) Look for a redirect to a canonical URL - e.g. explosm.net/comics to
+explosm.net/comics/2452, order of the stick
+
+3) Look for some sort of update - e.g. 2dgoggles.com
+
+4) Check the status of some other image - e.g. dresdencodak.com,
+abominable.cc, sisterclaire.com, somethingpositive.net, sluggy.com, wondermark
+
+5) Cope with HTTP::Async not coping with https URLs -
+e.g. ubersoft.net/comic/hd 
+
+6) Cope with webcomics requiring a click-through - e.g. oglaf
+
+7) Improve performance by not fetching paypal images.
+
+Working out canonical URLs
