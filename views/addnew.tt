@@ -1,0 +1,6 @@
+<form method="post">
+<fieldset>
+<p>Add: <input type="text" name="url" size="60" /></p>
+<p><input type="submit" value="Add webcomic" /></p>
+</fieldset>
+</form>

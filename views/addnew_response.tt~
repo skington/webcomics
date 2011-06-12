@@ -1,0 +1,5 @@
+<% IF error == 'invalid_url' %>
+<p class="error">Sorry, we couldn't fetch <a href="<% url %>"><% url %>.</p>
+<% END %>
+<% error %>
+<p>So, what's going on then? <% stuff %></p>
