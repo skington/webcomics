@@ -6,4 +6,18 @@
    <% RETURN %>
 <% END %>
 
-<p>Right, no bloody errors by now.</p>
+<p>Image URL: <% image.url %> </p>
+<ul>
+<% FOREACH identifier IN identifiers %>
+    <li> Tag <% identifier.tag %>
+    <% IF identifier.class %> class <% identifier.class %> <% END %>
+    <% IF identifier.id%>     ID <% identifier.id %>       <% END %>
+    </li>
+<% END %>
+</ul>
+
+<br />
+
+<p><img src="<% image.url %>" width="<% image.width %>"
+ height="<% image.height %>" />
+</p>
