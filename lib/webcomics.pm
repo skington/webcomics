@@ -45,45 +45,27 @@ sub addnew {
 	return template 'addnew_response',
 	    { error => 'invalid_url', url => $url, };
     };
+    
+    my %template_params;
+    
+    # Right, time to parse this web page.
     my $tree = HTML::TreeBuilder->new;
     $tree->parse($contents);
 
-    # Right, find the largest image on the page and find out how to identify
+    # Find the largest image on the page and find out how to identify
     # it.
     my $largest_image = find_largest_image($url, $tree);
-    my $element = $largest_image->{element};
-    my ($path_identified, @identifiers);
-    element:
-    while ($element && !$path_identified) {
-
-	# Anything with an ID can be assumed to be unique.
-	if (my $id = $element->attr('id') ) {
-	    unshift @identifiers, { id => $id };
-	    $path_identified = 1;
-
-	} elsif (my $class = $element->attr('class')) {
-	    # The class might only be used once, in which case it's as
-	    # good as an Id.
-	    unshift @identifiers, { tag => $element->tag, class => $class };
-	    my @elements_with_class = $tree->look_down(class => $class);
-	    if (@elements_with_class == 1) {
-		$path_identified = 1;
-	    }
-
-	} else {
-	    # Or this could be a totally unhelpful element like an empty
-	    # div or something.
-	    unshift @identifiers, { tag => $element->tag };
-	}
-
-	# Look up one level if we didn't find anything immediately.
-	if (!$path_identified) {
-	    ($element) = $element->lineage;
-	}
-    }
+    $template_params{image} = $largest_image;
+    
+    # Work out how to identify this image.
+    $template_params{identifiers}
+	= [ identifiers_from_element($tree, $largest_image->{element}) ];
+    
+    # We're done with our tree, so delete it to free up memory.
     $tree->delete;
-    template 'addnew_response',
-	{ image => $largest_image, identifiers => \@identifiers };
+
+    # Right, return our template.
+    template 'addnew_response', \%template_params;
 }
 
 sub get_page {
@@ -174,6 +156,47 @@ sub find_largest_image {
     }
     my ($largest_image) = (sort { $b->{area} <=> $a->{area} } @images)[0];
     return $largest_image;
+}
+
+# Supplied with an HTML::TreeBuilder tree, and an element from the
+# tree, return the minimal set of identifiers needed to
+# locate it (e.g. ids, classes or tags)
+
+sub identifiers_from_element {
+    my ($tree, $element) = @_;
+
+    my ($path_identified, @identifiers);
+    element:
+    while ($element && !$path_identified) {
+
+	# Anything with an ID can be assumed to be unique.
+	if (my $id = $element->attr('id')) {
+	    unshift @identifiers, { id => $id };
+	    $path_identified = 1;
+
+	} elsif (my $class = $element->attr('class')) {
+
+	    # The class might only be used once, in which case it's as
+	    # good as an Id.
+	    unshift @identifiers, { tag => $element->tag, class => $class };
+	    my @elements_with_class = $tree->look_down(class => $class);
+	    if (@elements_with_class == 1) {
+		$path_identified = 1;
+	    }
+
+	} else {
+
+	    # Or this could be a totally unhelpful element like an empty
+	    # div or something.
+	    unshift @identifiers, { tag => $element->tag };
+	}
+
+	# Look up one level if we didn't find anything immediately.
+	if (!$path_identified) {
+	    ($element) = $element->lineage;
+	}
+    }
+    return @identifiers;
 }
 
 true;
