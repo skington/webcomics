@@ -3,6 +3,7 @@ use Dancer ':moose';
 use common::sense;
 no warnings;
 
+use Data::Dumper::Concise;
 use HTML::TreeBuilder;
 use HTTP::Async;
 use Image::Size;
@@ -13,7 +14,15 @@ use URI;
 our $VERSION = '0.1';
 
 get '/' => sub {
-    template 'index';
+    my $filename_urls = config->{appdir} . '/urls';
+    open(my $fh_urls, $filename_urls)
+	or debug("Couldn't open url file $filename_urls: $!");
+    my %params;
+    while (<$fh_urls>) {
+	chomp;
+	push @{ $params{urls} }, { url => $_ };
+    }
+    template 'index', \%params;
 };
 
 get '/addnew' => sub {
@@ -147,7 +156,6 @@ sub find_largest_image {
 	}
 	my $contents = $response->content // $response->decoded_content;
 	if (!$contents) {
-	    use Data::Dumper::Concise;
 	    print STDERR "Strange response:\n", Dumper($response), "\n";
 	    next response;
 	}

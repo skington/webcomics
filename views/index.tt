@@ -1,1 +1,10 @@
 <p><a href="addnew">Add a new webcomic</a>.</p>
+
+<p>Existing webcomics:</p>
+<ul>
+<% FOREACH url IN urls %>
+<li>
+<a href="addnew/<% url.url %>"><% url.url %></a>
+</li>
+<% END %>
+</ul>
