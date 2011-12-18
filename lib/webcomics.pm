@@ -1,7 +1,6 @@
 package webcomics;
 use Dancer ':moose';
 use common::sense;
-no warnings;
 
 use Data::Dumper::Concise;
 use HTML::TreeBuilder;
@@ -15,13 +14,14 @@ our $VERSION = '0.1';
 
 get '/' => sub {
     my $filename_urls = config->{appdir} . '/urls';
-    open(my $fh_urls, $filename_urls)
+    open(my $fh_urls, '<', $filename_urls)
 	or debug("Couldn't open url file $filename_urls: $!");
     my %params;
     while (<$fh_urls>) {
 	chomp;
 	push @{ $params{urls} }, { url => $_ };
     }
+    close $fh_urls;
     template 'index', \%params;
 };
 
@@ -84,7 +84,7 @@ sub addnew {
     $tree->delete;
     template 'addnew_response',
 	{ image => $largest_image, identifiers => \@identifiers };
-};
+}
 
 sub get_page {
     my ($url) = @_;
@@ -102,8 +102,8 @@ sub get_page {
     my $ua;
     sub user_agent {
 	return $ua if $ua;
-	$ua = new LWP::UserAgent;
-	$ua->agent('Webcomics parser/0.1'); ### TODO: Id number
+	$ua = LWP::UserAgent->new;
+	$ua->agent('Webcomics parser/' . $VERSION);
 	return $ua;
     }
 }
@@ -137,8 +137,8 @@ sub find_largest_image {
 	# Don't bother fetching e.g. spacer gifs (seriously, guys?
 	# spacer gifs in the 2010s?)
 	next element if $seenelement{$image_info->{url}}
-	    || $image_info->{url} =~ /paypal.com/;
-	print STDERR "Having a look at image ", $image_info->{url}, "\n";
+	    || $image_info->{url} =~ / paypal[.]com /x;
+	print STDERR 'Having a look at image ', $image_info->{url}, "\n";
 	my $async_id =
 	    $async->add(HTTP::Request->new(GET => $image_info->{url}));
 	$image_by_id{$async_id} = $image_info;
@@ -148,9 +148,9 @@ sub find_largest_image {
     # Fish them out as our requests complete.
     response:
     while (my ($response, $id) = $async->wait_for_next_response) {
-	print STDERR "Got response for ", $image_by_id{$id}{url}, "\n";
+	print STDERR 'Got response for ', $image_by_id{$id}{url}, "\n";
 	if (!$response->is_success) {
-	    print STDERR "Couldn't fetch ", $image_by_id{$id}{url}, ": ",
+	    print STDERR q{Couldn't fetch }, $image_by_id{$id}{url}, ': ',
 		$response->status_line, "\n";
 	    next response;
 	}
@@ -162,20 +162,18 @@ sub find_largest_image {
 	my $image_info = $image_by_id{$id};
 	@$image_info{qw(width height)} = Image::Size::imgsize(\$contents);
 	if (!defined $image_info->{width}) {
-	    use Data::Dumper::Concise;
 	    print STDERR "What's up with this response then?\n",
 		Dumper($response), "\n";
-	
 	}
 	$image_info->{area} = $image_info->{width} * $image_info->{height};
     }
 
     # Find the largest image of them all - presumably the comic.
     for my $image (@images) {
-	printf STDERR "%s: %d x %d = %d\n", @$image{qw(url width height area)}
+	printf "%s: %d x %d = %d\n", @$image{qw(url width height area)}
     }
     my ($largest_image) = (sort { $b->{area} <=> $a->{area} } @images)[0];
     return $largest_image;
-};
+}
 
 true;
