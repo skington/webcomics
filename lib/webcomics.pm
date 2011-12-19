@@ -49,7 +49,7 @@ sub addnew {
     
     my %template_params;
     
-    # Is there a RSS feed? Possibly more than one?
+    # Is there a RSS feed?
     if (my %feed_contents = get_feed_contents($url, $contents)) {
 	$template_params{feeds}
 	    = [map { { url => $_, entries => $feed_contents{$_} } }
@@ -118,6 +118,8 @@ sub get_feed_contents {
     my %feed_contents;
     url:
     for my $url (@feed_urls) {
+        # webcomicsnation.com and possibly others decide to brush you off
+        # if you use the default libwww/perl user agent.
 	local *LWP::UserAgent::_agent = sub {
 	    'Who the hell bans automated access to RSS feeds?'
 	};
