@@ -3,7 +3,10 @@ use Dancer ':moose';
 use common::sense;
 
 use Data::Dumper::Concise;
+use DateTime;
+use English qw(-no_match_vars);
 use Feed::Find;
+use HTML::Entities;
 use HTML::TreeBuilder;
 use HTTP::Async;
 use Image::Size;
@@ -51,6 +54,10 @@ sub addnew {
     
     # Is there a RSS feed?
     if (my %feed_contents = get_feed_contents($url, $contents)) {
+        # Analyse each feed, trying to identify comics vs news vs comments,
+        # and working out URL structures.
+        analyse_feed_contents(\%feed_contents);
+        
 	$template_params{feeds}
 	    = [map { { url => $_, entries => $feed_contents{$_} } }
 		keys %feed_contents];
@@ -132,13 +139,162 @@ sub get_feed_contents {
 		{
 		    title => $_->title,
 		    link  => $_->link,
-		    date  => $_->issued ? $_->issued->ymd : 'n/a'
+		    date  => $_->issued,
 		}
 		} $feed->entries
 	];
     }
 
     return %feed_contents;
+}
+
+# Supplied with a hash of key => arrayref of feed entries, analyses each
+# one in turn.
+
+sub analyse_feed_contents {
+    my ($feed_contents) = @_;
+
+    for my $feed (keys %$feed_contents) {
+	analyse_feed_entries(@{ $feed_contents->{$feed} });
+    }
+}
+
+# Supplied with a feed entry, analyses it working out
+# details such as URL format, and likely nature of each entry (comic,
+# news/rant or comments).
+
+sub analyse_feed_entries {
+    my (@entries) = @_;
+
+    # Look for clues of the posted date in the link and/or the title.
+    for my $field (qw(link title)) {
+        # Go through each entry, finding regexstrs that match.
+        # Whichever regexstr matches the most things, and the most often,
+        # is presumably the best.
+        my %total_match_length;
+	for my $entry (@entries) {
+	    for my $regexstr (
+		identify_date_regexstr($entry->{$field}, $entry->{date}))
+	    {
+		for my $match (eval { $entry->{$field} =~ qr/$regexstr/; }) {
+		    $total_match_length{$regexstr} += length($match);
+		}
+	    }
+	}
+	
+	# Hopefully there'll never be any regexstrs that match equally
+	# often across an entire feed.
+	my $regexstr_bestmatch = (
+	    sort { $total_match_length{$b} <=> $total_match_length{$a} }
+		keys %total_match_length
+	)[0];
+	
+	# Now go through each entry applying the regexstr, now that we've
+	# decided on a favourite.
+	for my $entry (@entries) {
+	    $entry->{$field} =~ qr/$regexstr_bestmatch/;
+	    my %matches = %+;
+	    push @{ $entry->{matches} },
+		{
+		field => $field,
+		regexstr =>
+		    HTML::Entities::encode_entities($regexstr_bestmatch),
+		values => [
+		    map { { key => $_, value => $matches{$_} } }
+		    sort keys %matches
+		]
+		};
+	}
+    }
+    use Data::Dump;
+    print STDERR Data::Dump::dump(@entries), "\n";
+}
+
+# Supplied with a string and a DateTime object object, returns a list
+# of regexes that match the supplied string with the supplied DateTime
+# object.
+
+sub identify_date_regexstr {
+    my ($string, $datetime) = @_;
+    
+    return if !$datetime;
+    
+    # Build up a list of regexes that match this string, starting with
+    # the obvious "it's this string" one, and cumulatively trying to match
+    # more data parts.
+    # "regexstr" because this is a string representing a regex,
+    # not an actual regex object.
+    # And using quotemeta because \Q and \E act after the parser has looked
+    # for e.g. slashes, so saying qr/\Qhttp://...\E/ won't parse.
+    my @regexstr = ('^' . quotemeta($string) . '$');
+    
+    # And here's a bunch of matches we'll look for.
+    # Some of them will result in false positives, but with enough
+    # strings to go by we should spot a common pattern.
+    my %match = (
+	yyyy => { value => $datetime->year,  regexstr => '\d{4}' },
+	m    => { value => $datetime->month, regexstr => '\d{1,2}' },
+	mm   => {
+	    value    => sprintf('%02d', $datetime->month),
+	    regexstr => '\d{2}'
+	},
+	d => { value => $datetime->day, regexstr => '\d{1,2}' },
+	dd =>
+	    { value => sprintf('%02d', $datetime->day), regexstr => '\d{2}' },
+	month_name => { value => $datetime->month_name, regexstr => '\w+?' },
+	month_abbr => { value => $datetime->month_abbr, regexstr => '\w+?' },
+	day_name   => { value => $datetime->day_name,   regexstr => '\w+?' },
+	day_abbr   => { value => $datetime->day_abbr,   regexstr => '\w+?' },
+    );
+    
+    # Go through each of them looking for matches.
+    # For efficiency, try the longest match values first, to reduce
+    # false positives when e.g. the day of the month is 1 or something
+    # unhelpful like that.
+    # We'll maintain a cumulative list of regexstrs that match; at the end,
+    # the most complex *and* reliable will win out.
+    for my $match_term (
+	sort { length($match{$b}{value}) <=> length($match{$a}{value}) }
+	keys %match
+	)
+    {
+
+	# Build a regex that will match the value we're looking for.
+	my $regex_match = eval('qr/\Q' . $match{$match_term}{value} . '\E/i');
+	my $regexstr_match = eval(
+	    sprintf(
+		'qr/(?<%s> %s )/x',
+		$match_term, $match{$match_term}{regexstr}
+	    )
+	);
+
+	# Build revised regexstrs that match this match term - there might
+	# be many, which is fine (for e.g. a value between 1 and 12 that
+	# can match both months and days). Some of these won't be valid,
+	# either - e.g. "(?<month>...)" will be in turn matched by
+	# day_abbr, becoming "(?<(?<day_abbr> \w+?)th...))".
+	# That's fine, we can catch errors; it's easier than not matching
+	# anything within brackets.
+	my @regexstr_revised;
+	for my $regexstr (@regexstr) {
+	    while ($regexstr =~ m/$regex_match/g) {
+
+		# Replace the literal in the regex with a parametrised
+		# match for the term.
+		my $regexstr_matchterm = $regexstr;
+		substr($regexstr_matchterm, $LAST_MATCH_START[0],
+		    length($match{$match_term}{value}))
+		    = $regexstr_match;
+		push @regexstr_revised, $regexstr_matchterm;
+	    }
+	}
+
+	# Add on these revised regex strings.
+	@regexstr = (@regexstr, @regexstr_revised);
+    }
+        
+    # Right, we're all done. Return this.
+    return @regexstr;
 }
 
 # Supplied with a URL and a HTML::TreeBuilder tree, returns a hashref with the

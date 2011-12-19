@@ -44,3 +44,4 @@ Something Positive has the date, but also a comic name, in the title.
 Scary go round also mixes dates and a common string.
 No feed for El Goonish Shive.
 Sluggy only has one entry in the feed.
+PVP uses feedproxy URLs. A number of other comics may well do this as well.

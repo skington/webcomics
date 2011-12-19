@@ -14,7 +14,20 @@
   <ul>
   <% FOREACH entry IN feed.entries %>
      <li><% entry.date %>:
-	   <a href="<% entry.link %>"><% entry.title %></a></li>
+	   <a href="<% entry.link %>"><% entry.title %></a>
+	   <ul>
+	   <% FOREACH field IN entry.matches %>
+	      <li>Field <% field.field %>
+	      regexstr: <% field.regexstr %>
+	      <ul>
+	      <% FOREACH match IN field.values %>
+	        <li> <% match.key %>: <% match.value %> </li>
+	      <% END %>
+	      </ul>
+	      </li>
+	   <% END %>
+	   </ul>
+	 </li>
   <% END %>
   </ul>
   </li>
