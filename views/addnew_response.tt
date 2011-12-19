@@ -6,6 +6,22 @@
    <% RETURN %>
 <% END %>
 
+<% IF feeds %>
+<p>RSS or whatever feeds found:</p>
+<ul>
+<% FOREACH feed IN feeds %>
+  <li><% feed.url %>
+  <ul>
+  <% FOREACH entry IN feed.entries %>
+     <li><% entry.date %>:
+	   <a href="<% entry.link %>"><% entry.title %></a></li>
+  <% END %>
+  </ul>
+  </li>
+<% END %>
+</ul>
+<% END %>
+
 <p>Image URL: <% image.url %> </p>
 <ul>
 <% FOREACH identifier IN identifiers %>

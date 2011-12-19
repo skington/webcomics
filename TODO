@@ -15,6 +15,32 @@ e.g. ubersoft.net/comic/hd
 
 6) Cope with webcomics requiring a click-through - e.g. oglaf
 
-7) Improve performance by not fetching paypal images.
+7) Improve performance by not fetching paypal images - done?
+
+8) Let people choose whether to see news or not.
 
 Working out canonical URLs
+
+RSS feed issues:
+Doonesbury has a non-Doonesbury-related slate feed
+No feed for Dilbert
+Narbonic has two feeds, apparently at random.
+Skin Horse has two feeds, one for the comic, one for comments. Spinnerette also does this.
+So does Frankenstein Superstar.
+Evil-comic mixes news and comics, as do many others.
+No feed for Wonderella
+Dresden Codak uses feedproxy URLs.
+Basic Instructions has three feeds in different formats. Nerd.
+XKCD doesn't date entries in the Atom feed, but does in RSS.
+No RSS for dinosaur comics.
+OOTS has titles in the feed that don't figure in the comic.
+No feed for full frontal nerdity.
+Darths and droids finds the feeds for Irregular webcomic instead.
+No feed for oglaf.
+No feed for sinfest.
+Misfile only has the rants, which is completely fucking pointless.
+Gunnerkrigg Court has titles that are always the same.
+Something Positive has the date, but also a comic name, in the title.
+Scary go round also mixes dates and a common string.
+No feed for El Goonish Shive.
+Sluggy only has one entry in the feed.

@@ -3,12 +3,13 @@ use Dancer ':moose';
 use common::sense;
 
 use Data::Dumper::Concise;
+use Feed::Find;
 use HTML::TreeBuilder;
 use HTTP::Async;
 use Image::Size;
 use LWP;
-use Moose;
 use URI;
+use XML::Feed;
 
 our $VERSION = '0.1';
 
@@ -47,6 +48,36 @@ sub addnew {
     };
     
     my %template_params;
+    
+    # Is there a RSS feed?
+    if (my @feed_urls = Feed::Find->find_in_html(\$contents, $url)) {
+	url:
+	for my $url (@feed_urls) {
+	    local *LWP::UserAgent::_agent = sub {
+		'Who the hell bans automated access to RSS feeds?'
+	    };
+	    my $feed = XML::Feed->parse(URI->new($url)) or do {
+		print STDERR "Couldn't parse $url\n";
+		next url;
+	    };
+	    push @{ $template_params{feeds} }, {
+		url     => $url,
+		entries => [
+		    map {
+			{
+			    title => $_->title,
+			    link  => $_->link,
+			    date  => $_->issued ? $_->issued->ymd : 'n/a'
+			}
+			} $feed->entries
+		]
+	    };
+	}
+
+	### TODO: don't short-circuit this, or do this properly
+	return template 'addnew_response', \%template_params;
+    }
+    
     
     # Right, time to parse this web page.
     my $tree = HTML::TreeBuilder->new;
