@@ -49,30 +49,11 @@ sub addnew {
     
     my %template_params;
     
-    # Is there a RSS feed?
-    if (my @feed_urls = Feed::Find->find_in_html(\$contents, $url)) {
-	url:
-	for my $url (@feed_urls) {
-	    local *LWP::UserAgent::_agent = sub {
-		'Who the hell bans automated access to RSS feeds?'
-	    };
-	    my $feed = XML::Feed->parse(URI->new($url)) or do {
-		print STDERR "Couldn't parse $url\n";
-		next url;
-	    };
-	    push @{ $template_params{feeds} }, {
-		url     => $url,
-		entries => [
-		    map {
-			{
-			    title => $_->title,
-			    link  => $_->link,
-			    date  => $_->issued ? $_->issued->ymd : 'n/a'
-			}
-			} $feed->entries
-		]
-	    };
-	}
+    # Is there a RSS feed? Possibly more than one?
+    if (my %feed_contents = get_feed_contents($url, $contents)) {
+	$template_params{feeds}
+	    = [map { { url => $_, entries => $feed_contents{$_} } }
+		keys %feed_contents];
 
 	### TODO: don't short-circuit this, or do this properly
 	return template 'addnew_response', \%template_params;
@@ -121,6 +102,42 @@ sub get_page {
     }
 }
 
+# Supplied with the URL of a page, and its contents, finds any RSS / Atom
+# feeds and returns their contents, in the form of a hash of
+# url => arrayref of entry hashrefs with the following keys:
+#   title: title of the entry
+#   link:  URL of the page linked to
+#   date:  optional (missing in some feeds), the date posted
+
+sub get_feed_contents {
+    my ($url, $html_mainpage) = @_;
+
+    my @feed_urls = Feed::Find->find_in_html(\$html_mainpage, $url);
+    return if !@feed_urls;
+
+    my %feed_contents;
+    url:
+    for my $url (@feed_urls) {
+	local *LWP::UserAgent::_agent = sub {
+	    'Who the hell bans automated access to RSS feeds?'
+	};
+	my $feed = XML::Feed->parse(URI->new($url)) or do {
+	    print STDERR "Couldn't parse $url\n";
+	    next url;
+	};
+	$feed_contents{$url} = [
+	    map {
+		{
+		    title => $_->title,
+		    link  => $_->link,
+		    date  => $_->issued ? $_->issued->ymd : 'n/a'
+		}
+		} $feed->entries
+	];
+    }
+
+    return %feed_contents;
+}
 
 # Supplied with a URL and a HTML::TreeBuilder tree, returns a hashref with the
 # following fields:
