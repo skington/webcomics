@@ -134,15 +134,29 @@ sub get_feed_contents {
 	    print STDERR "Couldn't parse $url\n";
 	    next url;
 	};
-	$feed_contents{$url} = [
-	    map {
-		{
-		    title => $_->title,
-		    link  => $_->link,
-		    date  => $_->issued,
+	for my $entry ($feed->entries) {
+            # The link might be a feedproxy link, which is no use; we want
+            # the ultimate URL, without any of that tracking nonsense. 
+	    my $link = $entry->link;
+	    if ($link =~ /feedproxy/) {
+		my $response = user_agent->get($link);
+		$link = $response->base;
+		for my $keyword (qw(source medium campaign)) {
+		    $link =~ s{
+                        ( \? .*? )
+                        utm_$keyword = [^&]+
+                        (?: & | $)
+                    }{$1}x;
 		}
-		} $feed->entries
-	];
+		$link =~ s/\?$//;
+	    }
+	    push @{ $feed_contents{$url} },
+		{
+		title => $entry->title,
+		link  => $link,
+		date  => $entry->issued,
+		};
+	}
     }
 
     return %feed_contents;
@@ -170,9 +184,10 @@ sub analyse_feed_entries {
     for my $field (qw(link title)) {
         # Go through each entry, finding regexstrs that match.
         # Whichever regexstr matches the most things, and the most often,
-        # is presumably the best.
+        # is presumably the best. In case of ties, prefer the more complete
+        # regex.
         my %total_match_length;
-	for my $entry (@entries) {
+	for my $entry (@entries) {	    
 	    for my $regexstr (
 		identify_date_regexstr($entry->{$field}, $entry->{date}))
 	    {
@@ -182,10 +197,11 @@ sub analyse_feed_entries {
 	    }
 	}
 	
-	# Hopefully there'll never be any regexstrs that match equally
-	# often across an entire feed.
 	my $regexstr_bestmatch = (
-	    sort { $total_match_length{$b} <=> $total_match_length{$a} }
+	    sort {
+		$total_match_length{$b} <=> $total_match_length{$a}
+		    || length($b) <=> length($a)
+		}
 		keys %total_match_length
 	)[0];
 	
@@ -206,8 +222,6 @@ sub analyse_feed_entries {
 		};
 	}
     }
-    use Data::Dump;
-    print STDERR Data::Dump::dump(@entries), "\n";
 }
 
 # Supplied with a string and a DateTime object object, returns a list
@@ -292,9 +306,17 @@ sub identify_date_regexstr {
 	# Add on these revised regex strings.
 	@regexstr = (@regexstr, @regexstr_revised);
     }
+    
+    # URLs could have non-date-related content (e.g. PvP has a version
+    # of the title in the URL), so make another less-specific version of
+    # the regex that only includes the matches.
+    my @regexstr_shorter;
+    for my $regexstr (@regexstr) {
+        push @regexstr_shorter, $regexstr =~ m{ ( \( .+ \) ) }x;
+    }
         
     # Right, we're all done. Return this.
-    return @regexstr;
+    return @regexstr, @regexstr_shorter;
 }
 
 # Supplied with a URL and a HTML::TreeBuilder tree, returns a hashref with the
