@@ -5,6 +5,9 @@
 # Your application's name
 appname: "webcomics"
 
+# Start on port 80, just because we can
+port: 80
+
 # The default layout to use for your application (located in
 # views/layouts/main.tt)
 layout: "main"
