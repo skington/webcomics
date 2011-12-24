@@ -1,5 +1,6 @@
 package webcomics;
 use Dancer ':moose';
+use Dancer::Plugin::Database;
 use common::sense;
 
 use Data::Dumper::Concise;

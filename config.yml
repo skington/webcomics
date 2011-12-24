@@ -26,4 +26,12 @@ engines:
     encoding:  'utf8'
     start_tag: '<%'
     end_tag:   '%>'
-
+    
+# Database.
+plugins:
+  Database:
+    driver: 'mysql'
+    database: 'webcomics'
+    host: 'localhost'
+    username: 'webcomics'
+    password: 'Dy,wwyaued?'
