@@ -173,10 +173,16 @@ sub get_feed_contents {
 sub analyse_feed_contents {
     my ($feed_contents) = @_;
 
-    # Discard out of hand any feed that doesn't even have dates.
-    # That means you, xkcd Atom feed.
+    # Prune our feeds beforehand if we can.
     for my $feed (keys %$feed_contents) {
+
+        # Discard out of hand any feed that doesn't even have dates.
+        # That means you, xkcd Atom feed.
         delete $feed_contents->{$feed} if !$feed_contents->{$feed}[0]{date};
+
+        # Ignore feeds that are blatantly comments-only feeds (e.g.
+        # Skin Horse).
+        delete $feed_contents->{$feed} if $feed =~ / \b comment s? \b /x;
     }
 
     # Find regexstrs for link and title in all feeds.
@@ -195,10 +201,7 @@ sub analyse_feed_contents {
             }
         }
     }
-    
-    use Data::Dump;
-    print STDERR Data::Dump::dump(\%field_matches), "\n";
-    
+        
     # Work out what we're going to say about this.
     my %feed_info;
     $feed_info{feed} = (sort { $feed_matches{$b} <=> $feed_matches{$a} }
