@@ -16,7 +16,7 @@
      <li><% entry.date %>:
 	   <a href="<% entry.link %>"><% entry.title %></a>
 	   <ul>
-	   <% FOREACH field IN entry.matches %>
+	   <% FOREACH field IN entry.display_matches %>
 	      <li>Field <% field.field %>
 	      regexstr: <% field.regexstr %>
 	      <ul>
@@ -31,6 +31,16 @@
   <% END %>
   </ul>
   </li>
+<% END %>
+</ul>
+<% END %>
+
+<% IF feed_info %>
+<p>Best feed: <% feed_info.feed %></p>
+
+<ul>
+<% FOREACH regexstr IN feed_info.regexstr %>
+  <li><% regexstr.field %>: <% regexstr.regexstr %></li>
 <% END %>
 </ul>
 <% END %>
