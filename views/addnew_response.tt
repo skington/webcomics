@@ -8,7 +8,7 @@
 
 <% IF url_home %>
 
-<form action="create" method="post">
+<form action="/create" method="post">
 <fieldset>
 <p>
 Title:
@@ -32,8 +32,10 @@ value="<% regexstr_entry_title %>" /><br/>
 
 <% FOREACH entry IN entries %>
 
-<input type="checkbox" name="entry_<% entry.url_entry %>" value="on"
-checked="checked" />
+<input type="checkbox" name="entry_<% entry.date_entry %>"
+value="<% entry.url_entry %>" checked="checked" />
+<input type="hidden" name="entrydate_<% entry.date_entry %>"
+value="<% entry.date_entry %>" />
 <% entry.date_entry %>:
 <a href="<% entry.url_entry %>"><% entry.url_entry %></a>
 <br/>

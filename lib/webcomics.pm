@@ -1,6 +1,6 @@
 package webcomics;
 use Dancer ':moose';
-use Dancer::Plugin::Database;
+use Dancer::Plugin::Database qw();
 use common::sense;
 
 use Data::Dumper::Concise;
@@ -513,5 +513,29 @@ sub identifiers_from_element {
     }
     return @identifiers;
 }
+
+post '/create' => sub {
+    my $database = Dancer::Plugin::Database::database();
+    $database->quick_insert(
+        'webcomic',
+        {
+            map { $_ => params->{$_} }
+                qw(title url_home url_feed regexstr_entry_link regexstr_entry_title)
+        }
+    );
+    # Fuck you, Tim Bunce; why make me specify these useless parameters?
+    my $webcomic_id = $database->last_insert_id(undef, undef, undef, undef);
+    for my $entryparam (sort grep { /^entry_/ && params->{$_} } params) {
+        (my $dateparam = $entryparam) =~ s/entry/entrydate/;
+        $database->quick_insert(
+            'entry',
+            {
+                webcomic_id => $webcomic_id,
+                url_entry   => params->{$entryparam},
+                date_entry  => params->{$dateparam},
+            }
+        );
+    }
+};
 
 true;
