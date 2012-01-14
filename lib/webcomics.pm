@@ -5,6 +5,7 @@ use common::sense;
 
 use Data::Dumper::Concise;
 use DateTime;
+use DateTime::Format::MySQL;
 use English qw(-no_match_vars);
 use Feed::Find;
 use HTML::Entities;
@@ -53,19 +54,33 @@ sub addnew {
 
     my %template_params;
 
-    # Is there a RSS feed?
+    # Is there a RSS feed? If so, that's probably our best bet,
+    # assuming the feed is germane (e.g. this isn't Doonesbury, which has
+    # a standard Slate feed rather than its own)
     if (my %feed_contents = get_feed_contents($url, $contents)) {
 
         # Analyse each feed, trying to identify comics vs news vs comments,
         # and working out URL structures.
-        $template_params{feed_info} = analyse_feed_contents(\%feed_contents);
+        my $feed_info = analyse_feed_contents(\%feed_contents);
 
-        $template_params{feeds} = [
-            map { { url => $_, entries => $feed_contents{$_} } }
-                keys %feed_contents
-        ];
-
-        ### TODO: don't short-circuit this, or do this properly
+        $template_params{url_home} = $url;
+        $template_params{url_feed} = $feed_info->{feed};
+        for my $field (map { 'regexstr_entry_' . $_ } qw(title link)) {
+            $template_params{$field}
+                = HTML::Entities::encode_entities($feed_info->{$field});
+        }
+        
+        # Describe the entries briefly
+        for my $entry (sort { $a->{date} <=> $b->{date} }
+            @{ $feed_contents{ $feed_info->{feed} } })
+        {
+            push @{ $template_params{entries} },
+                {
+                url_entry => $entry->{link},
+                date_entry =>
+                    DateTime::Format::MySQL->format_datetime($entry->{date})
+                };
+        }
         return template 'addnew_response', \%template_params;
     }
 
@@ -212,17 +227,11 @@ sub analyse_feed_contents {
     push @useful_fields, qw(title) if $better_field_title >= 0;
     push @useful_fields, qw(link)  if $better_field_title <= 0;
     for my $field (@useful_fields) {
-        push @{ $feed_info{regexstr} }, {
-            field    => $field,
-            regexstr => (
-                sort {
-                    $field_matches{$field}{$b} <=> $field_matches{$field}{$a}
-                    }
-                    grep {
-                    $_ ne 'any'
-                    } keys %{ $field_matches{$field} }
-                )[0]
-        };
+        $feed_info{ 'regexstr_entry_' . $field } = (
+            sort { $field_matches{$field}{$b} <=> $field_matches{$field}{$a} }
+            grep { $_ ne 'any' }
+            keys %{ $field_matches{$field} }
+        )[0];
     }
     
     return \%feed_info;
@@ -294,16 +303,6 @@ sub analyse_feed_entries {
             my %matches = %+;
             $entry->{matches}{$field}
                 = { regexstr => $regexstr_bestmatch, values => \%matches };
-            push @{ $entry->{display_matches} },
-                {
-                field => $field,
-                regexstr =>
-                    HTML::Entities::encode_entities($regexstr_bestmatch),
-                values => [
-                    map { { key => $_, value => $matches{$_} } }
-                    sort keys %matches
-                ]
-                };
         }
     }
 }

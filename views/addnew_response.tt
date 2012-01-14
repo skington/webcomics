@@ -6,45 +6,48 @@
    <% RETURN %>
 <% END %>
 
-<% IF feeds %>
-<p>RSS or whatever feeds found:</p>
-<ul>
-<% FOREACH feed IN feeds %>
-  <li><% feed.url %>
-  <ul>
-  <% FOREACH entry IN feed.entries %>
-     <li><% entry.date %>:
-	   <a href="<% entry.link %>"><% entry.title %></a>
-	   <ul>
-	   <% FOREACH field IN entry.display_matches %>
-	      <li>Field <% field.field %>
-	      regexstr: <% field.regexstr %>
-	      <ul>
-	      <% FOREACH match IN field.values %>
-	        <li> <% match.key %>: <% match.value %> </li>
-	      <% END %>
-	      </ul>
-	      </li>
-	   <% END %>
-	   </ul>
-	 </li>
-  <% END %>
-  </ul>
-  </li>
-<% END %>
-</ul>
+<% IF url_home %>
+
+<form action="create" method="post">
+<fieldset>
+<p>
+Title:
+<input type="text" name="title" size="60" /></br>
+
+Home page:
+<input type="text" name="url_home" size="60"
+value="<% url_home %>" /><br/>
+
+Feed URL:
+<input type="text" name="url_feed" size="60"
+value="<% url_feed %>" /><br/>
+
+Regexstr entry link:
+<input type="text" name="regexstr_entry_link" size="100"
+value="<% regexstr_entry_link %>" /><br/>
+
+Regexstr entry title:
+<input type="text" name="regexstr_entry_title" size="100"
+value="<% regexstr_entry_title %>" /><br/>
+
+<% FOREACH entry IN entries %>
+
+<input type="checkbox" name="entry_<% entry.url_entry %>" value="on"
+checked="checked" />
+<% entry.date_entry %>:
+<a href="<% entry.url_entry %>"><% entry.url_entry %></a>
+<br/>
+
 <% END %>
 
-<% IF feed_info %>
-<p>Best feed: <% feed_info.feed %></p>
+<input type="submit" value="Add webcomic" />
 
-<ul>
-<% FOREACH regexstr IN feed_info.regexstr %>
-  <li><% regexstr.field %>: <% regexstr.regexstr %></li>
-<% END %>
-</ul>
+</fieldset>
+</form>
+
 <% END %>
 
+<% IF image.url %>
 <p>Image URL: <% image.url %> </p>
 <ul>
 <% FOREACH identifier IN identifiers %>
@@ -60,3 +63,5 @@
 <p><img src="<% image.url %>" width="<% image.width %>"
  height="<% image.height %>" />
 </p>
+
+<% END %>
