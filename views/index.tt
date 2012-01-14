@@ -4,7 +4,8 @@
 <ul>
 <% FOREACH url IN urls %>
 <li>
-<input type="checkbox" name="url_<% url.url %>" />
+<input type="checkbox" name="url_<% url.url %>"
+<% IF url.got %> checked <% END %> />
 <a href="addnew/<% url.url %>"><% url.url %></a>
 </li>
 <% END %>

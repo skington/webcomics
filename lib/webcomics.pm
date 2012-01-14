@@ -25,7 +25,13 @@ get '/' => sub {
     my %params;
     while (<$fh_urls>) {
         chomp;
-        push @{ $params{urls} }, { url => $_ };
+        push @{ $params{urls} },
+            {
+            url => $_,
+            got => Dancer::Plugin::Database::database->quick_select(
+                'webcomic', { url_home => $_ }
+            )
+            };
     }
     close $fh_urls;
     template 'index', \%params;
