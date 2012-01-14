@@ -520,7 +520,8 @@ post '/create' => sub {
         'webcomic',
         {
             map { $_ => params->{$_} }
-                qw(title url_home url_feed regexstr_entry_link regexstr_entry_title)
+                qw(title url_home url_feed
+                regexstr_entry_link regexstr_entry_title)
         }
     );
     # Fuck you, Tim Bunce; why make me specify these useless parameters?
