@@ -69,7 +69,7 @@ sub addnew {
             $template_params{$field}
                 = HTML::Entities::encode_entities($feed_info->{$field});
         }
-        
+
         # Describe the entries briefly
         for my $entry (sort { $a->{date} <=> $b->{date} }
             @{ $feed_contents{ $feed_info->{feed} } })
@@ -146,9 +146,11 @@ sub get_feed_contents {
 
         # webcomicsnation.com and possibly others decide to brush you off
         # if you use the default libwww/perl user agent.
+        ## no critic (Variables::ProtectPrivateVars)
         local *LWP::UserAgent::_agent = sub {
             'Who the hell bans automated access to RSS feeds?'
         };
+        ## use critic
         my $feed = XML::Feed->parse(URI->new($url)) or do {
             print STDERR "Couldn't parse $url\n";
             next url;
@@ -163,12 +165,12 @@ sub get_feed_contents {
                 $link = $response->base;
                 for my $keyword (qw(source medium campaign)) {
                     $link =~ s{
-                        ( \? .*? )
+                        ( [?] .*? )
                         utm_$keyword = [^&]+
                         (?: & | $)
                     }{$1}x;
                 }
-                $link =~ s/\?$//;
+                $link =~ s/[?]$//;
             }
             push @{ $feed_contents{$url} },
                 {
@@ -216,7 +218,7 @@ sub analyse_feed_contents {
             }
         }
     }
-        
+
     # Work out what we're going to say about this.
     my %feed_info;
     $feed_info{feed} = (sort { $feed_matches{$b} <=> $feed_matches{$a} }
@@ -233,7 +235,7 @@ sub analyse_feed_contents {
             keys %{ $field_matches{$field} }
         )[0];
     }
-    
+
     return \%feed_info;
 }
 
@@ -259,7 +261,10 @@ sub analyse_feed_entries {
                 identify_date_regexstr($entry->{$field}, $entry->{date}))
             {
                 my %match_term;
+                ## no critic (ErrorHandling::RequireCheckingReturnValueOfEval)
+                ## no critic (RegularExpressions::RequireExtendedFormatting)
                 eval { $entry->{$field} =~ qr/$regexstr/; %match_term = %+};
+                ## use critic
 
                 # To weed out false positives (e.g. 'Mnemonics' matching
                 # day_abbr), make sure we have a full date.
@@ -279,7 +284,7 @@ sub analyse_feed_entries {
                     }
                 }
                 next regexstr if $found_set_member != 3;
-                
+
                 # Right, remember how useful this regexstr was.
                 for my $match (values %match_term) {
                     $total_match_length{$regexstr} += length($match);
@@ -299,7 +304,9 @@ sub analyse_feed_entries {
         # Now go through each entry applying the regexstr, now that we've
         # decided on a favourite.
         for my $entry (@entries) {
+            ## no critic (RegularExpressions::RequireExtendedFormatting)
             $entry->{$field} =~ qr/$regexstr_bestmatch/;
+            ## use critic
             my %matches = %+;
             $entry->{matches}{$field}
                 = { regexstr => $regexstr_bestmatch, values => \%matches };
@@ -359,7 +366,9 @@ sub identify_date_regexstr {
     {
 
         # Build a regex that will match the value we're looking for.
+        ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
         my $regex_match = eval('qr/\Q' . $match{$match_term}{value} . '\E/i');
+        ## use critic
         my $regexstr_match = eval(
             sprintf(
                 'qr/(?<%s> %s )/x',
@@ -382,8 +391,8 @@ sub identify_date_regexstr {
                 # match for the term.
                 my $regexstr_matchterm = $regexstr;
                 substr($regexstr_matchterm, $LAST_MATCH_START[0],
-                    length($match{$match_term}{value}))
-                    = $regexstr_match;
+                    length($match{$match_term}{value}),
+                    $regexstr_match);
                 push @regexstr_revised, $regexstr_matchterm;
             }
         }
@@ -397,7 +406,7 @@ sub identify_date_regexstr {
     # the regex that only includes the matches.
     my @regexstr_shorter;
     for my $regexstr (@regexstr) {
-        push @regexstr_shorter, $regexstr =~ m{ ( \( .+ \) ) }x;
+        push @regexstr_shorter, $regexstr =~ m{ ( [(] .+ [)] ) }x;
     }
 
     # Right, we're all done. Return this.
