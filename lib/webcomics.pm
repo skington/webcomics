@@ -53,10 +53,13 @@ sub addnew {
     my ($url) = @_;
 
     # Fetch the URL, bomb out immediately if we couldn't get anything.
+    # Parse this no matter what, as we want the title.
     my $contents = get_page($url) or do {
         return template 'addnew_response',
             { error => 'invalid_url', url => $url, };
     };
+    my $tree = HTML::TreeBuilder->new;
+    $tree->parse($contents);
 
     my %template_params;
 
@@ -69,6 +72,12 @@ sub addnew {
         # and working out URL structures.
         my $feed_info = analyse_feed_contents(\%feed_contents);
 
+        my $title_element = $tree->look_down(_tag => 'title');
+        use Data::Dump;
+        print STDERR Data::Dump::dump("Title contains",
+            $title_element->content_list), "\n";
+        $template_params{title} = HTML::Entities::encode_entities(
+            ($title_element->content_list)[0]);
         $template_params{url_home} = $url;
         $template_params{url_feed} = $feed_info->{feed};
         for my $field (map { 'regexstr_entry_' . $_ } qw(title link)) {
@@ -87,12 +96,9 @@ sub addnew {
                     DateTime::Format::MySQL->format_datetime($entry->{date})
                 };
         }
+        $tree->delete;
         return template 'addnew_response', \%template_params;
     }
-
-    # Right, time to parse this web page.
-    my $tree = HTML::TreeBuilder->new;
-    $tree->parse($contents);
 
     # Find the largest image on the page and find out how to identify
     # it.

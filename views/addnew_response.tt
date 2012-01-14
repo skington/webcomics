@@ -12,7 +12,8 @@
 <fieldset>
 <p>
 Title:
-<input type="text" name="title" size="60" /></br>
+<input type="text" name="title" size="60" 
+value="<% title %>" /></br>
 
 Home page:
 <input type="text" name="url_home" size="60"
