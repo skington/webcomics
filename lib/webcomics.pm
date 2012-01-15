@@ -167,6 +167,7 @@ sub get_feed_contents {
             print STDERR "Couldn't parse $url\n";
             next url;
         };
+        entry:
         for my $entry ($feed->entries) {
 
             # The link might be a feedproxy link, which is no use; we want
@@ -186,6 +187,10 @@ sub get_feed_contents {
                     }{$1}x;
             }
             $link =~ s/[?]$//;
+            
+            # Skip any entries that look like they're non-comic news posts
+            next entry
+                if $link =~ m{ [/.] (?: blog | forums | news ) [/.] }xi;
             
             # Right, this should do it.
             push @{ $feed_contents{$url} },
