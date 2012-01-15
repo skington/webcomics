@@ -170,20 +170,24 @@ sub get_feed_contents {
         for my $entry ($feed->entries) {
 
             # The link might be a feedproxy link, which is no use; we want
-            # the ultimate URL, without any of that tracking nonsense.
+            # the ultimate URL.
             my $link = $entry->link;
             if ($link =~ /feedproxy/) {
                 my $response = user_agent->get($link);
                 $link = $response->base;
-                for my $keyword (qw(source medium campaign)) {
-                    $link =~ s{
+            }
+            
+            # Also, remove that tracking nonsense from URLs.
+            for my $keyword (qw(source medium campaign)) {
+                $link =~ s{
                         ( [?] .*? )
                         utm_$keyword = [^&]+
                         (?: & | $)
                     }{$1}x;
-                }
-                $link =~ s/[?]$//;
             }
+            $link =~ s/[?]$//;
+            
+            # Right, this should do it.
             push @{ $feed_contents{$url} },
                 {
                 title => $entry->title,
