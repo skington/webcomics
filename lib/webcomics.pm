@@ -100,7 +100,7 @@ sub addnew {
                         $match_date = DateTime->new(
                             year  => $matches->{yyyy},
                             month => $matches->{mm} || $matches->{m},
-                            day   => $matches->{dd} || $matches->{dd},
+                            day   => $matches->{dd} || $matches->{d},
                         );
                     };
                     if ($match_date) {
@@ -188,12 +188,18 @@ sub get_feed_contents {
             print STDERR "Couldn't parse $url\n";
             next url;
         };
+
+        # Pick out details of all entries.
+        my @entries;
         entry:
         for my $entry ($feed->entries) {
 
             # The link might be a feedproxy link or something, which is no
             # use; we want the ultimate URL.
             my $link = $entry->link;
+            # Penny Arcade put tabs in their links for some bizarre reason.
+            $link =~ s/^ \s+ //gx;
+            $link =~ s/ \s+ $//gx;
             if ($link =~ / (?: feedproxy | feeds ) [.] /x) {
                 my $response = user_agent->get($link);
                 $link = $response->base;
@@ -209,18 +215,25 @@ sub get_feed_contents {
             }
             $link =~ s/[?]$//;
             
-            # Skip any entries that look like they're non-comic news posts
-            next entry
-                if $link =~ m{ [/.] (?: blog | forums | news ) [/.] }xi;
-
             # Right, this should do it.
-            push @{ $feed_contents{$url} },
+            push @entries,
                 {
                 title => $entry->title,
                 link  => $link,
                 date  => $entry->issued,
                 };
         }
+
+        # Now that we have canonical URLs, strip out anything that looks
+        # like a news post.
+        my $re_comic = qr/ \b comic \b /x;
+        my $any_contain_comic = grep { $_->{link} =~ $re_comic } @entries;
+        @entries = grep {
+            !($_->{link} =~ m{ [/.] (?: blog | forums | news ) [/.] }xi
+                || ($any_contain_comic && $_->{link} !~ $re_comic));
+        } @entries;
+
+        push @{ $feed_contents{$url} }, @entries;
     }
 
     return %feed_contents;
