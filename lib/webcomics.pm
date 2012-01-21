@@ -215,9 +215,14 @@ sub get_feed_contents {
                     }{$1}x;
             }
             $link =~ s/[?]$//;
+
+            # Try and get the date from a number of places.
+            my $date = $entry->issued;
+            if (!$date && $entry->can('modified')) {
+                $date = $entry->modified;
+            }
             
             # The Trenches gets the date format wrong, so fix that.
-            my $date = $entry->issued;
             if (!$date && $entry->{entry}{pubDate}) {
                 my $date_iso8601 = eval {
                     DateTime::Format::ISO8601->parse_datetime(
