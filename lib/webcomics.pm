@@ -191,10 +191,10 @@ sub get_feed_contents {
         entry:
         for my $entry ($feed->entries) {
 
-            # The link might be a feedproxy link, which is no use; we want
-            # the ultimate URL.
+            # The link might be a feedproxy link or something, which is no
+            # use; we want the ultimate URL.
             my $link = $entry->link;
-            if ($link =~ /feedproxy/) {
+            if ($link =~ / (?: feedproxy | feeds ) [.] /x) {
                 my $response = user_agent->get($link);
                 $link = $response->base;
             }
