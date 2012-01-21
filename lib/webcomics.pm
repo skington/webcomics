@@ -5,6 +5,7 @@ use common::sense;
 
 use Data::Dumper::Concise;
 use DateTime;
+use DateTime::Format::ISO8601;
 use DateTime::Format::MySQL;
 use English qw(-no_match_vars);
 use Feed::Find;
@@ -215,12 +216,22 @@ sub get_feed_contents {
             }
             $link =~ s/[?]$//;
             
+            # The Trenches gets the date format wrong, so fix that.
+            my $date = $entry->issued;
+            if (!$date && $entry->{entry}{pubDate}) {
+                my $date_iso8601 = eval {
+                    DateTime::Format::ISO8601->parse_datetime(
+                        $entry->{entry}{pubDate});
+                };
+                $date = $date_iso8601 if $date_iso8601;
+            }
+            
             # Right, this should do it.
             push @entries,
                 {
                 title => $entry->title,
                 link  => $link,
-                date  => $entry->issued,
+                date  => $date,
                 };
         }
 
