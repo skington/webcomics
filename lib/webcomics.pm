@@ -73,9 +73,6 @@ sub addnew {
         my $feed_info = analyse_feed_contents(\%feed_contents);
 
         my $title_element = $tree->look_down(_tag => 'title');
-        use Data::Dump;
-        print STDERR Data::Dump::dump("Title contains",
-            $title_element->content_list), "\n";
         $template_params{title} = HTML::Entities::encode_entities(
             ($title_element->content_list)[0]);
         $template_params{url_home} = $url;
@@ -91,9 +88,10 @@ sub addnew {
         {
             push @{ $template_params{entries} },
                 {
-                url_entry => $entry->{link},
-                date_entry =>
-                    DateTime::Format::MySQL->format_datetime($entry->{date})
+                url_entry  => $entry->{link},
+                date_entry => $entry->{date}
+                ? DateTime::Format::MySQL->format_datetime($entry->{date})
+                : ''
                 };
         }
         $tree->delete;
@@ -191,7 +189,7 @@ sub get_feed_contents {
             # Skip any entries that look like they're non-comic news posts
             next entry
                 if $link =~ m{ [/.] (?: blog | forums | news ) [/.] }xi;
-            
+
             # Right, this should do it.
             push @{ $feed_contents{$url} },
                 {
@@ -212,15 +210,18 @@ sub analyse_feed_contents {
     my ($feed_contents) = @_;
 
     # Prune our feeds beforehand if we can.
-    for my $feed (keys %$feed_contents) {
+    if (keys %$feed_contents > 1) {
+        for my $feed (keys %$feed_contents) {
 
-        # Discard out of hand any feed that doesn't even have dates.
-        # That means you, xkcd Atom feed.
-        delete $feed_contents->{$feed} if !$feed_contents->{$feed}[0]{date};
+            # Discard out of hand any feed that doesn't even have dates.
+            # That means you, xkcd Atom feed.
+            delete $feed_contents->{$feed}
+                if !$feed_contents->{$feed}[0]{date};
 
-        # Ignore feeds that are blatantly comments-only feeds (e.g.
-        # Skin Horse).
-        delete $feed_contents->{$feed} if $feed =~ / \b comment s? \b /x;
+            # Ignore feeds that are blatantly comments-only feeds (e.g.
+            # Skin Horse).
+            delete $feed_contents->{$feed} if $feed =~ / \b comment s? \b /x;
+        }
     }
 
     # Find regexstrs for link and title in all feeds.
