@@ -12,6 +12,7 @@ use HTML::Entities;
 use HTML::TreeBuilder;
 use HTTP::Async;
 use Image::Size;
+use List::MoreUtils;
 use LWP;
 use URI;
 use XML::Feed;
@@ -86,11 +87,33 @@ sub addnew {
         for my $entry (sort { $a->{date} <=> $b->{date} }
             @{ $feed_contents{ $feed_info->{feed} } })
         {
+            # Hopefully we got a date from the feed. Otherwise, we'll have
+            # to work it out from our regexstr.
+            my $date = $entry->{date};
+            if (!$date) {
+                field:
+                for my $field (qw(link title)) {
+                    my $matches = $entry->{matches}{$field}{values};
+                    ### TODO: month_name, month_abbr, day_name, day_abbr
+                    my $match_date;
+                    eval {
+                        $match_date = DateTime->new(
+                            year  => $matches->{yyyy},
+                            month => $matches->{mm} || $matches->{m},
+                            day   => $matches->{dd} || $matches->{dd},
+                        );
+                    };
+                    if ($match_date) {
+                        $date = $match_date;
+                        last field;
+                    }
+                }
+            }
             push @{ $template_params{entries} },
                 {
                 url_entry  => $entry->{link},
-                date_entry => $entry->{date}
-                ? DateTime::Format::MySQL->format_datetime($entry->{date})
+                date_entry => $date
+                ? DateTime::Format::MySQL->format_datetime($date)
                 : ''
                 };
         }
@@ -343,7 +366,17 @@ sub analyse_feed_entries {
 sub identify_date_regexstr {
     my ($string, $datetime) = @_;
 
-    return if !$datetime;
+    # If we weren't given a date, attempt to match on any date in the past
+    # fortnight.
+    if (!$datetime) {
+        my @regexstr_guesses;
+        for my $delta_days (0 .. 13) {
+            push @regexstr_guesses,
+                identify_date_regexstr($string,
+                DateTime->now->subtract(days => $delta_days));
+        }
+        return List::MoreUtils::uniq(@regexstr_guesses);
+    }
 
     # Build up a list of regexes that match this string, starting with
     # the obvious "it's this string" one, and cumulatively trying to match
