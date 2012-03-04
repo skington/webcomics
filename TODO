@@ -3,7 +3,7 @@ Working out the image (and therefore knowing whether the page has changed):
 1) Look at the largest image. This works most of the time.
 
 2) Look for a redirect to a canonical URL - e.g. explosm.net/comics to
-explosm.net/comics/2452, order of the stick
+explosm.net/comics/2452, order of the stick, PvP
 
 3) Look for some sort of update - e.g. 2dgoggles.com
 
@@ -26,7 +26,7 @@ Doonesbury has a non-Doonesbury-related slate feed
 No feed for Dilbert (but there's a link to it).
 Wonderella has a link to a feed, less obvious.
 Evil-comic mixes news and comics, as do many others.
-No feed for Wonderella
+Useless feed for Wonderella
 No RSS for dinosaur comics.
 OOTS has titles in the feed that don't figure in the comic. But the feed
 doesn't have dates.
