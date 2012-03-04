@@ -24,13 +24,12 @@ Working out canonical URLs
 RSS feed issues:
 Doonesbury has a non-Doonesbury-related slate feed
 No feed for Dilbert (but there's a link to it).
-Wonderella has a link to a feed, less obvious.
 Reptilis Rex has an RSS feed, but it's broken.
 Evil-comic mixes news and comics, as do many others.
 Useless feed for Wonderella
 No RSS for dinosaur comics.
 OOTS has titles in the feed that don't figure in the comic. But the feed
-doesn't have dates.
+doesn't have dates. It does have ordinal numbers, though.
 No feed for full frontal nerdity.
 Darths and droids finds the feeds for Irregular webcomic instead.
 No feed for oglaf.
@@ -39,3 +38,4 @@ Misfile only has the rants, which is completely fucking pointless.
 Gunnerkrigg Court has titles that are always the same, and links to the front page.
 No feed for El Goonish Shive.
 Sluggy only has one entry in the feed.
+Wondermark mixes news and comics. Comic entries are of the form ..../nnnn though.

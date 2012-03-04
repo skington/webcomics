@@ -15,6 +15,7 @@ use HTTP::Async;
 use Image::Size;
 use List::MoreUtils;
 use LWP;
+use Text::Sequence;
 use URI;
 use XML::Feed;
 
@@ -366,6 +367,13 @@ sub analyse_feed_entries {
             }
         }
 
+        # See if there are any matches based on an ordinal number
+        # increasing.
+        my %sequence_regexstr_length
+            = identify_sequence_regexstr(map { $_->{$field} } @entries);
+        %total_match_length
+            = (%total_match_length, %sequence_regexstr_length);
+
         my $regexstr_bestmatch = (
             sort {
                 $total_match_length{$b} <=> $total_match_length{$a}
@@ -495,6 +503,27 @@ sub identify_date_regexstr {
 
     # Right, we're all done. Return this.
     return @regexstr, @regexstr_shorter;
+}
+
+# Supplied with a list of fields, attempts to identify sequences. If it finds
+# any, returns a hash of regexstr => number of total characters matched.
+
+sub identify_sequence_regexstr {
+    my (@values) = @_;
+
+    my ($sequences, $singletons) = Text::Sequence::find(@values);
+    return if @$sequences == 0;
+    my %sequence_regexstr_length;
+    for my $sequence (@$sequences) {
+        (my $regexstr = $sequence->re) =~ s/[(]/(?<seq>/;
+        my $length_match;
+        for my $value (@values) {
+            my ($match) = $value =~ qr/$regexstr/;
+            $length_match += length($match);
+        }
+        $sequence_regexstr_length{$regexstr} = $length_match;
+    }
+    return %sequence_regexstr_length;
 }
 
 # Supplied with a URL and a HTML::TreeBuilder tree, returns a hashref with the
