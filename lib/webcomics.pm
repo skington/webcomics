@@ -202,7 +202,6 @@ sub get_feed_contents {
         }
         my ($skip_category)
             = (grep { /^ (?: blog | news ) $ /xi } keys %has_category);
-        
 
         # Pick out details of all entries.
         my @entries;
@@ -222,7 +221,7 @@ sub get_feed_contents {
                 my $response = user_agent->get($link);
                 $link = $response->base;
             }
-            
+
             # Also, remove that tracking nonsense from URLs.
             for my $keyword (qw(source medium campaign)) {
                 $link =~ s{
@@ -238,7 +237,7 @@ sub get_feed_contents {
             if (!$date && $entry->can('modified')) {
                 $date = $entry->modified;
             }
-            
+
             # The Trenches gets the date format wrong, so fix that.
             if (!$date && $entry->{entry}{pubDate}) {
                 my $date_iso8601 = eval {
@@ -247,7 +246,7 @@ sub get_feed_contents {
                 };
                 $date = $date_iso8601 if $date_iso8601;
             }
-            
+
             # Right, this should do it.
             push @entries,
                 {
