@@ -123,14 +123,20 @@ sub addnew {
         return template 'addnew_response', \%template_params;
     }
 
+    # Extract all interesting-looking links.
+    $template_params{links}
+        = [identify_interesting_links(extract_links($url, $tree))];
+
     # Find the largest image on the page and find out how to identify
     # it.
-    my $largest_image = find_largest_image($url, $tree);
-    $template_params{image} = $largest_image;
+    if (q{Care about this} eq q{A lot}) {
+        my $largest_image = find_largest_image($url, $tree);
+        $template_params{image} = $largest_image;
 
-    # Work out how to identify this image.
-    $template_params{identifiers}
-        = [identifiers_from_element($tree, $largest_image->{element})];
+        # Work out how to identify this image.
+        $template_params{identifiers}
+            = [identifiers_from_element($tree, $largest_image->{element})];
+    }
 
     # We're done with our tree, so delete it to free up memory.
     $tree->delete;
@@ -539,6 +545,58 @@ sub identify_sequence_regexstr {
         $sequence_regexstr_length{$regexstr} = $length_match;
     }
     return %sequence_regexstr_length;
+}
+
+# Supplied with a list of links, as returned by extract_links, returns
+# only those that look interesting.
+
+sub identify_interesting_links {
+    my (@links) = @_;
+
+    my @interesting_links;
+    tag:
+    for my $link (@links) {
+        for my $attribute (keys %$link) {
+            if ($link->{$attribute}
+                =~ /(?: \b | _) (?: prev (?: ious)? | back ) \b /xi)
+            {
+                push @interesting_links, $link;
+                next tag;
+            }
+        }
+    }
+    return @interesting_links;
+}
+
+# Supplied with a URL and a HTML::TreeBuilder tree, returns a list of
+# hashes with the following keys:
+#  url: the absolute URL for this URL
+#  text: the text of the link
+#  css: the CSS for this element
+#  rel: any rel attributes
+
+sub extract_links {
+    my ($url, $tree) = @_;
+
+    my @links = $tree->look_down(_tag => 'a');
+    my @link_data;
+    for my $link (@links) {
+        my %link_data = ( url => URI->new_abs($link->attr('href'), $url) );
+        for my $attribute ('class', 'id', 'rel') {
+            if ($link->attr($attribute)) {
+                $link_data{$attribute} = $link->attr($attribute);
+            }
+        }
+        if (my $image = $link->look_down(_tag => 'img')) {
+            $link_data{img_alt} = $image->attr('alt');
+            $link_data{img_src} = URI->new_abs($image->attr('src'), $url);
+        }
+        if (my $text = $link->as_text) {
+            $link_data{text} = $text;
+        }
+        push @link_data, \%link_data;
+    }
+    return @link_data;
 }
 
 # Supplied with a URL and a HTML::TreeBuilder tree, returns a hashref with the

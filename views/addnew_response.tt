@@ -50,6 +50,34 @@ value="<% entry.date_entry %>" />
 
 <% END %>
 
+<% IF links %>
+  <ul>
+  <% FOREACH link IN links %>
+    <li>
+    URL: <% link.url %>
+	<% IF link.text %>
+	  <br/> Link text "<% link.text %>".
+	<% END %>
+	<% IF link.id %>
+	  <br/> ID "<% link.id %>".
+	<% END %>
+	<% IF link.class %>
+	  <br/> Class "<% link.class %>".
+	<% END %>
+	<% IF link.rel %>
+	  <br/> Rel "<% link.rel %>".
+	<% END %>
+	<% IF link.img_alt %>
+	  </br> Image alt "<% link.img_alt %>".
+	<% END %>
+	<% IF link.img_src %>
+	  </br> Image link "<% link.img_src %>".
+	<% END %>
+    </li>
+  <% END %>
+  </ul>
+<% END %>
+
 <% IF image.url %>
 <p>Image URL: <% image.url %> </p>
 <ul>

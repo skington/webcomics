@@ -1,26 +1,3 @@
-Working out the image (and therefore knowing whether the page has changed):
-
-1) Look at the largest image. This works most of the time.
-
-2) Look for a redirect to a canonical URL - e.g. explosm.net/comics to
-explosm.net/comics/2452, order of the stick, PvP
-
-3) Look for some sort of update - e.g. 2dgoggles.com
-
-4) Check the status of some other image - e.g. dresdencodak.com,
-abominable.cc, sisterclaire.com, somethingpositive.net, sluggy.com, wondermark
-
-5) Cope with HTTP::Async not coping with https URLs -
-e.g. ubersoft.net/comic/hd 
-
-6) Cope with webcomics requiring a click-through - e.g. oglaf
-
-7) Improve performance by not fetching paypal images - done?
-
-8) Let people choose whether to see news or not.
-
-Working out canonical URLs
-
 RSS feed issues:
 Doonesbury has a non-Doonesbury-related slate feed
 No feed for Dilbert (but there's a link to it).
@@ -45,3 +22,15 @@ Gunnerkrigg Court: link to /archive_page.php?comicID=nnnn, contains img src prev
 Sluggy: useless RSS feed. Link to /comics/archives/daily/yymmdd, contains image class "ui-icon-seek-prev", text "Prev.". Today's link redirects to front page.
 El Goonish Shive: finds correct image, /comics/yyyy/mm/yyyymmdd_....png. Link to /?date=yyyy-mm-dd, contains image src /templates/home/arrow_prev.gif. Today's link exists.
 Project Apollo: link to abnnn.html, contains image, alt 'Previous Page', src layout/button-back.png. Page doesn't exist. Site fucked.
+
+So, interesting things:
+* link title Prev or Previous
+* class contains Prev
+* rel contains prev
+* image back.jpg or prev_a.gif or arrow_prev.gif
+* image alt Previous
+* link text contains PREVIOUS or Prev
+
+General TODO:
+
+* Get alt text
