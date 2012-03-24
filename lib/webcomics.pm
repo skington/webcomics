@@ -191,10 +191,26 @@ sub get_feed_contents {
             next url;
         };
 
+        # Find out which categories these entries implement. If we find
+        # out that we have e.g. Comics and Blog entries, we'll use that to
+        # discard blog entries.
+        my %has_category;
+        for my $entry ($feed->entries) {
+            for my $category ($entry->category) {
+                $has_category{$category}++;
+            }
+        }
+        my ($skip_category)
+            = (grep { /^ (?: blog | news ) $ /xi } keys %has_category);
+        
+
         # Pick out details of all entries.
         my @entries;
         entry:
         for my $entry ($feed->entries) {
+
+            # If this is a blog or news post, skip it.
+            next entry if grep { $_ eq $skip_category } $entry->category;
 
             # The link might be a feedproxy link or something, which is no
             # use; we want the ultimate URL.

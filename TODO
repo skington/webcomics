@@ -24,8 +24,6 @@ Working out canonical URLs
 RSS feed issues:
 Doonesbury has a non-Doonesbury-related slate feed
 No feed for Dilbert (but there's a link to it).
-Reptilis Rex mixes comics and news; only comics have a large image in the RSS feed.
-Dresden Codak mixes comics and news; comics posts have a tag 'Comics', feature images with an empty src attribute - why the hell would you ever do that?
 No RSS for dinosaur comics.
 No feed for full frontal nerdity.
 Darths and droids finds the feeds for Irregular webcomic instead.
