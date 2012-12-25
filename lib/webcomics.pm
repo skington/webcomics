@@ -10,7 +10,6 @@ use DateTime::Format::MySQL;
 use English qw(-no_match_vars);
 use Feed::Find;
 use HTML::Entities;
-use HTML::TreeBuilder;
 use HTTP::Async;
 use Image::Size;
 use List::MoreUtils;
@@ -64,8 +63,6 @@ sub addnew {
         return template 'addnew_response',
             { error => 'invalid_url', url => $url, };
     };
-    my $tree = HTML::TreeBuilder->new;
-    $tree->parse($contents);
 
     my %template_params;
 
@@ -78,7 +75,7 @@ sub addnew {
         # and working out URL structures.
         my $feed_info = analyse_feed_contents(\%feed_contents);
 
-        my $title_element = $tree->look_down(_tag => 'title');
+        my $title_element = $page->tree->look_down(_tag => 'title');
         $template_params{title} = HTML::Entities::encode_entities(
             ($title_element->content_list)[0]);
         $template_params{url_home} = $url;
@@ -122,27 +119,23 @@ sub addnew {
                 : ''
                 };
         }
-        $tree->delete;
         return template 'addnew_response', \%template_params;
     }
 
     # Extract all interesting-looking links.
     $template_params{links}
-        = [identify_interesting_links(extract_links($url, $tree))];
+        = [identify_interesting_links(extract_links($url, $page->tree))];
 
     # Find the largest image on the page and find out how to identify
     # it.
     if (q{Care about this} eq q{A lot}) {
-        my $largest_image = find_largest_image($url, $tree);
+        my $largest_image = find_largest_image($url, $page->tree);
         $template_params{image} = $largest_image;
 
         # Work out how to identify this image.
         $template_params{identifiers}
-            = [identifiers_from_element($tree, $largest_image->{element})];
+            = [identifiers_from_element($page->tree, $largest_image->{element})];
     }
-
-    # We're done with our tree, so delete it to free up memory.
-    $tree->delete;
 
     # Right, return our template.
     template 'addnew_response', \%template_params;

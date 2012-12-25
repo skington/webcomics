@@ -30,5 +30,18 @@ my $lazy_page_contents = $lazy_page->contents;
 ok($lazy_page_contents, 'We can get the page contents lazily');
 like($page_contents, $re_html_like, 'Lazy page looks like HTML also');
 
+# Neither of these objects have a tree attribute yet.
+ok(!$page->has_tree, 'No tree object for explicit page object');
+ok(!$lazy_page->has_tree, 'No tree object for lazy page object');
+
+# The tree attribute auto-vivifies, and can be used to fetch the title
+# of the page.
+ok($page->tree, 'We can get a tree for our page');
+isa_ok($page->tree, 'HTML::TreeBuilder');
+my $element_title = $page->tree->look_down(_tag => 'title');
+ok($element_title, 'We can look down the tree for a title');
+isa_ok($element_title, 'HTML::Element');
+is_deeply($element_title->content_list, 'Google', 'This looks like Google');
+
 # And we're done.
 done_testing();

@@ -9,6 +9,7 @@ use Moose;
 use Moose::Util::TypeConstraints;
 use MooseX::LazyRequire;
 
+use HTML::TreeBuilder;
 use URI;
 use LWP::UserAgent;
 
@@ -61,6 +62,28 @@ sub fetch_page {
         die "Couldn't fetch $self->url: ", $response->status_line;
     }
     return $response->decoded_content // $response->content;    
+}
+
+has 'tree' => (
+    is => 'ro',
+    isa => 'HTML::TreeBuilder',
+    lazy_build => 1,
+);
+
+sub _build_tree {
+    my ($self) = @_;
+
+    my $tree = HTML::TreeBuilder->new;
+    $tree->parse($self->contents);
+    return $tree;
+}
+
+sub DEMOLISH {
+    my ($self) = @_;
+
+    if ($self->has_tree) {
+        $self->tree->delete;
+    }
 }
 
 __PACKAGE__->meta->make_immutable;
