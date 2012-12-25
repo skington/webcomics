@@ -19,6 +19,8 @@ use Text::Sequence;
 use URI;
 use XML::Feed;
 
+use WWW::Webcomic::Page;
+
 our $VERSION = '0.1';
 
 get '/' => sub {
@@ -57,7 +59,8 @@ sub addnew {
 
     # Fetch the URL, bomb out immediately if we couldn't get anything.
     # Parse this no matter what, as we want the title.
-    my $contents = get_page($url) or do {
+    my $page = WWW::Webcomic::Page->new(url => $url);
+    my $contents = eval { $page->fetch_page($url) } or do {
         return template 'addnew_response',
             { error => 'invalid_url', url => $url, };
     };
@@ -145,29 +148,6 @@ sub addnew {
     template 'addnew_response', \%template_params;
 }
 
-sub get_page {
-    my ($url) = @_;
-
-    my $ua       = user_agent();
-    my $response = $ua->get($url);
-    if (!$response->is_success) {
-        print STDERR "Couldn't fetch $url: ", $response->status_line, "\n";
-        return;
-    }
-    return $response->decoded_content // $response->content;
-}
-
-{
-    my $ua;
-
-    sub user_agent {
-        return $ua if $ua;
-        $ua = LWP::UserAgent->new;
-        $ua->agent('Webcomics parser/' . $VERSION);
-        return $ua;
-    }
-}
-
 # Supplied with the URL of a page, and its contents, finds any RSS / Atom
 # feeds and returns their contents, in the form of a hash of
 # url => arrayref of entry hashrefs with the following keys:
@@ -224,7 +204,7 @@ sub get_feed_contents {
             $link =~ s/^ \s+ //gx;
             $link =~ s/ \s+ $//gx;
             if ($link =~ / (?: feedproxy | feeds ) [.] /x) {
-                my $response = user_agent->get($link);
+                my $response = WWW::Webcomic::Page->new->user_agent->get($link);
                 $link = $response->base;
             }
 
