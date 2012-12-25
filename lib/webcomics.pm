@@ -60,7 +60,7 @@ sub addnew {
     # Fetch the URL, bomb out immediately if we couldn't get anything.
     # Parse this no matter what, as we want the title.
     my $page = WWW::Webcomic::Page->new(url => $url);
-    my $contents = eval { $page->fetch_page($url) } or do {
+    my $contents = eval { $page->contents } or do {
         return template 'addnew_response',
             { error => 'invalid_url', url => $url, };
     };

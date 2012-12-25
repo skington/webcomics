@@ -41,6 +41,18 @@ sub agent_string {
     'Webcomics parser/' . $VERSION;
 }
 
+has 'contents' => (
+    is         => 'ro',
+    isa        => 'Str',
+    lazy_build => 1,
+);
+
+sub _build_contents {
+    my ($self) = @_;
+
+    $self->fetch_page;
+}
+
 sub fetch_page {
     my ($self) = @_;
 
@@ -48,8 +60,7 @@ sub fetch_page {
     if (!$response->is_success) {
         die "Couldn't fetch $self->url: ", $response->status_line;
     }
-    return $response->decoded_content // $response->content;
-    
+    return $response->decoded_content // $response->content;    
 }
 
 __PACKAGE__->meta->make_immutable;
