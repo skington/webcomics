@@ -1,5 +1,5 @@
 use Test::More tests => 1;
-use strict;
-use warnings;
+use common::sense;
+use lib::abs '../../lib';
 
 use_ok 'webcomics';
