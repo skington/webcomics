@@ -1,4 +1,4 @@
-use Test::More tests => 2;
+use Test::More tests => 1;
 use common::sense;
 use lib::abs qw(../../lib);
 
