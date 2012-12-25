@@ -10,16 +10,18 @@ use Moose::Util::TypeConstraints;
 use MooseX::LazyRequire;
 
 use URI;
+use LWP::UserAgent;
 
+class_type 'URI', { class => 'URI' };
+coerce 'URI', from 'Str', via {
+    URI->new($_);
+};
 has 'url' => (
     is            => 'ro',
     isa           => 'URI',
     coerce        => 1,
     lazy_required => 1,
 );
-coerce 'URI', from 'Str', via {
-    URI->new($_);
-};
 
 has 'user_agent' => (
     is => 'ro',
@@ -31,8 +33,12 @@ sub build_user_agent {
     my ($self) = @_;
 
     my $user_agent = LWP::UserAgent->new;
-    $user_agent->agent('Webcomics parser/' . $VERSION);
+    $user_agent->agent($self->agent_string);
     return $user_agent;
+}
+
+sub agent_string {
+    'Webcomics parser/' . $VERSION;
 }
 
 sub fetch_page {
