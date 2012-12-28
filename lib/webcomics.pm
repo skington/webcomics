@@ -165,6 +165,18 @@ sub get_feed_contents {
     my %feed_contents;
     url:
     for my $page (@feed_pages) {
+        my @entries = map {
+            {
+                title => $_->title,
+                link  => $_->page->url,
+                date  => $_->date,
+            }
+        } $page->all_entries;
+        push @{ $feed_contents{ $page->url } }, @entries;
+    }
+    return %feed_contents;
+
+    if (my $page eq 'Something useful') {
         # Find out which categories these entries implement. If we find
         # out that we have e.g. Comics and Blog entries, we'll use that to
         # discard blog entries.
@@ -238,8 +250,6 @@ sub get_feed_contents {
             !($_->{link} =~ m{ [/.] (?: blog | forums | news ) [/.] }xi
                 || ($any_contain_comic && $_->{link} !~ $re_comic));
         } @entries;
-
-        push @{ $feed_contents{$page->url} }, @entries;
     }
 
     return %feed_contents;
