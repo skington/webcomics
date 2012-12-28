@@ -19,6 +19,7 @@ use URI;
 use XML::Feed;
 
 use WWW::Webcomic::Page;
+use WWW::Webcomic::Site;
 
 our $VERSION = '0.1';
 
@@ -58,8 +59,8 @@ sub addnew {
 
     # Fetch the URL, bomb out immediately if we couldn't get anything.
     # Parse this no matter what, as we want the title.
-    my $page = WWW::Webcomic::Page->new(url => $url);
-    my $contents = eval { $page->contents } or do {
+    my $site = WWW::Webcomic::Site->new(home_page => $url);
+    my $contents = eval { $site->home_page->contents } or do {
         return template 'addnew_response',
             { error => 'invalid_url', url => $url, };
     };
@@ -75,7 +76,8 @@ sub addnew {
         # and working out URL structures.
         my $feed_info = analyse_feed_contents(\%feed_contents);
 
-        my $title_element = $page->tree->look_down(_tag => 'title');
+        my $title_element
+            = $site->home_page->tree->look_down(_tag => 'title');
         $template_params{title} = HTML::Entities::encode_entities(
             ($title_element->content_list)[0]);
         $template_params{url_home} = $url;
@@ -123,18 +125,24 @@ sub addnew {
     }
 
     # Extract all interesting-looking links.
-    $template_params{links}
-        = [identify_interesting_links(extract_links($url, $page->tree))];
+    $template_params{links} = [
+        identify_interesting_links(
+            extract_links($url, $site->home_page->tree)
+        )
+    ];
 
     # Find the largest image on the page and find out how to identify
     # it.
     if (q{Care about this} eq q{A lot}) {
-        my $largest_image = find_largest_image($url, $page->tree);
+        my $largest_image = find_largest_image($url, $site->home_page->tree);
         $template_params{image} = $largest_image;
 
         # Work out how to identify this image.
-        $template_params{identifiers}
-            = [identifiers_from_element($page->tree, $largest_image->{element})];
+        $template_params{identifiers} = [
+            identifiers_from_element(
+                $site->home_page->tree, $largest_image->{element}
+            )
+        ];
     }
 
     # Right, return our template.

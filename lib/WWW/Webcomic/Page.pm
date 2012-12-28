@@ -9,6 +9,7 @@ use English qw(-no_match_vars);
 use Moose;
 use Moose::Util::TypeConstraints;
 use MooseX::LazyRequire;
+use WWW::Webcomic::MooseTypes;
 
 use Carp;
 use HTML::TreeBuilder;
@@ -39,10 +40,6 @@ internally as a URI object.
 
 =cut
 
-class_type 'URI', { class => 'URI' };
-coerce 'URI', from 'Str', via {
-    URI->new($_);
-};
 has 'url' => (
     is            => 'ro',
     isa           => 'URI',
@@ -93,10 +90,6 @@ will be stored in /tmp/cache/example.com/foo/bar/baz.gif
 No distinction is made between http and https, or any other URL protocols.
 
 =cut
-
-subtype 'WWW::Webcomic::CacheDir', as 'Str', where {
-    -d $_ && -r _ && -w _
-};
 
 has 'cache_directory' => (
     is        => 'rw',
