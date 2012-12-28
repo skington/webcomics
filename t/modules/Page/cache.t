@@ -5,7 +5,9 @@ use strict;
 use warnings;
 no warnings qw(uninitialized);
 
-use lib::abs qw(../../../lib);
+use lib::abs qw(../../../lib ../../lib);
+use Utils;
+
 use Test::More;
 
 use_ok('WWW::Webcomic::Page');
@@ -88,19 +90,6 @@ RAW_HTML
         qr{no \s reason \s for \s this}xsm,
         'Div and span tags found',
     );
-}
-
-sub _directory_is_safe {
-    my ($dir, $name) = @_;
-
-    ok(
-        !-e $dir || -e _ && -d _ && -w _,
-        "$name $dir is safe to use or create"
-    ) or exit;
-
-    if (!-e $dir) {
-        ok(mkdir($dir, 0755), "We can create our $name") or exit;
-    }
 }
 
 sub _write_cached_file {
