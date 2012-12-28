@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:admin="http://webns.net/mvcb/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+
+    <channel>
+    <atom:link href="http://pvponline.com/feed" rel="self" type="application/rss+xml" />
+    
+    <title>PvPonline</title>
+    <link>http://pvponline.com/</link>
+    <description>PvP News and Comics Feed</description>
+    <dc:language>en</dc:language>
+    <dc:creator>mail@pvponline.com</dc:creator>
+    <dc:rights>Copyright (c) 1998-2011 Scott R. Kurtz | PVP</dc:rights>
+    <dc:date>2011-08-01T09:00:41+00:00</dc:date>
+    <admin:generatorAgent rdf:resource="http://expressionengine.com/" />
+    
+
+    <item>
+		<title>Comic: The Pies have it</title>
+		<link>
+							http://pvponline.com/comic/2012/12/27/the-pies-have-it
+								</link>
+		<guid>http://pvponline.com/comic/2012/12/27/the-pies-have-it</guid>
+		<description>
+			<![CDATA[
+							New Comic: The Pies have it
+									]]>
+		</description>
+		<dc:date>2012-12-27T04:40:30+00:00</dc:date>
+	</item>
+
+    <item>
+		<title>News: Merry Christmas from PvP</title>
+		<link>
+										http://pvponline.com/news/merry-christmas-from-pvp
+					</link>
+		<guid>http://pvponline.com/news/merry-christmas-from-pvp</guid>
+		<description>
+			<![CDATA[
+										Scott R. Kurtz: 
+				
+Everyone here at PvP (including all fictional characters living in my head) want to wish you and your family a very merry Christmas.
+
+We&#8217;re taking the next couple of days off to be with our kin and we hope you are getting to do the same. New PvP strips will be back on Thursday.						]]>
+		</description>
+		<dc:date>2012-12-24T17:49:07+00:00</dc:date>
+	</item>
+
+    <item>
+		<title>Comic: home for christmas</title>
+		<link>
+							http://pvponline.com/comic/2012/12/21/home-for-christmas
+								</link>
+		<guid>http://pvponline.com/comic/2012/12/21/home-for-christmas</guid>
+		<description>
+			<![CDATA[
+							New Comic: home for christmas
+									]]>
+		</description>
+		<dc:date>2012-12-21T20:39:42+00:00</dc:date>
+	</item>
+
+    <item>
+		<title>Comic: mean one</title>
+		<link>
+							http://pvponline.com/comic/2012/12/20/mean-one
+								</link>
+		<guid>http://pvponline.com/comic/2012/12/20/mean-one</guid>
+		<description>
+			<![CDATA[
+							New Comic: mean one
+									]]>
+		</description>
+		<dc:date>2012-12-20T04:40:04+00:00</dc:date>
+	</item>
+
+    <item>
+		<title>Comic: Trash Talk</title>
+		<link>
+							http://pvponline.com/comic/2012/12/19/trash-talk
+								</link>
+		<guid>http://pvponline.com/comic/2012/12/19/trash-talk</guid>
+		<description>
+			<![CDATA[
+							New Comic: Trash Talk
+									]]>
+		</description>
+		<dc:date>2012-12-19T04:40:27+00:00</dc:date>
+	</item>
+
+    <item>
+		<title>Comic: Cleaning house</title>
+		<link>
+							http://pvponline.com/comic/2012/12/18/cleaning-house
+								</link>
+		<guid>http://pvponline.com/comic/2012/12/18/cleaning-house</guid>
+		<description>
+			<![CDATA[
+							New Comic: Cleaning house
+									]]>
+		</description>
+		<dc:date>2012-12-18T04:40:43+00:00</dc:date>
+	</item>
+
+    <item>
+		<title>Comic: walk on</title>
+		<link>
+							http://pvponline.com/comic/2012/12/17/walk-on
+								</link>
+		<guid>http://pvponline.com/comic/2012/12/17/walk-on</guid>
+		<description>
+			<![CDATA[
+							New Comic: walk on
+									]]>
+		</description>
+		<dc:date>2012-12-17T04:40:28+00:00</dc:date>
+	</item>
+
+    <item>
+		<title>Comic: standards and practices</title>
+		<link>
+							http://pvponline.com/comic/2012/12/14/standards-and-practices
+								</link>
+		<guid>http://pvponline.com/comic/2012/12/14/standards-and-practices</guid>
+		<description>
+			<![CDATA[
+							New Comic: standards and practices
+									]]>
+		</description>
+		<dc:date>2012-12-14T04:40:49+00:00</dc:date>
+	</item>
+
+    <item>
+		<title>Comic: a girl named</title>
+		<link>
+							http://pvponline.com/comic/2012/12/13/a-girl-named
+								</link>
+		<guid>http://pvponline.com/comic/2012/12/13/a-girl-named</guid>
+		<description>
+			<![CDATA[
+							New Comic: a girl named
+									]]>
+		</description>
+		<dc:date>2012-12-13T04:40:07+00:00</dc:date>
+	</item>
+
+    <item>
+		<title>Comic: mi amor</title>
+		<link>
+							http://pvponline.com/comic/2012/12/12/mi-amor
+								</link>
+		<guid>http://pvponline.com/comic/2012/12/12/mi-amor</guid>
+		<description>
+			<![CDATA[
+							New Comic: mi amor
+									]]>
+		</description>
+		<dc:date>2012-12-12T04:40:22+00:00</dc:date>
+	</item>
+
+    </channel>
+</rss>

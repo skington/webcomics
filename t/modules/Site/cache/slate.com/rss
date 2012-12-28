@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="/css/rss20.xsl" type="text/xsl"?>
+<rss xmlns:slate="http://www.slate.com" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:pheedo="http://www.pheedo.com/namespace/pheedo">
+	<channel>
+		<title>Slate Articles</title>
+		<link>http://www.slate.com/articles.teaser.all.10.rss</link>
+		<description>Stories from Slate</description>
+		<atom:link rel="hub" href="http://www.pheedo.com/api/hub/"/>
+		<atom:link rel="self" href="http://feeds.slate.com/slate" type="application/rss+xml"/>
+		<item>
+			<title>Les Mis&amp;eacute;rables</title>
+			<link>http://feeds.slate.com/click.phdo?i=096e0280bb5837d6eb679ae4673aec38</link>
+			<pheedo:origLink>http://www.slate.com/articles/arts/movies/2012/12/les_mis_rables_reviewed.html</pheedo:origLink>
+			<description>&lt;p&gt;It seems only fair to begin a review of Tom Hooper’s &lt;em&gt;Les Mis&amp;eacute;rables&lt;/em&gt; with the disclaimer that there’s probably no cinematic adaptation of the long-running stage musical that would completely win me over. The show’s music—by Claude-Michel Sch&amp;ouml;nberg, with the original French lyrics rendered in English by Herbert Kretzmer—just isn’t my bag. &lt;em&gt;Les Mis&amp;eacute;rables&lt;/em&gt; is a sung-through pop operetta with plodding four-square rhythms and long stretches of rhymed recitative. The film's libretto accomplishes its expository duty with the joyless efficiency of a French peasant: “There was a time we killed the king/ We tried to change the world too fast/ Now we’ve got another king/ He’s no better than the last.” Every 20 minutes or so, a pop aria with a melody emerges from the sonic sludge, takes shape, then disappears again, soon to be brought back in multiple reprises. The most memorable of these songs (perhaps because it was implanted in our brains a few years ago by &lt;em&gt;&lt;a href="http://www.amazon.com/gp/product/B0026P3G12/ref=as_li_ss_tl?ie=UTF8&amp;amp;tag=slatmaga-20&amp;amp;linkCode=as2&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B0026P3G12"&gt;Britain’s Got Talent phenom Susan Boyle&lt;/a&gt;&lt;/em&gt;) is “I Dreamed a Dream,” a pipes-testing ode to self-pity here sung by Anne Hathaway. (More on that performance, and on this movie’s unusual approach to vocal performance in general, below.)&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:f3eb1dfa8914f1b52501e5b7069f471d:OArTgA8QzVBy5S1Gb63AhqVCiPZ%2FnlbUNmW6g%2FPvw60HPNk5iQLqAgNr0yj0T8NXHMJZfemTQ%2BXcxp0%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:5a48255bb0eb07c3be8e95f3f2a11732:7SMvvHP821xGdM0iAIrHTmOvEa9RAJSaMa7EJQ%2Bs2QCo2U9MndPYfuadiSCSs6DLW7mBhYIvKKYD0mI%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:4925c22f3acf256d0493dcb5d6ad57e5:wv6%2B2Tk3ws7n5WTYOcrJPPUXshmqcBEXrK9cPN%2Bx%2F%2B6w7TUBWitDakWv%2F4gZbfAiuFSPSAxr%2BL1c%2Bg%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:f93c815293d083d0480079d54ed10f54:ZICTrEyhFxNRvlQ5VuleiMLhPpGEjD3ik9lwg8cs16Q1anUcOF75vhJbdtiKiFXQ7xzQ%2BsRYEwZRIQ%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:b3bcd4c04f61bc7c42d1ffd1768f8e5d:h88tV4V0vIDJugmKnaSqS11dnbCFx2W60fM48DyMH58rBTlULHUMXrrv2LoRBHxaooPhHXKXLKgGXvI%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:4be6a9cb237e44eea22582a8f309c278:bVzhgUGoFpwDfBBHXyDicv1H15ofyeKNNus5d%2BfVR%2FJ3y%2BiSt13ZXL%2FQSOFJa48qVGxZmUczYeqxpG4%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=096e0280bb5837d6eb679ae4673aec38&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=096e0280bb5837d6eb679ae4673aec38&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Fri, 28 Dec 2012 01:24:04 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/arts/movies/2012/12/les_mis_rables_reviewed.html</guid>
+			<dc:creator>Dana Stevens</dc:creator>
+			<dc:date>2012-12-28T01:24:04Z</dc:date>
+			<slate:dek>Very few performers can sing vocally demanding, dramatic solos while a movie camera inspects their nostrils.</slate:dek>
+			<slate:section>Arts</slate:section>
+			<slate:menuline>&lt;em&gt;Les Mis&amp;eacute;rables&lt;/em&gt;: Tom Hooper Sticks His Camera Up His Actors’ Noses</slate:menuline>
+			<slate:id>100121227018</slate:id>
+			<slate:topic display_name="movies" path="/etc/tags/slate_topics/movies0">movies</slate:topic>
+			<slate:author display_name="Dana Stevens" path="/etc/tags/authors/dana_stevens" url="http://www.slate.com/authors.dana_stevens.html">Dana Stevens</slate:author>
+			<slate:rubric display_name="Movies" path="/etc/tags/slate_rubric/movies">Movies</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/arts/movies/2012/12/121226_MOV_LesMiserables.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">Laurie Sparham</slate:credit>
+					<slate:description>Helena Bonham Carter, Isabelle Allen, and Sacha Baron Cohen in &lt;em&gt;Les Mis&amp;eacute;rables&lt;/em&gt;</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/arts/movies/2012/12/121226_MOV_LesMiserables.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+		<item>
+			<title>Pokey</title>
+			<link>http://feeds.slate.com/click.phdo?i=63f21306bd3cf95ab9d30c108a047b8e</link>
+			<pheedo:origLink>http://www.slate.com/articles/technology/technology/2012/12/facebook_s_poke_its_snapchat_clone_is_a_bad_sign.html</pheedo:origLink>
+			<description>&lt;p&gt;It’s pretty ballsy to call your sexting app Poke. That was &lt;a href="https://twitter.com/fmanjoo/status/282246545460568065"&gt;my first reaction&lt;/a&gt; to the news last week that Facebook had launched a clone of &lt;a href="http://www.snapchat.com/"&gt;Snapchat&lt;/a&gt;, the trendy smartphone app that lets you send photos and videos that self-destruct after a few seconds. Like most people born before the 1990s, I’m not a Snapchat user, and I’ve long assumed the worst about the app—that combining cameras; young people; and secret, self-destructing messages could only mean trouble.&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:f19284352834e7222226719d8dc90019:1yP79F4%2FTu9CVIWaS5CMSi87tH8k6uHsoLTdp1UkZu7x54zxAGrzIuX7Ba6QPqMW4VMtbUbLBrmfrqw%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:d5c01322f9efa32c63497f8ee265f4b9:D7w7T3X1%2FONK%2B5zpaxEjafaB5QpGpH%2F4d2KygsDtNT2UGxKw2OOSrttsf%2BQm5bn4H02Oio9Nqydfvhc%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:bf76f34bd298391cd2b85f915a6a468a:%2Bo99evxT7B4J9%2B8jYc0Vm2s9UsrBId5aaFBOgXofRlv%2F9P%2BiNItaQJiHFRkt05aUDuRnSNBY5pnkcw%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:47c101f4234d9946f5122206ffd87256:kFBoixubQE%2Fx5TvaIriMmgW1gDbMAbX7BBlLzSlAZoR8U%2FnXu%2BjDLnEfB9SQBB4%2FKGY8xbC9cIw%2Bbg%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:9b24cf1d81296ad0f6a8f2ae9f9a4a7e:gxQXdWI5QRnVRiqIUezMD2G4inLCU47KrngUQqyrdXoGWSNb83e66t0T2Xt6ygUsxqFu4LEUrcgiL5s%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:d4b4f18362b1df93070fb039a8da74c7:hNJJLbZ6AS6XNvdA8xwCT8b7b2nTTsDeKuy6irzDaRjbH9bqLdUN2Y6wmosAgt0WjAf6yKpYGVi%2BPi4%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=63f21306bd3cf95ab9d30c108a047b8e&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=63f21306bd3cf95ab9d30c108a047b8e&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Thu, 27 Dec 2012 22:06:58 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/technology/technology/2012/12/facebook_s_poke_its_snapchat_clone_is_a_bad_sign.html</guid>
+			<dc:creator>Farhad Manjoo</dc:creator>
+			<dc:date>2012-12-27T22:06:58Z</dc:date>
+			<slate:dek>Is its new chat app a sign that Facebook’s falling behind?</slate:dek>
+			<slate:section>Technology</slate:section>
+			<slate:menuline>Facebook’s New App Isn’t &lt;em&gt;Just&lt;/em&gt; for Sexting</slate:menuline>
+			<slate:id>100121227017</slate:id>
+			<slate:topic display_name="facebook" path="/etc/tags/slate_topics/facebook0">facebook</slate:topic>
+			<slate:topic display_name="technology" path="/etc/tags/slate_topics/technology0">technology</slate:topic>
+			<slate:topic display_name="Smartphone apps" path="/etc/tags/slate_topics/smartphone_apps">Smartphone apps</slate:topic>
+			<slate:topic display_name="facebook" path="/etc/tags/slate_topics/facebook0">facebook</slate:topic>
+			<slate:topic display_name="technology" path="/etc/tags/slate_topics/technology0">technology</slate:topic>
+			<slate:topic display_name="Smartphone apps" path="/etc/tags/slate_topics/smartphone_apps">Smartphone apps</slate:topic>
+			<slate:author display_name="Farhad Manjoo" path="/etc/tags/authors/farhad_manjoo" url="http://www.slate.com/authors.farhad_manjoo.html">Farhad Manjoo</slate:author>
+			<slate:rubric display_name="Technology" path="/etc/tags/slate_rubric/technology">Technology</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/technology/technology/2012/12/121227_TECH_FacebookPoke.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">Courtesy Facebook.</slate:credit>
+					<slate:description>Facebook's Poke app</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/technology/technology/2012/12/121227_TECH_FacebookPoke.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+		<item>
+			<title>An NFL Penalty Box</title>
+			<link>http://feeds.slate.com/click.phdo?i=db44a619b79fcbff56d35974fe6658cd</link>
+			<pheedo:origLink>http://www.slate.com/articles/sports/sports_nut/2012/12/nfl_concussions_teams_should_have_to_play_a_man_down_after_a_flagrant_hit.html</pheedo:origLink>
+			<description>&lt;p&gt;Last week, Patrick Chung (of my beloved New England Patriots) laid &lt;a href="http://www.csnne.com/football-new-england-patriots/patriots-talk/Flags-fly-on-Wilfork-Chung-hits?blockID=816777&amp;amp;feedID=10426"&gt;a vicious helmet-to-helmet hit&lt;/a&gt; on Jacksonville Jaguars receiver Cecil Shorts III during the final drive of a tight game. New England took a 15-yard penalty for the dirty hit, but Shorts was done for the day. A few plays later, Chung made the interception that ended the game.&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:98578a86184ea5467874794cd8eb626d:wH0EKcOwuQ6pB%2FPpyN3uKwVRrE715hCUoBZKIHH68L6yjoWxY7M3S2JVsG9u1f56uhPNXwfI%2BnkI2tM%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:bb519c5d3f3c6cf8de53aa189724423a:cnOaKWsKgn%2B5C2lmB5bec6nLp3aMTySTdOO%2F3buKFRtSe8BJWCpvRm7hbJO2BL6va6nUh8FtjP%2Fvm48%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:0e6da0736e3a5a70829a8c18b413100d:SVPgwndXrX3EuKBDTNQZXKFVE3ytXxQr94WP45dBM%2BQTykc2vROqG7eU1TIgh5F40nSbHBMnXApWdQ%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:81a53d055a7fb82bdac33983162645ac:2yXuzbHHDr83zVYrAcyexpROSxdbStcwAuDLdgdk%2BoCWplXFxNUvi6N%2BrhevUUUS6wUCeYhUd9q4Hg%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:fe2bb42f5c4bbd8ae9cbf4bcd0074f7c:rK3TkjZso%2FsjGZnqJDPs9R3AqjXLvJXoxcU1pIBML9GRQdmWXBnmLhDxARnB6Y4f2GwCa2BjmK9qkLI%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:bafe1b190314ac899e45b12b5fb7abf8:G2VB%2B%2FT73I8WWNGqOC9ENcwZCTHONdYvyArhGadJuYdWXkR2VuQs9xbBE9MlBNhu0idR3l2fffiZ7YY%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=db44a619b79fcbff56d35974fe6658cd&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=db44a619b79fcbff56d35974fe6658cd&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Thu, 27 Dec 2012 21:51:01 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/sports/sports_nut/2012/12/nfl_concussions_teams_should_have_to_play_a_man_down_after_a_flagrant_hit.html</guid>
+			<dc:creator>John  Plotz</dc:creator>
+			<dc:date>2012-12-27T21:51:01Z</dc:date>
+			<slate:dek>Make NFL teams play a man down after dirty hits.</slate:dek>
+			<slate:section>Sports</slate:section>
+			<slate:menuline>NFL Teams Should Have To Play a Man Down After a Dirty Hit</slate:menuline>
+			<slate:id>100121227016</slate:id>
+			<slate:topic display_name="football" path="/etc/tags/slate_topics/football0">football</slate:topic>
+			<slate:author display_name="John  Plotz" path="/etc/tags/authors/john_plotz" url="http://www.slate.com/authors.john_plotz.html">John  Plotz</slate:author>
+			<slate:rubric display_name="Sports Nut" path="/etc/tags/slate_rubric/sports_nut">Sports Nut</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/sports/sports_nut/2012/12/nfl_concussions_teams_should_have_to_play_a_man_down_after_a_flagrant_hit/158676676.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">Photo by Grant Halverson/Getty Images.</slate:credit>
+					<slate:description>Perhaps 15 yards isn't enough of a penalty on rough hits</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/sports/sports_nut/2012/12/nfl_concussions_teams_should_have_to_play_a_man_down_after_a_flagrant_hit/158676676.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+		<item>
+			<title><![CDATA[Advertisement:]]></title>
+			<link>http://ads.pheedo.com/click.phdo?s=db44a619b79fcbff56d35974fe6658cd&amp;p=4</link>
+			<guid isPermaLink="false">db44a619b79fcbff56d35974fe6658cd</guid>
+			<description><![CDATA[<a href="http://ads.pheedo.com/click.phdo?s=db44a619b79fcbff56d35974fe6658cd&amp;p=4"><img alt="" style="border: 0;" border="0" src="http://ads.pheedo.com/img.phdo?s=db44a619b79fcbff56d35974fe6658cd&amp;p=4"/></a>]]></description>
+			<pubDate>Thu, 27 Dec 2012 21:51:01 GMT</pubDate>
+		</item>
+		<item>
+			<title>Modern-Day Typhoid Marys</title>
+			<link>http://feeds.slate.com/click.phdo?i=19d4c8c776196a0f0bd9d5f0ecd7ee39</link>
+			<pheedo:origLink>http://www.slate.com/articles/health_and_science/pandemics/2012/12/superspreaders_of_disease_sars_and_other_pandemics_are_spread_by_modern.html</pheedo:origLink>
+			<description>&lt;p&gt;If germs hung a recruiting sign for their hosts, it would probably be a version of the World War I poster of Uncle Sam pointing: We want YOU to help us reproduce. All hosts were equally eligible for service, infectious-disease researchers thought. Assuming the recruits weren’t immune due to a prior infection or vaccination, anyone should have roughly the same potential to spread a disease’s pathogens. But then came severe acute respiratory syndrome, or SARS.&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:b07f815b9cc1a721a6321c6b8685bbdc:kdRo15pxeT%2BgU4xBvfyrpOZJVNtvKeTHGght8g2v%2FgVqyxDtko9%2BjJEhBQWZKBJgALCBltBRdEEvVhY%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:9e115b97791a08223d6bcb0c8ab47040:mA2b90AF%2BcFxWP%2FzJi%2FhUv1av8xZBmtVyep1bm7IhmAoyb7YYmX2GU7ynwlq%2FyNSbYaNpKQ1QXWCJas%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:a932a69d56ef0bf3810523c726324d1f:z5yxw769V56n%2B7cmG80nSm4QHzNwyS6bG8%2FDb6IDMhrgQr%2BU8A8O%2FerDYa818WFzOxkWxIeq%2F4mxjg%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:bfbeabdbc8ec4b519eda39f46c2775af:nYw2J2ugOH0PSft%2BoOz519OQ35nzG7nyADVN3CquTfsu%2FPIKRuUaE0sCs5AEhcajMfhD5oJ1m%2Fj6SA%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:52ba8152258ce55b8a67ce99ffbf1f57:%2BHxiAk%2FRIK7JvvcDZcitPzsIdym3l%2FoXop5%2FZcuNBQojBJpYr%2BOVQdGnlNuRLT7voifIq%2BsxPC3AM6Q%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:80a1622a268b67c5126d3f67db8faea8:hfZQvPV0Pd73OcZ9K5khSG09r3jFLnWJWX%2BuU9%2BWT7iqAuVZwxPOfS4h5ozrkBj54MnRmXr%2F5dAQ8Es%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=19d4c8c776196a0f0bd9d5f0ecd7ee39&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=19d4c8c776196a0f0bd9d5f0ecd7ee39&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Thu, 27 Dec 2012 20:35:00 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/health_and_science/pandemics/2012/12/superspreaders_of_disease_sars_and_other_pandemics_are_spread_by_modern.html</guid>
+			<dc:creator>Carrie Arnold</dc:creator>
+			<dc:date>2012-12-27T20:35:00Z</dc:date>
+			<slate:dek>Superspreaders can turn a minor outbreak into a pandemic.</slate:dek>
+			<slate:section>Health and Science</slate:section>
+			<slate:menuline>What Turns a Disease Into a Pandemic? Beware the Superspreaders.</slate:menuline>
+			<slate:id>100121227015</slate:id>
+			<slate:topic display_name="disease" path="/etc/tags/slate_topics/disease">disease</slate:topic>
+			<slate:topic display_name="big questions" path="/etc/tags/slate_topics/big_questions">big questions</slate:topic>
+			<slate:topic display_name="disease" path="/etc/tags/slate_topics/disease">disease</slate:topic>
+			<slate:topic display_name="big questions" path="/etc/tags/slate_topics/big_questions">big questions</slate:topic>
+			<slate:author display_name="Carrie Arnold" path="/etc/tags/authors/carrie_arnold" url="http://www.slate.com/authors.carrie_arnold.html">Carrie Arnold</slate:author>
+			<slate:rubric display_name="Pandemics" path="/etc/tags/slate_rubric/pandemics">Pandemics</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/health_and_science/pandemics/2012/12/121227_PAND_Superspreaders.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">Photo by J.P. Moczulski/AFP/Getty Images.</slate:credit>
+					<slate:description>Patients put on face masks as they leave a SARS clinic in Toronto in 2003</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/health_and_science/pandemics/2012/12/121227_PAND_Superspreaders.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+		<item>
+			<title>2012: The Year in TV Moments</title>
+			<link>http://feeds.slate.com/click.phdo?i=dc68a526b6ed521489b5e350e9c2ca67</link>
+			<pheedo:origLink>http://www.slate.com/articles/arts/television/features/2012/best_tv_2012/best_tv_2012_flag_football_and_tailgating_on_the_league.html</pheedo:origLink>
+			<description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;FX, Nov. 15, 10:52 p.m.&lt;br /&gt; &lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:fe4cad8fb0a981ed240de71551f421a5:1u1IX0tfrk3grhIaAfYpFnVqg13dpnzhQ5tjJW37NX2qoNNY86pmEPUHsJZsJO0gpSr7Xh64PZhF4tk%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:c4c9e7e37f8072b32841ce0d37a10de2:i5pkl5Khrz6fO4rRRcJsOyv4Y4zn1eh2Vlpbofm78BmYbZBtJEwGE9LjlW5OJz8UXJPz0c%2FuaeGC2U8%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:8a439d3818a101e9c228456c81a1eba1:kzGKYo9vVCoGM9y%2B49BFgqVeZR7ag6Da4GimaKOSpFGRjmn0Vn%2BIBGkTg70kg4VQS62AureWZmiUmg%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:1a60b5a34505abae5a7d743d66560905:JXWa4SBOdjMmOSnhU6ihJsxyMGLlCYU%2Fe0gEhYAmRwT9tDfsZB4HZvVS778JPFB0y%2FJQafmzbvY%2FPg%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:81c567831a7907457e9802e92c783f21:cKZ64hVQ2NP8dT4WPlchU9KXWLFkujXshDPM6SYsuKWwdmsDcXDHyXvh5SofGC5JcsSm6w3a%2Fwm%2BiwI%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:9c8017b78847f891d3ccf013381862ce:8dNeC5R9lVmm06wF4Sw1ibf%2FrD7JZRPyhwbzcgzu4sPxSPH5ozAVLvfod%2FccI6IBzHkul8%2B2Rs8C16g%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=dc68a526b6ed521489b5e350e9c2ca67&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=dc68a526b6ed521489b5e350e9c2ca67&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Thu, 27 Dec 2012 20:00:00 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/arts/television/features/2012/best_tv_2012/best_tv_2012_flag_football_and_tailgating_on_the_league.html</guid>
+			<dc:creator>Rachael Larimore</dc:creator>
+			<dc:date>2012-12-27T20:00:00Z</dc:date>
+			<slate:dek>Parking-lot flag football in &lt;em&gt;The League&lt;/em&gt;.</slate:dek>
+			<slate:section>Arts</slate:section>
+			<slate:menuline>The Year’s Funniest Flag-Football Clothesline</slate:menuline>
+			<slate:id>100121227014</slate:id>
+			<slate:topic display_name="comedy" path="/etc/tags/slate_topics/comedy0">comedy</slate:topic>
+			<slate:topic display_name="tv" path="/etc/tags/slate_topics/tv0">tv</slate:topic>
+			<slate:topic display_name="sports" path="/etc/tags/slate_topics/sports">sports</slate:topic>
+			<slate:topic display_name="best of 2012" path="/etc/tags/slate_topics/best_of_2012">best of 2012</slate:topic>
+			<slate:author display_name="Rachael Larimore" path="/etc/tags/authors/rachael_larimore" url="http://www.slate.com/authors.rachael_larimore.html">Rachael Larimore</slate:author>
+			<slate:rubric display_name="Television" path="/etc/tags/slate_rubric/television">Television</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/double_x/doublex/2012/10/121019_DX_TheLeague.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">Photo by Michael Becker/FX.</slate:credit>
+					<slate:description>Katie Aselton as Jenny, Stephen Rannazzisi as Kevin.</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/double_x/doublex/2012/10/121019_DX_TheLeague.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+		<item>
+			<title>The Departed</title>
+			<link>http://feeds.slate.com/click.phdo?i=9fc467e9b6ffa4aefdc2b717fed808c0</link>
+			<pheedo:origLink>http://www.slate.com/articles/news_and_politics/politics/2012/12/outgoing_congressmen_steven_latourette_brad_miller_and_hansen_clarke_explain.html</pheedo:origLink>
+			<description>&lt;p&gt;The next House of Representatives will contain 233 Republicans, 200 Democrats, and 80 freshmen. Redistricting, primaries, and retirements have culled a few centuries’ worth of political experience. So in November and December, I talked to a few representative soon-to-be-former congressmen about what it’s been like to serve in an institution 85 percent of Americans can’t stand. Excerpts of their thoughts follow.&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:334a3e569a196284d32b6d247ef92b9d:ajU1XF2tlnPjVuVx6DO2J8xirtKva0T2yimqtTom16IDY4vPmNJIUNLKBUmgF%2FnPAyElSwzXnQIy1fE%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:b93ada6287eefd52628390d3c3fbf882:g8%2FPNLaTqeapxavo2fh5HArjpseI0OsyXhylooMd%2B2TWuQgYX%2B1eT3%2FE5m8BDspDsYwc3yIMoijY34Y%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:a1bcc40d631c11428ebb40f48bc2068c:KrzXAxHTggiWjRp04H3g19C72j5X00wChJr%2FIpC5HTDle3yTXTflxM%2Bljn7ZEFaxr3CsjvffBhA1hg%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:abcc7bd8124d25656b57a534b93f415b:8uFh%2FkGgez5RIrGi6j0tzSXcLHQuFXglZLR6uLrWrwFpC5yMd8VwOET6%2Flt32V4M6WDtG6Tu9VEwww%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:daaaaf45f860564390d2f4528ca12fe6:RgW66htIy4TSWdTBD5I%2B2G0jGYF1X1hHwtNu3d%2Flw0GVNQg2yOyr7lHd0rzXsHxIAu3gInVTiUW1PH0%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:d24c33fc9d5d9309b18c86c4a2fab327:QeiyQKqpf%2FvL8%2BzCGzSb4UMaensRbOEACY2Qw7jz6TYdkW0pNghfMe8l%2BDyl13ztgi2b8zwf0cbhLyE%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=9fc467e9b6ffa4aefdc2b717fed808c0&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=9fc467e9b6ffa4aefdc2b717fed808c0&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Thu, 27 Dec 2012 19:16:33 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/news_and_politics/politics/2012/12/outgoing_congressmen_steven_latourette_brad_miller_and_hansen_clarke_explain.html</guid>
+			<dc:creator>David Weigel</dc:creator>
+			<dc:date>2012-12-27T19:16:33Z</dc:date>
+			<slate:dek>Three soon-to-be-former congressmen talk about how bad things have gotten.</slate:dek>
+			<slate:section>News and Politics</slate:section>
+			<slate:menuline>Why the House of Representatives Is Even Worse Than You Think</slate:menuline>
+			<slate:id>100121227013</slate:id>
+			<slate:topic display_name="republicans" path="/etc/tags/slate_topics/republicans">republicans</slate:topic>
+			<slate:topic display_name="politics" path="/etc/tags/slate_topics/politics0">politics</slate:topic>
+			<slate:topic display_name="democrats" path="/etc/tags/slate_topics/democrats">democrats</slate:topic>
+			<slate:topic display_name="republicans" path="/etc/tags/slate_topics/republicans">republicans</slate:topic>
+			<slate:topic display_name="politics" path="/etc/tags/slate_topics/politics0">politics</slate:topic>
+			<slate:topic display_name="democrats" path="/etc/tags/slate_topics/democrats">democrats</slate:topic>
+			<slate:author display_name="David Weigel" path="/etc/tags/authors/david_weigel" url="http://www.slate.com/authors.david_weigel.html">David Weigel</slate:author>
+			<slate:rubric display_name="Politics" path="/etc/tags/slate_rubric/politics">Politics</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/news_and_politics/politics/2012/12/121227_POL_TheDeparted.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">Photo by Paul Morigi/Getty Images for Ovation; Photo by Andy Kropa/Getty Images; MANDEL NGAN/AFP/Getty Images</slate:credit>
+					<slate:description>Rep. Steven C. LaTourette (R-Ohio), Rep. Brad Miller (D-N.C.), and Rep. Hansen Clarke (D-Mich.)</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/news_and_politics/politics/2012/12/121227_POL_TheDeparted.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+		<item>
+			<title>The Top Stocks of 2012</title>
+			<link>http://feeds.slate.com/click.phdo?i=c85f1ede07774d82b6d628548aed4ef5</link>
+			<pheedo:origLink>http://www.slate.com/articles/business/moneybox/2012/12/best_stocks_of_2012_which_s_p_500_companies_saw_the_biggest_growth.html</pheedo:origLink>
+			<description>&lt;p&gt;Last year’s profile of the &lt;a href="http://www.slate.com/articles/business/moneybox/2011/12/visa_mastercard_t_j_maxx_the_top_stocks_of_2011_.html"&gt;best-performing stocks in the S&amp;amp;P 500 was a depressing read&lt;/a&gt; full of mining concerns, discount stores, and credit-card companies trading up on regulatory favors. This year’s list is a more optimistic, more diverse collection, not least because the market as a whole did much better. Cabot Oil &amp;amp; Gas topped last year’s list at 107 percent growth, which would only be good for fourth place this time around. Visa’s 43.19 percent growth last year wouldn’t have made the top 40 this time around. Corporate America, in other words, had a much stronger run in 2012. These are the companies you wish you’d bought last Christmas:&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:6883636974d668b9c3e41d4fc71dff3b:32DtcEpOz0Yg2dsoeohZcxMxG13xZNSpMomOxPikk0gU9iz86oJcLUqBJwM1MYfyZmcw9b%2Bhz456JoM%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:d202a38ba9e9b58aa97a3cd03cab440e:Nrwe5JCqCe0tRl58iFR9YJgmEwKP0FkNFFA%2BqXBZ8rGWtnU0979pRFR2QAZXo2VJBsH5bHdCTxM5CaU%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:a38e513d982121ae325b62b9a7519e1c:RD5RWMZWmLyZa6aQkEQBID2QoAeNDlEt%2FHV6Oqf1245bQ9cwy3d0bTsQQJSz%2FL9Fu38TOWWbaOw7iQ%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:bfdb9cf5841d56950a205b52a6943cfa:D7MYUj024ROV4JA0VcEZfVufq98FrkEkfUYapsPBotzXj55VTSZ9tDtvt%2BgojPL1w6XLpzK4r3Nvfw%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:8ce424d47550cfcf2248e4222ca2ab2a:GPAGx3zXAP2DgLO9ctUmiGbsanW8K%2FNfTurqfW6XwFICm0upzckSOn5fl1kecRBLFBhQ3tfGBU0C%2Fmk%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:e3963983312b7056ee2d14b2a4d33fd6:8Bq%2BSbKAloOP4Q9EVaABtPXRhAm6GVcnsZ9mIUPZcPDcyJCMO4NZmDadmQQrFOmzc3tuq34AWagCgrw%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=c85f1ede07774d82b6d628548aed4ef5&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=c85f1ede07774d82b6d628548aed4ef5&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Thu, 27 Dec 2012 17:37:40 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/business/moneybox/2012/12/best_stocks_of_2012_which_s_p_500_companies_saw_the_biggest_growth.html</guid>
+			<dc:creator>Matthew Yglesias</dc:creator>
+			<dc:date>2012-12-27T17:37:40Z</dc:date>
+			<slate:dek>The year’s big winners show signs of a rebounding economy.</slate:dek>
+			<slate:section>Business</slate:section>
+			<slate:menuline>What Were the Best-Performing Stocks of 2012?</slate:menuline>
+			<slate:id>100121227012</slate:id>
+			<slate:topic display_name="stock market" path="/etc/tags/slate_topics/stock_market">stock market</slate:topic>
+			<slate:topic display_name="best of 2012" path="/etc/tags/slate_topics/best_of_2012">best of 2012</slate:topic>
+			<slate:topic display_name="stock market" path="/etc/tags/slate_topics/stock_market">stock market</slate:topic>
+			<slate:topic display_name="best of 2012" path="/etc/tags/slate_topics/best_of_2012">best of 2012</slate:topic>
+			<slate:author display_name="Matthew Yglesias" path="/etc/tags/authors/matthew_yglesias" url="http://www.slate.com/authors.matthew_yglesias.html">Matthew Yglesias</slate:author>
+			<slate:rubric display_name="Moneybox" path="/etc/tags/slate_rubric/moneybox">Moneybox</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/business/moneybox/2012/12/121227_MBOX_BestStocks2012.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">Photo by Joe Raedle/Getty Images.</slate:credit>
+					<slate:description>Two homebuilding companies were among the top-performing stocks of 2012</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/business/moneybox/2012/12/121227_MBOX_BestStocks2012.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+		<item>
+			<title>Why Is Cashmere More Expensive Than Other Kinds of Wool?</title>
+			<link>http://feeds.slate.com/click.phdo?i=732aef3b0b9dd571c0d3f890b8725b9a</link>
+			<pheedo:origLink>http://www.slate.com/articles/life/luxury_explainer/2012/12/cashmere_why_is_it_so_soft_why_is_it_so_expensive.html</pheedo:origLink>
+			<description>&lt;p&gt;Winter is upon us, which means that cashmere sweaters—a staple of holiday gift-giving and cold-weather fashion—have returned to store shelves. Those planning to purchase a garment boasting the label “100 percent cashmere” can expect a hefty price tag; at Banana Republic, &lt;a href="http://bananarepublic.gap.com/browse/product.do?cid=65560&amp;amp;vid=1&amp;amp;pid=327047002"&gt;one cardigan&lt;/a&gt; is &lt;a href="http://bananarepublic.gap.com/browse/product.do?cid=5032&amp;amp;pid=233993&amp;amp;vid=1&amp;amp;scid=233959032"&gt;priced at $198&lt;/a&gt;; elsewhere, you can find cashmere sweaters for &lt;a href="https://www.amazon.com/dp/B008OPLJD0/ref=as_li_ss_til?tag=slatmaga-20&amp;amp;camp=0&amp;amp;creative=0&amp;amp;linkCode=as4&amp;amp;creativeASIN=B008OPLJD0&amp;amp;adid=1PFHDQFK6F7GFPHJMQDG&amp;amp;"&gt;upward of $500&lt;/a&gt;. Why is cashmere so much more expensive than other kinds of wool?&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:56173417cd3241d5f7484fc257b5f355:Oo7UZXGQk1KFvTTlHyjN85ZXYMFak8Hx9N16%2F8rXjCUKSBiZVOstVT%2BrUcQQmrNaiINumMJnc6CuBlc%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:75bb88832d3b0f6145ebfa101888247b:HmnZIbJuQ3BzHp%2Bk3I1nRqaWZrvt3rxuYhOpetosJJMBpDIDh6iqqPJhp76jrjoOQufJQRVvH1A9gs4%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:304ba9afc956e78f7f065deadee992fd:AC8K29ZlHaE5hf3gvCssWKC%2BdUlpRjxWWi5Wo1iYNYXA7cb9ioaz37WJn1BCr%2B5QvjummubtfHvp5Q%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:a288bfd3e220fc580cef14a239d0036f:K0CI6wOJzqA6JTmzV4OF6Sx%2FGSdLi6GGbqpfJg9zv1YVQROzZshrLbtsxH1lP%2Bq%2FOcNP04%2BPIT9efw%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:0ae390490acd901b737899ce1df2bb94:9kk7kU5%2Fz7GbnrVlFVY3t7zJ40PAOUY7jWeQuQ%2BF8W1ugZo0CnXeAKUYPKfbSKmGuzCwbvUEzORXY6U%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:e759a431ce1da710ff6aa7127f069354:eZRWG5bfW7oevQAckKcaujD7jyKi6QTw3ih76KyBBiea%2FbMxsVA59GL1eTx6WFWmgWP07X5ZwTyPJJU%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=732aef3b0b9dd571c0d3f890b8725b9a&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=732aef3b0b9dd571c0d3f890b8725b9a&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Thu, 27 Dec 2012 17:33:51 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/life/luxury_explainer/2012/12/cashmere_why_is_it_so_soft_why_is_it_so_expensive.html</guid>
+			<dc:creator>Aisha  Harris</dc:creator>
+			<dc:date>2012-12-27T17:33:51Z</dc:date>
+			<slate:dek>It comes down to the goats.</slate:dek>
+			<slate:section>Life</slate:section>
+			<slate:menuline>Why Is Cashmere More Expensive Than Other Kinds of Wool?</slate:menuline>
+			<slate:id>100121227011</slate:id>
+			<slate:topic display_name="fashion" path="/etc/tags/slate_topics/fashion0">fashion</slate:topic>
+			<slate:author display_name="Aisha  Harris" path="/etc/tags/authors/aisha_harris" url="http://www.slate.com/authors.aisha_harris.html">Aisha  Harris</slate:author>
+			<slate:rubric display_name="Luxury Explainer" path="/etc/tags/slate_rubric/luxury_explainer">Luxury Explainer</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/life/luxury_explainer/2012/12/121226_LUXE_CahsmereGoats.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">Photograph by iStockphoto.</slate:credit>
+					<slate:description>Cashmere comes from the soft undercoat of goats bred to produce the wool</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/life/luxury_explainer/2012/12/121226_LUXE_CahsmereGoats.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+		<item>
+			<title>Should You Go To Grad School?</title>
+			<link>http://feeds.slate.com/click.phdo?i=5bd9eaffa709f6dd2efb44d17a19ac67</link>
+			<pheedo:origLink>http://www.slate.com/articles/life/the_spectator/2012/12/should_i_go_to_grad_school_ron_rosenbaum_explains.html</pheedo:origLink>
+			<description>&lt;p&gt;Apparently, people have been talking. Recently I received an email from an editor at &lt;em&gt;Bookforum&lt;/em&gt; who was asking a number of writers to contribute essays to a book to be called &lt;em&gt;Should I Go to Grad School?&lt;/em&gt; for an institution called the &lt;a href="http://www.platformed.org/"&gt;Platform for Pedagogy&lt;/a&gt;.&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:fbb58106245e345935c9ee885086274a:u9goOtDIsE27F0UpPWHGv1G7GPhCIhTTtydm4RxJCX%2BaftFkdArCPodK%2Fa0Bww7b54T1aSf6lB27NEA%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:f3cab5df0a57fa1deed18b13ff3f240a:mV6HkA8VeESxDMydHw8%2Bp7PbTxm%2BK0CLTadd5%2FM9HMJyYB2%2BllR6VxT9cU%2FnR15szeTCkGFlbEDin5I%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:4621ab6e14476a9cc51703d915167066:3ElwZbEUkTsHynk7Ks4OvP0ezea8VCaojU7%2F2sd3dZF06m0svQ8vnAXYh8Wlfn%2BrW3dNINkmlOnLJA%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:eb46aa2bcc573bc2275dd554cce73266:vTf3PPmEQS9L9QoqE5tN%2FRY2JxjYaEIY7UZx5XFS3MAQWXmPAF6EWla09DRUMWW2sxeivah4JsqT0w%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:7b6de6ccfd50dcf16534b5aca4c1d518:3ZW5UJpsTG3NdekW6WuEplMLJw562zOnPWNipYj7jIaHPxwNTq6WIeucHvKUe9Sdwjlp3cjL2%2B4Ff1w%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:297ec03bec45c03145efae6b0d54208d:0osFlNpbyukKGAvPf557NgO2d0XnezfmehmjzHXo7ift%2FnSBLLsQzWzWdetoEmKt21rTPJS%2Bp8rrFkY%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=5bd9eaffa709f6dd2efb44d17a19ac67&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=5bd9eaffa709f6dd2efb44d17a19ac67&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Thu, 27 Dec 2012 17:16:16 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/life/the_spectator/2012/12/should_i_go_to_grad_school_ron_rosenbaum_explains.html</guid>
+			<dc:creator>Ron Rosenbaum</dc:creator>
+			<dc:date>2012-12-27T17:16:16Z</dc:date>
+			<slate:dek>My story.</slate:dek>
+			<slate:section>Life</slate:section>
+			<slate:menuline>Ron Rosenbaum Explains Why You Shouldn’t Go to Grad School</slate:menuline>
+			<slate:id>100121227010</slate:id>
+			<slate:topic display_name="education" path="/etc/tags/slate_topics/education">education</slate:topic>
+			<slate:author display_name="Ron Rosenbaum" path="/etc/tags/authors/ron_rosenbaum" url="http://www.slate.com/authors.ron_rosenbaum.html">Ron Rosenbaum</slate:author>
+			<slate:rubric display_name="The Spectator" path="/etc/tags/slate_rubric/the_spectator">The Spectator</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/life/the_spectator/2012/121126_SPEC_gradschool.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">Photograph by Otmar Winterleitner/iStockPhoto.</slate:credit>
+					<slate:description>Please don't waste your life this way</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/life/the_spectator/2012/121126_SPEC_gradschool.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+		<item>
+			<title>2012: The Year in TV Moments</title>
+			<link>http://feeds.slate.com/click.phdo?i=3f08eba4e8d044dc63c8e6c9fbbff688</link>
+			<pheedo:origLink>http://www.slate.com/articles/arts/television/features/2012/best_tv_2012/best_tv_2012_assisted_suicide_arrest_on_frontline.html</pheedo:origLink>
+			<description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;PBS, November 13, 10:30 p.m.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:add4345b6ea28616174fe3891ff9e508:eRJkFDfLgP4Na6fqjVYw22hZDXed1lCkiVNulbXQVWEU1A2Oc%2F2Jgd88hIKo9BG9mJ4GhJPt%2F20bdRA%3D'&gt;&lt;img border='0' title='Add to Facebook' alt='Add to Facebook' src='http://images.pheedo.com/images/mm/facebook.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:dcdc03e2b9a7f8f2321bfd691634a32e:fciz%2FlQ%2FV98QK8428Ist4eUPYw4x7HIAVYhWoXYKZXT5Sr33nGENGY3BKfcAUy19gjBNijfQYkaTpiY%3D'&gt;&lt;img border='0' title='Add to Twitter' alt='Add to Twitter' src='http://images.pheedo.com/images/mm/twitter.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:1f478612574d0696ae2eb22d3498e152:jYf8qVoHnjdF6KI449nXf%2FtivQxfFKwI4t4xQBSLX712B7YuuGlyJ9D6wnhueI6iKYyLBnyl7E3nHQ%3D%3D'&gt;&lt;img border='0' title='Add to digg' alt='Add to digg' src='http://images.pheedo.com/images/mm/digg.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:1860f26ee13e45e8eb35d864cdd3dc86:Hg%2FfDEcmK7%2Fdfv%2FCayJR8Cih%2BuwCJrm5d8L7GH1eps1F6JAjfJXEoLJa4lC%2FCjQJeVbG9IscOW5DuQ%3D%3D'&gt;&lt;img border='0' title='Add to Reddit' alt='Add to Reddit' src='http://images.pheedo.com/images/mm/reddit.png'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:f7befa01503ca9fee68f14d62311c1b8:iTJzW79ucPrTUdTtBaava4MJjZq%2F7sNw9ctL%2Fj7izJ04Hr7w5JILM0jAialpHNoaSBQ5HEP5ggmMod0%3D'&gt;&lt;img border='0' title='Add to StumbleUpon' alt='Add to StumbleUpon' src='http://images.pheedo.com/images/mm/stumbleit.gif'/&gt;&lt;/a&gt;
+  &lt;a style='font-size: 10px; color: maroon;' href='http://www.pheedcontent.com/hostedMorselClick.php?hfmm=v3:47b167d237140e538ae8327e6bab909d:9n%2BfIs9SQ641i9PuxS1T9Z5KWAaOtG2FKITwWCDGbOxAhoq6zhAv%2FANCMo0Ce8IxorCwbOUNW1sbphc%3D'&gt;&lt;img border='0' title='Email this Article' alt='Email this Article' src='http://images.pheedo.com/images/mm/emailthisHF.gif'/&gt;&lt;/a&gt;
+&lt;br clear=&quot;both&quot; style=&quot;clear: both;&quot;/&gt;
+&lt;a href=&quot;http://ads.pheedo.com/click.phdo?s=3f08eba4e8d044dc63c8e6c9fbbff688&amp;p=1&quot;&gt;&lt;img alt=&quot;&quot; style=&quot;border: 0;&quot; border=&quot;0&quot; src=&quot;http://ads.pheedo.com/img.phdo?s=3f08eba4e8d044dc63c8e6c9fbbff688&amp;p=1&quot;/&gt;&lt;/a&gt;
+&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://tags.bluekai.com/site/5148&quot;/&gt;&lt;img alt=&quot;&quot; height=&quot;0&quot; width=&quot;0&quot; border=&quot;0&quot; style=&quot;display:none&quot; src=&quot;http://insight.adsrvr.org/track/evnt/?ct=0:ef7jeah&amp;adv=wouzn4v&amp;fmt=3&quot;/&gt;</description>
+			<pubDate>Thu, 27 Dec 2012 17:15:00 GMT</pubDate>
+			<guid isPermaLink="false">http://www.slate.com/articles/arts/television/features/2012/best_tv_2012/best_tv_2012_assisted_suicide_arrest_on_frontline.html</guid>
+			<dc:creator>Torie Bosch</dc:creator>
+			<dc:date>2012-12-27T17:15:00Z</dc:date>
+			<slate:dek>&lt;em&gt;Frontline&lt;/em&gt;: A suicide sting.</slate:dek>
+			<slate:section>Arts</slate:section>
+			<slate:menuline>A Suicide Sting on &lt;em&gt;Frontline&lt;/em&gt;</slate:menuline>
+			<slate:id>100121227009</slate:id>
+			<slate:topic display_name="television" path="/etc/tags/slate_topics/television0">television</slate:topic>
+			<slate:topic display_name="documentaries" path="/etc/tags/slate_topics/documentaries0">documentaries</slate:topic>
+			<slate:topic display_name="suicide" path="/etc/tags/slate_topics/suicide0">suicide</slate:topic>
+			<slate:topic display_name="TV" path="/etc/tags/slate_topics/tv">TV</slate:topic>
+			<slate:author display_name="Torie Bosch" path="/etc/tags/authors/torie_bosch" url="http://www.slate.com/authors.torie_bosch.html">Torie Bosch</slate:author>
+			<slate:rubric display_name="Television" path="/etc/tags/slate_rubric/television">Television</slate:rubric>
+			<media:group>
+				<media:content medium="image" height="346" width="568" url="http://www.slate.com/content/dam/slate/articles/arts/television/2012/12/121211_TV_FrontlineSuicide.jpg.CROP.rectangle-large.jpg">
+					<slate:credit role="producer" scheme="urn:ebu">PBS.</slate:credit>
+					<slate:description>Still from The Suicide Plan.</slate:description>
+					<media:thumbnail url="http://www.slate.com/content/dam/slate/articles/arts/television/2012/12/121211_TV_FrontlineSuicide.jpg.CROP.thumbnail-small.jpg" width="274" height="238"/>
+				</media:content>
+			</media:group>
+		</item>
+	</channel>
+</rss>

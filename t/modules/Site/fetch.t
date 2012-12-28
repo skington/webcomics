@@ -14,20 +14,37 @@ use_ok('WWW::Webcomic::Site');
 
 my %site_details = site_details();
 
-# Make sure we have a home page for each site.
+# Make sure we have a cache directory. This directory shouldn't normally be
+# cleared out, but let's be ready for it being empty and re-populating it.
 my $cache_directory = lib::abs::path('./cache');
 _directory_is_safe($cache_directory);
+
+# Check each site for basics.
 for my $site_name (sort keys %site_details) {
+
+    # Create a Site object. Explcitly pass a Page object so we can
+    # specify a cache.
     my $site = WWW::Webcomic::Site->new(
         home_page => WWW::Webcomic::Page->new(
-            url => $site_details{$site_name}{url},
+            url             => $site_details{$site_name}{url},
             cache_directory => $cache_directory
         )
     );
+
+    # Make sure the home page is fine.
     ok($site, "We have a Site object for $site_name");
     my $page_name = "${site_name}'s home page";
     ok($site->home_page,           "We have a Page object for $page_name");
     ok($site->home_page->contents, "We have page contents for $page_name");
+
+    # Find the raw feeds. Some of these will be unhelpful, so we won't
+    # necessarily keep them.
+    my @feed_pages = $site->feed_pages;
+    if (exists $site_details{$site_name}{feeds}) {
+        ### TODO
+    } else {
+        is(scalar @feed_pages, 0, "$site_name has no feeds as expected");
+    }
 }
 
 # And we're done.

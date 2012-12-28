@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2enclosuresfull.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0" xml:base="http://www.eviscerati.org/rss/EVOrgMain">
+  <channel>
+    <title>Eviscerati.Org: All Hail the Eviscerati</title>
+    <link>http://www.eviscerati.org/rss/EVOrgMain</link>
+    <description />
+    <language>en</language>
+          <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/EvisceratiOrgMain" /><feedburner:info uri="evisceratiorgmain" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
+    <title>That's Still Pretty Awesome</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/46O4il9qYAk/Thats-Still-Pretty-Awesome</link>
+    <description>&lt;div class="field field-name-field-comic-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/comics/hd/hd20121224.png" width="600" height="1009" alt="Help Desk, by Christopher B. Wright" title="That&amp;#039;s Still Pretty Awesome" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/46O4il9qYAk" height="1" width="1"/&gt;</description>
+     <pubDate>Mon, 24 Dec 2012 15:57:57 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3028 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome</feedburner:origLink></item>
+  <item>
+    <title>Usability</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/ovfOzCEuF1w/Usability</link>
+    <description>&lt;div class="field field-name-field-comic-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/comics/hd/hd20121220.png" width="600" height="622" alt="Help Desk, by Christopher B. Wright" title="Usability" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/ovfOzCEuF1w" height="1" width="1"/&gt;</description>
+     <pubDate>Thu, 20 Dec 2012 08:09:14 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3027 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/comics/comic/hd/2012/12/Usability</feedburner:origLink></item>
+  <item>
+    <title>Forums Are Offline</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/vYg2xMk7LYU/Forums-Are-Offline</link>
+    <description>&lt;div class="field field-name-field-site-news-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/default_images/evorg_newsbanner_1.png" alt="" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="field field-name-body field-type-text-with-summary field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even" property="content:encoded"&gt;&lt;p&gt;In the continuing drama of "as soon as you fix one thing, two more things break" I've had to disable the forums. Today I started getting alerts that there were php errors in the forums, and reports of infinite loops... I went to check it out and some of the forum subsections were... well, not working right.&lt;/p&gt;
+&lt;p&gt;Fortunately they haven't been used much. I say "fortunately" because it looks like the best way to fix the problem is "nuke and rebuild".&lt;/p&gt;
+&lt;p&gt;Anyway, forums are offline until I online them again.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/vYg2xMk7LYU" height="1" width="1"/&gt;</description>
+     <pubDate>Wed, 19 Dec 2012 18:25:02 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3026 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/site-news/2012/12/Forums-Are-Offline</feedburner:origLink></item>
+  <item>
+    <title>Story Arc Viewer Broken (Now Fixed!)</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/ywRREeJFlvU/Story-Arc-Viewer-Broken</link>
+    <description>&lt;div class="field field-name-field-site-news-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/default_images/evorg_newsbanner_1.png" alt="" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="field field-name-body field-type-text-with-summary field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even" property="content:encoded"&gt;&lt;p&gt;Just a quick FYI... for those of you who use the story arc viewer (i.e., for those of you who click the "Webcomic Storyline" link at the top of each comic in order to view the entire series of comics associated with the storyline) something is broken. You can only view the first five comics of a story arc... the pagers don't work.&lt;/p&gt;
+&lt;p&gt;I'm trying to figure out why. It's exciting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt;: I found out why! It's fixed.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/ywRREeJFlvU" height="1" width="1"/&gt;</description>
+     <pubDate>Tue, 18 Dec 2012 16:28:52 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3025 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/site-news/2012/12/Story-Arc-Viewer-Broken</feedburner:origLink></item>
+  <item>
+    <title>Finally the links are back!</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/tZw5KdfAwjI/Finally-links-are-back</link>
+    <description>&lt;div class="field field-name-field-site-news-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/default_images/evorg_newsbanner_1.png" alt="" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="field field-name-body field-type-text-with-summary field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even" property="content:encoded"&gt;&lt;p&gt;The move from Drupal 6 to Drupal 7 was, if you will recall, a traumatic process that literally took years to figure out. Even after the move was complete (which has produced a number of benefits in site stability and responsiveness, though this is still a fairly sluggish site) there were some key features that were missing. For example, when you went over to the main comics page you would see comics without any navigation links. This was, understandibly, not what people prefer to see.&lt;/p&gt;
+&lt;p&gt;It's taken me most of the rest of year to figure out how to put those damn links back on the page, but I did it. It's a kludge (a pretty brilliant one in my not so humble opinion) but I did it. In the process I discovered a few permissions settings that prevented those of you who were browsing anonymously from seeing the complete page. That's fixed, too.&lt;/p&gt;
+&lt;p&gt;At this point, I still haven't figured out how to put the navigation links above and below the comic. I know that's what most of you prefer to see, and I'm working on it.&lt;/p&gt;
+&lt;p&gt;I'm also playing around with Google Web Fonts. Let me know if you find them distracting, easier to read, if you would prefer I do the whole site in Comic Sans, that sort of thing. &lt;/p&gt;
+&lt;p&gt;UPDATE: I've set most of the site text back to the standard Arial/Helv b/c "Titillium Web" renders... very badly... on -- wait for it -- Chrome, of all browsers.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/tZw5KdfAwjI" height="1" width="1"/&gt;</description>
+     <pubDate>Sun, 16 Dec 2012 02:28:04 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3024 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/site-news/2012/12/Finally-links-are-back</feedburner:origLink></item>
+  <item>
+    <title>Things have been quiet, but that's just a clever ruse.</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/gyJ1ktMxVeE/Things-have-been-quiet-thats-just-clever-ruse</link>
+    <description>&lt;div class="field field-name-field-site-news-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/default_images/evorg_newsbanner_1.png" alt="" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="field field-name-body field-type-text-with-summary field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even" property="content:encoded"&gt;&lt;p&gt;I know I haven't updated much. There are few reasons for this:&lt;/p&gt;
+&lt;p&gt;1. I am sick. I am sick and I have no more leave, which means I am working while sick. This makes it very hard to focus on things.&lt;/p&gt;
+&lt;p&gt;2. I can focus enough to try to solve site-related problems, so I've been trying to get the comic pagers to work the way they used to. Unfortunately, while I can focus enough to &lt;strong&gt;try&lt;/strong&gt; to solve the problems, I can't focus enough to &lt;strong&gt;actually&lt;/strong&gt; solve the problems.&lt;/p&gt;
+&lt;p&gt;3. The sickness has made it harder for me to string together coherent sentences. Just in case you filigree marsupial banana.&lt;/p&gt;
+&lt;p&gt;That's all. Sorry for the delays. I am working on stuff.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/gyJ1ktMxVeE" height="1" width="1"/&gt;</description>
+     <pubDate>Fri, 14 Dec 2012 17:11:53 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3023 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/site-news/2012/12/Things-have-been-quiet-thats-just-clever-ruse</feedburner:origLink></item>
+  <item>
+    <title>Pay Me, Bug! is getting a new cover</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/CXPlK1sK0YM/Pay-Me-Bug-getting-new-cover</link>
+    <description>&lt;div class="field field-name-field-article-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/default_images/evorg_articlebanner_1.png" alt="" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="field field-name-body field-type-text-with-summary field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even" property="content:encoded"&gt;&lt;p&gt;I've been trying to create a trade paperback of &lt;a href="http://www.paymebug.com"&gt;Pay Me, Bug!&lt;/a&gt; for almost a year. My first attempt was with &lt;a href="http://www.lulu.com"&gt;Lulu&lt;/a&gt;. The samples were good, but when I tried to use their option to sell to distributors (like Amazon) the price of printing the paperback mysteriously shot up to the point where I would have had to sell each copy for &lt;strong&gt;twenty freaking dollars&lt;/strong&gt; in order to break even. Now don't get me wrong, I think &lt;em&gt;Pay Me, Bug!&lt;/em&gt; is a fine story... but it's not twenty dollars worth of story in paperback form.&lt;/p&gt;
+&lt;p&gt;So next I went to &lt;a href="http://www.createspace.com"&gt;CreateSpace&lt;/a&gt;. Their prices are a lot lower (a &lt;em&gt;lot&lt;/em&gt;) but they told me the cover I was using wouldn't work. That made sense--the cover was intended to be used on an eBook, which is considerably smaller. Unfortunately CreateSpace complained that the letters were too close to the edge of the page, and would be in danger of being cut off when the book was being created. So, as cool as I thought the cover was, I was going to need something new.&lt;/p&gt;
+&lt;p&gt;Enter &lt;a href="http://www.gcgstudios.com"&gt;Garth Graham&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Garth's work has already appeared on this site. He designed the main graphic for &lt;a href="http://www.curveballchronicles.com"&gt;Curveball&lt;/a&gt; and I've been getting a lot of mileage out of it. I asked him if he was free for more work, and after a complicated process that involved me giving him money he gave me a new cover for &lt;em&gt;Pay Me, Bug!&lt;/em&gt;. I just got the final art today. And I'm going to show it to you in this very post.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/CXPlK1sK0YM" height="1" width="1"/&gt;</description>
+     <pubDate>Tue, 11 Dec 2012 01:28:46 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3022 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/articles/2012/12/Pay-Me-Bug-getting-new-cover</feedburner:origLink></item>
+  <item>
+    <title>A quick note on Music, Alienation, and Curveball</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/sD3uMuov-cU/quick-note-Music-Alienation-and-Curveball</link>
+    <description>&lt;div class="field field-name-field-article-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/default_images/evorg_articlebanner_1.png" alt="" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="field field-name-body field-type-text-with-summary field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even" property="content:encoded"&gt;&lt;p&gt;I like to listen to music when I'm writing. A lot of people do--there are people who find music or any other kind of noise distracting, but if I'm listening to the right music at the right time I find my ability to write increases a thousandfold, and "thousandfold" is a pretty good factor of increase. So for my writing projects I like to come up with playlists that reflect not necessarily the mood of the story, but the mood I want to be in when I'm writing the story. So my writing playlists are usually some combination of "songs that I like" and "songs that I like that are also sort of thematically appropriate."&lt;/p&gt;
+&lt;p&gt;I have posted the playlist I used when I wrote &lt;a href="https://www.eviscerati.org/articles/2011/04/pay-me-bug-playlist"&gt;Pay Me, Bug!&lt;/a&gt;, and the playlist I use when I write &lt;a href="https://www.eviscerati.org/articles/2011/11/points-between-playlist"&gt;The Points Between&lt;/a&gt;. I have yet, however, to post a playlist for &lt;a href="http://www.curveballchronicles.com"&gt;Curveball&lt;/a&gt;. It's still a work in progress.&lt;/p&gt;
+&lt;p&gt;But I do want to talk about one song. It's a very important song that I play every time I sit down to write about CB. If you know me, you'd be surprised by the song. It's not what you'd expect.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/sD3uMuov-cU" height="1" width="1"/&gt;</description>
+     <pubDate>Mon, 10 Dec 2012 18:17:35 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3021 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/articles/2012/12/quick-note-Music-Alienation-and-Curveball</feedburner:origLink></item>
+  <item>
+    <title>An Enthusiastic Verdict</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/RTgck0DSGx4/Enthusiastic-Verdict</link>
+    <description>&lt;div class="field field-name-field-comic-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/comics/hd/hd20121207_0.png" width="600" height="1010" alt="Help Desk, by Christopher B. Wright" title="An Enthusiastic Verdict" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/RTgck0DSGx4" height="1" width="1"/&gt;</description>
+     <pubDate>Fri, 07 Dec 2012 08:00:00 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3019 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/comics/comic/hd/2012/12/Enthusiastic-Verdict</feedburner:origLink></item>
+  <item>
+    <title>The Real Jury Speaks</title>
+    <link>http://feedproxy.google.com/~r/EvisceratiOrgMain/~3/M2y6XDfnVbU/Real-Jury-Speaks</link>
+    <description>&lt;div class="field field-name-field-comic-image field-type-image field-label-hidden"&gt;&lt;div class="field-items"&gt;&lt;div class="field-item even"&gt;&lt;img typeof="foaf:Image" src="http://www.eviscerati.org/files/comics/hd/hd20121206.png" width="600" height="815" alt="Help Desk, by Christopher B. Wright" title="The Real Jury Speaks" /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;img src="http://feeds.feedburner.com/~r/EvisceratiOrgMain/~4/M2y6XDfnVbU" height="1" width="1"/&gt;</description>
+     <pubDate>Thu, 06 Dec 2012 12:55:59 +0000</pubDate>
+ <dc:creator>Christopher Wright</dc:creator>
+ <guid isPermaLink="false">3018 at http://www.eviscerati.org</guid>
+  <feedburner:origLink>http://www.eviscerati.org/comics/comic/hd/2012/12/Real-Jury-Speaks</feedburner:origLink></item>
+  </channel>
+</rss>
