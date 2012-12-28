@@ -1,0 +1,1239 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sluggy Freelance - Comic for 12/27/12</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Stylesheets -->
+    <link href="/stylesheets/fireandrain/style.css" media="screen" rel="stylesheet" type="text/css" />
+    
+     <link rel="alternate" type="application/rss+xml" title="Sluggy Freelance" href="http://feeds.feedburner.com/sluggy_freelance"/>
+          
+
+    <link href="/stylesheets/jquery_ui/lightness/lightness.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.history.js" type="text/javascript"></script>
+
+     
+	<link href="/stylesheets/jquery_ui/lightness/lightness.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.history.js" type="text/javascript"></script>
+
+
+
+						
+	<link media="screen" rel="stylesheet" type="text/css" />
+	
+	
+
+<style type="text/css">
+	.base_footer {
+		padding-left: 180px;
+		padding-right: 15px;
+	}
+
+
+</style>
+
+
+	
+<style type="text/css">
+	#comicNavCalContainer {
+	   float: right;
+       left: 5px;
+       margin-bottom: 10px;
+       height: 190px;
+	}
+
+    .ui-datepicker {
+        font-family:Lucida Grande,Lucida Sans,Arial,sans-serif;
+        font-size:12px;
+    }
+  
+    #story-list {
+        font-size: 9px;   
+    }
+    
+    .hide_noscript {
+        visibility: hidden;
+    }
+    
+    #enhanced_comic_nav_menu {
+        overflow: hidden;
+        width: 220px;
+        font-size: 1em;
+    }
+    
+</style>
+
+<script type="text/javascript">
+
+    $(function(){
+				
+		$('#enhanced_comic_nav_menu').menu({
+			content: $('#enhanced_comic_nav_menu').next().html(),
+			backLink: true,
+			maxHeight: 350,
+			width: 350,
+			crumbDefaultText: 'Choose a story',
+            flyOut: false,
+            linkToFront: true
+		});
+    });
+	
+	function pad(number, length){
+		var str = "" + number;
+		while(str.length<length){
+			str = '0'+str;
+	   	}
+	   	return str;
+	}
+
+
+	function navigate(url) { 
+		window.location.href = url;
+	}
+
+	$(document).ready(function() {
+		$("#comic_nav_dropdown").change( function() {
+			comic_nav_value = $("#comic_nav_dropdown").val();
+       		window.location.href= "/comics/archives/daily/" + comic_nav_value;
+		});
+	});
+	
+	var checkStruct = {};
+	var lock = {};
+
+	function dateToShortFmt(dt) {
+		return (dt.getMonth() + "/" + dt.getDate() + "/" + dt.getFullYear());
+	}
+		
+	function dateToIdFmt(dt) {
+		return (dt.getFullYear()+""+pad(dt.getMonth()+1, 2)+""+pad(dt.getDate(), 2));
+	}
+	
+	function dateToLocaleString(dt, cal) {
+		var wStr = cal.cfg.getProperty("WEEKDAYS_LONG")[dt.getDay()];
+		var dStr = dt.getDate();
+		var mStr = cal.cfg.getProperty("MONTHS_LONG")[dt.getMonth()];
+		var yStr = dt.getFullYear();
+		return (wStr + ", " + dStr + " " + mStr + " " + yStr);
+	}
+
+	function calSelectHandler(dateStr) {
+		window.location.href = "/comics/archives/daily/" + dateStr;
+	};
+
+    function handleData(month, year, data) {
+        key = month + '/' + year;
+        checkStruct[key] = data;
+        lock[key] = false;
+    }
+
+	var newMonth = function(year, month, cal) {			
+	   key = month + '/' + year;
+		if (!checkStruct[key] && !lock[key]) {
+			lock[key] = true;
+			valid =  $.getJSON("/comics/navigation/calendar_date_check?month=" + month + "&year=" + year,
+				function (data) {
+					month = data.month;
+					year = data.year;
+					data = data.data;
+                    handleData(month, year, data);
+				});
+		}
+		else if (lock[key]) {
+			//console.debug("Lock set for month #" + month);
+		}
+		else {
+			//console.debug("Already have data for month #" + month);
+		}
+    }  
+    
+    function pause(numberMillis)
+    {
+        var now = new Date();
+        var exitTime = now.getTime() + numberMillis;
+        while (true)
+        {
+            now = new Date();
+            if (now.getTime() > exitTime)
+                return;
+        }
+    }
+    
+    var checkDay = function(date) {
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        key = month + '/' + year;
+        struct = checkStruct[key];
+        valid = struct[day];
+        return [valid, '', ''];
+    }
+    
+	$(function() {
+		$("#comicNavCalContainer").datepicker({ 
+            showButtonPanel: false,
+            showOtherMonths: true,
+            dateFormat: 'yymmdd', 
+            minDate: new Date(Date.parse("08/25/1997")),  
+            maxDate: new Date(Date.parse("12/27/2012")), 
+            defaultDate: new Date(Date.parse("12/27/2012")),
+            onSelect: calSelectHandler,
+            onChangeMonthYear: newMonth
+        });
+	});
+
+
+</script>
+
+
+ 
+	
+
+
+<style type="text/css">
+  	.hidden { position:absolute; top:0; left:-9999px; width:1px; height:1px; overflow:hidden; }
+</style>
+
+	
+<!-- style exceptions for IE 6 -->
+<!--[if IE 6]>
+<style type="text/css">
+	.fg-menu-ipod .fg-menu li { width: 95%; }
+	.fg-menu-ipod .ui-widget-content { border:0; }
+</style>
+<![endif]-->
+
+<link href="/javascripts/fg_menu/fg.menu.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="/javascripts/fg_menu/fg.menu.js" type="text/javascript"></script>
+<link href="/stylesheets/jquery_ui/darkness_custom/darkness_custom.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+
+    $(function(){
+    	// BUTTONS
+    	$('.fg-button').hover(
+    		function(){ $(this).removeClass('ui-state-default').addClass('ui-state-focus'); },
+    		function(){ $(this).removeClass('ui-state-focus').addClass('ui-state-default'); }
+    	);
+    	
+        $(".hide_noscript").removeClass("hide_noscript");
+				
+		$('#store_menu').menu({
+			content: $('#store_menu').next().html()
+		});
+		$('#about_menu').menu({
+			content: $('#about_menu').next().html()
+		});	
+    	$('#community_menu').menu({
+			content: $('#community_menu').next().html(),
+			width: 250
+		});
+        $('#defenders_menu').menu({
+			content: $('#defenders_menu').next().html()
+		});
+    });
+</script>
+
+
+	<!-- Attempt to warn our lovely IE users that an update is available -->
+	<!--[if IE 6]>
+	<script type="text/javascript"> 
+		/*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+		var IE6UPDATE_OPTIONS = {
+			icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+		}
+	</script>
+	<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+	<![endif]-->
+</head>
+<body>    
+	<div id="container">
+        <div id="header">
+                <div class="logobar">
+    			<a href="/">
+                        <div class="logo"></div>
+                </a>
+    		</div>
+			
+
+	<div id="navbar" class="darkness">
+            <a href="http://feeds.feedburner.com/sluggy_freelance" class="fg-button ui-widget ui-state-default" ><img id="top_feed_icon" src="/icons/feed icons/feed-icon-14x14.png" alt="Sluggy RSS Feed"/></a>
+				<a class="fg-button ui-widget ui-state-default ui-corner-all fg-button-icon-right" href="/">
+                <span class="ui-icon ui-icon-home"></span>
+                    Today's Comic</a>
+                <a tabindex="0" href="#store-menu-items" 
+                    class="hide_noscript fg-button fg-button-icon-right ui-widget ui-state-default" 
+                    id="store_menu">
+                    <span class="ui-icon ui-icon-cart"></span>
+                    Buy Stuff
+                </a>
+                <div id="store-menu-items" class="hidden">
+                    <ul>
+                        <li><a href="http://store.sluggy.com/">Sluggy Store</a></li>
+                        <li><a href="/public/defenders">Defenders of the Nifty</a></li>
+                        <li><a href="/shop_amazon">Shop Amazon</a></li>
+                        <li><a href="http://www.cafepress.com/sluggyfreelance">Breakables Shop</a></li>
+                    </ul>
+                </div>
+                <a tabindex="0" href="#about-menu-items" 
+                    class="hide_noscript fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" 
+                    id="about_menu">
+                    <span class="ui-icon ui-icon-tag"></span>
+                    About Us
+                </a>
+                <div id="about-menu-items" class="hidden">
+                    <ul>
+                        <!--<li><a href="/public/about/email">Email Us</a></li>-->
+                    </ul>
+                </div>
+                <a tabindex="0" href="#community-menu-items" 
+                    class="hide_noscript fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" 
+                    id="community_menu">
+                    <span class="ui-icon ui-icon-comment"></span>
+                    Community
+                </a>
+                <div id="community-menu-items" class="hidden">
+                    <ul>
+                        <li><a href="http://www.sluggy.net/forum/">Forums</a></li>
+                        <li><a href="http://freemail.sluggy.net/email/scripts/loginuser.pl">Free Sluggy.net Email</a></li>
+						<li><a href="http://sluggy.wikia.com/wiki/Niftypedia">The Niftypedia (Wiki)</a></li>
+						<li><a href="http://sluggy.info">Sluggy NiftySearch (Search Dialog)</a></li>
+					
+                    </ul>
+
+                </div>
+                <a tabindex="0" href="#defenders-menu-items" 
+                    class="hide_noscript fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" 
+                    id="defenders_menu">
+                    <span class="ui-icon ui-icon-key"></span>
+                    Defenders of the Nifty
+                </a>        
+                <div id="defenders-menu-items" class="hidden">
+                    <ul>
+                            <li><a href="/public/defenders">Join!</a></li>
+                        <li><a href="/defenders/blog">Blog</a></li>
+                        <li><a href="/defenders/compendium">Compendium</a></li>
+                        <li><a href="/defenders/comicbooks">Comic Books</a></li>
+    		                <li><a href="/public/defenders/login">Login</a></li>
+                    </ul>
+                </div>
+                <a tabindex="0" href="/nvg"
+                    class="hide_noscript fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" 
+                    id="nvg_menu">
+                    <span class="ui-icon ui-icon-help"></span>
+                    New Viewer's Guide
+                </a>        
+
+				<div id="menu-logged-in">
+				</div>
+        
+        
+	</div>
+
+
+        </div>
+	    <!-- Begin base body area -->
+		
+
+
+
+
+
+
+	<!-- Begin comics_base.mako -->
+	<div class="content">
+    	<div class="comic_body ">
+    
+    			<div class="comic_header">
+    					
+<div id="top_ad">
+
+
+
+<!-- Updated -->
+<!-- Beginning of Project Wonderful ad code: -->
+<!-- Ad box ID: 13928 -->
+<script type="text/javascript">
+<!--
+var pw_d=document;
+pw_d.projectwonderful_adbox_id = "13928";
+pw_d.projectwonderful_adbox_type = "5";
+pw_d.projectwonderful_foreground_color = "";
+pw_d.projectwonderful_background_color = "";
+//-->
+</script>
+<script type="text/javascript" src="http://www.projectwonderful.com/ad_display.js"></script>
+<noscript><map name="admap13928" id="admap13928"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&amp;c=0&amp;id=13928&amp;type=5" shape="rect" coords="0,0,728,90" title="" alt="" target="_blank" rel="nofollow" /></map>
+<table cellpadding="0" border="0" cellspacing="0" width="728" bgcolor="#ffffff"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=13928&amp;type=5" width="728" height="90" usemap="#admap13928" border="0" alt="" /></td></tr><tr><td bgcolor="#ffffff" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=13928&amp;type=5" target="_blank">Ads by Project Wonderful!  Your ad could be here, right now.</a></center></td></tr><tr><td colspan="1" valign="top" width="728" bgcolor="#000000" style="height:3px;font-size:1px;padding:0px;max-height:3px;"></td></tr></table>
+</noscript>
+<!-- End of Project Wonderful ad code. -->
+
+
+
+</div>
+
+    		    	<!-- <div class="banner">
+    	   				
+
+    		    	</div> -->
+    		        	<div class="headline">
+    		            	<p><img style="float: right;" src="/images/newsimages/holly-blueright.gif" alt="" width="50" height="49" /><img style="float: left;" src="/images/newsimages/holly-blueleft.gif" alt="" width="50" height="49" /><strong>OK here&rsquo;s the holiday plan!</strong> We&rsquo;ll be running actual canon comics through the end of the year!!! Instead of the planned cliffhanger on Dec 21st, we&rsquo;re going to segue into some inconsequential (or is it?) and hopefully humorous comics, with art of some kind for Christmas Day and New Year&rsquo;s Day, and resume the story in a serious way on January 4th.</p>
+    		        	</div>
+    	    	</div>
+    			<div class="comic_content">
+    				<img src="/images/comics/121227a.gif" alt="Comic for 12/27/12"/>
+    				<p/>
+    			</div>
+                
+			<!-- Begin comic_navigation.mako -->
+			<div id="comic_navigation">
+				<div class="buttons fg-buttonset">
+					
+
+        <a href="/comics/archives/daily/970825" class="fg-button fg-button-icon-left ui-state-default ui-corner-all"><span class="ui-icon ui-icon-seek-first"></span>First</a>
+
+
+					
+
+        <a href="/comics/archives/daily/121226" class="fg-button fg-button-icon-left ui-state-default ui-corner-all"><span class="ui-icon ui-icon-seek-prev"></span>Prev.</a>
+
+
+					
+    <a class="fg-button fg-button-icon-right ui-state-disabled ui-corner-all"><span class="ui-icon ui-icon-seek-next"></span>Next</a>
+    
+
+					
+    <a class="fg-button fg-button-icon-right ui-state-disabled ui-corner-all"><span class="ui-icon ui-icon-seek-end"></span>Last</a>
+    
+
+           <a href="/comics/archives/weekly/" class="fg-button fg-button-icon-left ui-state-default ui-corner-all"><span class="ui-icon ui-icon-calendar"></span>Weekly</a>
+				</div>
+
+                <div id="comic_navigation_menu">
+                    <a tabindex="0" href="#story-list" class="hide_noscript fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="enhanced_comic_nav_menu"><span class="ui-icon ui-icon-triangle-1-s"></span>Chapter 64: The Research and Development Wars - Spearhead</a><div id="story-list" class="hidden">
+<ul>
+<li><a href="/comics/archives/daily/970825">+ Megatome 1 - Born of Nifty</a>
+<ul>
+	<li><a href="/comics/archives/daily/970825">-BOOK 1: Is It Not Nifty?</a>
+	<ul>
+		<li><a href="/comics/archives/daily/970825">Chapter 1: Is It Not Nifty?</a>
+		<ul>
+			<li><a href="/comics/archives/daily/970825">Satan</a></li>
+			<li><a href="/comics/archives/daily/970831">Along Came a Bunny</a></li>
+			<li><a href="/comics/archives/daily/970909">Teddy Weddy</a></li>
+			<li><a href="/comics/archives/daily/970915">Demon Summoning Week</a></li>
+			<li><a href="/comics/archives/daily/970922">The Bikini-Suicide-Frisbee Match</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/970929">Chapter 2: The Sci-Fi Adventure</a>
+		<ul>
+			<li><a href="/comics/archives/daily/970929">The Flux Agitator</a></li>
+			<li><a href="/comics/archives/daily/971006">Engineers?</a></li>
+			<li><a href="/comics/archives/daily/971012">Get me a Proctologist!</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/971028">Chapter 3: Holiday Seasons</a>
+		<ul>
+			<li><a href="/comics/archives/daily/971028">Halloween Week</a></li>
+			<li><a href="/comics/archives/daily/971108">The Lab</a></li>
+			<li><a href="/comics/archives/daily/971116">The Dr. Lorna Radio Show</a></li>
+			<li><a href="/comics/archives/daily/971125">Thanksgiving Week</a></li>
+			<li><a href="/comics/archives/daily/971201">Sluggy of the Living Freelance</a></li>
+			<li><a href="/comics/archives/daily/971219">Christmas Week</a></li>
+			<li><a href="/comics/archives/daily/971228">New Years Eve Week</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/980103">Chapter 4: The Slug-Files</a>
+		<ul>
+			<li><a href="/comics/archives/daily/980103">Torg's Blind Date</a></li>
+			<li><a href="/comics/archives/daily/980111">Return of the Alien</a></li>
+			<li><a href="/comics/archives/daily/980119">Aylee vs. Bun-Bun</a></li>
+			<li><a href="/comics/archives/daily/980127">An Interlude in Vermont</a></li>
+			<li><a href="/comics/archives/daily/980226">Driving Miss Aylee</a></li>
+			<li><a href="/comics/archives/daily/980301">The Slug-Files</a></li>
+		</ul></li>
+	</ul></li>
+	<li><a href="/comics/archives/daily/980323">-BOOK 2: Worship the Comic</a>
+	<ul>
+		<li><a href="/comics/archives/daily/980323">Chapter 5: Valerie</a>
+		<ul>
+			<li><a href="/comics/archives/daily/980323">The Search for Sam</a></li>
+			<li><a href="/comics/archives/daily/980406">Robot Rampage</a></li>
+			<li><a href="/comics/archives/daily/980420">The Affair</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/980427">Chapter 6: Torg Goes to Hell</a>
+		<ul>
+			<li><a href="/comics/archives/daily/980427">Torg Goes to Hell</a></li>
+			<li><a href="/comics/archives/daily/980510">It's the Wrong Torg, Grommit!</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/980601">Chapter 7: Summer Vacation</a>
+		<ul>
+			<li><a href="/comics/archives/daily/980601">A Slice of Sluggy Life</a></li>
+			<li><a href="/comics/archives/daily/980621">Evil Technology and Worldly Ways</a></li>
+			<li><a href="/comics/archives/daily/980628">Nag's Head, North Carolina</a></li>
+			<li><a href="/comics/archives/daily/980723">Bun-bun Marooned!</a></li>
+			<li><a href="/comics/archives/daily/980808">Aylee Cocooned!</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/980828">Chapter 8: Vampires</a>
+		<ul>
+			<li><a href="/comics/archives/daily/980828">It All Starts here</a></li>
+			<li><a href="/comics/archives/daily/980902">Vampires</a></li>
+		</ul></li>
+	</ul></li>
+	<li><a href="/comics/archives/daily/981026">-BOOK 3: When Holidays Attack!</a>
+	<ul>
+		<li><a href="/comics/archives/daily/981026">Chapter 9: Return of the Holiday Seasons</a>
+		<ul>
+			<li><a href="/comics/archives/daily/981026">Torg's Black Heart</a></li>
+			<li><a href="/comics/archives/daily/981114">A Carnivorous Smurf for Kimmy Sue Hasenpfeffer</a></li>
+			<li><a href="/comics/archives/daily/981203">A Sluggy Mummy Christmas</a></li>
+			<li><a href="/comics/archives/daily/981226">Lara Croft-Macaroni-and-Cheese</a></li>
+			<li><a href="/comics/archives/daily/990102">Post-Holiday Traumatic Syndrome!</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/990112">Chapter 10: K'Z'K</a>
+		<ul>
+			<li><a href="/comics/archives/daily/990112">Black Magic Woman</a></li>
+			<li><a href="/comics/archives/daily/990127">Omnitaser Supreme</a></li>
+			<li><a href="/comics/archives/daily/990208">A Game of Chess</a></li>
+			<li><a href="/comics/archives/daily/990227">The Empire State Building</a></li>
+			<li><a href="/comics/archives/daily/990305">Aftermath...</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/990315">Chapter 11: Mecha Easter Bunny</a>
+		<ul>
+			<li><a href="/comics/archives/daily/990315">Mecha Easter Bunny</a></li>
+			<li><a href="/comics/archives/daily/990405">Bun-bun's Revenge</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/990426">Chapter 12: The Time Machine</a>
+		<ul>
+			<li><a href="/comics/archives/daily/990426">College Life</a></li>
+			<li><a href="/comics/archives/daily/990503">The Time Machine</a></li>
+			<li><a href="/comics/archives/daily/990510">Muffin the Vampire Baker</a></li>
+		</ul></li>
+	</ul></li>
+	</ul></li>
+<li><a href="/comics/archives/daily/990531">+ Megatome 2 - Little Evils</a>
+<ul>
+	<li><a href="/comics/archives/daily/990531">-BOOK 4: Game Called on Account of Naked Chick</a>
+	<ul>
+		<li><a href="/comics/archives/daily/990531">Chapter 13: Loose Ends</a>
+		<ul>
+			<li><a href="/comics/archives/daily/990531">Art Belial</a></li>
+			<li><a href="/comics/archives/daily/990619">Mr. Fuzbutt</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/990704">Chapter 14: The Storm Breaker Saga</a>
+		<ul>
+			<li><a href="/comics/archives/daily/990704">The Warlord</a></li>
+			<li><a href="/comics/archives/daily/990711">The Gypsy</a></li>
+			<li><a href="/comics/archives/daily/990718">The Book</a></li>
+			<li><a href="/comics/archives/daily/990725">The War</a></li>
+			<li><a href="/comics/archives/daily/990801">The Quest</a></li>
+			<li><a href="/comics/archives/daily/990808">The Vowelless</a></li>
+			<li><a href="/comics/archives/daily/990815">Last Call</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/990913">Chapter 15: The Isle of Dr. Steve</a>
+		<ul>
+			<li><a href="/comics/archives/daily/990913">Into the Woods</a></li>
+			<li><a href="/comics/archives/daily/990922">The Isle of Dr. Steve</a></li>
+			<li><a href="/comics/archives/daily/991018">A Spooky Kind of Love</a></li>
+			<li><a href="/comics/archives/daily/991115">Cannibals Anonymous</a></li>
+			<li><a href="/comics/archives/daily/991213">A.J. and the Crudosaur</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/991220">Chapter 16: 2000</a>
+		<ul>
+			<li><a href="/comics/archives/daily/991220">Millenium-ish Thingy 2000</a></li>
+		</ul></li>
+	</ul></li>
+	<li><a href="/comics/archives/daily/000101">-BOOK 5: Yippy Skippy, The Evil!</a>
+	<ul>
+		<li><a href="/comics/archives/daily/000101">Chapter 17: Kiki's Virus</a>
+		<ul>
+			<li><a href="/comics/archives/daily/000101">Kiki's Virus</a></li>
+			<li><a href="/comics/archives/daily/000122">The Quatrix</a></li>
+			<li><a href="/comics/archives/daily/000131">Tuffy</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/000221">Chapter 18: Love Potion</a>
+		<ul>
+			<li><a href="/comics/archives/daily/000221">Squeekybobo Ball!</a></li>
+			<li><a href="/comics/archives/daily/000306">The Love Potion: PART 1</a></li>
+			<li><a href="/comics/archives/daily/000327">Sluggy Freelance: Where Are You?</a></li>
+			<li><a href="/comics/archives/daily/000417">The Love Potion: PART 2</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/000605">Chapter 19: K I T T E N</a>
+		<ul>
+			<li><a href="/comics/archives/daily/000605">The Alien's New Clothes.</a></li>
+			<li><a href="/comics/archives/daily/000626">Bun-bun's Theatre of Horrors!</a></li>
+		</ul></li>
+	</ul></li>
+	<li><a href="/comics/archives/daily/000815">-BOOK 6: The Bug, the Witch, and the Robot</a>
+	<ul>
+		<li><a href="/comics/archives/daily/000815">Chapter 20: On The Run</a>
+		<ul>
+			<li><a href="/comics/archives/daily/000815">On The Run: The Caribbean</a></li>
+			<li><a href="/comics/archives/daily/000822">On The Run: Bun-bun's Black Ops Elves</a></li>
+			<li><a href="/comics/archives/daily/000903">On The Run: Dr. Crabtree</a></li>
+			<li><a href="/comics/archives/daily/000920">On The Run: Finale</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/001009">Chapter 21: The Hunt</a>
+		<ul>
+			<li><a href="/comics/archives/daily/001009">Pete gets Lazy Week(s)</a></li>
+			<li><a href="/comics/archives/daily/001019">The Hunter</a></li>
+			<li><a href="/comics/archives/daily/001106">Sasha</a></li>
+			<li><a href="/comics/archives/daily/001127">Rescue Mission to the North Pole!</a></li>
+			<li><a href="/comics/archives/daily/001218">Spitting Image</a></li>
+			<li><a href="/comics/archives/daily/010115">Kiki Shrugged</a></li>
+			<li><a href="/comics/archives/daily/010122">Intermission</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/010129">Chapter 22: The Bug, the Witch, and the Robot</a>
+		<ul>
+			<li><a href="/comics/archives/daily/010129">The Bug, the Witch, and the Robot 1</a></li>
+			<li><a href="/comics/archives/daily/010212">Not a Good Idea</a></li>
+			<li><a href="/comics/archives/daily/010305">The Bug, the Witch, and the Robot 2</a></li>
+			<li><a href="/comics/archives/daily/010322">Jane Doe</a></li>
+		</ul></li>
+	</ul></li>
+	</ul></li>
+	<li><a href="/comics/archives/daily/010402">-BOOK 7: A Very Big Bang</a>
+	<ul>
+		<li><a href="/comics/archives/daily/010402">Chapter 23: Spring in the Air</a>
+		<ul>
+			<li><a href="/comics/archives/daily/010402">Camel in the Middle</a></li>
+			<li><a href="/comics/archives/daily/010409">The Bad Dream Preceding Easter</a></li>
+			<li><a href="/comics/archives/daily/010416">Spring Break</a></li>
+			<li><a href="/comics/archives/daily/010423">Sluggy Freelibs</a></li>
+			<li><a href="/comics/archives/daily/010430">Spring Cleaning</a></li>
+			<li><a href="/comics/archives/daily/010511">The Isle of the Ployees</a></li>
+			<li><a href="/comics/archives/daily/010522">Torg's New Gig</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/010611">Chapter 24: GOFOTRON Champion of the Cosmos</a>
+		<ul>
+			<li><a href="/comics/archives/daily/010611">Lodoze</a></li>
+			<li><a href="/comics/archives/daily/010625">Politics of a Punyverse</a></li>
+			<li><a href="/comics/archives/daily/010709">War of the Transbots</a></li>
+			<li><a href="/comics/archives/daily/010719">Secret Cranky Office Temp</a></li>
+			<li><a href="/comics/archives/daily/010731">Chau Down</a></li>
+			<li><a href="/comics/archives/daily/010817">Void Ghosts</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/010827">Chapter 25: Changes</a>
+		<ul>
+			<li><a href="/comics/archives/daily/010827">Homecoming</a></li>
+			<li><a href="/comics/archives/daily/010910">Home Hunting</a></li>
+			<li><a href="/comics/archives/daily/010919">House Haunting</a></li>
+			<li><a href="/comics/archives/daily/010927">Herald Hiding</a></li>
+			<li><a href="/comics/archives/daily/011008">Happy Hiatus</a></li>
+			<li><a href="/comics/archives/daily/011015">Halloween</a></li>
+			<li><a href="/comics/archives/daily/011105">Haftermath</a></li>
+		</ul></li>
+	</ul></li>
+	<li><a href="/comics/archives/daily/011112">-BOOK 8: Fire and Rain</a>
+	<ul>
+		<li><a href="/comics/archives/daily/011112">Chapter 26: Brie Meighsaton House</a>
+		<ul>
+			<li><a href="/comics/archives/daily/011112">A Beige Horn Mist</a></li>
+			<li><a href="/comics/archives/daily/011217">Snowfinger</a></li>
+			<li><a href="/comics/archives/daily/020107">LEGOMICS</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/020114">Chapter 27: Fire and Rain</a>
+		<ul>
+			<li><a href="/comics/archives/daily/020114">A Thousand Oceans</a></li>
+			<li><a href="/comics/archives/daily/020119">Lady Picture Show</a></li>
+			<li><a href="/comics/archives/daily/020125">One of These Days</a></li>
+			<li><a href="/comics/archives/daily/020204">Someone to Die For</a></li>
+			<li><a href="/comics/archives/daily/020210">Hurt</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/020225">Chapter 28: That Amazing Chapter</a>
+		<ul>
+			<li><a href="/comics/archives/daily/020225">The Great House War</a></li>
+			<li><a href="/comics/archives/daily/020311">Joe Sunday Takes the Reins</a></li>
+			<li><a href="/comics/archives/daily/020318">Guest Artist Week</a></li>
+			<li><a href="/comics/archives/daily/020325">Cornucopia Week</a></li>
+			<li><a href="/comics/archives/daily/020301">Sluggite Cartoonist Week</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/020408">Chapter 29: Books</a>
+		<ul>
+			<li><a href="/comics/archives/daily/020408">Shadow Boxing</a></li>
+			<li><a href="/comics/archives/daily/020503">Something Happened to Zoe</a></li>
+		</ul></li>
+	</ul></li>
+	<li><a href="/comics/archives/daily/020513">-BOOK 9: Dangerous Days</a>
+	<ul>
+		<li><a href="/comics/archives/daily/020513">Chapter 30: Dangerous Days Ahead</a>
+		<ul>
+			<li><a href="/comics/archives/daily/020513">The Daily Grind</a></li>
+			<li><a href="/comics/archives/daily/020520">Betrayal</a></li>
+			<li><a href="/comics/archives/daily/020527">Divergence</a></li>
+			<li><a href="/comics/archives/daily/020607">Vengeance</a></li>
+			<li><a href="/comics/archives/daily/020615">Convergence</a></li>
+			<li><a href="/comics/archives/daily/020724">Stories and Corollaries</a></li>
+			<li><a href="/comics/archives/daily/020819">Hellos and Goodbyes</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/020902">Chapter 31: Torg Potter and the Sorcerer's Nut</a>
+		<ul>
+			<li><a href="/comics/archives/daily/020902">Part I: The Lastnameless One</a></li>
+			<li><a href="/comics/archives/daily/020909">Part II: Life At Hoggelryth</a></li>
+			<li><a href="/comics/archives/daily/020916">Part III: A Game of Sandwiches</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/020930">Chapter 32: Scary Chapter</a>
+		<ul>
+			<li><a href="/comics/archives/daily/020930">Welcoming</a></li>
+			<li><a href="/comics/archives/daily/021007">Party Planning</a></li>
+			<li><a href="/comics/archives/daily/021014">Halloween</a></li>
+			<li><a href="/comics/archives/daily/021021">K I T T E N I I</a></li>
+		</ul></li>
+	</ul></li>
+	<li><a href="/comics/archives/daily/021217">-BOOK 10: Ghosts in the Gastank</a>
+	<ul>
+		<li><a href="/comics/archives/daily/021217">Chapter 33: A Seed of Knowledge</a>
+		<ul>
+			<li><a href="/comics/archives/daily/021217">The Naughty/Nice Plot Device</a></li>
+			<li><a href="/comics/archives/daily/021223">The Gift</a></li>
+			<li><a href="/comics/archives/daily/021230">Holiday Wars: Prelude</a></li>
+			<li><a href="/comics/archives/daily/030106">Sluggy Freelance: Alternates</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/030113">Chapter 34: Kesandru's Well</a>
+		<ul>
+			<li><a href="/comics/archives/daily/030113">Girls' Night Out</a></li>
+			<li><a href="/comics/archives/daily/030224">Nothing Dead Here</a></li>
+			<li><a href="/comics/archives/daily/030407">The Wizard's Off To See Us...</a></li>
+			<li><a href="/comics/archives/daily/030428">Guest Artist Week</a></li>
+			<li><a href="/comics/archives/daily/030505">Restless Natives</a></li>
+			<li><a href="/comics/archives/daily/030604">A Delicate Spell... OOPS!</a></li>
+			<li><a href="/comics/archives/daily/030622">Fun Foglio Fill-in Freaks Fans!</a></li>
+			<li><a href="/comics/archives/daily/030630">A Phone and a Skeleton in the Closet</a></li>
+		</ul></li>
+	</ul></li>
+	<li><a href="/comics/archives/daily/030707">Comics Not Yet in Books</a>
+	<ul>
+		<li><a href="/comics/archives/daily/030707">Chapter 35: Magic Flap</a>
+		<ul>
+			<li><a href="/comics/archives/daily/030707">The Magic Flap</a></li>
+			<li><a href="/comics/archives/daily/030714">The Festival</a></li>
+			<li><a href="/comics/archives/daily/030728">Day Jobs</a></li>
+			<li><a href="/comics/archives/daily/030818">Girlfriends and Boyfriends</a></li>
+			<li><a href="/comics/archives/daily/030904">green</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/030915">Chapter 36: Torg Potter and the Chamberpot of </a>
+		<ul>
+			<li><a href="/comics/archives/daily/030915">Part I: Sound Warnings</a></li>
+			<li><a href="/comics/archives/daily/030922">Part II: Taste of Vengeance</a></li>
+			<li><a href="/comics/archives/daily/030929">Part III: Touch of Unease</a></li>
+			<li><a href="/comics/archives/daily/031006">Part IV: Smell of Duty</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/031013">Chapter 37: Holiday Wars: Halloween</a>
+		<ul>
+			<li><a href="/comics/archives/daily/031013">Telemarketer Trilogy</a></li>
+			<li><a href="/comics/archives/daily/031017">Smashing Pumpkins</a></li>
+			<li><a href="/comics/archives/daily/031110">PartiallySluggy</a></li>
+			<li><a href="/comics/archives/daily/031117">Smashing Pumpkins II</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/031124">Chapter 38: Holiday Wars: Thanksgiving</a>
+		<ul>
+			<li><a href="/comics/archives/daily/031124">Tofinterlude</a></li>
+			<li><a href="/comics/archives/daily/031128">Roasting Turkeys</a></li>
+			<li><a href="/comics/archives/daily/031212">Tofaftermath</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/031214">Chapter 39: Holiday Wars: Christmas</a>
+		<ul>
+			<li><a href="/comics/archives/daily/031214">Slay Bells Ring</a></li>
+			<li><a href="/comics/archives/daily/031222">Cery Fill-in from 1992</a></li>
+			<li><a href="/comics/archives/daily/040102">Resolutions</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/040112">Chapter 40: Boys' Night Out</a>
+		<ul>
+			<li><a href="/comics/archives/daily/040112">Boys' Night Out</a></li>
+			<li><a href="/comics/archives/daily/040123">Don't Drink with the Vampire</a></li>
+			<li><a href="/comics/archives/daily/040216">Inappropriately Timed Filler Week</a></li>
+			<li><a href="/comics/archives/daily/040223">The Sam Cirkail Mamajama</a></li>
+			<li><a href="/comics/archives/daily/040308">The Epilogue Has Fangs</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/040322">Chapter 41: Freelance Bums</a>
+		<ul>
+			<li><a href="/comics/archives/daily/040322">Vroom!</a></li>
+			<li><a href="/comics/archives/daily/040412">Kiki's Easter Activity Week</a></li>
+			<li><a href="/comics/archives/daily/040419">Broke</a></li>
+			<li><a href="/comics/archives/daily/040513">The Poor Four</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/040519">Chapter 42: That Which Redeems</a>
+		<ul>
+			<li><a href="/comics/archives/daily/040519">Along Came (another) Bunny</a></li>
+			<li><a href="/comics/archives/daily/040527">BLEEP on Earth</a></li>
+			<li><a href="/comics/archives/daily/040624">Caravans and Battle Plans</a></li>
+			<li><a href="/comics/archives/daily/040726">Bil Holbrook Week</a></li>
+			<li><a href="/comics/archives/daily/040802">Trill's Classic Fills</a></li>
+			<li><a href="/comics/archives/daily/040809">Sham Pain</a></li>
+			<li><a href="/comics/archives/daily/040830">Clay Young Week</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/040906">Chapter 43: That Which Redeems II</a>
+		<ul>
+			<li><a href="/comics/archives/daily/040906">Dead Man's Hand</a></li>
+			<li><a href="/comics/archives/daily/040921">The Demon's Earrings</a></li>
+			<li><a href="/comics/archives/daily/041003">Triggered Overseas</a></li>
+			<li><a href="/comics/archives/daily/041019">Pile of Bones</a></li>
+			<li><a href="/comics/archives/daily/041105">The Fall</a></li>
+			<li><a href="/comics/archives/daily/041115">A Moment of Heroes</a></li>
+			<li><a href="/comics/archives/daily/041204">Tears in the Darkness</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/041213">Chapter 44: Most Wonderful Time...</a>
+		<ul>
+			<li><a href="/comics/archives/daily/041213">Most Wonderful Time...</a></li>
+			<li><a href="/comics/archives/daily/050103">Dirty Deeds</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/050124">Chapter 45: Oceans Unmoving</a>
+		<ul>
+			<li><a href="/comics/archives/daily/050124">'tween the Rigging</a></li>
+			<li><a href="/comics/archives/daily/050131">Shanghai</a></li>
+			<li><a href="/comics/archives/daily/050307">Treasure Map</a></li>
+			<li><a href="/comics/archives/daily/050324">Double Cross</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/050418">Chapter 46: Living Conditions</a>
+		<ul>
+			<li><a href="/comics/archives/daily/050418">Something Puny This Way Comes</a></li>
+			<li><a href="/comics/archives/daily/050530">The Sluggite Koan</a></li>
+			<li><a href="/comics/archives/daily/050613">Something Punier's Heading This Way</a></li>
+			<li><a href="/comics/archives/daily/050701">The Puniest is COMING RIGHT AT US!!!</a></li>
+			<li><a href="/comics/archives/daily/050710">28 GEEKS LATER</a></li>
+			<li><a href="/comics/archives/daily/050808">Pretty Tangle</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/050822">Chapter 47: Torg Potter and the President from</a>
+		<ul>
+			<li><a href="/comics/archives/daily/050822">Part I: Day of the Duh-Mentors</a></li>
+			<li><a href="/comics/archives/daily/050906">Part II: Fate of the Familiars</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/050919">Chapter 48: Oceans Unmoving II</a>
+		<ul>
+			<li><a href="/comics/archives/daily/050919">Real Time</a></li>
+			<li><a href="/comics/archives/daily/051021">Stick Figure Tales of Cotton</a></li>
+			<li><a href="/comics/archives/daily/051103">The Time Before That</a></li>
+			<li><a href="/comics/archives/daily/051122">A Little After</a></li>
+			<li><a href="/comics/archives/daily/051207">Back A Little More Before That</a></li>
+			<li><a href="/comics/archives/daily/051218">Christmas Ninjas 2002</a></li>
+			<li><a href="/comics/archives/daily/060105">During and After a Little After</a></li>
+			<li><a href="/comics/archives/daily/060131">A Step to the Side</a></li>
+			<li><a href="/comics/archives/daily/060213">End Time</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/060306">Chapter 49: Homeward</a>
+		<ul>
+			<li><a href="/comics/archives/daily/060306">Along Returned a Bunny</a></li>
+			<li><a href="/comics/archives/daily/060320">Business as Unusual</a></li>
+			<li><a href="/comics/archives/daily/060404">Wayang Kulit</a></li>
+			<li><a href="/comics/archives/daily/060516">Stick-Figures in Spaaaaaace</a></li>
+			<li><a href="/comics/archives/daily/060523">Price of Opportunity</a></li>
+			<li><a href="/comics/archives/daily/060702">Ten Minutes at a Party</a></li>
+			<li><a href="/comics/archives/daily/060724">The Sistine Shrapnel</a></li>
+			<li><a href="/comics/archives/daily/060731">Stick-Figures in Spaaaaaace 2</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/060814">Chapter 50: Phoenix Rising</a>
+		<ul>
+			<li><a href="/comics/archives/daily/060814">Slice of Evil</a></li>
+			<li><a href="/comics/archives/daily/060821">Balancing Flames</a></li>
+			<li><a href="/comics/archives/daily/060911">Find of Evil</a></li>
+			<li><a href="/comics/archives/daily/060918">*Hiatus Week*</a></li>
+			<li><a href="/comics/archives/daily/060925">Mighty Be the Pen</a></li>
+			<li><a href="/comics/archives/daily/061016">Research Center of Evil</a></li>
+			<li><a href="/comics/archives/daily/061024">Pay Back the Dead</a></li>
+			<li><a href="/comics/archives/daily/061127">House of Evil</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/061204">Chapter 51: Brain Games</a>
+		<ul>
+			<li><a href="/comics/archives/daily/061204">Consolation Prize</a></li>
+			<li><a href="/comics/archives/daily/061218">*Kiki's Christmas*</a></li>
+			<li><a href="/comics/archives/daily/070101">Brain Games</a></li>
+			<li><a href="/comics/archives/daily/070115">24 - 11 = unlucky 13</a></li>
+			<li><a href="/comics/archives/daily/070122">*Erica Henderson's Story*</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/070205">Chapter 52: Aylee</a>
+		<ul>
+			<li><a href="/comics/archives/daily/070205">Lies Within</a></li>
+			<li><a href="/comics/archives/daily/070328">Body</a></li>
+			<li><a href="/comics/archives/daily/070420">Lies Without</a></li>
+			<li><a href="/comics/archives/daily/070508">Mind</a></li>
+			<li><a href="/comics/archives/daily/070514">*Bikini Suicide Sasha Days*</a></li>
+			<li><a href="/comics/archives/daily/070528">*Heart of Hearts*</a></li>
+			<li><a href="/comics/archives/daily/070604">Mind (Continued)</a></li>
+			<li><a href="/comics/archives/daily/070625">Precipice</a></li>
+			<li><a href="/comics/archives/daily/070709">Heart</a></li>
+			<li><a href="/comics/archives/daily/070813">The Halves and Half-knots</a></li>
+			<li><a href="/comics/archives/daily/070905">Code Boom</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/071001">Chapter 53: A Time for Healing</a>
+		<ul>
+			<li><a href="/comics/archives/daily/071001">Alien Specious</a></li>
+			<li><a href="/comics/archives/daily/071022">*Stick-Figures in Spaaaaaace 3*</a></li>
+			<li><a href="/comics/archives/daily/071105">Monkey Business</a></li>
+			<li><a href="/comics/archives/daily/071029">Flash Forward Z1</a></li>
+			<li><a href="/comics/archives/daily/071126">Flash Forward Z2</a></li>
+			<li><a href="/comics/archives/daily/071210">The Last Day</a></li>
+			<li><a href="/comics/archives/daily/071217">Now Z3</a></li>
+			<li><a href="/comics/archives/daily/071225">The 2007 Christmas Super-Special</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/080114">Chapter 54:  Mandatory Applause</a>
+		<ul>
+			<li><a href="/comics/archives/daily/080114">Torg gets a Hobby</a></li>
+			<li><a href="/comics/archives/daily/080217">The Greatest Comic Book of All Time</a></li>
+			<li><a href="/comics/archives/daily/080225">Subtle Moves</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/080305">Chapter 55: Torg Potter and the Giblets with F</a>
+		<ul>
+			<li><a href="/comics/archives/daily/080305">Part I: Millard Stoop</a></li>
+			<li><a href="/comics/archives/daily/080326">Part II: The Killing Curse</a></li>
+			<li><a href="/comics/archives/daily/080401">Part III: The Tournament</a></li>
+			<li><a href="/comics/archives/daily/080418">Part IV: Bloody Hell</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/080602">Chapter 56: A Time for Hair-Raising</a>
+		<ul>
+			<li><a href="/comics/archives/daily/080602">Thats the Spirit!</a></li>
+			<li><a href="/comics/archives/daily/080623">The Perfect Wish</a></li>
+			<li><a href="/comics/archives/daily/080630">Housewarming Picnic</a></li>
+			<li><a href="/comics/archives/daily/080707">*Fragile Gravity*</a></li>
+			<li><a href="/comics/archives/daily/080714">*Stick-Figures in Spaaaaaace 4*</a></li>
+			<li><a href="/comics/archives/daily/080721">Strung Along</a></li>
+			<li><a href="/comics/archives/daily/080512">Hair-brained Scheme</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/080728">Chapter 57: Years of Yarncraft</a>
+		<ul>
+			<li><a href="/comics/archives/daily/080728">Years of Yarncraft</a></li>
+			<li><a href="/comics/archives/daily/080731">I: Fellowship of My Own Damn Self</a></li>
+			<li><a href="/comics/archives/daily/080818">II: The Two Tiers</a></li>
+			<li><a href="/comics/archives/daily/080918">III: Return of the N00b</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/080929">Chapter 58: Fortune</a>
+		<ul>
+			<li><a href="/comics/archives/daily/080929">Mark 19</a></li>
+			<li><a href="/comics/archives/daily/081013">Tiny Little Bacon-Bots</a></li>
+			<li><a href="/comics/archives/daily/081103">The Fortunate</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/081201">Chapter 59: bROKEN</a>
+		<ul>
+			<li><a href="/comics/archives/daily/081201">Year in the Life of a Villain</a></li>
+			<li><a href="/comics/archives/daily/081222">*Winter Holiday 2008 (and some 09) Random Extravaganza!*</a></li>
+			<li><a href="/comics/archives/daily/090105">Interweb with the Vampire</a></li>
+			<li><a href="/comics/archives/daily/090112">The Spider's Apprentice</a></li>
+			<li><a href="/comics/archives/daily/090202">To The Zombie Fun Lab</a></li>
+			<li><a href="/comics/archives/daily/090302">The Phoenix Unleashed</a></li>
+			<li><a href="/comics/archives/daily/090323">The Breaking Bullet</a></li>
+			<li><a href="/comics/archives/daily/090427">Roken</a></li>
+			<li><a href="/comics/archives/daily/090615">*'Sometime in the Recent Past' week(s)*</a></li>
+			<li><a href="/comics/archives/daily/090629">bURNED</a></li>
+			<li><a href="/comics/archives/daily/090810">Picking up the Pieces</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/090824">Chapter 60: Paradise</a>
+		<ul>
+			<li><a href="/comics/archives/daily/090824">*Kiki+Zombie Part 1*</a></li>
+			<li><a href="/comics/archives/daily/090831">758449</a></li>
+			<li><a href="/comics/archives/daily/091005">*The Proof*</a></li>
+			<li><a href="/comics/archives/daily/091012">Displacement</a></li>
+			<li><a href="/comics/archives/daily/091221">A 4U City Christmas</a></li>
+			<li><a href="/comics/archives/daily/091228">New Years at the Center of the Earth</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/100111">Chapter 61: Perspective</a>
+		<ul>
+			<li><a href="/comics/archives/daily/100111">A Better View I</a></li>
+			<li><a href="/comics/archives/daily/100118">*Emergency TOC WOW Week*</a></li>
+			<li><a href="/comics/archives/daily/100125">A Better View II</a></li>
+			<li><a href="/comics/archives/daily/100322">4U City Green</a></li>
+			<li><a href="/comics/archives/daily/100426">*Portraits Week*</a></li>
+			<li><a href="/comics/archives/daily/100503">*Stick Figures in Spaaaaaace 5*</a></li>
+			<li><a href="/comics/archives/daily/100510">4U City Blue</a></li>
+			<li><a href="/comics/archives/daily/100614">Minions are Forever</a></li>
+			<li><a href="/comics/archives/daily/100830">*Preview Weeks*</a></li>
+			<li><a href="/comics/archives/daily/100920">Minions are Forever Part 2</a></li>
+			<li><a href="/comics/archives/daily/101213">Home for the Holidays</a></li>
+			<li><a href="/comics/archives/daily/101225">*Sluggy Pawnz Week*</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/110103">Chapter 62: 4U City Red</a>
+		<ul>
+			<li><a href="/comics/archives/daily/110103">Precious Metals</a></li>
+			<li><a href="/comics/archives/daily/110117">Another Year in the Life of a Villain</a></li>
+			<li><a href="/comics/archives/daily/110214">4U City Red</a></li>
+			<li><a href="/comics/archives/daily/110711">Breaking the News</a></li>
+			<li><a href="/comics/archives/daily/110808">*more Classic Pawnz week*</a></li>
+			<li><a href="/comics/archives/daily/110815">On The Same Page</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/110926">Chapter 63: Safehouse</a>
+		<ul>
+			<li><a href="/comics/archives/daily/110926">The Shallow Beds</a></li>
+			<li><a href="/comics/archives/daily/111018">The Unbearable Rabbit</a></li>
+			<li><a href="/comics/archives/daily/111116">The Orange Tomato</a></li>
+			<li><a href="/comics/archives/daily/111225">*Holiday Wars Pawnz-week*</a></li>
+			<li><a href="/comics/archives/daily/120102">The NOM</a></li>
+			<li><a href="/comics/archives/daily/120305">*Partially Sluggy 2*</a></li>
+		</ul></li>
+		<li><a href="/comics/archives/daily/120312">Chapter 64: The Research and Development Wars</a>
+		<ul>
+			<li><a href="/comics/archives/daily/120312">Sabotage</a></li>
+			<li><a href="/comics/archives/daily/120411">Recalibration</a></li>
+			<li><a href="/comics/archives/daily/120514">Rendition</a></li>
+			<li><a href="/comics/archives/daily/120716">Bombshell</a></li>
+			<li><a href="/comics/archives/daily/120827">*Partially Sluggy 3*</a></li>
+			<li><a href="/comics/archives/daily/120903">Spearhead</a></li>
+		</ul></li>
+	</ul></li>
+</ul>
+</div>
+				</div>
+				
+				<div id="comicNavCalContainer"></div>
+				
+				<div class="defnif_login">
+						<!-- <div class="defnif_loginbar"></div> -->
+						<div class="ui-dark-glass ui-corner-all dotn_login_banner">
+							Defenders Of The Nifty Login
+						</div>
+							<form id="login" action="/public/defenders/login?fromURI=%2F" method="post">
+					    		<label for="username-field">Username:</label>
+					    		<input id="username-field" class="ui-widget-content ui-corner-all username" type="text" name="username" size="16" value="" />
+					    		<label for="password-field">Password:</label>
+					    		<input id="password-field" class="ui-widget-content ui-corner-all  password" type="password" name="password" size="16" value="" />
+    				            <input class="fg-button ui-state-default ui-corner-all" type="submit" value="Login"/> 
+    				            
+							</form>
+				</div>
+				
+<div id="archive_ad">
+
+
+<!-- Updated -->
+<!-- Beginning of Project Wonderful ad code: -->
+<!-- Ad box ID: 22588 -->
+<script type="text/javascript">
+<!--
+var pw_d=document;
+pw_d.projectwonderful_adbox_id = "22588";
+pw_d.projectwonderful_adbox_type = "2";
+pw_d.projectwonderful_foreground_color = "";
+pw_d.projectwonderful_background_color = "";
+//-->
+</script>
+<script type="text/javascript" src="http://www.projectwonderful.com/ad_display.js"></script>
+<noscript><map name="admap22588" id="admap22588"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&amp;c=0&amp;id=22588&amp;type=2" shape="rect" coords="0,0,117,30" title="" alt="" target="_blank" /><area href="http://www.projectwonderful.com/out_nojs.php?r=0&amp;c=1&amp;id=22588&amp;type=2" shape="rect" coords="117,0,234,30" title="" alt="" target="_blank" /><area href="http://www.projectwonderful.com/out_nojs.php?r=0&amp;c=2&amp;id=22588&amp;type=2" shape="rect" coords="234,0,351,30" title="" alt="" target="_blank" /><area href="http://www.projectwonderful.com/out_nojs.php?r=0&amp;c=3&amp;id=22588&amp;type=2" shape="rect" coords="351,0,468,30" title="" alt="" target="_blank" /></map>
+<table cellpadding="0" border="0" cellspacing="0" width="468" bgcolor="#ffffff"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=22588&amp;type=2" width="468" height="30" usemap="#admap22588" border="0" alt="" /></td></tr><tr><td bgcolor="#ffffff" colspan="4"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=22588&amp;type=2" target="_blank">Ads by Project Wonderful!  Your ad could be here, right now.</a></center></td></tr><tr><td colspan="4" valign="top" width="468" bgcolor="#000000" style="height:3px;font-size:1px;padding:0px;max-height:3px;"></td></tr></table>
+</noscript>
+<!-- End of Project Wonderful ad code. -->
+
+
+
+</div>
+</script>
+
+			</div>
+
+			<div class="clear"></div>
+			<!-- End comic_navigation.mako -->
+
+    			<p/>
+    			
+
+
+
+
+
+
+    	</div>
+    	
+<div id="news_block">
+	<div class="comic_news_ad">
+		
+<div id="news_ad">
+
+
+<!-- Updated -->
+<!-- Beginning of Project Wonderful ad code: -->
+<!-- Ad box ID: 14644 -->
+<script type="text/javascript">
+<!--
+var pw_d=document;
+pw_d.projectwonderful_adbox_id = "14644";
+pw_d.projectwonderful_adbox_type = "3";
+pw_d.projectwonderful_foreground_color = "";
+pw_d.projectwonderful_background_color = "";
+//-->
+</script>
+<script type="text/javascript" src="http://www.projectwonderful.com/ad_display.js"></script>
+<noscript><map name="admap14644" id="admap14644"><area href="http://www.projectwonderful.com/out_nojs.php?r=0&amp;c=0&amp;id=14644&amp;type=3" shape="rect" coords="0,0,160,600" title="" alt="" target="_blank" /><area href="http://www.projectwonderful.com/out_nojs.php?r=1&amp;c=0&amp;id=14644&amp;type=3" shape="rect" coords="0,600,160,1200" title="" alt="" target="_blank" /></map>
+<table cellpadding="0" border="0" cellspacing="0" width="160" bgcolor="#ffffff"><tr><td><img src="http://www.projectwonderful.com/nojs.php?id=14644&amp;type=3" width="160" height="1200" usemap="#admap14644" border="0" alt="" /></td></tr><tr><td bgcolor="#ffffff" colspan="1"><center><a style="font-size:10px;color:#0000ff;text-decoration:none;line-height:1.2;font-weight:bold;font-family:Tahoma, verdana,arial,helvetica,sans-serif;text-transform: none;letter-spacing:normal;text-shadow:none;white-space:normal;word-spacing:normal;" href="http://www.projectwonderful.com/advertisehere.php?id=14644&amp;type=3" target="_blank">Ads by Project Wonderful!  Your ad could be here, right now.</a></center></td></tr><tr><td colspan="1" valign="top" width="160" bgcolor="#000000" style="height:3px;font-size:1px;padding:0px;max-height:3px;"></td></tr></table>
+</noscript>
+<!-- End of Project Wonderful ad code. -->
+
+
+</div>
+</script>
+
+	</div>
+	<div id="comic_news">
+		<div class="comic_news_article">
+			<div class="ui-widget ui-state-highlight comic_news_headline">
+				<span class="comic_news_headline"> Book 12 and book 13 News</span>
+				<br />
+				<span class="comic_news_byline">
+					by Pete on 2012-11-16
+				</span>
+				<div class="clear"></div>
+			</div>
+			<div class="comic_news_story">
+				<p class="MsoNormal" style="text-align: left;">Just in time for the holidays! <a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank">2 NEW* SLUGGY BOOKS!</a></p>
+<p class="MsoNormal" style="text-align: left;"><small>*Technically Book 12 was available at Dragon*Con and Intervention and Book 13 was supposed to be released at WindyCon which I had to cancel my appearance at (Thanks Hurricane Sandy!).</small></p>
+<p class="MsoNormal" style="text-align: left;"><a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank"><img src="../images/newsimages/cover-bk12-100.jpg" border="0" alt="Book12" width="100" height="116" align="left" /></a><a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank"><img src="../images/newsimages/cover-bk13-100.jpg" border="0" alt="Book13" width="100" height="116" align="right" /></a><strong>Book 12, &lsquo;Vampires &amp; Demons&rsquo; </strong>starts with one of my favorite &lsquo;Goofy Guys&rsquo; storylines! Instead of Riff, it&rsquo;s Sam who teams up with Torg<span style="mso-spacerun:yes">&nbsp; </span>for some (vampire) Idiocy.<span style="mso-spacerun:yes">&nbsp; </span>In the middle are various joys like<span style="mso-spacerun:yes">&nbsp;  Pasquirlio and the Lemonade Stand Wars, </span>and Vroomba (Book 12 includes a page dedicated to the ultimate fate of Vroomba). And Book 12 wraps with one the beginning of one of my greatest stories. That Which Redeems Part 1.<br /> <br /> <strong>And Book 13, &lsquo;Redemption,&rsquo; </strong>brings it to a conclusion as it is the entirety of That Which Redeems Part 2. &lsquo;Redemption&rsquo; is the book in which everything changes in the Sluggy Universe forever. Book 13 includes everything you need to create a solo-playable board game, where you play the role of Torg, trying to save innocent humans from the demons and their soul caravan.<br /> <br /> These books include the superb works of Ian McDonald, Bill Holbrook, and Clay Yount!</p>
+<p class="MsoNormal" style="text-align: left;">You can get them both now from <a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank">IndyPlanet</a> and have them in time for the holidays for yourself or as perfect gifts for the sluggite you love.</p>
+<p>Sluggy Freelance books 12 &amp; 13, VAMPIRES &amp; DEMONS,and&nbsp; REDEMPTION</p>
+<p class="MsoNormal"><span style="text-transform: uppercase;"> </span><br /> <small><strong><big><big><big><big>THAT WHICH REDEEMS</big></big></big></big></strong></small></p>
+<p class="MsoNormal"><em>&ldquo;Hell is yourself and the only redemption is when a person puts himself aside to feel deeply for another person.&rdquo;</em></p>
+<p class="MsoNormal">-Tennessee Williams</p>
+<p class="MsoNormal"><strong><a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank">Things  will never be the same</a>.</strong></p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="comic_news_article">
+			<div class="ui-widget ui-state-highlight comic_news_headline">
+				<span class="comic_news_headline"> Cancelling WindyCon</span>
+				<br />
+				<span class="comic_news_byline">
+					by Pete on 2012-11-06
+				</span>
+				<div class="clear"></div>
+			</div>
+			<div class="comic_news_story">
+				<p>Hey everybody at <a href="http://www.windycon.org/" target="_parent">WindyCon</a>! It&rsquo;s with a heavy heart that I must cancel my attendance of WindyCon39. It&rsquo;s been over a week since Super Storm Sandy struck, and I look to be without power for another week more, and cannot leave my family in that situation. I just want to make sure everyone understands that my first convention cancellation in 15 years was not a simple or easy choice. This situation has been very hard on me, yet unbelievably tragic for so many others. I want to thank con chairs Bill Roper and Richard France for being so understanding through this. And I also want to thank him for inviting me to be the Artist Guest of Honor for next year&rsquo;s WindyCon. Looking forward to seeing you all next year! I&rsquo;ll play Zombicide this weekend by candlelight and think of you.</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="comic_news_article">
+			<div class="ui-widget ui-state-highlight comic_news_headline">
+				<span class="comic_news_headline">Hurrican Sandy Update</span>
+				<br />
+				<span class="comic_news_byline">
+					by Pete on 2012-11-02
+				</span>
+				<div class="clear"></div>
+			</div>
+			<div class="comic_news_story">
+				<p><span style="color: #800000;"><strong>10/29/2012 Noon STORM UPDATE: </strong></span>Things are looking pretty calm out my window but all news suggets in about three hours I have a good chance of losing power and/or being underwater. At this point I do not have tomorrows comic in the queue, but I'm working on it as we speak. If there is no new comic up tonight at midnight theres a good chance I'm without power and unable to update the site. I'll keep you all posted when I can manage.<span style="color: #800000;"><strong><br />10/29/2012 4pm STORM UPDATE: </strong></span>I got the comic in for tomorrow (Tuesday). Leah just finished doing some quick Halloween art for me so there'll be something new for you all on the 31st. The wind is crazy. I anticipate a falling tree cutting my power any minute. I've decided to shut my computer down from now until the storm passes so If I lose power it won't fry my systems. Expect my next update late tomorrow. <strong>GL to my fellow east-coasters!</strong><span style="color: #800000;"><strong><br />10/31/2012 4pm STORM UPDATE:</strong></span> We lost power around 7PM on the 29th and most likely won't have power back until next week. I have a generator but no internet and we're all fighting for gasoline like Mad Max, and rationing it to keep the kids warm at night. I haven't slept in two days and am barely getting by so needless to sat <span style="font-size: medium;"><strong><span style="color: #800000;">NO NEW COMICS UNTIL MONDAY!</span></strong></span> Plus Halloween has been canceled for my neighborhood for the secomnd year in a row. The Pumpkin King is such a wuss.<br /><span style="color: #800000;"><strong>11/2/2012 1pm STORM UPDATE:</strong></span> We It's looking more and more like we're going to be without power for  over a week from now. The trouble is we have a lot of power-related  damage that needs fixing before restoring power to a relative few homes  so we are low priority. And we have snow coming in. The gas shortage is  causing a lot of stress and I find the workable daylight hours vanishing  fast. <span style="color: #800000;"><strong>THERE WILL BE A NEW COMIC MONDAY BUT WE WILL BE ON A M/W/F SCHEDULE UNTIL THE POWER IS RESTORED!<br /><br /></strong></span><span style="color: #800000;"><strong>11/6/2012 7pm STORM UPDATE:</strong></span> It looks like another week of no power. They got the trees off the  poles, but some of the poles were destroyed. They must replace the poles  before the electricians can fix the power, and that&rsquo;ll take maybe 1-3  days? And the news today? They ran out of poles. :(</p>
+<p><span style="color: #800000;"><strong>11/9/2012 10am STORM UPDATE:</strong></span> Still no power. I hate missing <a href="http://www.windycon.org/" target="_blank">WindyCon</a>.  I hate not being able to get the auction art out the door yet. I hate  the fact that I don't have scripts for Monday's strip yet. BUT I'm glad  that ALL I need is the power turned on, with so many people in worse  shape. I'm glad the snow didn't make anything worse around me. AndIi'm  glad for warmer temperatures. I may be able to actually work in y office  this weekend, power-or-not.&nbsp; :( <span style="color: #800000;"><strong>WE WILL BE ON A Probably a cmoic for Monday and we should be able to maintain a M/W/F SCHEDULE UNTIL MY POWER IS TURNED ON!</strong></span><br /><br /><span style="color: #800000;"><strong>11/11/2012 2pm STORM UPDATE: </strong></span>Yesterday  we got power back, but I couldn&rsquo;t tell you all because I had no  internet! We just got internet back now! YAAAYYYY!!! After 12 days,  longer than both of last year&rsquo;s outages combined, I think I&rsquo;m suffering a  wee bit of the mental fatigue! Still, time to get crackin&rsquo;! <span style="font-size: medium;"><strong>TONIGHT&rsquo;S COMIC MAY BE LATE</strong></span> as I have to spend most of the day doing house prep and yard cleanup  (Who wedged a whole pine tree between the fence and the swing-set?) and  will get a late start.<br /><span style="color: #800000;"><strong><span style="font-size: medium;">LOOK FOR A FULL 5-DAY WEEK OF DAILY COMICS!</span></strong></span> It&rsquo;s good to be back.</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="comic_news_article">
+			<div class="ui-widget ui-state-highlight comic_news_headline">
+				<span class="comic_news_headline">The Rebirth of the Sluggy Store!</span>
+				<br />
+				<span class="comic_news_byline">
+					by Pete on 2012-10-15
+				</span>
+				<div class="clear"></div>
+			</div>
+			<div class="comic_news_story">
+				<p style="text-align: left;">For a while now Kim has been overwhelmed with running the entirety of the Sluggy Store. Some orders were falling through the cracks. So the first step was to shut down the store so she could send everyone&rsquo;s orders out. The second step was&hellip; to not quite have a second step.<br /><br />But we finally, at last, have a <strong>second step!</strong> Which is to make REALLY SURE nobody has fallen through cracks! <strong>IF YOU HAVE ANY OUTSTANDING ORDERS FOR THE SLUGGY STORE, SEND AN EMAIL TO kim@sluggy.com OR CONTACT ME AT website@sluggy.com SO WE CAN GET YOU TAKEN CARE OF!</strong><br /><br />After that comes Step three! We have not worked out all the details out but we THINK it&rsquo;ll run something like this:</p>
+<p style="text-align: left;"><strong>STEP THREE:</strong><br /><strong>October 22nd:</strong> The Store reopens on October 22nd with the essential: Megatomes 1 &amp; 2, and Book 9 (all other books are currently available through <a href="http://indyplanet.com/store/advanced_search_result.php?keywords=sluggy&amp;osCsid=q3uaa17kduudsv751qllfjri82&amp;search.x=0&amp;search.y=0" target="_blank">IndyPlanet</a>), and plush Bun-buns and Kikis (Because they are TOO AWESOME), and whatever shirts Kim chooses.<br /><br /><strong>December 7th:</strong> The <strong>last </strong>day for orders to ensure getting your stuff in time for Christmas!<br /><br /><strong>December 8th:</strong> The store closes again!<br /><br /><strong>STEP FOUR:<br />January 2013: </strong>A new Sluggy Store arises! And the shirts come back! Or something like that!&nbsp; It&rsquo;s gonna be <em><strong>grand!</strong></em><br /><span style="font-size: xx-small;"><em>STEP FOUR is subject to change. Do not taunt STEP FOUR. See your doctor if STEP FOUR symptoms persist beyond STEP FIVE.</em></span></p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="comic_news_article">
+			<div class="ui-widget ui-state-highlight comic_news_headline">
+				<span class="comic_news_headline">The New Sluggy Freelance of mid 2012:</span>
+				<br />
+				<span class="comic_news_byline">
+					by Pete on 2012-10-12
+				</span>
+				<div class="clear"></div>
+			</div>
+			<div class="comic_news_story">
+				<p>I hit a major medical fiasco back in June-2012 causing the comic to go from &ldquo;almost 15 years of daily content&rdquo; to &ldquo;almost four months of 3 comics a week&rdquo;. We are now at &ldquo;5 days a week (weekdays) with occasional weekend filler.&rdquo; Most of you already know this, but I figured I&rsquo;d keep this here for new readers and people who have come back after a while and wonder what happened while perusing the archives from June12 to September12.</p>
+<table id="AutoNumber4" style="height: 219px;" border="0" cellspacing="0" cellpadding="5">
+<tbody>
+<tr>
+<td width="25%" align="center"><a href="http://store.sluggy.com/product.php?productid=8&amp;cat=0&amp;page=" target="_blank"> </a><br /></td>
+<td width="25%" align="center"><a href="http://store.sluggy.com/product.php?productid=2&amp;cat=1&amp;page=1" target="_blank"> </a><br /></td>
+<td width="25%" align="center"><a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6366" target="_blank"> </a><br /></td>
+<td width="25%" align="center"><a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6365" target="_blank"> </a><br /></td>
+</tr>
+<tr>
+<td width="25%" align="center"><a href="http://store.sluggy.com/product.php?productid=19&amp;cat=1&amp;page=1" target="_blank"> </a><a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6366" target="_blank"> <img src="../images/newsimages/cover-bk07-100.jpg" border="0" alt="" width="100" height="116" /></a><br /> <strong> <a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6366" target="_top">Book 7 </a> <br /> <a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6366" target="_top">A Very Big Bang</a></strong><br /> available at <br /> <a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank">IndyPlanet!</a><br /></td>
+<td width="25%" align="center"><a href="http://indyplanet.com/store/product_info.php?products_id=4372" target="_blank"> </a><a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6365" target="_blank"> <img src="../images/newsimages/cover-bk08-100.jpg" border="0" alt="" width="100" height="116" /></a><br /> <strong> <a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6365" target="_blank">Book 8 </a> <br /> <a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6365" target="_blank">Fire and Rain</a></strong><br /> available at <br /> <a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank">IndyPlanet!</a><br /></td>
+<td width="25%" align="center"><a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank"> <span style="font-size: medium;"> </span></a><a href="http://indyplanet.com/store/product_info.php?products_id=4372" target="_blank"> <img src="../images/newsimages/cover-bk10-100.jpg" border="0" alt="" width="100" height="116" /></a><br /> <strong> <a href="http://indyplanet.com/store/product_info.php?products_id=4372" target="_blank">Book 10 </a><br /> <a href="http://indyplanet.com/store/product_info.php?products_id=4372" target="_blank"> Ghosts in the Gastank</a></strong><br /> available at<br /> <a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank"> IndyPlanet!</a><br /></td>
+<td width="25%" align="center"><br /> <a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank"> <span style="font-size: medium;"> <img src="../images/newsimages/cover-bk11-100.jpg" border="0" alt="" width="100" height="116" /></span></a><br /> <strong> <a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6413" target="_top"> Book 11 </a> <br /> </strong> <a href="http://indyplanet.com/store/product_info.php?manufacturers_id=4669&amp;products_id=6413"> <strong>The Holiday Wars</strong></a><br /> available  at <br /> <a href="http://indyplanet.com/store/index.php?manufacturers_id=4669" target="_blank">IndyPlanet!</a><br /> &nbsp;</td>
+</tr>
+</tbody>
+</table>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="comic_news_article">
+			<div class="ui-widget ui-state-highlight comic_news_headline">
+				<span class="comic_news_headline">Handy Donations and Defenders Link:</span>
+				<br />
+				<span class="comic_news_byline">
+					by Pete on 2011-07-11
+				</span>
+				<div class="clear"></div>
+			</div>
+			<div class="comic_news_story">
+				<div>It'll take me ages to incorporate these buttons into the site design, but due  to Defenders being the biggest thing supporting the comic, I've gotta keep these  things handy!</div>
+<div>
+<table id="AutoNumber1" style="width: 100%;" border="0" cellspacing="0" cellpadding="0" bordercolor="#111111">
+<tbody>
+<tr>
+<td width="50%" align="right"><a href="../defenders/"> </a><a href="../public/defenders" target="_blank"><img src="../images/newsimages/defgelbutton.gif" border="0" alt="" width="178" height="26" /></a></td>
+<td width="50%" align="left"><form action="https://www.paypal.com/cgi-bin/webscr" method="post"> <input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="3110036" /> <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" type="image" /> <img src="https://www.paypal.com/en_US/i/scr/pixel.gif" border="0" alt="" width="1" height="1" /> </form></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Become a <a href="../public/defenders" target="_blank">Defender!</a> Help Support  the Strip<br /> This page has all the details but I also wanted to mention <strong> <a href="../defenders/cbr.php?comic_ID=5" target="_blank">&ldquo;The Sampire&rdquo;  Defenders-Only Comic Book</a></strong>! 37 Pages of Sampire!</p>
+<table id="AutoNumber4" style="width: 100%;" border="1" cellspacing="0" cellpadding="5" bordercolor="#111111">
+<tbody>
+<tr>
+<td width="100%" align="left" valign="top" bgcolor="#ffffcc">Being a Defender isn't only about bonus content, it&rsquo;s also about saying thanks  for the years of entertainment this strip has provided you. And it gives me the  gift of continuing to provide it for at least a few more years to come, for  everyone!<br /> Just fill out the <a href="../public/defenders" target="_blank">registration form,</a> and you&rsquo;ll be taken to a page where you can pay via <strong>Credit Card </strong>(link on the  bottom left) or via <strong>Paypal</strong>. Your account should be activated almost  immediately!* <br /> <a href="../defenders/"> </a><a href="../public/defenders" target="_blank"><img src="../images/newsimages/defgelbutton.gif" border="0" alt="" width="178" height="26" /></a><br /> <br /> <strong>Checks and Money Orders can be sent to:</strong><br /> Sluggy Freelance, LLC<br /> PO Box 453,<br /> Denville, NJ 07834<br /> Please include a valid contact email with the check, and please allow 3 weeks*  for account activation! (I can&rsquo;t get out to my PO Box every day and personal  checks take time to clear.)</td>
+</tr>
+<tr>
+<td width="100%" bgcolor="#ccffcc"><strong>Donate! </strong>When I started my last &ldquo;New Defenders Drive&rdquo; I was surprised how many people  simply wanted to donate completely separate from Defenders Membership so I set  one up! If you do go this route please donate at least $5 otherwise I' won't see  much of the money due to processing fees.<br /> <form action="https://www.paypal.com/cgi-bin/webscr" method="post"> <input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="3110036" />
+<p><input alt="PayPal - The safer, easier way to pay online!" name="I1" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" type="image" /> <img src="https://www.paypal.com/en_US/i/scr/pixel.gif" border="0" alt="" width="1" height="1" /></p>
+</form></td>
+</tr>
+<tr>
+<td width="100%" bgcolor="#ccffff"><span style="color: #660066;"><strong>*IMPORTANT:</strong> Once you&rsquo;ve paid, (and waited the three weeks if paying by check or money  order) if you can&rsquo;t access Defenders content or log in for any reason contact me at </span><a href="mailto:defendersfix@sluggy.com">defendersfix@sluggy.com</a><span style="color: #660066;"> and we&rsquo;ll take care of you! We&rsquo;ve noticed sometimes the Paypal payments and automatic membership activation don&rsquo;t synch up, and I don&rsquo;t  want anybody left out!</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+</div>
+
+	</div>
+	<div style="display: none;" id="compendium_popup" title="Defenders of the Nifty Compendium"></div>
+
+	<!-- End comics_base.mako -->
+
+		<!-- End base body area -->
+        <div class="clear"></div>
+		<div id="footer">	
+
+            <div id="copyright_area">
+				<span id="mongodb_badge"><a href="http://mongodb.org"><img src="/icons/mongo_logo_small.png"></a></span>
+    			<span id="system_version"><em>emergencyPants v1.1.6 [giblets with fiber]</em></span>
+            </div>
+
+		</div>
+	</div>
+	
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+try{
+var pageTracker = _gat._getTracker("UA-8904064-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</script>
+</body>
+</html>

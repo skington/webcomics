@@ -1,0 +1,386 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>PVP - The Pies have it</title>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.pvponline.com/feed" />
+	<link rel="stylesheet" href="/assets/css/futura.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://newcdn.pvponline.com/assets/css/style.20120234.css" type="text/css" media="screen" />
+	<link rel="Shortcut Icon" href="/favicon.ico" type="image/ico" />
+	<script type="text/javascript" src="http://newcdn.pvponline.com/assets/js/random-sub.js"></script> 
+	<script type='text/javascript'>
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+	(function() {
+		var gads = document.createElement('script');
+		gads.async = true;
+		gads.type = 'text/javascript';
+		var useSSL = 'https:' == document.location.protocol;
+		gads.src = (useSSL ? 'https:' : 'http:') + 
+		'//www.googletagservices.com/tag/js/gpt.js';
+		var node = document.getElementsByTagName('script')[0];
+		node.parentNode.insertBefore(gads, node);
+		})();
+		</script>
+
+		<script type='text/javascript'>
+		googletag.cmd.push(function() {
+			googletag.defineSlot('/1051411/PvP_Leaderboard', [728, 90], 'div-gpt-ad-1330122087776-0').addService(googletag.pubads());
+			googletag.defineSlot('/1051411/PvP_Medium_Rectangle', [300, 250], 'div-gpt-ad-1330123163724-0').addService(googletag.pubads());
+			googletag.pubads().enableSingleRequest();
+			googletag.enableServices();
+		});
+		</script>
+			
+	
+			
+
+	<!-- Begin Google Analytics -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-692724-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	<!-- End Google Analytics -->
+
+	<!-- BEGIN Quantcast Tag -->
+	<script type="text/javascript">
+	var _qevents = _qevents || [];
+	(function() {
+		var elem = document.createElement('script');
+		elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+		elem.async = true;
+		elem.type = "text/javascript";
+		var scpt = document.getElementsByTagName('script')[0];
+		scpt.parentNode.insertBefore(elem, scpt);
+		})();
+		_qevents.push({qacct:"p-7aMlAhcqainl6"});
+		</script>
+		<noscript>
+			<div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-7aMlAhcqainl6.gif" border="0" height="1" width="1" alt="Quantcast"/></div>
+		</noscript>
+		<!-- END Quantcast tag -->
+
+		<!-- BEGIN Nielsen Online SiteCensus V6.0 -->
+		<!-- COPYRIGHT 2010 Nielsen Online -->
+		<script type="text/javascript">
+		(function () {
+			var d = new Image(1, 1);
+			d.onerror = d.onload = function () {
+				d.onerror = d.onload = null;
+			};
+			d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-105791h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+			})();
+			</script>
+			<noscript>
+				<div><img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-105791h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" /></div>
+			</noscript>
+			<!-- END Nielsen Online SiteCensus V6.0 -->
+
+			<!-- BEGIN Compete XL Code for penny-arcade.com -->
+			<script type="text/javascript">
+			__compete_code = '7068d7e9358a648ffebc11d328f1691b';
+			/* Set control variables below this line. */ 
+			</script>
+			<script type="text/javascript" src="//c.compete.com/bootstrap/s/7068d7e9358a648ffebc11d328f1691b/penny-arcade-com/bootstrap.js"></script>
+			<noscript>
+				<img width="1" height="1" src="https://ssl-penny-arcade-com-7068d7.c-col.com"/>
+			</noscript>
+			<!-- END Compete XL Code for penny-arcade.com -->
+
+			<!-- BEGIN comScore Tag -->
+			<script>
+			var _comscore = _comscore || [];
+			_comscore.push({ 
+				c1: "2", c2: "13395694" 
+			});
+			(function() {
+				var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+				s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+				el.parentNode.insertBefore(s, el);
+				})();
+				</script>
+				<noscript>
+					<img src="http://b.scorecardresearch.com/p?c1=2&c2=13395694&cv=2.0&cj=1" />
+				</noscript>
+				<!-- END comScore Tag -->
+
+</head>
+<body>
+	<div id="headerSub">
+		<div class="content">
+			<h1><a href="http://pvponline.com/" title="PVP">PVP - Player Vs Player</a></h1>
+			<div id="adLeaderboard">
+				<div id='div-gpt-ad-1330122087776-0' style='width:728px; height:90px;'>
+					<script type='text/javascript'>
+					googletag.cmd.push(function() {googletag.display('div-gpt-ad-1330122087776-0');});
+					</script>
+				</div>
+			</div>
+			<ul class="nav">
+				<li class="updates">Updates <strong>Mon - Fri</strong></li>
+				<li><a href="http://pvponline.com/" title="Home">Home</a></li>
+				<li class="active"><a href="http://pvponline.com/comic" title="Comic">Comic</a></li>
+				<li><a href="http://pvponline.com/archive" title="Archive">Archive</a></li>
+				<li><a href="http://store.pvponline.com/" title="Store">Store</a></li>
+				<li><a href="http://pvponline.com/new_reader" title="New Readers">New Readers</a></li>
+				<li><a href="http://pvponline.com/extras" title="Extras">Extras</a></li>
+			</ul>
+		</div>
+	</div>
+		
+<hr />
+<div id="mainComic">
+	<div class="content">
+		<div class="body">
+			<div class="bodyNav">
+		
+			<h2 id="headingArchive">The Pies have it</h2>
+			
+			<div class="nextBg">
+				
+			</div>
+			<div class="prevBg">
+				
+
+				<a class="prevBtn btn" href="http://pvponline.com/comic/2012/12/21/home-for-christmas" title="Previous Comic">Previous comic</a>
+								
+			</div>
+		</div>
+			
+						<div class="postMeta">
+				<p>Posted December 27, 2012</p> 
+<!--				<a class="buyaprint btn" href="#" title="Buy A Print">Buy A Print</a>-->
+					<a class="rssfeed btn" href="http://pvponline.com/feed" title="Subscribe to RSS Feed">Subscribe to RSS Feed</a>
+				<div class="postSocial">					
+					<a class="facebook btn" href="http://www.facebook.com/sharer.php?u=http://pvponline.com/comic/2012/12/27/the-pies-have-it&amp;t=The Pies have it" title="Share on Facebook">Share on Facebook</a>
+					<a class="twitter btn" href="http://twitter.com/share?url=http://pvponline.com/comic/2012/12/27/the-pies-have-it&amp;text=The Pies have it%20%23PVP - " title="Share on Twitter">Share on Twitter</a>
+				</div>
+			</div>
+			<div class="post">
+				<img src="http://newcdn.pvponline.com/img/comic/pvp20121227.jpg" alt="pvp20121227" />
+			</div>
+			
+		</div>
+		<hr />
+		<div class="sidebarLeft">
+			<div id="headingReader" class="headingBox">
+				
+				<h2>New Readers</h2>
+				<div id="readerContent">
+					<h4 class="storeOhai btn">New!</h4>
+					<a href="http://www.pvponline.com/comic/2009/03/10/the-one-where-they-play-dd" title="Say Hello To&#8230; your new dungenon master"><img src="http://pvponline.com/img/comic_new_readers/new-readers-dnd.png" alt="new-readers-dnd" /></a>
+					<h3><a href="http://www.pvponline.com/comic/2009/03/10/the-one-where-they-play-dd" title="Say Hello To&#8230; your new dungenon master"><strong>Say Hello To&#8230;</strong> your new dungenon master</a></h3>
+				</div>
+				
+			</div>
+			<div id="headingStore">
+	<h2 class="btn">Store Features</h2>
+	<ul>
+		
+		<li>
+			<a href="http://store.pvponline.com/products/book-8-the-cat-is-plotting-my-death" title="book 8cat is plotting my death"><img src="http://newcdn.pvponline.com/img/store_feat/store_book8.png" alt="book 8cat is plotting my death" /></a>
+			
+			<h4 class="storeSale btn">New!</h4>
+			
+			<div class="overlay">
+				<div class="price"> 
+					<p>6<span>.99</span></p>
+				</div>
+				<h3><a href="http://store.pvponline.com/products/book-8-the-cat-is-plotting-my-death" title="book 8cat is plotting my death"><strong>book 8</strong>cat is plotting my death</a></h3>
+			</div>
+		</li>
+		
+		<li class='lastStore'>
+			<a href="http://store.pvponline.com/collections/apparel/products/ale-and-whores-tee" title="ShirtAle and whores"><img src="http://newcdn.pvponline.com/img/store_feat/store_ales.png" alt="ShirtAle and whores" /></a>
+			
+			<h4 class="storeSale btn">New!</h4>
+			
+			<div class="overlay">
+				<div class="price"> 
+					<p>6<span>.99</span></p>
+				</div>
+				<h3><a href="http://store.pvponline.com/collections/apparel/products/ale-and-whores-tee" title="ShirtAle and whores"><strong>Shirt</strong>Ale and whores</a></h3>
+			</div>
+		</li>
+		
+	</ul>
+</div>
+			<div id="adBox">
+				<div id='div-gpt-ad-1330123163724-0' style='width:300px; height:250px;'>
+					<script type='text/javascript'>
+					googletag.cmd.push(function() {googletag.display('div-gpt-ad-1330123163724-0');});
+					</script>
+				</div>
+			</div>
+		</div>
+		<hr />
+	</div>
+</div>
+	<div id="footer">
+		<div class="content">
+			<ul class="nav">
+				<li class="updates">Updates <strong>Mon - Fri</strong></li>
+				<li><a href="http://pvponline.com/" title="Home">Home</a></li>
+				<li><a href="http://pvponline.com/comic" title="Comic">Comic</a></li>
+				<li><a href="http://pvponline.com/archive" title="Archive">Archive</a></li>
+				<li><a href="http://store.pvponline.com/" title="Store">Store</a></li>
+				<li><a href="http://pvponline.com/new_reader" title="New Readers">New Readers</a></li>
+				<li><a href="http://pvponline.com/extras" title="Extras">Extras</a></li>
+			</ul>
+			<hr />
+			<div class="left">
+				<h3>Archive Search</h3>	
+				<form method="POST" action="http://pvponline.com/search/results">
+ 
+					<fieldset>
+					<input type="hidden" name="search-words-within-words" value="no" /> 
+						<input id="search" type="text" name="keywords" onfocus="clearField(this,'Search')" onblur="" value="Search" autocomplete="off" onclick="this.value='';" />
+						<input id="searchBtn" class="btn" type="submit" value="Search Archive" />
+					</fieldset>
+ 
+</form> 
+			
+				<h3>Projects</h3>
+				<ul>
+					<li><a id="logoKrisScott" class="projLogo" href="http://penny-arcade.com/patv/show/kris-and-scotts-scott-and-kris-show" title="Kris and Scott's Scott and Kris Show">Kris and Scott's Scott and Kris Show</a></li>
+					<li><a id="logoBlam" class="projLogo" href="http://penny-arcade.com/patv/show/blamimations" title="Blamimation with Kris and Scott">Blamimation with Kris and Scott</a></li>
+					<li><a id="logoTrenches" class="projLogo" href="http://trenchescomic.com/" title="The Trenches">The Trenches</a></li>
+					<li><a id="logoWebcomics" class="projLogo" href="http://www.webcomics.com/" title="Webcomics.com">Webcomics.com</a></li>
+					<li><a id="logoWebcomicsWeekly" class="projLogo" href="http://ww.libsyn.com/" title="Webcomics Weekly">Webcomic's Weekly Podcast</a></li>
+				</ul>
+			</div>
+			<hr />
+			<div class="mid">
+				<h3><a href="http://pvponline.com/archive/news" title="Browse News Archive">Latest PVP News <em>Browse Archive&hellip;</em></a></h3>
+				<ul>
+					
+					<li>
+						<a class="thumb" href="http://pvponline.com/news/merry-christmas-from-pvp" title="Merry Christmas from PvP">	
+																				</a>
+						
+						<div class="left">
+							<h4><a href="http://pvponline.com/news/merry-christmas-from-pvp" title="Merry Christmas from PvP">Merry Christmas from PvP</a></h4>
+							<cite>By Scott R. Kurtz</cite>
+							<p>
+								 
+								Everyone here at PvP (including all fictional characters living in my head) want to wish you and your family a
+								<a href="http://pvponline.com/news/merry-christmas-from-pvp" title="More&hellip;">More&hellip;</a>
+							</p> 
+						</div>
+					</li>
+					
+					<li>
+						<a class="thumb" href="http://pvponline.com/news/scott-kurtz-teams-with-wizards-of-the-coast-for-dd-comic" title="Scott Kurtz teams with Wizards of the Coast for D&amp;D comic">	
+																				</a>
+						
+						<div class="left">
+							<h4><a href="http://pvponline.com/news/scott-kurtz-teams-with-wizards-of-the-coast-for-dd-comic" title="Scott Kurtz teams with Wizards of the Coast for D&amp;D comic">Scott Kurtz teams with Wizards of the Coast for D&amp;D comic</a></h4>
+							<cite>By Scott R. Kurtz</cite>
+							<p>
+								 
+								I get to draw the official D&amp;D webcomic. It&#8217;s true. I can&#8217;t believe it either. I keep reading the press
+								<a href="http://pvponline.com/news/scott-kurtz-teams-with-wizards-of-the-coast-for-dd-comic" title="More&hellip;">More&hellip;</a>
+							</p> 
+						</div>
+					</li>
+					
+					<li>
+						<a class="thumb" href="http://pvponline.com/news/everything-must-go" title="Everything must go">	
+																				</a>
+						
+						<div class="left">
+							<h4><a href="http://pvponline.com/news/everything-must-go" title="Everything must go">Everything must go</a></h4>
+							<cite>By Scott R. Kurtz</cite>
+							<p>
+								 
+								We&#8217;re liquidating everything in our PvP store. That&#8217;s right. We&#8217;re clearing the decks to make room for the coming of
+								<a href="http://pvponline.com/news/everything-must-go" title="More&hellip;">More&hellip;</a>
+							</p> 
+						</div>
+					</li>
+					
+					<li>
+						<a class="thumb" href="http://pvponline.com/news/peer-to-peer" title="peer to peer">	
+																				</a>
+						
+						<div class="left">
+							<h4><a href="http://pvponline.com/news/peer-to-peer" title="peer to peer">peer to peer</a></h4>
+							<cite>By Scott R. Kurtz</cite>
+							<p>
+								 
+								Peer groups are important for artists. This is something I said in a recent blog post and also on a
+								<a href="http://pvponline.com/news/peer-to-peer" title="More&hellip;">More&hellip;</a>
+							</p> 
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+			<hr />
+			<div class="right">
+				<h3>Newsletter</h3>
+				<form action="http://okdomo.createsend.com/t/r/s/zdrkil/" method="post" id="subForm">
+					<fieldset>
+						<input id="zdrkil-zdrkil" name="cm-zdrkil-zdrkil" type="text" onfocus="clearField(this,'Enter Email')" onblur="resetField(this,'Enter Email')" value="Enter Email" autocomplete="off" onclick="this.value='';" />
+						<input id="signupBtn" class="btn" type="submit" value="Sign Up for Newsletter" />
+					</fieldset>
+				</form>
+				<h3>Events</h3>
+				<ul>
+					
+<li>
+	<a href="http://www.emeraldcitycomicon.com/" title="Emerald City Comicon"><img src="http://newcdn.pvponline.com/img/events/event_eccc.jpg" alt="Emerald City Comicon" /></a>
+	<div class="left">
+		<h4>Mar 1-3</h4>
+		<p><a href="http://www.emeraldcitycomicon.com/" title="Emerald City Comicon">Emerald City Comicon</a></p>
+	</div>
+</li>
+
+<li>
+	<a href="http://www.paxsite.com" title="PAX East"><img src="http://newcdn.pvponline.com/img/events/events03.jpg" alt="PAX East" /></a>
+	<div class="left">
+		<h4>Mar 22-24</h4>
+		<p><a href="http://www.paxsite.com" title="PAX East">PAX East</a></p>
+	</div>
+</li>
+
+<li>
+	<a href="http://www.comic-con.org" title="San Diego Comicon"><img src="http://newcdn.pvponline.com/img/events/events01.jpg" alt="San Diego Comicon" /></a>
+	<div class="left">
+		<h4>July 17-21</h4>
+		<p><a href="http://www.comic-con.org" title="San Diego Comicon">San Diego Comicon</a></p>
+	</div>
+</li>
+
+				</ul>
+				<h3>Stay Connected</h3>
+				<ul class="last">
+					<li><a class="twitter btn" href="https://twitter.com/#!/pvponline" title="Follow us on Twitter">Follow us on Twitter</a></li>
+					<li><a class="facebook btn" href="http://www.facebook.com/PVPonline" title="Friend us on Facebook">Friend us on Facebook</a></li>
+					<li><a class="rssfeed btn" href="http://pvponline.com/feed" title="Subscribe to our RSS Feed">Subscribe to our RSS Feed</a></li>
+				</ul>
+			</div>
+			<hr />
+			<ul class="subNav">
+				<li id="footerLogo"><a href="http://pvponline.com/" title="PVP Home">PVP - Player Vs Player</a></li>
+				<li class="divider"><a href="mailto:mail@pvponline.com" title="Contact Us">Contact Us</a></li>
+				<li class="divider"><a href="mailto:advertising@penny-arcade.com?subject=Advertising on PvP Online" title="Advertise With Us">Advertise With Us</a></li>
+				<li>Site by <a href="http://www.okdomo.com" title="Visit Ok Domo">Ok Domo</a></li>
+				<li class="right">Copyright &copy;1998-2012 Scott R. Kurtz</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
