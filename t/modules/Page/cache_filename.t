@@ -10,7 +10,10 @@ use Test::More;
 
 use_ok('WWW::Webcomic::Page');
 
-my $cache_directory = lib::abs::path('cache');
+# We're not going to be caching anything, we're just testing that
+# the files generated look sane, so this directory should be fine.
+my $cache_directory = lib::abs::path('./');
+
 my %expected_components = (
     'http://www.example.com/'        => ['www.example.com', 'index.html'],
     'http://www.example.com/foo'     => ['www.example.com', 'foo'],
