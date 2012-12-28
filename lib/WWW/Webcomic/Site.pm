@@ -62,13 +62,12 @@ has 'feed_pages' => (
     lazy_build => 1,
 );
 
-# home_page is ro and required, so we know it exists at this point.
-
 sub _build_feed_pages {
     my ($self) = @_;
 
     # Find whether we have any RSS or Atom feeds linked from the home page.
     # If there's nothing there, fine.
+    # home_page is ro and required, so we know it exists at this point.
     my $homepage_contents = $self->home_page->contents;
     my @feed_urls = Feed::Find->find_in_html(\$homepage_contents,
         $self->home_page->url);
