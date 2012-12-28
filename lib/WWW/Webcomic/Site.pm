@@ -11,6 +11,7 @@ use Moose::Util::TypeConstraints;
 use MooseX::LazyRequire;
 
 use WWW::Webcomic::Page;
+use WWW::Webcomic::Page::Feed;
 use WWW::Webcomic::MooseTypes;
 
 use Carp;
@@ -57,7 +58,7 @@ objects - so not parsed or anything.
 
 has 'feed_pages' => (
     is      => 'rw',
-    isa     => 'ArrayRef[WWW::Webcomic::Page]',
+    isa     => 'ArrayRef[WWW::Webcomic::Page::Feed]',
     lazy    => 1,
     builder => 'fetch_feed_pages',
 );
@@ -74,13 +75,13 @@ sub fetch_feed_pages {
         $self->home_page->url);
     return [] if !@feed_urls;
 
-    # Right, fetch the feeds. Get them via our Page module (a) so we can
+    # Right, fetch the feeds. Get them via our Feed module (a) so we can
     # cache this stuff, and (b) so we can override the default user-agent.    
     # webcomicsnation.com and possibly others decide to brush you off
     # if you use the default libwww/perl user agent.
     my @feeds;
     for my $feed_url (@feed_urls) {
-        my $feed_page = WWW::Webcomic::Page->new(url => $feed_url);
+        my $feed_page = WWW::Webcomic::Page::Feed->new(url => $feed_url);
         if ($self->home_page->cache_directory) {
             $feed_page->cache_directory($self->home_page->cache_directory)
         }

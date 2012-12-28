@@ -165,17 +165,11 @@ sub get_feed_contents {
     my %feed_contents;
     url:
     for my $page (@feed_pages) {
-        my $page_contents = $page->contents;
-        my $feed = XML::Feed->parse(\$page_contents) or do {
-            print STDERR "Couldn't parse $site->url\n";
-            next url;
-        };
-
         # Find out which categories these entries implement. If we find
         # out that we have e.g. Comics and Blog entries, we'll use that to
         # discard blog entries.
         my %has_category;
-        for my $entry ($feed->entries) {
+        for my $entry ($page->feed->entries) {
             for my $category ($entry->category) {
                 $has_category{$category}++;
             }
@@ -186,7 +180,7 @@ sub get_feed_contents {
         # Pick out details of all entries.
         my @entries;
         entry:
-        for my $entry ($feed->entries) {
+        for my $entry ($page->feed->entries) {
 
             # If this is a blog or news post, skip it.
             next entry if grep { $_ eq $skip_category } $entry->category;
