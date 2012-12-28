@@ -36,8 +36,8 @@ with an error message if the feed contents are malformed.
 =cut
 
 has 'feed' => (
-    is => 'ro',
-    isa => 'XML::Feed',
+    is         => 'ro',
+    isa        => 'XML::Feed',
     lazy_build => 1,
 );
 
