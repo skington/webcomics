@@ -38,10 +38,10 @@ string.
 =cut
 
 has 'home_page' => (
-    is            => 'ro',
-    isa           => 'WWW::Webcomic::Page',
-    coerce        => 1,
-    lazy_required => 1,
+    is       => 'ro',
+    isa      => 'WWW::Webcomic::Page',
+    coerce   => 1,
+    required => 1,
 );
 
 =back
