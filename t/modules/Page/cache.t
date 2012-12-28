@@ -6,7 +6,7 @@ use warnings;
 no warnings qw(uninitialized);
 
 use lib::abs qw(../../../lib ../../lib);
-use Utils;
+use Utils qw(_directory_is_safe);
 
 use Test::More;
 

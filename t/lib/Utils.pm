@@ -6,7 +6,7 @@ use warnings;
 no warnings qw(uninitialized);
 use parent qw(Exporter);
 
-our @EXPORT = qw(_directory_is_safe);
+our @EXPORT_OK = qw(_directory_is_safe);
 
 use Test::More;
 
