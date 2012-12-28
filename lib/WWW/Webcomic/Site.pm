@@ -57,15 +57,14 @@ objects - so not parsed or anything.
 =cut
 
 has 'feed_pages' => (
-    is      => 'rw',
-    isa     => 'ArrayRef[WWW::Webcomic::Page::Feed]',
-    lazy    => 1,
-    builder => 'fetch_feed_pages',
+    is         => 'rw',
+    isa        => 'ArrayRef[WWW::Webcomic::Page::Feed]',
+    lazy_build => 1,
 );
 
 # home_page is ro and required, so we know it exists at this point.
 
-sub fetch_feed_pages {
+sub _build_feed_pages {
     my ($self) = @_;
 
     # Find whether we have any RSS or Atom feeds linked from the home page.
