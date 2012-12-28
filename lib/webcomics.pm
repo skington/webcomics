@@ -70,7 +70,7 @@ sub addnew {
     # Is there a RSS feed? If so, that's probably our best bet,
     # assuming the feed is germane (e.g. this isn't Doonesbury, which has
     # a standard Slate feed rather than its own)
-    if (my %feed_contents = get_feed_contents($url, $contents)) {
+    if (my %feed_contents = get_feed_contents($site)) {
 
         # Analyse each feed, trying to identify comics vs news vs comments,
         # and working out URL structures.
@@ -157,24 +157,17 @@ sub addnew {
 #   date:  optional (missing in some feeds), the date posted
 
 sub get_feed_contents {
-    my ($url, $html_mainpage) = @_;
+    my ($site) = @_;
 
-    my @feed_urls = Feed::Find->find_in_html(\$html_mainpage, $url);
-    return if !@feed_urls;
+    my @feed_pages = @{$site->feed_pages};
+    return if !@feed_pages;
 
     my %feed_contents;
     url:
-    for my $url (@feed_urls) {
-
-        # webcomicsnation.com and possibly others decide to brush you off
-        # if you use the default libwww/perl user agent.
-        ## no critic (Variables::ProtectPrivateVars)
-        local *LWP::UserAgent::_agent = sub {
-            'Who the hell bans automated access to RSS feeds?'
-        };
-        ## use critic
-        my $feed = XML::Feed->parse(URI->new($url)) or do {
-            print STDERR "Couldn't parse $url\n";
+    for my $page (@feed_pages) {
+        my $page_contents = $page->contents;
+        my $feed = XML::Feed->parse(\$page_contents) or do {
+            print STDERR "Couldn't parse $site->url\n";
             next url;
         };
 
@@ -252,7 +245,7 @@ sub get_feed_contents {
                 || ($any_contain_comic && $_->{link} !~ $re_comic));
         } @entries;
 
-        push @{ $feed_contents{$url} }, @entries;
+        push @{ $feed_contents{$page->url} }, @entries;
     }
 
     return %feed_contents;
