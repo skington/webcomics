@@ -159,7 +159,7 @@ sub addnew {
 sub get_feed_contents {
     my ($site) = @_;
 
-    my @feed_pages = @{$site->feed_pages};
+    my @feed_pages = $site->all_feed_pages;
     return if !@feed_pages;
 
     my %feed_contents;

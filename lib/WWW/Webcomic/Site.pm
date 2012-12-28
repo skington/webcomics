@@ -60,6 +60,8 @@ has 'feed_pages' => (
     is         => 'rw',
     isa        => 'ArrayRef[WWW::Webcomic::Page::Feed]',
     lazy_build => 1,
+    traits     => ['Array'],
+    handles    => { all_feed_pages => 'elements', },
 );
 
 sub _build_feed_pages {
