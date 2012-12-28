@@ -4,11 +4,13 @@ use strict;
 use warnings;
 no warnings qw(uninitialized);
 use vars qw($VERSION);
+use English qw(-no_match_vars);
 
 use Moose;
 use Moose::Util::TypeConstraints;
 use MooseX::LazyRequire;
 
+use Carp;
 use HTML::TreeBuilder;
 use URI;
 use LWP::UserAgent;
@@ -74,10 +76,98 @@ sub agent_string {
     'Webcomics parser/' . $VERSION;
 }
 
+=item cache_directory
+
+Optional; a directory where web pages are stored.
+
+If a cache directory is set, and a request is made for a page that is stored
+in the cache, the cache will be used.
+
+If a cache directory is set, and a request is made for a page that is not
+stored in the cache, the page contents will be stored in the cache.
+
+If cache_directory is /tmp/cache, http://example.com/ will be stored in
+/tmp/cache/example.com/index.html and http://example.com/foo/bar/baz.gif
+will be stored in /tmp/cache/example.com/foo/bar/baz.gif
+
+No distinction is made between http and https, or any other URL protocols.
+
+=cut
+
+subtype 'WWW::Webcomic::CacheDir', as 'Str', where {
+    -d $_ && -r _ && -w _
+};
+
+has 'cache_directory' => (
+    is        => 'rw',
+    isa       => 'WWW::Webcomic::CacheDir',
+    predicate => 'has_cache_directory',
+);
+
+=item cached_file_path
+
+The full filesystem path of the file where the page would be stored.
+Undef if there is no cache_directory.
+
+Lazy attribute; will create the requisite subdirectories, or die trying,
+when called.
+
+=cut
+
+has 'cached_file_path' => (
+    is         => 'ro',
+    isa        => 'Str',
+    lazy_build => 1,
+);
+
+sub _build_cached_file_path {
+    my ($self) = @_;
+
+    return if !$self->has_cache_directory;
+
+    my @components = $self->_cached_file_components;
+    my $target_directory = $self->cache_directory;
+    sub_directory:
+    while (@components > 1) {
+        my $sub_directory = shift @components;
+        ### TODO: cope with Windows.
+        $target_directory .= '/' . $sub_directory;
+        if (-e $target_directory && -d _ && -w _) {
+            next sub_directory;
+        } elsif (-e $target_directory) {
+            1;
+        }
+        mkdir($target_directory, 0755) or do {
+            1;
+        }
+            or die "Couldn't create $target_directory: $!";
+    }
+    return $target_directory . '/' . (shift @components || 'index.html');
+}
+
+sub _cached_file_components {
+    my ($self) = @_;
+    
+    my @components = ($self->url->host);
+    if (length($self->url->path)) {
+        my @path_components = split('/', $self->url->path);
+        shift @path_components;
+        push @components, @path_components;
+        if ($self->url->path =~ m{ / $ }x) {
+            push @components, 'index.html';
+        }
+    }
+    if ($self->url->query) {
+        $components[-1] .= '?' . $self->url->query;
+    }
+    return @components;
+}
+
+
 =item contents
 
 The contents of the page. Lazy, so only retrieved when first requested,
-and cached for later use. Will die on errors, so be sure to wrap in
+and cached in memory for later use. Will die on errors, so be sure to wrap in
 an eval block or Try::Tiny::catch etc.
 
 =cut
@@ -91,7 +181,35 @@ has 'contents' => (
 sub _build_contents {
     my ($self) = @_;
 
-    $self->fetch_page;
+    if ($self->has_cache_directory) {
+        if (my $cached_contents = $self->fetch_cached_contents) {
+            return $cached_contents;
+        }
+    }
+    my $contents = $self->fetch_page;
+    if ($self->has_cache_directory) {
+        $self->store_cached_contents($contents);
+    }
+    return $contents;
+}
+
+sub fetch_cached_contents {
+    my ($self) = @_;
+
+    # It's OK not to have a cached file.
+    return if !-e $self->cached_file_path;
+
+    # But we should squawk if it doesn't exist.
+    open(my $fh, '<', $self->cached_file_path)
+        or die sprintf(q{Couldn't open cached %s as %s: %s},
+        $self->url, $self->cached_file_path, $OS_ERROR);
+
+    # Slurp the contents in and return them.
+    local $INPUT_RECORD_SEPARATOR = undef;
+    my $contents = <$fh>;
+    close $fh;
+
+    return $contents;
 }
 
 sub fetch_page {
@@ -102,6 +220,19 @@ sub fetch_page {
         die "Couldn't fetch $self->url: ", $response->status_line;
     }
     return $response->decoded_content // $response->content;    
+}
+
+sub store_cached_contents {
+    my ($self, $contents) = @_;
+
+    open(my $fh, '>', $self->cached_file_path) or do {
+        carp sprintf(q{Couldn't write %s to cached file %s: %s'},
+            $self->url, $self->cached_file_path, $OS_ERROR);
+        return;
+    };
+    print $fh $contents;
+    close $fh;
+    return;
 }
 
 =item tree
