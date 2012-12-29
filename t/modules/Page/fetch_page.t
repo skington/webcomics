@@ -19,7 +19,7 @@ my $page = WWW::Webcomic::Page->new(url => 'http://www.google.com');
 isa_ok($page, 'WWW::Webcomic::Page', 'Google is a valid page to fetch');
 
 # Fetch the page. We should have something that looks googlish.
-my $page_contents = $page->fetch_page;
+my $page_contents = $page->_fetch_page;
 ok($page_contents, 'We got something from fetch_page');
 my $re_html_like = qr{.* < \s* html [^>]* > }xsm;
 like($page_contents, $re_html_like, 'Looks like HTML');
