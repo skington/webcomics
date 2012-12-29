@@ -57,8 +57,8 @@ vanilla LWP.
 =cut
 
 has 'user_agent' => (
-    is => 'ro',
-    isa => 'LWP::UserAgent',
+    is      => 'ro',
+    isa     => 'LWP::UserAgent',
     builder => 'build_user_agent',
 );
 
@@ -159,7 +159,6 @@ sub _cached_file_components {
     return @components;
 }
 
-
 =item contents
 
 The contents of the page. Lazy, so only retrieved when first requested,
@@ -204,14 +203,26 @@ sub _fetch_cached_contents {
     return $contents;
 }
 
+# Private attribute, hence init_arg => undef so you can't specify it
+# in the constructor. Not entirely sure how much use that's going to be
+# given that all of the other attributes are lazy, though.
+
+has '_http_response' => (
+    is        => 'rw',
+    isa       => 'HTTP::Response',
+    init_arg  => undef,
+    predicate => '_has_http_response',
+);
+
 sub _fetch_page {
     my ($self) = @_;
 
-    # Fetch the page.
+    # Fetch the page, and remember this for later on.
     my $response = $self->user_agent->get($self->url);
     if (!$response->is_success) {
         die "Couldn't fetch $self->url: ", $response->status_line;
     }
+    $self->_http_response($response);
 
     # Work out its contents, and cache them if necessary.
     # If this looks like a redirect, make a symlink from the requested
@@ -247,6 +258,51 @@ sub _store_cached_contents {
     print $fh Encode::encode('UTF-8', $contents);
     close $fh;
     return;
+}
+
+=item canonical_url
+
+A URI object for the page this page ultimately points to.
+
+=cut
+
+has 'canonical_url' => (
+    is         => 'ro',
+    isa        => 'URI',
+    lazy_build => 1,
+);
+
+sub _build_canonical_url {
+    my ($self) = @_;
+
+    # If this is an object that has just fetched a live page,
+    # let LWP do the work for us.
+    # Confusingly, HTTP::Response->base returns the contents of e.g.
+    # the <base> header tag, i.e. which page this page is pretending to be.
+    # Or, if there's no such tag and we had a redirection, the page we
+    # were redirected to.
+    # Either way, it's the canonical URL for this page.
+    if ($self->_has_http_response) {
+        return $self->_http_response->base;
+    }
+
+    # OK, this is a cached response. If this is a straight file,
+    # there hasn't been any redirection, so the canonical URL is the
+    # one requested.
+    if (!-e $self->cached_file_path
+        || (-e _ && !(-l $self->cached_file_path)))
+    {
+        return $self->url;
+    }
+
+    # OK, this is a cached response resulting from a redirect, so rely on the
+    # stored symlinks to tell us what the eventual URL was. In this case,
+    # we've been fetched from a cached file, which is actually a symlink to
+    # another file, so work out what the URL should be from the symlink
+    # target.
+    my $eventual_url = readlink($self->cached_file_path);
+    substr($eventual_url, 0, length($self->cache_directory)) = 'http://';
+    return URI->new($eventual_url);
 }
 
 =item tree

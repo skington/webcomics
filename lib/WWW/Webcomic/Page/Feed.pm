@@ -71,20 +71,12 @@ has 'entries' => (
 sub _build_entries {
     my ($self) = @_;
 
-    # Remember to pass along our cache_directory setting if we have one.
-    my %page_constructor_args;
-    if ($self->has_cache_directory) {
-        $page_constructor_args{cache_directory} = $self->cache_directory;
-    }
-
-    # Go through the feed generating Entry objects.
     my @entries;
     for my $feed_entry ($self->feed->entries) {
         my $entry = WWW::Webcomic::Entry->new(
             title => $feed_entry->title,
-            page  => WWW::Webcomic::Page->new(
-                url => $feed_entry->link,
-                %page_constructor_args
+            page  => $self->page_with_same_options(
+                $self->_sanitised_url($feed_entry->link),
             ),
         );
         $entry->date($feed_entry->issued) if $feed_entry->issued;
@@ -92,6 +84,54 @@ sub _build_entries {
     }
 
     return \@entries;
+}
+
+sub _sanitised_url {
+    my ($self, $url) = @_;
+
+    # If the URL doesn't look like anything we should care about,
+    # assume it's legit.
+    if ($url !~ / (?: feedproxy | feeds ) [.] /x) {
+        return $url;
+    }
+
+    # OK, fetch the remote page.
+    my $proxy_page = $self->page_with_same_options($url);
+    $proxy_page->contents;
+
+    # And return what we think this page should be.
+    return $proxy_page->canonical_url;
+}
+
+=back
+
+=head2 Object methods
+
+=over
+
+=item page_with_same_options
+
+ In: $url (URI object or URL string)
+ Out: $page (WWW::Webcomic::Page object)
+
+Supplied with a URL suitable to be passed to the constructor of
+WWW::Webcomic::Page, returns a WWW::Webcomic::Page object similar to
+this WWW::Webcomic::Feed object.
+
+At the moment, 'similar' means 'with the same cache_directory attribute
+value'.
+
+=cut
+
+sub page_with_same_options {
+    my ($self, $url) = @_;
+
+    my %page_constructor_args;
+    if ($self->has_cache_directory) {
+        $page_constructor_args{cache_directory} = $self->cache_directory;
+    }
+
+    return WWW::Webcomic::Page->new(url => $url, %page_constructor_args);
 }
 
 =back
