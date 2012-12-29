@@ -100,12 +100,12 @@ sub _sanitised_url {
     # Remove stupid tracking nonsense from URLs.
     for my $keyword (qw(source medium campaign)) {
         $url =~ s{
-            ( [?] .*? )
+            ([?&])
             utm_$keyword = [^&]+
             (?: & | $)
         }{$1}x;
     }
-    $url =~ s/[?]$//;
+    $url =~ s/[?&]$//;
 
     # And we're done.
     return $url;
