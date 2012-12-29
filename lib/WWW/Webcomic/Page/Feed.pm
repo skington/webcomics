@@ -14,6 +14,7 @@ extends 'WWW::Webcomic::Page';
 
 use WWW::Webcomic::Entry;
 
+use DateTime::Format::ISO8601;
 use XML::Feed;
 
 =head1 NAME
@@ -73,13 +74,30 @@ sub _build_entries {
 
     my @entries;
     for my $feed_entry ($self->feed->entries) {
+        # Build our entry; title is easy, and URL is fine but needs to be
+        # sanitised for various tracking crud.
         my $entry = WWW::Webcomic::Entry->new(
             title => $feed_entry->title,
             page  => $self->page_with_same_options(
                 $self->_sanitised_url($feed_entry->link),
             ),
         );
-        $entry->date($feed_entry->issued) if $feed_entry->issued;
+
+        # The date is normally straightforward, but The Trenches
+        # decides to do things differently.
+        my $date = $feed_entry->issued;
+        if (!$date && $feed_entry->{entry}{pubDate}) {
+            my $date_iso8601 = eval {
+                DateTime::Format::ISO8601->parse_datetime(
+                    $feed_entry->{entry}{pubDate});
+            };
+            $date = $date_iso8601 if $date_iso8601;
+        }
+        if ($date) {
+            $entry->date($date);
+        }
+
+        # OK, that looks good enough.
         push @entries, $entry;
     }
 
