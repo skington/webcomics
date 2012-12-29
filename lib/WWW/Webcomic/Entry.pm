@@ -58,7 +58,6 @@ The date this entry was originally posted. A DateTime object.
 has 'date' => (
     is  => 'rw',
     isa => 'DateTime',
-    lazy_required => 1,
     predicate => 'has_date',
 );
 
