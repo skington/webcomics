@@ -22,6 +22,7 @@ read_prepared_file();
 
 # And now make sure that any page fetched from the wild is cached as well.
 check_website_is_cached();
+check_redirected_website_is_cached();
 
 # Clear the cache.
 ### TODO: Windows
@@ -105,6 +106,8 @@ sub _write_cached_file {
 }
 
 sub check_website_is_cached {
+    # Request a random number from a site that hopefully won't go AWOL
+    # any time soon.
     my $url = 'http://www.random.org/integers/?num=1&min=1&max=100000'
         . '&col=1&base=10&format=plain&rnd=new';
     my $page = WWW::Webcomic::Page->new(
@@ -118,11 +121,64 @@ sub check_website_is_cached {
         q{It's a 1-6 digit random number}
     );
 
+    # Fetch it; we get the same result.
     my $other_page = WWW::Webcomic::Page->new(
         url             => $url,
         cache_directory => $cache_directory
     );
     ok($other_page->contents, 'We can fetch that URL again');
     is($other_page->contents, $page->contents, 'It was cached');
+}
+
+sub check_redirected_website_is_cached {
+
+    # First fetch the short link.
+    my $short_url = 'http://bbc.co.uk/f1';
+    my $short_link_page = WWW::Webcomic::Page->new(
+        url             => $short_url,
+        cache_directory => $cache_directory
+    );
+    ok($short_link_page->contents, q{We can fetch the BBC's F1 page});
+    my $re_f1 = qr{Formula \s 1}x;
+    like($short_link_page->contents, $re_f1,
+        'It looks like a Formula 1 page');
+
+    # We should expect a cached version of the long URL.
+    my $long_url = 'http://www.bbc.co.uk/sport/0/formula1/';
+    my $cached_file_path
+        = $cache_directory . $long_url =~ s{http://(.+)/}{/$1/index.html}r;
+    ok(-e $cached_file_path, 'We cached the resulting page');
+
+    # OK, let's add some random gibberish to that file.
+    ok(open(my $fh_cached, '>>', $cached_file_path),
+        'We can write to the cached file');
+    my $random_content = 'Not expecting this' . int(rand(1<<31));
+    ok(print {$fh_cached} ($random_content), 'We can append to the cache');
+    ok(close $fh_cached, 'Closing the file works');
+
+    # Fetching the long URL gets us the expected content, both from the
+    # original and our meddling.
+    my $full_page = WWW::Webcomic::Page->new(
+        url             => $long_url,
+        cache_directory => $cache_directory
+    );
+    ok($full_page->contents, 'We can fetch the canonical URL of that page');
+    like($full_page->contents, $re_f1, 'It still looks like an F1 page');
+    like(
+        $full_page->contents,
+        qr{\Q$random_content\E},
+        'Our random vandalism has taken'
+    );
+
+    # Fetching the short version again gets the same thing.
+    my $short_link_page_again = WWW::Webcomic::Page->new(
+        url             => $short_url,
+        cache_directory => $cache_directory
+    );
+    ok($short_link_page_again->contents, 'We can fetch the short URL again');
+    isnt($short_link_page_again->contents,
+        $short_link_page->contents, 'Its contents have changed');
+    is($short_link_page_again->contents,
+        $full_page->contents, 'The two pages are now identical');
 }
 

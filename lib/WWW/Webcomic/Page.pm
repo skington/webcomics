@@ -118,7 +118,13 @@ sub _build_cached_file_path {
 
     return if !$self->has_cache_directory;
 
-    my @components = $self->_cached_file_components;
+    return $self->_file_path_for_uri($self->url);
+}
+
+sub _file_path_for_uri {
+    my ($self, $uri) = @_;
+
+    my @components = $self->_cached_file_components($uri);
     my $target_directory = $self->cache_directory;
     sub_directory:
     while (@components > 1) {
@@ -127,31 +133,27 @@ sub _build_cached_file_path {
         $target_directory .= '/' . $sub_directory;
         if (-e $target_directory && -d _ && -w _) {
             next sub_directory;
-        } elsif (-e $target_directory) {
-            1;
         }
-        mkdir($target_directory, 0755) or do {
-            1;
-        }
+        mkdir($target_directory, 0755)
             or die "Couldn't create $target_directory: $!";
     }
     return $target_directory . '/' . (shift @components || 'index.html');
 }
 
 sub _cached_file_components {
-    my ($self) = @_;
-    
-    my @components = ($self->url->host);
-    if (length($self->url->path)) {
-        my @path_components = split('/', $self->url->path);
+    my ($self, $uri) = @_;
+
+    my @components = ($uri->host);
+    if (length($uri->path)) {
+        my @path_components = split('/', $uri->path);
         shift @path_components;
         push @components, @path_components;
-        if ($self->url->path =~ m{ / $ }x) {
+        if ($uri->path =~ m{ / $ }x) {
             push @components, 'index.html';
         }
     }
-    if ($self->url->query) {
-        $components[-1] .= '?' . $self->url->query;
+    if ($uri->query) {
+        $components[-1] .= '?' . $uri->query;
     }
     return @components;
 }
@@ -175,18 +177,14 @@ sub _build_contents {
     my ($self) = @_;
 
     if ($self->has_cache_directory) {
-        if (my $cached_contents = $self->fetch_cached_contents) {
+        if (my $cached_contents = $self->_fetch_cached_contents) {
             return $cached_contents;
         }
     }
-    my $contents = $self->fetch_page;
-    if ($self->has_cache_directory) {
-        $self->store_cached_contents($contents);
-    }
-    return $contents;
+    return $self->_fetch_page;
 }
 
-sub fetch_cached_contents {
+sub _fetch_cached_contents {
     my ($self) = @_;
 
     # It's OK not to have a cached file.
@@ -205,22 +203,44 @@ sub fetch_cached_contents {
     return $contents;
 }
 
-sub fetch_page {
+sub _fetch_page {
     my ($self) = @_;
 
+    # Fetch the page.
     my $response = $self->user_agent->get($self->url);
     if (!$response->is_success) {
         die "Couldn't fetch $self->url: ", $response->status_line;
     }
-    return $response->decoded_content // $response->content;    
+
+    # Work out its contents, and cache them if necessary.
+    # If this looks like a redirect, make a symlink from the requested
+    # URL to the stored URL.
+    my $contents = $response->decoded_content // $response->content;
+    if ($self->has_cache_directory) {
+        $self->_store_cached_contents($response->request->uri, $contents);
+        if ($response->request->uri->as_string ne $self->url->as_string) {
+            my $stored_file
+                = $self->_file_path_for_uri($response->request->uri);
+            my $requested_file = $self->_file_path_for_uri($self->url);
+            if (!-e $requested_file) {
+                symlink($stored_file, $requested_file)
+                    or carp "Couldn't link $requested_file to $stored_file: "
+                    . $OS_ERROR;
+            }
+        }
+    }
+
+    # And return the result.
+    return $contents;
 }
 
-sub store_cached_contents {
-    my ($self, $contents) = @_;
+sub _store_cached_contents {
+    my ($self, $uri, $contents) = @_;
 
-    open(my $fh, '>', $self->cached_file_path) or do {
+    my $file_path = $self->_file_path_for_uri($uri);
+    open(my $fh, '>', $file_path) or do {
         carp sprintf(q{Couldn't write %s to cached file %s: %s'},
-            $self->url, $self->cached_file_path, $OS_ERROR);
+            $uri->as_string, $file_path, $OS_ERROR);
         return;
     };
     print $fh $contents;
