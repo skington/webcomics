@@ -63,6 +63,24 @@ has 'date' => (
 
 =back
 
+=head2 Object methods
+
+=over
+
+=item link
+
+A shortcut for $entry->page->url
+
+=cut
+
+sub link {
+    my ($self) = @_;
+
+    return $self->page->url;
+}
+
+=back
+
 =head1 VERSION
 
 This is version 0.02.

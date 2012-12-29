@@ -88,12 +88,12 @@ sub addnew {
         }
 
         # Describe the entries briefly
-        for my $entry (sort { $a->{date} <=> $b->{date} }
+        for my $entry (sort { $a->date <=> $b->date }
             @{ $feed_contents{ $feed_info->{feed} } })
         {
             # Hopefully we got a date from the feed. Otherwise, we'll have
             # to work it out from our regexstr.
-            my $date = $entry->{date};
+            my $date = $entry->date;
             if (!$date) {
                 field:
                 for my $field (qw(link title)) {
@@ -115,7 +115,7 @@ sub addnew {
             }
             push @{ $template_params{entries} },
                 {
-                url_entry  => $entry->{link},
+                url_entry  => $entry->page->url,
                 date_entry => $date
                 ? DateTime::Format::MySQL->format_datetime($date)
                 : ''
@@ -165,14 +165,7 @@ sub get_feed_contents {
     my %feed_contents;
     url:
     for my $page (@feed_pages) {
-        my @entries = map {
-            {
-                title => $_->title,
-                link  => $_->page->url,
-                date  => $_->date,
-            }
-        } $page->all_entries;
-        push @{ $feed_contents{ $page->url } }, @entries;
+        $feed_contents{$page->url} = $page->entries;
     }
     return %feed_contents;
 }
@@ -254,12 +247,12 @@ sub analyse_feed_entries {
         for my $entry (@entries) {
             regexstr:
             for my $regexstr (
-                identify_date_regexstr($entry->{$field}, $entry->{date}))
+                identify_date_regexstr($entry->$field, $entry->date))
             {
                 my %match_term;
                 ## no critic (ErrorHandling::RequireCheckingReturnValueOfEval)
                 ## no critic (RegularExpressions::RequireExtendedFormatting)
-                eval { $entry->{$field} =~ qr/$regexstr/; %match_term = %+};
+                eval { $entry->$field =~ qr/$regexstr/; %match_term = %+};
                 ## use critic
 
                 # To weed out false positives (e.g. 'Mnemonics' matching
@@ -291,7 +284,7 @@ sub analyse_feed_entries {
         # See if there are any matches based on an ordinal number
         # increasing.
         my %sequence_regexstr_length
-            = identify_sequence_regexstr(map { $_->{$field} } @entries);
+            = identify_sequence_regexstr(map { $_->$field } @entries);
         %total_match_length
             = (%total_match_length, %sequence_regexstr_length);
 
@@ -308,7 +301,7 @@ sub analyse_feed_entries {
         # decided on a favourite.
         for my $entry (@entries) {
             ## no critic (RegularExpressions::RequireExtendedFormatting)
-            $entry->{$field} =~ qr/$regexstr_bestmatch/;
+            $entry->$field =~ qr/$regexstr_bestmatch/;
             ## use critic
             my %matches = %+;
             $entry->{matches}{$field}
