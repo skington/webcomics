@@ -89,18 +89,26 @@ sub _build_entries {
 sub _sanitised_url {
     my ($self, $url) = @_;
 
-    # If the URL doesn't look like anything we should care about,
-    # assume it's legit.
-    if ($url !~ / (?: feedproxy | feeds ) [.] /x) {
-        return $url;
+    # If the URL looks like a redirect by a hosted feed site,
+    # fetch it and track any redirects.
+    if ($url =~ / (?: feedproxy | feeds ) [.] /x) {
+        my $proxy_page = $self->page_with_same_options($url);
+        $proxy_page->contents;
+        $url = $proxy_page->canonical_url;
     }
 
-    # OK, fetch the remote page.
-    my $proxy_page = $self->page_with_same_options($url);
-    $proxy_page->contents;
+    # Remove stupid tracking nonsense from URLs.
+    for my $keyword (qw(source medium campaign)) {
+        $url =~ s{
+            ( [?] .*? )
+            utm_$keyword = [^&]+
+            (?: & | $)
+        }{$1}x;
+    }
+    $url =~ s/[?]$//;
 
-    # And return what we think this page should be.
-    return $proxy_page->canonical_url;
+    # And we're done.
+    return $url;
 }
 
 =back

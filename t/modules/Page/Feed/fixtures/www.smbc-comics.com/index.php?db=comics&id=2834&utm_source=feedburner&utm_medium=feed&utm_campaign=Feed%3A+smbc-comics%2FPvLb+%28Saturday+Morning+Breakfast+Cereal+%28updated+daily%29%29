@@ -39,8 +39,8 @@
    if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
    document.write ("'><\/scr"+"ipt>");
 //]]>--></script><noscript><a
-href='http://openx.blindferret.com/www/delivery/ck.php?n=a5348d3f&amp;cb=6094293' target='_blank'><img
-src='http://openx.blindferret.com/www/delivery/avw.php?zoneid=30&amp;cb=6094293&amp;n=a5348d3f'
+href='http://openx.blindferret.com/www/delivery/ck.php?n=a5348d3f&amp;cb=7104126' target='_blank'><img
+src='http://openx.blindferret.com/www/delivery/avw.php?zoneid=30&amp;cb=7104126&amp;n=a5348d3f'
 border='0' alt='' /></a></noscript>
 </td></tr>
  <tr><td style='height:5px'></td></tr>
@@ -49,16 +49,16 @@ border='0' alt='' /></a></noscript>
   <tr><td>
 <script language="JavaScript" type="text/javascript">
   var links = new Array(
-//   "http://www.invasionofthezakks.com/ctlite.php?from=38", "http://zs1.smbc-comics.com/images/smbc_zakkslite.png",
-//   "http://www.invasionofthezakks.com/", "http://zs1.smbc-comics.com/images/smbc_zakks.png",
-//   "http://www.snowflakescomic.com/", "http://zs1.smbc-comics.com/images/smbc_snowflakes.png",
-//   "http://www.topatoco.com/merchant.mvc?Screen=CTGY&Store_Code=TO&Category_Code=SMBC-SHIRTS", "http://zs1.smbc-comics.com/images/smbc_shirts.png"
-//   "http://www.yityat.com/magic", "http://zs1.smbc-comics.com/images/smbc_marty.png",
-//   "http://www.captainexcelsior.com/", "http://zs1.smbc-comics.com/images/smbc_ce.png"
-//   "http://www.smbc-theater.com/", "http://zs1.smbc-comics.com/images/smbctheaterellipse.png",
-    "http://www.smbc-theater.com/", "http://zs1.smbc-comics.com/images/SMBCTheaterAd.png",
-    "http://smbc.myshopify.com/collections/frontpage/products/save-yourself-mammal-an-smbc-collection", "http://zs1.smbc-comics.com/images/bookicon.gif"
-//    "http://www.smbc-theater.com/", "http://zs1.smbc-comics.com/images/jameslink.png"
+//   "http://www.invasionofthezakks.com/ctlite.php?from=38", "http://www.smbc-comics.com/images/smbc_zakkslite.png",
+//   "http://www.invasionofthezakks.com/", "http://www.smbc-comics.com/images/smbc_zakks.png",
+//   "http://www.snowflakescomic.com/", "http://www.smbc-comics.com/images/smbc_snowflakes.png",
+//   "http://www.topatoco.com/merchant.mvc?Screen=CTGY&Store_Code=TO&Category_Code=SMBC-SHIRTS", "http://www.smbc-comics.com/images/smbc_shirts.png"
+//   "http://www.yityat.com/magic", "http://www.smbc-comics.com/images/smbc_marty.png",
+//   "http://www.captainexcelsior.com/", "http://www.smbc-comics.com/images/smbc_ce.png"
+//   "http://www.smbc-theater.com/", "http://www.smbc-comics.com/images/smbctheaterellipse.png",
+    "http://www.smbc-theater.com/", "http://www.smbc-comics.com/images/SMBCTheaterAd.png",
+    "http://smbc.myshopify.com/collections/frontpage/products/save-yourself-mammal-an-smbc-collection", "http://www.smbc-comics.com/images/bookicon.gif"
+//    "http://www.smbc-theater.com/", "http://www.smbc-comics.com/images/jameslink.png"
   );
   var num= Math.floor(Math.random()*links.length);
   if (num%2 == 1) num--;
@@ -217,14 +217,14 @@ if (document.addEventListener) {
 }
 </script>
   <div id=aftercomic style='position:absolute; z-index:10; display:none' onMouseOver='onMouseOverSubmenu()' onMouseOut='onMouseOutSubmenu("aftercomic")'>
-<img src='http://zs1.smbc-comics.com/comics/20121224after.gif'>
+<img src='http://www.smbc-comics.com/comics/20121224after.gif'>
   </div>
   <div id=konamicomic style='position:absolute; left:95px; top:400px; z-index:15; display:none' onMouseDown='hideBlock("konamicomic")'>
 <img src='/images/videogamezach.gif' style='border:3px solid black' onMouseDown='hideBlock("konamicomic")'>
   </div>
 
   <div style="z-index:1000">
-  <img src="http://zs1.smbc-comics.com/images/smbclogo.gif"
+  <img src="http://www.smbc-comics.com/images/smbclogo.gif"
        usemap="#headerbuttons" alt="header">
   </div>
   </td>
@@ -245,18 +245,18 @@ if (document.addEventListener) {
     <td>
     <table cellpadding=0 cellspacing=0><tr><td>
     <center>
-    <img src="http://zs1.smbc-comics.com/images/buttons.gif" usemap="#buttons" alt="buttons"><br>
+    <img src="http://www.smbc-comics.com/images/buttons.gif" usemap="#buttons" alt="buttons"><br>
     
     <!--FANBASEONLINE-->
-    <img src='http://zs1.smbc-comics.com/comics/20121224.gif'><br>
-    <table><tr><td><img src='http://zs1.smbc-comics.com/images/secretvoteybutton.gif' onMouseOver='onMouseOverMenu("aftercomic")' onMouseOut='onMouseOutMenu("aftercomic")'>&nbsp;&nbsp;</td><td align=center><table><tr valign=middle><td valign=middle>
+    <img src='http://www.smbc-comics.com/comics/20121224.gif'><br>
+    <table><tr><td><img src='http://www.smbc-comics.com/images/secretvoteybutton.gif' onMouseOver='onMouseOverMenu("aftercomic")' onMouseOut='onMouseOutMenu("aftercomic")'>&nbsp;&nbsp;</td><td align=center><table><tr valign=middle><td valign=middle>
 <a href="http://www.smbc-comics.com/rss.php"><img width=64px border=0 src="/images/rssicon.png"></a> &nbsp;
 <a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.smbc-comics.com%2F%3Fid%3D2834"><img width=64px border=0 src="/images/facebook.png"></a> &nbsp;
 <a href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.smbc-comics.com%2F%3Fid%3D2834&title=Saturday+Morning+Breakfast+Cereal+-+December+24%2C+2012"><img width=64px border=0 src="/images/reddit.png"></a> &nbsp;
 <a href="http://twitter.com/home/?status=SMBC+-+December+24%2C+2012%20http%3A%2F%2Fwww.smbc-comics.com%2F%3Fid%3D2834"><img width=64px border=0 src="/images/twitter.png"></a> &nbsp;
 <script src="http://www.stumbleupon.com/hostedbadge.php?s=5&r=http://www.smbc-comics.com/?id=2834"></script> &nbsp; 
 <g:plusone size="tall"></g:plusone> &nbsp;
-<a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.smbc-comics.com%2F%3Fid%3D2834&media=http://zs1.smbc-comics.com/comics/20121224.gif" class="pin-it-button" count-layout="vertical">Pin It</a>
+<a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.smbc-comics.com%2F%3Fid%3D2834&media=http://www.smbc-comics.com/comics/20121224.gif" class="pin-it-button" count-layout="vertical">Pin It</a>
 </td></tr></table><script language='JavaScript' type='text/javascript'>
 var refboxcode='<table style="border: 3px; border-style: solid; border-color: #000000"><tr><td><font size=3 face=arial><b>Paste this comic into your MySpace, Xanga, LiveJournal, or website..</b></font></td></tr><tr><td><font size=2 face=arial>&lt;a href="http://www.smbc-comics.com/index.php?db=comics&id=2834"&gt;<br>&lt;img src="http://www.smbc-comics.com/comics/20121224.gif"&gt;&lt;/a&gt;</font></td></tr><tr><td><font size=3 face=arial><b>Paste this comic into a forum..</b></font></td></tr><tr><td><font size=2 face=arial>[URL="http://www.smbc-comics.com/index.php?db=comics&id=2834"]<br>[IMG]http://www.smbc-comics.com/comics/20121224.gif[/IMG][/URL]</font></td></tr><tr><td><font size=3 face=arial><b>Or, add the SMBC Update Facebook App!</b></font></td></tr><tr><td><font size=2 face=arial><a href="http://www.facebook.com/apps/application.php?id=14258116479">http://www.facebook.com/apps/application.php?id=14258116479</a></font></td></tr></table>';
 </script>
@@ -323,7 +323,7 @@ Did you know that if Ryan North's kickstarter breaks 500k, he'll literally <a hr
 <center>
 <script language="JavaScript" type="text/javascript">
   var shirtlinks = new Array(
-    "http://www.amazon.com/Save-Yourself-Mammal-Breakfast-Collection/dp/098285370X/ref=sr_1_1?ie=UTF8&qid=1310803737&sr=8-1", "http://zs1.smbc-comics.com/images/shirtwindow_book.gif"
+    "http://www.amazon.com/Save-Yourself-Mammal-Breakfast-Collection/dp/098285370X/ref=sr_1_1?ie=UTF8&qid=1310803737&sr=8-1", "http://www.smbc-comics.com/images/shirtwindow_book.gif"
   );
   var shirtnum= Math.floor(Math.random()*shirtlinks.length);
   if (shirtnum%2 == 1) shirtnum--;
@@ -343,7 +343,7 @@ Did you know that if Ryan North's kickstarter breaks 500k, he'll literally <a hr
   <!-- Right panes -->
   <td width=235>
   <table width=240 cellpadding=0 cellspacing=5>
-    <tr><td style="background-image: url(http://zs1.smbc-comics.com/images/adbar.gif); background-repeat: no-repeat; height:656px; padding: 20px; padding-left:20px;" align=center>
+    <tr><td style="background-image: url(http://www.smbc-comics.com/images/adbar.gif); background-repeat: no-repeat; height:656px; padding: 20px; padding-left:20px;" align=center>
 <script type='text/javascript'><!--//<![CDATA[
    var m3_u =
 (location.protocol=='https:'?'https://openx.blindferret.com/www/delivery/ajs.php':'http://openx.blindferret.com/www/delivery/ajs.php');
@@ -361,15 +361,15 @@ Did you know that if Ryan North's kickstarter breaks 500k, he'll literally <a hr
    if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
    document.write ("'><\/scr"+"ipt>");
 //]]>--></script><noscript><a
-href='http://openx.blindferret.com/www/delivery/ck.php?n=aa54bfd5&amp;cb=8046151' target='_blank'><img
-src='http://openx.blindferret.com/www/delivery/avw.php?zoneid=31&amp;cb=8046151&amp;n=aa54bfd5'
+href='http://openx.blindferret.com/www/delivery/ck.php?n=aa54bfd5&amp;cb=8184123' target='_blank'><img
+src='http://openx.blindferret.com/www/delivery/avw.php?zoneid=31&amp;cb=8184123&amp;n=aa54bfd5'
 border='0' alt='' /></a></noscript>
 
     </td></tr>
   </table>
   <table width=240 cellpadding=0 cellspacing=5>
     <tr><td style="height:250px; padding: 0px; padding-left:0px;" align=center>
-<img border=0 style="" width="227" height="288" usemap="#zachboxmap" src="http://zs1.smbc-comics.com/images/rightsidebar.gif">
+<img border=0 style="" width="227" height="288" usemap="#zachboxmap" src="http://www.smbc-comics.com/images/rightsidebar.gif">
 <!-- Beginning of Project Wonderful ad code: -->
 <!-- Ad box ID: 6260 -->
 <script type="text/javascript">
@@ -385,7 +385,7 @@ d.projectwonderful_background_color = "";
   </table>
 <!--
   <table width=240 cellpadding=0 cellspacing=5>
-    <tr><td style="background-image: url(http://zs1.smbc-comics.com/images/weinerworks.png); background-repeat: no-repeat; height:222px; padding: 5px; padding-left:20px;" align=left>
+    <tr><td style="background-image: url(http://www.smbc-comics.com/images/weinerworks.png); background-repeat: no-repeat; height:222px; padding: 5px; padding-left:20px;" align=left>
 <br><br><br><br>
 <a href="http://www.captainexcelsior.com/">Captain Excelsior</a><br>
 <a href="http://www.smbc-theater.com/">SMBC Theater</a><br>
