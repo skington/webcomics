@@ -5,6 +5,7 @@ use warnings;
 no warnings qw(uninitialized);
 use vars qw($VERSION);
 use English qw(-no_match_vars);
+use Encode;
 
 use Moose;
 use Moose::Util::TypeConstraints;
@@ -243,7 +244,7 @@ sub _store_cached_contents {
             $uri->as_string, $file_path, $OS_ERROR);
         return;
     };
-    print $fh $contents;
+    print $fh Encode::encode('UTF-8', $contents);
     close $fh;
     return;
 }
