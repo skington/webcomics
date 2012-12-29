@@ -72,37 +72,60 @@ has 'entries' => (
 sub _build_entries {
     my ($self) = @_;
 
+    # Find out which categories these entries implement. If we find
+    # out that we have e.g. Comics and Blog entries, we'll use that to
+    # discard blog entries.
+    my %has_category;
+    for my $entry ($self->feed->entries) {
+        for my $category ($entry->category) {
+            $has_category{$category}++;
+        }
+    }
+    my %skip_category = map { $_ => 1 }
+        grep { /^ (?: blog | news ) $ /xi } keys %has_category;
+
     my @entries;
+    feed_entry:
     for my $feed_entry ($self->feed->entries) {
-        # Build our entry; title is easy, and URL is fine but needs to be
-        # sanitised for various tracking crud.
-        my $entry = WWW::Webcomic::Entry->new(
-            title => $feed_entry->title,
-            page  => $self->page_with_same_options(
-                $self->_sanitised_url($feed_entry->link),
-            ),
-        );
+        # Ignore entries if they're in an eminently skippable category.
+        next feed_entry if grep { $skip_category{$_} } $feed_entry->category;
 
-        # The date is normally straightforward, but The Trenches
-        # decides to do things differently.
-        my $date = $feed_entry->issued;
-        if (!$date && $feed_entry->{entry}{pubDate}) {
-            my $date_iso8601 = eval {
-                DateTime::Format::ISO8601->parse_datetime(
-                    $feed_entry->{entry}{pubDate});
-            };
-            $date = $date_iso8601 if $date_iso8601;
-        }
-        if ($date) {
-            $entry->date($date);
-        }
-
-        # OK, that looks good enough.
-        push @entries, $entry;
+        # Looks initially good, so add this to the list.
+        push @entries, $self->_entry_from_feed_entry($feed_entry);
     }
 
     return \@entries;
 }
+
+sub _entry_from_feed_entry {
+    my ($self, $feed_entry) = @_;
+
+    # Build our entry; title is easy, and URL is fine but needs to be
+    # sanitised for various tracking crud.
+    my $entry = WWW::Webcomic::Entry->new(
+        title => $feed_entry->title,
+        page  => $self->page_with_same_options(
+            $self->_sanitised_url($feed_entry->link),
+        ),
+    );
+
+    # The date is normally straightforward, but The Trenches
+    # decides to do things differently.
+    my $date = $feed_entry->issued;
+    if (!$date && $feed_entry->{entry}{pubDate}) {
+        my $date_iso8601 = eval {
+            DateTime::Format::ISO8601->parse_datetime(
+                $feed_entry->{entry}{pubDate});
+        };
+        $date = $date_iso8601 if $date_iso8601;
+    }
+    if ($date) {
+        $entry->date($date);
+    }
+
+    return $entry;
+}
+
 
 sub _sanitised_url {
     my ($self, $url) = @_;

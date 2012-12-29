@@ -177,70 +177,7 @@ sub get_feed_contents {
     return %feed_contents;
 
     if (my $page eq 'Something useful') {
-        # Find out which categories these entries implement. If we find
-        # out that we have e.g. Comics and Blog entries, we'll use that to
-        # discard blog entries.
-        my %has_category;
-        for my $entry ($page->feed->entries) {
-            for my $category ($entry->category) {
-                $has_category{$category}++;
-            }
-        }
-        my ($skip_category)
-            = (grep { /^ (?: blog | news ) $ /xi } keys %has_category);
-
-        # Pick out details of all entries.
         my @entries;
-        entry:
-        for my $entry ($page->feed->entries) {
-
-            # If this is a blog or news post, skip it.
-            next entry if grep { $_ eq $skip_category } $entry->category;
-
-            # The link might be a feedproxy link or something, which is no
-            # use; we want the ultimate URL.
-            my $link = $entry->link;
-            # Penny Arcade put tabs in their links for some bizarre reason.
-            $link =~ s/^ \s+ //gx;
-            $link =~ s/ \s+ $//gx;
-            if ($link =~ / (?: feedproxy | feeds ) [.] /x) {
-                my $response = WWW::Webcomic::Page->new->user_agent->get($link);
-                $link = $response->base;
-            }
-
-            # Also, remove that tracking nonsense from URLs.
-            for my $keyword (qw(source medium campaign)) {
-                $link =~ s{
-                        ( [?] .*? )
-                        utm_$keyword = [^&]+
-                        (?: & | $)
-                    }{$1}x;
-            }
-            $link =~ s/[?]$//;
-
-            # Try and get the date from a number of places.
-            my $date = $entry->issued;
-            if (!$date && $entry->can('modified')) {
-                $date = $entry->modified;
-            }
-
-            # The Trenches gets the date format wrong, so fix that.
-            if (!$date && $entry->{entry}{pubDate}) {
-                my $date_iso8601 = eval {
-                    DateTime::Format::ISO8601->parse_datetime(
-                        $entry->{entry}{pubDate});
-                };
-                $date = $date_iso8601 if $date_iso8601;
-            }
-
-            # Right, this should do it.
-            push @entries,
-                {
-                title => $entry->title,
-                link  => $link,
-                date  => $date,
-                };
-        }
 
         # Now that we have canonical URLs, strip out anything that looks
         # like a news post.
