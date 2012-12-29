@@ -1,0 +1,375 @@
+	
+	
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<meta property="og:title" content="Penny Arcade - Star Wars: Edge of the Empire" />
+		<meta property="og:image" content="" />
+	<title>Penny Arcade - Star Wars: Edge of the Empire</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.penny-arcade.com/pa-mainsite" />
+	<link rel="stylesheet" media="screen" type="text/css" href="http://hw1.pa-cdn.com/pa/assets/css/index2.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" ></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js" ></script>
+	<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+	<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script>
+	<script type="text/javascript" src="http://hw1.pa-cdn.com/pa/assets/js/pa.js"></script>
+	<script type="text/javascript" src="http://hw1.pa-cdn.com/pa/assets/js/loader-ee.js"></script>
+	<script type="text/javascript" src="http://hw1.pa-cdn.com/pa/assets/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="http://hw1.pa-cdn.com/pa/assets/js/jquery.cycle.js"></script>	
+	<script type="text/javascript">
+	$('#theCut').cycle({ 
+	    fx:     'scrollUp', 
+		speed:   350,
+	    timeout: 4500,
+		easing: 'easeInBack',
+	    pager:  '#theCutNav' 
+	});
+	</script>
+		
+	<script type="text/javascript">
+	// Init Google AdManagr
+	GS_googleAddAdSenseService("ca-pub-3222936370827379");
+	GS_googleEnableAllServices();
+	</script>
+	<script type="text/javascript">
+	// Configure AdManager
+		GA_googleAddSlot("ca-pub-3222936370827379", "News_Horizontal");
+	GA_googleAddSlot("ca-pub-3222936370827379", "News_Vertical");
+		</script>
+	
+	<script type="text/javascript">
+	GA_googleFetchAds();
+	
+	// Analytics
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-589570-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+</head>
+<body>
+	<div id="bb">
+		<div class="content">
+			<ul>
+				<li><a class="btnPA" href="http://penny-arcade.com/" title="Penny Arcade">Penny Arcade</a></li>
+				<li><a class="btnPAR" href="http://thepareport.com/" title="The PA Report">The PA Report</a></li>
+				<li><a class="btnPAX" href="http://paxsite.com/" title="PAX">PAX</a></li>
+				<li><a class="btnTrenches" href="http://trenchescomic.com/" title="The Trenches">The Trenches</a></li>
+				<li><a class="btnCP" href="http://childsplaycharity.org/" title="Child's Play">Child's Play</a></li>
+			</ul>
+		</div>
+	</div>
+	<hr />
+	<div id="message"><div class="content"><a class="btn btnClose" href="#" title="Close">Close</a><p></p></div></div>
+	<div id="header">
+		<div class="pixels">
+			<div class="content">
+				<h1><a href="http://penny-arcade.com/" title="Penny Arcade - Home">Penny Arcade</a></h1>
+				<ul>
+					<li id="navComic" class="nav"><a href="http://penny-arcade.com/comic" title="Comic"><strong>Comic</strong></a></li>
+					<li id="navArchive" class="nav"><a href="http://penny-arcade.com/archive" title="Archive"><strong>Archive</strong></a></li>
+					<li id="navForum" class="nav"><a href="http://forums.penny-arcade.com" title="Forum"><strong>Forum</strong></a></li>
+					<li id="navStore" class="nav"><a href="http://store.penny-arcade.com" title="Store"><strong>Store</strong></a></li>
+					<li id="navPATV" class="nav"><a href="http://penny-arcade.com/patv" title="PATV"><strong>PATV</strong></a></li>
+					<li id="navPresents"><a href="http://penny-arcade.com/presents" title="PA Presents">PA Presents</a></li>
+					<li id="navScholarship"><a href="http://penny-arcade.com/scholarship" title="PA Scholarship">PA Scholarship</a></li>
+				</ul>
+				<div id="bannerAd">
+					<script type="text/javascript">
+											GA_googleFillSlot("News_Horizontal");
+										</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+	<div id="main">
+		<div class="pixels">
+			<div class="content">
+<div id="body">
+	<div id="heroFeature">
+	<ul id="featTabs">
+		
+		<li id="slot01" class="iconPATV">
+			<h4><a href="#feat1" title="Extra Credits">Extra Credits</a></h4>
+		</li>
+		
+		
+		<li id="slot02" class="iconTrenches">
+			<h4><a href="#feat2" title="The Trenches">The Trenches</a></h4>
+		</li>
+		
+		
+		<li id="slot03" class="iconPAR">
+			<h4><a href="#feat3" title="The PA Report">The PA Report</a></h4>
+		</li>
+		
+		
+		<li id="slot04" class="iconNew">
+			<h4><a href="#feat4" title="Rain-Slick 3">Rain-Slick 3</a></h4>
+		</li>
+		
+		
+		<li id="slot05" class="iconMerch">
+			<h4><a href="#feat5" title="First Party Shell">First Party Shell</a></h4>
+		</li>
+		
+	</ul>
+	<div id="feature">
+		
+		<div id="feat1">
+			<a title="Religion in Games (Part 2)" href="http://penny-arcade.com/patv/episode/religion-in-games-part-2"><img src="http://penny-arcade.com/uploads/main/hero/pa_hero_extracredits5episode17.jpg" alt="Religion in Games (Part 2)" /></a>
+			<div class="info">
+				<h3><a title="Religion in Games (Part 2)" href="http://penny-arcade.com/patv/episode/religion-in-games-part-2">Religion in Games (Part 2)</a></h3>
+				<p>This week, we talk a bit about Faith in games.</p>
+				<a class="btnLearnMore btn" title="Learn More" href="http://penny-arcade.com/patv/episode/religion-in-games-part-2">Learn More</a>
+			</div>
+		</div>
+		
+		
+		<div id="feat2">
+			<a title="Isaac Style Guide" href="http://trenchescomic.com/"><img src="http://penny-arcade.com/uploads/main/hero/pa_hero_isaacstyleguide.jpg" alt="Isaac Style Guide" /></a>
+			<div class="info">
+				<h3><a title="Isaac Style Guide" href="http://trenchescomic.com/">Isaac Style Guide</a></h3>
+				<p>A style guide for Isaac created by Scott and a new tale.</p>
+				<a class="btnLearnMore btn" title="Learn More" href="http://trenchescomic.com/">Learn More</a>
+			</div>
+		</div>
+		
+		
+		<div id="feat3">
+			<a title="Uncertain future" href="http://penny-arcade.com/report/editorial-article/uncertain-future-heres-what-thqs-bankruptcy-really-means-for-the-company-an"><img src="http://penny-arcade.com/uploads/main/hero/pa_hero_thq.jpg" alt="Uncertain future" /></a>
+			<div class="info">
+				<h3><a title="Uncertain future" href="http://penny-arcade.com/report/editorial-article/uncertain-future-heres-what-thqs-bankruptcy-really-means-for-the-company-an">Uncertain future</a></h3>
+				<p>Here’s what THQ’s bankruptcy means for the company and its lineup of games</p>
+				<a class="btnLearnMore btn" title="Learn More" href="http://penny-arcade.com/report/editorial-article/uncertain-future-heres-what-thqs-bankruptcy-really-means-for-the-company-an">Learn More</a>
+			</div>
+		</div>
+		
+		
+		<div id="feat4">
+			<a title="Rain-Slick 3 Now Portable!" href="http://rainslick.com/order"><img src="http://penny-arcade.com/uploads/main/hero/pa_hero_rspd3_heromobile.jpg" alt="Rain-Slick 3 Now Portable!" /></a>
+			<div class="info">
+				<h3><a title="Rain-Slick 3 Now Portable!" href="http://rainslick.com/order">Rain-Slick 3 Now Portable!</a></h3>
+				<p>Rain-Slick 3 now available on iOS, Android and Mac. Plus free new "Lair of the Seamstress" DLC for all!</p>
+				<a class="btnLearnMore btn" title="Learn More" href="http://rainslick.com/order">Learn More</a>
+			</div>
+		</div>
+		
+		
+		<div id="feat5">
+			<a title="First Party v1.0 Men&#8217;s Shell Jacket" href="http://store.penny-arcade.com/products/first-party-v1-0-shell-jacket"><img src="http://penny-arcade.com/uploads/main/hero/pa_hero_shell_1.0.jpg" alt="First Party v1.0 Men&#8217;s Shell Jacket" /></a>
+			<div class="info">
+				<h3><a title="First Party v1.0 Men&#8217;s Shell Jacket" href="http://store.penny-arcade.com/products/first-party-v1-0-shell-jacket">First Party v1.0 Men&#8217;s Shell Jacket</a></h3>
+				<p>Now available! These First Party v1.0 Shells were designed panel-by-panel to keep your torso warm and dry.</p>
+				<a class="btnLearnMore btn" title="Learn More" href="http://store.penny-arcade.com/products/first-party-v1-0-shell-jacket">Learn More</a>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<hr />	
+	<div class="news">
+		<ul class="newsNav top">
+			<li><a class="btnFirst btn" href="http://penny-arcade.com/2002/02/11" title="First">First</a></li>
+			<li><a class="btnPrev btn" href="http://penny-arcade.com/2012/12/21" title="Previous">Previous</a></li>
+			<li><a class="btnComic btn" href="http://penny-arcade.com/comic/2012/12/24" title="Comic">Comic</a></li>
+			<li><a class="btnNext btn" href="http://penny-arcade.com/2012/12/26" title="Next">Next</a></li>
+			<li><a class="btnNew btn" href="http://penny-arcade.com/" title="New">New</a></li>
+			<li><a class="btnRSS btn" href="http://penny-arcade.com/feed" title="Subscribe to RSS">Subscribe to RSS</a></li>
+		</ul>
+		<hr />
+		<div class="post">
+			<div class="heading byGabe">
+				<div class="title">
+					<h2><a href="http://penny-arcade.com/2012/12/24/star-wars-edge-of-the-empire" title="Star Wars: Edge of the Empire">Star Wars: Edge of the Empire</a></h2>
+					<p class="iconEmail"><a href="mailto:gabe@penny-arcade.com" title="Email Gabe">Gabe</a></p>
+										<p class="iconTwt"><a href="http://twitter.com/cwgabriel" title="Follow Gabe on Twitter">@cwgabriel</a></p>					<p class="iconDate">Monday, December 24 2012 - 12:17 PM</p>
+				</div>
+				<ul class="share">
+					<li><a class="btnTwt btn" href="http://twitter.com/share?url=http://penny-arcade.com/2012/12/24/star-wars-edge-of-the-empire&amp;text=Star Wars: Edge of the Empire%20%23pennyarcade" rel="tweet" title="Share on Twitter">Share on Twitter</a></li>
+					<li><a class="btnFB btn" href="http://www.facebook.com/sharer.php?u=http://penny-arcade.com/2012/12/24/star-wars-edge-of-the-empire&amp;t=Star Wars: Edge of the Empire" title="Share on Facebook">Share on Facebook</a></li>
+				</ul>
+			</div>
+			<p>I picked up the new <a href="http://store.fantasyflightgames.com/productdetails.cfm?SKU=SWE01">Star Wars: Edge of the Empire beginner game box</a>. This is an all in one product that contains everything you need to play a little adventure including character sheets, maps, rulebook and a handful of the special dice that are the core of the game. </p>
+
+<p>The adventure is designed so that everyone learns the game as you play the adventure. Players grab character sheets and then you just dive in. Mechanics are introduced slowly with each new encounter. I really liked this system as we were all playing within minutes of sitting down at the table. </p>
+
+<p>The first mechanic you learn and the one that is really the foundation of the game is the skill check. Edge of the Empire does not use the standard RPG dice that you’re familiar with from games like D&amp;D. Instead <a href="http://www.fantasyflightgames.com/edge_news.asp?eidn=3574">it requires a set of custom dice</a> in various shapes, colors and sizes all covered in odd symbols. They look a bit intimidating at first but once you learn the system it’s fast and most importantly, worth it. </p>
+
+<p>Some dice are covered in symbols that indicate success while others sport the symbol for failure. The various shapes and sizes all have different ratios of these symbols giving you a better or worse chance of racking up success or failures. When you need to make a skill check you grab a handful of the “good” dice. What you grab is determined by your rank in the skill. For example a droid trying to make a mechanics check might grab two green dice (some success on each side) and one yellow die (this thing is covered with fucking success). Now as the GM I start adding the bad dice to the pool. I might toss in one purple die (a few failures) because it’s a simple lock to pick. But maybe the droid is trying to pick it while being shot at by Stormtroopers so I add a red die (a.k.a the fuck orb) which is bristling with failures. Now the player has a handful of good dice representing their skill and some bad dice representing the circumstances of the check. They roll the entire pool and each failure rolled cancels out a success. If there are any success left over then the skill check succeeded. That right there is the core mechanic of Edge of the Empire.</p>
+
+<p>That by itself is a fun system but Edge of the Empire goes one step further. In addition to Success and Failure symbols the dice also have a few other symbols that might pop up on a roll. These are Advantage and Threat and like success and failure they cancel each other out. So on any given roll you might succeed or fail but you might also generate advantage or threat. The first one obviously determines if you accomplish what you’re trying to do or not and the second one gives it a bit of flavor. Let me give you an example from the game I ran last night. </p>
+
+<p><a href="http://tabletitans.com/">Kurtz</a> playing the smuggler Pash was trying to get a much needed part from a junk dealer. The problem was the part had already been promised to someone else. Scott’s first thought was to bluff the guy and tell him that he was here to pick up the part for the other customer. He collected a dice pool based on his deceit skill and then I added a few negative dice based on the vigilance skill of the junk shop owner. This is how Edge of the Empire handles opposed rolls. So he rolls all the dice and after it’s all over he is left with no successes but two &#8220;advantage&#8221;. So since he has no un-canceled successes he has failed the skill check, but he also generated a bit of advantage and as the GM I can decide what that means. In this case the shop owner sees through the lie but is impressed with his nerve and decides not to kick him and his friends out of his shop just yet. Now Scott could just as easily generated threat on the roll and he would have failed the check and then probably been kicked out of the shop to boot. </p>
+
+<p>Essentially every roll will determine a success or a failure but it will also generate fuel for kick ass RP. later on while trying to steal a ship they convinced a woman in the control room to release the ship&#8217;s docking clamps for them by telling her they were a maintenance crew. The roll was a success but in generated threat and I decided that she releases the clamps but then called the ship’s pilot to let him know his “mechanics” were en route. This dice system is designed to facilitate awesome story telling and it worked great! </p>
+
+<p>I really can’t say enough good stuff about our experience with the beginner box last night. Everyone who played had a blast and they want to play again ASAP. Luckily there is a downloadable adventure called <a href="http://www.fantasyflightgames.com/ffg_content/StarWarsRPG/edge-of-the-empire/beginner-game/Support/Bonus%20Adventure/Low%20Rez/Long_Arm_of_the_Hutt_LR.pdf">the Long Arm of the Hutt</a> that picks up right where the beginner box adventure leaves off. If you’re looking for something new to run for your group I highly recommend trying Edge of the Empire. </p>
+
+<p>-Gabe out</p>
+		</div>
+		
+		
+		
+		<hr />
+		<ul class="newsNav btm">
+			<li><a class="btnFirst btn" href="http://penny-arcade.com/2002/02/11" title="First">First</a></li>
+			<li><a class="btnPrev btn" href="http://penny-arcade.com/2012/12/21" title="Previous">Previous</a></li>
+			<li><a class="btnComic btn" href="http://penny-arcade.com/comic/2012/12/24" title="Comic">Comic</a></li>
+			<li><a class="btnNext btn" href="http://penny-arcade.com/2012/12/26" title="Next">Next</a></li>
+			<li><a class="btnNew btn" href="http://penny-arcade.com/" title="New">New</a></li>
+			<li><a class="btnRSS btn" href="http://penny-arcade.com/feed" title="Subscribe to RSS">Subscribe to RSS</a></li>
+		</ul>
+	</div>
+</div>
+<hr />
+<div id="sidebar">
+	<div id="latestComic">					
+		<h3>Latest Comic</h3>
+		<a class="btn btnReadComic" href="http://penny-arcade.com/comic" title="Read Comic: Playing Roles">Read Comic</a>
+		<img src="/assets/img/comic_preview/13321_preview.jpg" alt="Read Comic: Playing Roles" />
+	</div>
+	<ul id="social">
+		<li><a class="btn btnLikeUs" href="http://www.facebook.com/pages/Penny-Arcade/19103799704" title="Like Penny Arcade on Facebook">Like Penny Arcade on Facebook</a></li>
+		<li><a class="btn btnFollowUs" href="http://twitter.com/#!/PA_Megacorp" title="Follow Penny Arcade on Twitter">Follow Penny Arcade on Twitter</a></li>
+	</ul>
+	<div id="skyscraperAd">
+		<script type="text/javascript">GA_googleFillSlot("News_Vertical");</script>
+	</div>
+	<form id="newsletter" action="/assets/php/mc_subscribe.php" method="post">
+		<fieldset>
+			<h3>Newsletter</h3>
+			<p>Want Penny Arcade Spam?</p>
+			<label for="email">Email Address</label>
+			<input class="txt" id="email" name="email" type="text" value="email address" />
+			<input class="btn" id="btnSignUp" type="submit" value="Sign Me Up!" />
+		</fieldset>
+	</form>
+</div>
+				</div>
+			</div>
+		</div>
+	<hr />
+	<div id="footer">
+		<div class="content">
+			<ul id="promos">
+				<li>
+					<div class="promo" id="ad_01"></div>
+				</li>
+				<li>
+					<div class="promo" id="ad_02"></div>
+				</li>
+				<li>
+					<div class="promo" id="ad_03"></div>
+				</li>
+				<li>
+					<div class="promo" id="ad_04"></div>
+				</li>
+				<li>
+					<div class="promo" id="ad_05"></div>
+				</li>
+			</ul>
+			<p id="copyright">&copy; Copyright 1998-2012 Penny Arcade, Inc.</p>
+			<p id="sales"><a href="mailto:advertising@penny-arcade.com" title="Advertise on Penny Arcade">Advertise on Penny Arcade</a> | <a href="http://penny-arcade.com/contact" title="Company Contact Info">Contact Info</a></p>
+			<ul id="brands">
+				<li id="logoPAX" class="btn"><a href="http://www.paxsite.com/" title="PAX">PAX</a></li>
+				<li id="logoCP" class="btn"><a href="http://www.childsplaycharity.org/" title="Child's Play">Child's Play</a></li>
+				<li id="logoPA" class="btn"><a href="http://penny-arcade.com/" title="Penny Arcade"><strong>Penny Arcade</strong></a></li>
+				<li id="logoPATV" class="btn"><a href="http://penny-arcade.com/patv" title="PATV">PATV</a></li>
+				<li id="logoFP" class="btn"><a href="http://store.penny-arcade.com/collections/first-party" title="First Party">First Party</a></li>
+			</ul>
+		</div>
+	</div>
+
+<!-- vanilla comment counts -->
+<script type="text/javascript">
+var vanilla_forum_url = 'http://forums.penny-arcade.com/'; // Required: the full http url & path to your vanilla forum
+
+/* Optional - You can optionally specify the format of the comment counts. Html is allowed. */
+var vanilla_comments_none = '0 Comments';
+var vanilla_comments_singular = '1 Comment';
+var vanilla_comments_plural = '[num] Comments';
+
+(function() {
+   var vanilla_count = document.createElement('script');
+   vanilla_count.type = 'text/javascript';
+   vanilla_count.src = vanilla_forum_url + '/js/count.js';
+   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(vanilla_count);
+})();
+</script>
+
+<!-- BEGIN Quantcast Tag -->
+<script type="text/javascript">
+	var _qevents = _qevents || [];
+	(function() {
+		var elem = document.createElement('script');
+		elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+		elem.async = true;
+		elem.type = "text/javascript";
+		var scpt = document.getElementsByTagName('script')[0];
+		scpt.parentNode.insertBefore(elem, scpt);
+	})();
+	_qevents.push();
+</script>
+<noscript>
+	<div style="display:none;"><img src="//pixel.quantserve.com/pixel/p-7aMlAhcqainl6.gif" border="0" height="1" width="1" alt="Quantcast"/></div>
+</noscript>
+<!-- END Quantcast tag -->
+
+<!-- BEGIN Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2010 Nielsen Online -->
+<script type="text/javascript">
+	(function () {
+		var d = new Image(1, 1);
+		d.onerror = d.onload = function () {
+			d.onerror = d.onload = null;
+		};
+    	d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-105791h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+	})();
+</script>
+<noscript>
+	<div><img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-105791h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" /></div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+
+<!-- BEGIN Compete XL Code for penny-arcade.com -->
+<script type="text/javascript">
+	__compete_code = '7068d7e9358a648ffebc11d328f1691b';
+	/* Set control variables below this line. */ 
+</script>
+<script type="text/javascript" src="//c.compete.com/bootstrap/s/7068d7e9358a648ffebc11d328f1691b/penny-arcade-com/bootstrap.js"></script>
+<noscript>
+	<img width="1" height="1" src="https://ssl-penny-arcade-com-7068d7.c-col.com"/>
+</noscript>
+<!-- END Compete XL Code for penny-arcade.com -->
+
+<!-- BEGIN comScore Tag -->
+<script>
+	var _comscore = _comscore || [];
+	_comscore.push({ 
+		c1: "2", c2: "13395694" 
+	});
+	(function() {
+		var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+	})();
+</script>
+<noscript>
+	<img src="http://b.scorecardresearch.com/p?c1=2&c2=13395694&cv=2.0&cj=1" />
+</noscript>
+<!-- END comScore Tag -->
+
+</body>
+</html>
+
+<!-- praise the monitor dcdd5073de69caeea9e7f45c4e26d44e -->

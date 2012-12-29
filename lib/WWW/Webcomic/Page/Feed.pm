@@ -84,6 +84,8 @@ sub _build_entries {
     my %skip_category = map { $_ => 1 }
         grep { /^ (?: blog | news ) $ /xi } keys %has_category;
 
+    # Assemble entry summaries from the feed, skipping anything in the
+    # dodgy categories we identified earlier.
     my @entries;
     feed_entry:
     for my $feed_entry ($self->feed->entries) {
@@ -94,6 +96,23 @@ sub _build_entries {
         push @entries, $self->_entry_from_feed_entry($feed_entry);
     }
 
+    # Further stripping: strip anything that looks like a news post, or
+    # (if the URLs do this) isn't identified as being a comic.
+    # Start with a strict regexp for matching 'comic' and then get
+    # looser if that didn't help.
+    my ($re_comic, $any_contain_comic);
+    re:
+    for my $re (qr{ /comic/ }x, qr/ \b comic \b /x) {
+        $re_comic = $re;
+        $any_contain_comic = grep { $_->page->url =~ $re_comic } @entries;
+        last re if $any_contain_comic;
+    }
+    @entries = grep {
+        !($_->page->url =~ m{ [/.] (?: forums | news ) [/.] }xi
+            || ($any_contain_comic && $_->page->url !~ $re_comic));
+    } @entries;
+
+    # Right, that's all we can do for now. Hope this is OK.
     return \@entries;
 }
 

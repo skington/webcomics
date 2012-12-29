@@ -175,21 +175,6 @@ sub get_feed_contents {
         push @{ $feed_contents{ $page->url } }, @entries;
     }
     return %feed_contents;
-
-    if (my $page eq 'Something useful') {
-        my @entries;
-
-        # Now that we have canonical URLs, strip out anything that looks
-        # like a news post.
-        my $re_comic = qr/ \b comic \b /x;
-        my $any_contain_comic = grep { $_->{link} =~ $re_comic } @entries;
-        @entries = grep {
-            !($_->{link} =~ m{ [/.] (?: blog | forums | news ) [/.] }xi
-                || ($any_contain_comic && $_->{link} !~ $re_comic));
-        } @entries;
-    }
-
-    return %feed_contents;
 }
 
 # Supplied with a hash of key => arrayref of feed entries, analyses each
