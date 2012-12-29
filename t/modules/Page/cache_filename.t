@@ -27,7 +27,7 @@ for my $url (sort keys %expected_components) {
         cache_directory => $cache_directory
     );
     is_deeply(
-        [$page->_cached_file_components],
+        [$page->_cached_file_components($page->url)],
         $expected_components{$url},
         "Correct file components for $url"
     );
