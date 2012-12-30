@@ -88,6 +88,20 @@ sub _build_feed_pages {
         eval { $feed_page->contents } and push @feeds, $feed_page;
     }
 
+    # If we had more than one, get rid of the obviously unhelpful ones.
+    if (@feeds > 1) {
+        # Discard out of hand any feed that doesn't even have dates.
+        # That means you, xkcd Atom feed.
+        # (Feeds that don't have dates are fine if there's only one.
+        # So far I haven't found a site with two or more feeds, none of
+        # which have dates.)
+        @feeds = grep { $_->entries->[0]->has_date } @feeds;
+
+        # Ignore feeds that are blatantly comments-only feeds (e.g.
+        # Skin Horse).
+        @feeds = grep { $_->url !~ / \b comment s? \b /x } @feeds;
+    }
+
     return \@feeds;
 }
 

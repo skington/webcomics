@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en-US">
+<head>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>User Experience Page 9 | 2D Goggles</title>
+<link rel="Shortcut Icon" href="http://sydneypadua.com/2dgoggles/wp-content/themes/catalyst/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="http://sydneypadua.com/2dgoggles/wp-content/themes/2dgoggles/style.css" type="text/css" media="screen, projection" />
+<link rel="alternate" type="application/rss+xml" title="2D Goggles &raquo; Feed" href="http://sydneypadua.com/2dgoggles/feed/" />
+<link rel="alternate" type="application/rss+xml" title="2D Goggles &raquo; Comments Feed" href="http://sydneypadua.com/2dgoggles/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="2D Goggles &raquo; User Experience Page 9 Comments Feed" href="http://sydneypadua.com/2dgoggles/user-experience-page-9/feed/" />
+<script type='text/javascript' src='http://sydneypadua.com/2dgoggles/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<script type='text/javascript' src='http://sydneypadua.com/2dgoggles/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<script type='text/javascript' src='http://sydneypadua.com/2dgoggles/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.3.4'></script>
+<link rel="pingback" href="http://sydneypadua.com/2dgoggles/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sydneypadua.com/2dgoggles/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sydneypadua.com/2dgoggles/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='User Experience Page 8' href='http://sydneypadua.com/2dgoggles/user-experience-page-8/' />
+<link rel='next' title=':(' href='http://sydneypadua.com/2dgoggles/1591/' />
+<link rel='shortlink' href='http://sydneypadua.com/2dgoggles/?p=1587' />
+<link rel="stylesheet" href="http://sydneypadua.com/2dgoggles/wp-content/plugins/organize-series/orgSeries.css" type="text/css" media="screen" />        <style type="text/css" media="screen">
+          div.printfriendly {
+            margin: 0px 0px 0px 0px;
+          }
+          .printfriendly a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #c74242;
+            vertical-align: bottom;
+          }
+          
+          .printfriendly a:hover {
+            cursor: pointer;
+          }
+
+          .printfriendly a img  {
+            border: none;
+            padding:0;
+            margin-right: 6px;
+          } 
+          .printfriendly a span{
+            vertical-align: bottom;
+          }        
+          .alignleft {
+              float:left;
+              margin: 5px 20px 20px 0;
+          }
+          .alignright {
+              float:right;
+              margin: 5px 0 20px 20px;
+          }
+          .aligncenter {
+            text-align: center;
+            margin: 5px auto 5px auto;
+          }
+        </style>
+        <style type="text/css" media="print">
+          .printfriendly {
+            display: none;
+          }
+        </style>
+<link rel="canonical" href="http://sydneypadua.com/2dgoggles/user-experience-page-9/" />
+<style type="text/css" media="all">
+/* <![CDATA[ */
+@import url("http://sydneypadua.com/2dgoggles/wp-content/plugins/wp-table-reloaded/css/plugin.css?ver=1.9.3");
+@import url("http://sydneypadua.com/2dgoggles/wp-content/plugins/wp-table-reloaded/css/datatables.css?ver=1.9.3");
+.wp-table-reloaded-id-3 .column-2 {
+  width: 280px;
+}
+.wp-table-reloaded-id-3, .wp-table-reloaded-id-3 td, .wp-table-reloaded-id-3 th {
+  border: none!important;
+  border-collapse: collapse!important;
+  border-spacing: 0px!important;
+}
+/* ]]> */
+</style>
+<!-- Begin Catalyst Custom CSS -->
+<style id="custom-css-echo" type="text/css">
+/* Our 'no sidebar' pages. */
+
+.no-sidebar #content {
+    width: 980px ! important;
+}
+
+/* Extra styles for slider page. */
+
+#slider { 
+    margin: auto ! important;
+    margin-top: -30px ! important;
+    margin-bottom: 20px ! important;
+}
+
+/* Making comments more readable. */
+.comment-body-text, .commentlist p, .reply {
+    font-family: Georgia, serif ! important;
+    font-size: 13px ! important;
+}
+
+/* Styling donations. */
+#donate:hover { 
+    background-position  : -0px -101px;
+} 
+.paypal-donations { 
+    margin: 0 0 0 10px;
+} 
+
+/* Fix for sidebar widths. */
+
+.double-sidebar #content-sidebar-wrap {
+    width: 795px !important;
+}
+.double-sidebar #sidebar-2-wrap {
+    margin-left: 0px ! important;
+    width: 180px ! important;
+}
+.double-sidebar #sidebar-1-wrap {
+    margin-right: 0px ! important;
+    width: 210px ! important;
+}*/
+#content .post {
+    padding-left: 5px ! important;
+    padding-right: 5px ! important;
+}
+</style>
+<!-- End Catalyst Custom CSS -->
+<!-- Google Analytics Tracking by Google Analyticator 6.3.4: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-8821303-1']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+	
+</head>
+
+<body class="single single-post postid-1587 single-format-standard unknown-os unknown-browser double-sidebar catalyst_default logo-image">
+
+<div id="wrap" class="clearfix">
+<div id="header-wrap">
+<div id="header">
+<div id="header-left">
+<p id="title"><a href="http://sydneypadua.com/2dgoggles/" title="2D Goggles">2D Goggles</a></p><p id="tagline">Dangerous experiments in comics</p></div>
+<div id="header-right">
+<a href="http://feeds2.feedburner.com/sydneypadua/yBZX" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><img src="http://sydneypadua.com/2dgoggles/wp-content/uploads/2011/01/2dgoggles-rss64.png" alt="RSS image" style="border:0"/></a></div>
+</div>
+</div>
+<div id="navbar-1-wrap"><div id="navbar-1" class="clearfix"><div id="navbar-1-left"><ul id="nav-1" class="nav-1"><li class="home"><a href="http://sydneypadua.com/2dgoggles/" title="Home">Home</a></li><li class="page_item page-item-1302"><a href="http://sydneypadua.com/2dgoggles/cast/">Cast</a></li><li class="page_item page-item-177"><a href="http://sydneypadua.com/2dgoggles/faq/">FAQ</a><ul class='children'><li class="page_item page-item-899"><a href="http://sydneypadua.com/2dgoggles/faq/about-the-author/">About the Author</a></li><li class="page_item page-item-521"><a href="http://sydneypadua.com/2dgoggles/faq/contact/">Contact</a></li><li class="page_item page-item-1120"><a href="http://sydneypadua.com/2dgoggles/faq/press/">Press</a></li></ul></li><li class="page_item page-item-1363"><a href="http://sydneypadua.com/2dgoggles/ipad-app/">iPad App</a></li><li class="page_item page-item-853"><a href="http://sydneypadua.com/2dgoggles/pocket-universe-pocket-guide/">Pocket Universe Guide</a></li><li class="page_item page-item-896"><a href="http://sydneypadua.com/2dgoggles/stories/">Stories</a></li><li class="page_item page-item-872"><a href="http://sydneypadua.com/2dgoggles/wallpapers-and-links/">Wallpapers, Links, and Extras</a></li></ul></div></div></div>
+
+		<div id="container-wrap">
+		
+			
+			<div id="container">
+			
+							
+				<div id="content-sidebar-wrap">
+				
+										
+					<div id="content-wrap">
+
+												
+						<div id="content" class="hfeed">
+						
+							
+		
+		
+	<div class="post-1587 post type-post status-publish format-standard hentry category-uncategorized">
+	
+				<h1 class="entry-title">User Experience Page 9</h1>
+
+		<div class="byline-meta">Written <em>by</em> <span class="author vcard"><span class="fn"><a href="http://sydneypadua.com/2dgoggles/author/sydney/" rel="author">sydney</a></span></span> <em>on</em> <span class="date time published" title="2012-11-23T17:24:09+0000">November 23, 2012</span>  <span class="post-comments"> &middot; <a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/#comments">16 Comments</a></span> </div>		
+				<div class="entry-content">
+		<div class="seriesmeta">This entry is part 9 of 9 in the series <a href="http://sydneypadua.com/2dgoggles/series/user-experience/" class="series-17" title="User Experience">User Experience</a></div><div class="seriesbox"><div class="center"><br /><a href="http://sydneypadua.com/2dgoggles/series/user-experience/" class="series-17" title="User Experience">User Experience</a></div><ul class="serieslist-ul"><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-first/" title="USER EXPERIENCE Page the FIRST">USER EXPERIENCE Page the FIRST</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-second/" title="User Experience, Page the Second">User Experience, Page the Second</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-3/" title="User Experience Page 3">User Experience Page 3</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-pg-4/" title="User Experience Pg 4">User Experience Pg 4</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-fifth/" title="User Experience Page the Fifth">User Experience Page the Fifth</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-6/" title="User Experience Page 6">User Experience Page 6</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-7/" title="User Experience Page 7">User Experience Page 7</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/" title="User Experience Page 8">User Experience Page 8</a></li><li class="serieslist-li-current">User Experience Page 9</li></ul></div><p><img class="aligncenter size-full wp-image-1578" title="ux_009" src="http://sydneypadua.com/2dgoggles/wp-content/uploads/2012/11/ux_009.jpg" alt="" width="550" height="733" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>I&#8217;ve been so rushed I feel I&#8217;ve been shortchanging you folks on your NOTES, which I know full well is 64% of the reason anyone reads the comic in the first place so.. A quick recap of some of our friends:</p>
+<p>&nbsp;</p>
+<h3>CHARLES BABBAGE</h3>
+<p>was, we must not forget, a notable writer as well as a mathematician. By far his greatest hit was <a href="http://archive.org/stream/oneconomyofmachi00babbrich#page/n11/mode/2up">&#8220;On the Economy of Machinery and Manufactures&#8221;</a> which is indeed an <a href="http://books.google.co.uk/books?id=VZwTAAAAYAAJ&amp;pg=PA400&amp;dq=%22machinery+and+manufactures%22+babbage+price&amp;hl=en&amp;sa=X&amp;ei=sJ6vUKPFG5TM0AXSl4GYBg&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">unmixed gratification</a>. I link you to the 3rd edition because you may enjoy not only his <a href="http://archive.org/stream/oneconomyofmachi00babbrich#page/314/mode/2up/">initial exposure of the cabal of booksellers</a>, but also his <a href="http://archive.org/stream/oneconomyofmachi00babbrich#page/n15/mode/2up/">rebuttal of their defence, prefacing the 2nd edition</a>, AND the further dramatic developments for those watching at home from the <a href="http://archive.org/stream/oneconomyofmachi00babbrich#page/n19/mode/2up/">preface to the 3rd edition (with charts!)</a>.</p>
+<p>&nbsp;</p>
+<h3>THOMAS CARLYLE</h3>
+<p><img class="alignleft size-full wp-image-1577" title="220px-Thomas_Carlyle_daguerreotype,_1848" src="http://sydneypadua.com/2dgoggles/wp-content/uploads/2012/11/220px-Thomas_Carlyle_daguerreotype_1848.jpeg" alt="" width="220" height="276" /> &#8212; the preeminent, and least currently read, Victorian Public Intellectual. If living now would have regular column in The Times and do big BBC history series, that sort of thing. &#8212; shared an intense mutual dislike with Charles Babbage, I&#8217;m not sure why. Possibly because Carlyle disliked economists and mathematicians (he coined the phrase &#8216;the dismal science&#8217;); possibly because they were rivals in <a href="http://www.victorianweb.org/science/darwin/carlyle.html">dinner-party conversation-dominating</a> &#8212; or possibly because they were on opposite sides of the slavery issue- abolitionist Babbage inserts a <a href="http://books.google.co.uk/books?id=y_ERAAAAYAAJ&amp;pg=PA116&amp;lpg=PA116&amp;dq=%22The+soul+of+the+negro,+whose+fettered+body+surviving+the+living+charnel-house+of+his+infected+prison,+was+thrown+into+the+sea+to+lighten+the+ship%22&amp;source=bl&amp;ots=BYlfJ9h1kp&amp;sig=HmN7uxLbmEyrJA1gyAgThxRIQaw&amp;hl=en&amp;sa=X&amp;ei=oaavUIbBH8aK0AWqnIGIDQ&amp;ved=0CEIQ6AEwBw#v=onepage&amp;q=%22The%20soul%20of%20the%20negro%2C%20whose%20fettered%20body%20surviving%20the%20living%20charnel-house%20of%20his%20infected%20prison%2C%20was%20thrown%20into%20the%20sea%20to%20lighten%20the%20ship%22&amp;f=false">heartfelt plea against it in the 9th Bridgewater Treatise</a>; Carlyle would I&#8217;m sure be surprised to find himself the author of what must be the only Victorian essay with a <a href="http://books.google.co.uk/books?id=2pYMAAAAYAAJ&amp;pg=PP11#v=onepage&amp;q&amp;f=false">genuinely unprintable title (NSFW)</a> &#8211;such was their antagonism that they were unable to bond over their mutual persecution by <a href="http://www.archive.org/stream/romanceofprocons00milnrich#page/40/">street urchins</a> and street musicians and hobby of running outside WITHOUT HATS to confront them.</p>
+<h3>WILIKE COLLINS <img class="alignright size-full wp-image-1579" title="imgres" src="http://sydneypadua.com/2dgoggles/wp-content/uploads/2012/11/imgres1.jpeg" alt="" width="178" height="284" /></h3>
+<p>&#8211; his books are really great. You haven&#8217;t read <a href="http://www.goodreads.com/book/show/45205.No_Name">NO NAME??</a> OMG go read it! Why isn&#8217;t it a lavish BBC spectacular? Honestly. &#8212; He hung out with Dickens and they wrote an awful play together, <a href="http://en.wikipedia.org/wiki/The_Frozen_Deep">The Frozen Deep</a> &#8212; His father was a notable landscape painter and <a href="http://books.google.co.uk/books?id=IuwoAAAAYAAJ&amp;pg=PA53&amp;dq=ada+byron&amp;lr=&amp;as_drrb_is=b&amp;as_minm_is=0&amp;as_miny_is=1840&amp;as_maxm_is=0&amp;as_maxy_is=1850&amp;as_brr=0&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">described 19-yr-old Ada Lovelace</a>as &#8220;delightful and simple-minded, without an atom of pride&#8221;. She never met Wilkie as far as I know which is a shame as I think they would have gotten on LIKE A HOUSE ON FIRE. &#8212; on account of they both liked unconventional women, unconventional marriages, and opium &#8212; Marion Halcombe in The Woman In White is thought to be based on George Eliot. Dang it I need to work that better into the comic.</p>
+<blockquote><p>The easy elegance of every movement of her limbs and body as soon as she began to advance from the far end of the room, set me in a flutter of expectation to see her face clearly. She left the window—and I said to myself, The lady is dark. She moved forward a few steps—and I said to myself, The lady is young. She approached nearer—and I said to myself (with a sense of surprise which words fail me to express), The lady is ugly! Never was the old conventional maxim, that Nature cannot err, more flatly contradicted—never was the fair promise of a lovely figure more strangely and startlingly belied by the face and head that crowned it. The lady&#8217;s complexion was almost swarthy, and the dark down on her upper lip was almost a moustache. She had a large, firm, masculine mouth and jaw; prominent, piercing, resolute brown eyes; and thick, coal-black hair, growing unusually low down on her forehead.</p></blockquote>
+<h3><img class="alignleft size-full wp-image-1581" title="george" src="http://sydneypadua.com/2dgoggles/wp-content/uploads/2012/11/george-e1353690412751.jpeg" alt="" width="300" height="277" />GEORGE ELIOT</h3>
+<p>Here she is again! I love George. The Lady Novelist&#8217;s jibe about her &#8216;friend&#8217; George in the last page is an allusion to Marion Evans extremely unconventional marriage, or <a href="http://en.wikipedia.org/wiki/George_Eliot#Relationship_with_George_Lewes">&#8216;marriage&#8217; to George Henry Lewes</a>. I don&#8217;t often recommend secondary sources but if you want a cozy gossip about weird Victorian personal relations <a href="http://www.goodreads.com/book/show/251515.Parallel_Lives">Parallel Lives</a> tells you ALL ABOUT not just George Eliot and Robert Carlyle, but also Ruskin, JS Mill, and Charles Dickens.</p>
+<p>CHARLES DICKENS we will get to know more next week!</p>
+<p>(I have not, before you ask, actually conducted a statistical survey of misprints in Victorian publications BUT I will leave you with the most poetical example of all: the final page of Lovelace&#8217;s magisterial, yet extremely full of typos, paper on computer science and the elimination of errors by machinery, which not only misprints her initials as &#8220;A.L.L&#8221; instead of &#8220;A.A.L&#8221; (Augusta Ada Lovelace that is), but is headed &#8220;The Analytitical Engine&#8221;!</p>
+<p><a href="http://books.google.co.uk/books?id=qsY-AAAAYAAJ&#038;dq=sketch%20of%20the%20analytical%20engine&#038;lr&#038;as_drrb_is=b&#038;as_minm_is=0&#038;as_miny_is=1840&#038;as_maxm_is=0&#038;as_maxy_is=1852&#038;as_brr=0&#038;pg=PA731&#038;ci=178%2C44%2C565%2C199&#038;source=bookclip"><img src="http://books.google.co.uk/books?id=qsY-AAAAYAAJ&#038;pg=PA731&#038;img=1&#038;zoom=3&#038;hl=en&#038;sig=ACfU3U0UY8Jw5lBQxevXPojJYDudyZdX0g&#038;ci=178%2C44%2C565%2C199&#038;edge=0"/></a></p>
+<fieldset><legend>Series Navigation</legend><span class="series-nav-left"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/" title="Back to the Previous Gripping Episode!">Back to the Previous Gripping Episode!</a></span><span class="series-nav-right"></span></fieldset><div class="printfriendly alignleft"><a href="http://www.printfriendly.com/print/v2?url=http://sydneypadua.com/2dgoggles/user-experience-page-9/" rel="nofollow" onclick="window.print(); return false;"><span class="printfriendly-text2 printandpdf"><img style="border:none;margin-right:6px;" src="http://cdn.printfriendly.com/pf-print-icon.gif" width="16" height="15" alt="Print Friendly Version of this page" />Print <img style="border:none;margin:0 6px" src="http://cdn.printfriendly.com/pf-pdf-icon.gif" width="12" height="12" alt="Get a PDF version of this webpage" />PDF</span></a></div><div style="clear:both;"></div>
+<!--<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://sydneypadua.com/2dgoggles/user-experience-page-9/"
+    dc:identifier="http://sydneypadua.com/2dgoggles/user-experience-page-9/"
+    dc:title="User Experience Page 9"
+    trackback:ping="http://sydneypadua.com/2dgoggles/user-experience-page-9/trackback/" />
+</rdf:RDF>-->
+		</div>
+		<div class="custom-comment-link">
+        <p>
+            <a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/#comments" rel="nofollow">( 16 Comments )</a>
+        </p>
+        </div>
+<div class="post-meta"><p><span class="categories">Categories: <a href="http://sydneypadua.com/2dgoggles/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a></span> </p></div>		
+	</div>
+		
+	<div id="comment-wrap">
+		<div id="comments">
+			<h3 class="comment-heading">16 Responses to &#8220;User Experience Page 9&#8221;</h3>
+			<p class="commentlist comment-body-text">Read below or <a href="#respond" rel="nofollow">add a comment...</a></p>
+			<ol class="commentlist">
+				
+		<li class="comment even thread-even depth-1" id="li-comment-11213">
+		<div id="comment-11213">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/e060a6e6e23ab26207d1054ad27fc060?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">John</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11213" rel="nofollow">November 23, 2012 at 6:51 pm</a>			</div>
+			<p>Many years ago, I was told a (probably apocryphal) story of the early Internet, that a researcher complained to one of the system programmers that it was difficult enough spelling everything correctly, but then typing out all his e-mails on those big, clunky terminals made it impossible.  He asked if it was possible to have the computer automatically correct the spelliing.</p>
+<p>The story goes that the programmer said it was probably possible, but it would be a far easier task to instead level the field in the other diirection, and write a program to insert spelling errors into everybody else&#8217;s messages.</p>
+<p>It&#8217;s possible the Victorian publishers figured this out a century before&#8230;</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11213#respond' onclick='return addComment.moveForm("comment-11213", "11213", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11214">
+		<div id="comment-11214">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/c0980b4a75e7d58b0e848620a590acde?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Bruce Byfield</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11214" rel="nofollow">November 23, 2012 at 6:52 pm</a>			</div>
+			<p>Somehow, I missed the new publication schedule, so today I had the pleasure of reading nine pages in one gulp.</p>
+<p>George Eliot? Wilkie Collins? My favorite Victorian novelists in the same comic? What more could I ask for? If chronology allowed for Thomas Hardy as well, I wouldn&#8217;t have anything more to ask for; the habit of obscure Biblical and Classical allusions he had in his early books would make great comic material.</p>
+<p>You&#8217;re right, too: &#8220;No Name&#8221; is terrific, and so are &#8220;Armadale&#8221; and &#8220;The Law and the Lady&#8221; Collins really deserves to be known for more than &#8220;The Woman in White&#8221; and &#8220;The Moonstone.&#8221;</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11214#respond' onclick='return addComment.moveForm("comment-11214", "11214", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment even thread-even depth-1" id="li-comment-11215">
+		<div id="comment-11215">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/7e06402f004b1218d1963848a849c47e?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Therru</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11215" rel="nofollow">November 23, 2012 at 7:16 pm</a>			</div>
+			<p>I think you may need the Engine yourself! Wilkie Collins, not &#8220;Wilike&#8221;! </p>
+<p>That said, I am ashamed to admit that I have read nothing of his, and that I really need to find a copy of &#8220;No Name&#8221; now. </p>
+<p>As always, your comics are delightful and your notes are half the fun!</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11215#respond' onclick='return addComment.moveForm("comment-11215", "11215", "respond", "1587")'>Reply</a>				</div>
+			</div>
+<ul class='children'>
+
+		<li class="comment odd alt depth-2" id="li-comment-11371">
+		<div id="comment-11371">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/5c32fcf6f5d7a8f77088210387a606b4?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Sparks</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11371" rel="nofollow">December 3, 2012 at 11:32 pm</a>			</div>
+			<p>Honestly, as wonderful as No Name is (and as great as the better-known works like The Moonstone and The Woman in White are), I feel that given the general tone of 2D Goggles someone at least has to *mention* one of Collins&#8217; shorter works: The Haunted Hotel, which is basically an episode of Scooby-Doo done in Victorian prose.</p>
+<p>I&#8217;m actually dead serious about that.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11371#respond' onclick='return addComment.moveForm("comment-11371", "11371", "respond", "1587")'>Reply</a>				</div>
+			</div>
+<ul class='children'>
+
+		<li class="comment even depth-3" id="li-comment-11389">
+		<div id="comment-11389">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/c0980b4a75e7d58b0e848620a590acde?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Bruce Byfield</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11389" rel="nofollow">December 5, 2012 at 6:40 am</a>			</div>
+			<p>Happily, a lot of Wilkie Collins was reprinted by Dover about 15 years ago, so it&#8217;s not too hard to accumulate about 20 or so of his novels if you dig around a little. Some of his works are slight, but most have at least parts that are worth reading.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11389#respond' onclick='return addComment.moveForm("comment-11389", "11389", "respond", "1587")'>Reply</a>				</div>
+			</div>
+<ul class='children'>
+
+		<li class="comment odd alt depth-4" id="li-comment-11394">
+		<div id="comment-11394">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/ab2e6e673c986d48862b8ea1d4de8f23?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">David DeLaney</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11394" rel="nofollow">December 6, 2012 at 3:05 am</a>			</div>
+			<p>Also, there&#8217;s a whole big chunk of Collins available on gutenberg.org, if you just want to read them rather than own physical copies. (Peculiarly appropriate for this webcomic, too!)</p>
+<p>&#8211;Dave, I don&#8217;t think I&#8217;ve seen a comment box that uses copperplate italics before</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11394#respond' onclick='return addComment.moveForm("comment-11394", "11394", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+
+		<li class="comment even thread-odd thread-alt depth-1" id="li-comment-11219">
+		<div id="comment-11219">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/21b92bcebd1324d0615b97c993469643?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Brian</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11219" rel="nofollow">November 24, 2012 at 6:47 pm</a>			</div>
+			<p>Such bountiful notes!</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11219#respond' onclick='return addComment.moveForm("comment-11219", "11219", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment odd alt thread-even depth-1" id="li-comment-11220">
+		<div id="comment-11220">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/8f4f1f1a24afc03c2abe5946903f3c9c?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Joe Green</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11220" rel="nofollow">November 25, 2012 at 3:29 am</a>			</div>
+			<p>If I may, surely it&#8217;s &#8220;misspellings&#8221;, or &#8220;mis-spellings&#8221; if you prefer. How ironic. Or was that deliberate? Anyhoo, it&#8217;s all as thoroughly wonderful as ever, even if one installment leads to so many avenues to explore (with so little time to explore them&#8230; how on earth do you find the time to hold down a day job, write L&amp;B *and* do all the research?)</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11220#respond' onclick='return addComment.moveForm("comment-11220", "11220", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment even thread-odd thread-alt depth-1" id="li-comment-11221">
+		<div id="comment-11221">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/7305bdad2d646260efe4a597854da9f9?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn"><a href='http://twitter.com/ConFigures' rel='external nofollow' class='url'>ConFigures</a></cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11221" rel="nofollow">November 25, 2012 at 5:13 am</a>			</div>
+			<p>Wilkie Collins&#8217; Armadale is awesome.  I love, love, love the part where the heroine/villainess has a vision of throwing her foe out the window when he&#8217;s being particularly obliviously offensive.  Kind of an early Allie McBeal moment, if you know what I mean.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11221#respond' onclick='return addComment.moveForm("comment-11221", "11221", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment odd alt thread-even depth-1" id="li-comment-11226">
+		<div id="comment-11226">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/4cb14a2c675710ebafa9367086a41234?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">palenoue</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11226" rel="nofollow">November 25, 2012 at 9:41 pm</a>			</div>
+			<p>Any chance you could post the comics at a bigger size?  My eyes aren&#8217;t as good as they used to be, glasses don&#8217;t help all the time, and I miss out on a lot of the little things you throw in there.  Or maybe links to bigger files?</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11226#respond' onclick='return addComment.moveForm("comment-11226", "11226", "respond", "1587")'>Reply</a>				</div>
+			</div>
+<ul class='children'>
+
+		<li class="comment even depth-2" id="li-comment-11234">
+		<div id="comment-11234">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/a12c889651272034a8cd6ef1db351d82?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Kaazz</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11234" rel="nofollow">November 28, 2012 at 10:29 pm</a>			</div>
+			<p>Browsers all have the ability to &#8216;zoom&#8217; in any page. I have done this with these comics (my eyes aren&#8217;t as young anymore, either), and they seem to blow up very well.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11234#respond' onclick='return addComment.moveForm("comment-11234", "11234", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+</ul>
+</li>
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11227">
+		<div id="comment-11227">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/9c6ef60fd2d1264e8fdfc8c30e3bfb00?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Scott Hanley</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11227" rel="nofollow">November 25, 2012 at 9:45 pm</a>			</div>
+			<p>Not since I first encountered Calvin &amp; Hobbes, oh those many years ago, have I looked forward to a new installment of a serial publication with such anticipation! Thank you, Sydney!</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11227#respond' onclick='return addComment.moveForm("comment-11227", "11227", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment even thread-even depth-1" id="li-comment-11235">
+		<div id="comment-11235">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/a12c889651272034a8cd6ef1db351d82?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Kaazz</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11235" rel="nofollow">November 28, 2012 at 10:30 pm</a>			</div>
+			<p>I concur with Scott &#8211; it&#8217;s really fun to look forward to each new installment!! And then I am looking forward to reading them all at once, when you finally get to the end.</p>
+<p>And thanks for more notes!! :-)</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11235#respond' onclick='return addComment.moveForm("comment-11235", "11235", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11241">
+		<div id="comment-11241">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/96e549fca31240046fe59e33d7a3b43c?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">JHB</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11241" rel="nofollow">November 29, 2012 at 10:18 pm</a>			</div>
+			<p>The comments on the Ireland post don&#8217;t seem to work, so I&#8217;m going to sneakily sneak this one in to say how could we presume on your bountiful grace? and hope you enjoyed the Guinness.  </p>
+<p>Besides, the glitch is *clearly* because Babbage has tinkered once too often with the differential tubes of website-locomotion, so we all know where to place the blame&#8230;</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11241#respond' onclick='return addComment.moveForm("comment-11241", "11241", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment even thread-even depth-1" id="li-comment-11406">
+		<div id="comment-11406">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/52cc79ef0b4a93e3f88890a67a623c4d?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Janice</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11406" rel="nofollow">December 9, 2012 at 8:12 pm</a>			</div>
+			<p>Returning to the blog after a long hiatus, and greatly enjoying it. But oh, my, I wish you hadn&#8217;t linked to that horrid unmentionable essay by Carlyle, because I&#8217;ve now conceived a hatred for him I doubt I&#8217;ll ever get over. White privilege, class privilege, racism (against the Irish as well as the &#8220;Negroes&#8221;; and the whole thing topped by his smug certainty that he knew what the divine plan was and he and his fellow upper-class Anglo-Saxons were entitled to implement it, forcibly, if necessary. I&#8217;m sure it was only a coincidence that the divine plan guaranteed his comfort, waited on by loyal and never mouthy servants.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11406#respond' onclick='return addComment.moveForm("comment-11406", "11406", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11415">
+		<div id="comment-11415">
+			<div class="comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/c0980b4a75e7d58b0e848620a590acde?s=96&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Bruce Byfield</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/comment-page-1/#comment-11415" rel="nofollow">December 10, 2012 at 6:55 pm</a>			</div>
+			<p>Even without that essay, Carlyle has always seemed to me to be pompous and sharp-tongued. Babbage could probably be annoying in his own right, but I can&#8217;t help but think better of him for disliking Carlyle.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-9/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11415#respond' onclick='return addComment.moveForm("comment-11415", "11415", "respond", "1587")'>Reply</a>				</div>
+			</div>
+</li>
+			</ol>
+			<div class="comments-nav">
+				<div class="alignleft"></div>
+				<div class="alignright"></div>
+			</div>
+		</div>
+	<div id="trackbacks">
+</div>
+								<div id="respond">
+				<h3 id="reply-title">Leave A Comment... <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2dgoggles/user-experience-page-9/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://sydneypadua.com/2dgoggles/wp-comments-post.php" method="post" id="commentform">
+																										<p class="comment-form-author"><input id="author" name="author" type="text" value="" size="22" tabindex="1" aria-required="true" /><label class="comment-body-text" for="author"><small>Name</small></label> <span class="required">*</span></p>
+<p class="comment-form-email"><input id="email" name="email" type="text" value="" size="22" tabindex="2" aria-required="true" /><label class="comment-body-text" for="email"><small>Email</small></label> <span class="required">*</span></p>
+<p class="comment-form-url"><input id="url" name="url" type="text" value="" size="22" tabindex="3" /><label class="comment-body-text" for="url"><small>Website</small></label></p>
+												<p class="comment-form-comment"><textarea id="comment" name="comment" cols="80" rows="10" tabindex="4" aria-required="true"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Submit" />
+							<input type='hidden' name='comment_post_ID' value='1587' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="02fe6ea644" /></p>					</form>
+							</div><!-- #respond -->
+						<div style="clear:both;"></div>
+</div>
+
+	
+						</div><!-- end #content -->
+						
+						<div style="clear:both;"></div>
+						
+						
+					</div><!-- end #content-wrap -->
+					
+						<div id="sidebar-1-wrap">
+				<div id="sidebar-1">
+			<div id="php-text-3" class="widget php-text"><div class="widget-wrap">			
+			<div class="php-textwidget"><div class="sidebar-spacer"></div>
+<h4>A HIGHLY IRREGULAR webcomic, with footnotes<a href="#footnote">*</a></h4></div>
+		</div></div>
+<div id="text-5" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><a href="http://twitter.com/sydneypadua" title="Twitter bird" id="twitterbird" class="sidebar-poster-left"></a>
+<div><h2><span class='twitterwidget twitterwidget-title'>Twitter: sydneypadua</span></h2><ul><li><span class='entry-content'>Mo Farah is the worst kayaker I have ever seen. Feeling that warm Olympic glow again...</span> <span class='entry-meta'><span class='time-meta'><a href="http://twitter.com/sydneypadua/statuses/285101976319037440">about 5 hours ago</a></span> <span class='from-meta'>from <a href="https://mobile.twitter.com" rel="nofollow">Mobile Web (M5)</a></span></span> <span class="intent-meta"><a href="http://twitter.com/intent/tweet?in_reply_to=285101976319037440" data-lang="en" class="in-reply-to" title="Reply">Reply</a><a href="http://twitter.com/intent/retweet?tweet_id=285101976319037440" data-lang="en" class="retweet" title="Retweet">Retweet</a><a href="http://twitter.com/intent/favorite?tweet_id=285101976319037440" data-lang="en" class="favorite" title="Favorite">Favorite</a></span></li></ul><div class="follow-button"><a href="http://twitter.com/sydneypadua" class="twitter-follow-button" title="Follow @sydneypadua" data-lang="en">@sydneypadua</a></div></div>
+</div>
+		</div></div>
+<div id="php-text-4" class="widget php-text"><div class="widget-wrap">			
+			<div class="php-textwidget"><a href="http://www.zazzle.com/sydney_padua" title="Shop" id="shop" class="sidebar-poster-left"></a>
+<div class="sidebar-spacer"></div>
+<a href="http://sydneypadua.com/2dgoggles/wallpapers-and-links/" title="Wallpapers and links" id="wallpapers" class="sidebar-poster-left"></a>
+</div>
+		</div></div>
+<div id="php-text-5" class="widget php-text"><div class="widget-wrap">			
+			<div class="php-textwidget"><a name="footnote"></a>* If you checked down here for the footnote, you may be an appropriate audience for this comic.</div>
+		</div></div>
+		</div><!-- end #sidebar-1 -->
+		<div style="clear:both;"></div>
+			</div><!-- end #sidebar-1-wrap -->
+
+				</div><!-- end #content-sidebar-wrap -->
+				
+					<div id="sidebar-2-wrap">
+				<div id="sidebar-2">
+			<div id="text-6" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><a href="http://sydneypadua.com/2dgoggles/lovelace-the-origin-2/" title="Start here" id="starthere" class="sidebar-poster-right"></a>
+<div class="sidebar-spacer"></div>
+<a href="http://www.diigo.com/list/sydneypadua/lovelace-and-babbage" title="Primary documents" id="primarydocs" class="sidebar-poster-right"></a>
+</div>
+		</div></div>
+<div id="paypal_donations-4" class="widget widget_paypal_donations"><div class="widget-wrap">
+<!-- Begin PayPal Donations by http://wpstorm.net/ -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><div class="paypal-donations"><input type="hidden" name="cmd" value="_donations" /><input type="hidden" name="business" value="sydney.padua@gmail.com" /><input type="hidden" name="currency_code" value="GBP" /><input type="image" src="http://sydneypadua.com/2dgoggles/wp-content/uploads/2011/01/2dgoggles-donateposter.jpg" name="submit" alt="PayPal - The safer, easier way to pay online." /><img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" /></div></form>
+<!-- End PayPal Donations -->
+</div></div>
+<div id="seriestoc-3" class="widget widget_seriestoc"><div class="widget-wrap"><h4 class="widgettitle">Series</h4>
+<ul>	<li class="cat-item cat-item-12"><a href="http://sydneypadua.com/2dgoggles/series/economicmodel/" title="Ripped from the headlines of 1837!">Lovelace and Babbage Vs The Economy</a> (3)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://sydneypadua.com/2dgoggles/series/meanwhile/" title="Inside the tortured brain of 2DGoggles">Meanwhile..</a> (11)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://sydneypadua.com/2dgoggles/series/client/" title="A Tale Of Terror">The Client</a> (3)
+</li>
+	<li class="cat-item cat-item-14"><a href="http://sydneypadua.com/2dgoggles/series/organist/" title="An epic battle with Organized Crime">The Organist</a> (12)
+</li>
+	<li class="cat-item cat-item-17"><a href="http://sydneypadua.com/2dgoggles/series/user-experience/" title="View all posts filed under User Experience">User Experience</a> (9)
+</li>
+</ul><br /><br /><h4>Other posts belonging to the Series: User Experience</h4><ul><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-first/" title="USER EXPERIENCE Page the FIRST">USER EXPERIENCE Page the FIRST</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-second/" title="User Experience, Page the Second">User Experience, Page the Second</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-3/" title="User Experience Page 3">User Experience Page 3</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-pg-4/" title="User Experience Pg 4">User Experience Pg 4</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-fifth/" title="User Experience Page the Fifth">User Experience Page the Fifth</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-6/" title="User Experience Page 6">User Experience Page 6</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-7/" title="User Experience Page 7">User Experience Page 7</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/" title="User Experience Page 8">User Experience Page 8</a></li><li class="serieslist-current-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/" title="User Experience Page 9">User Experience Page 9</a></li></ul></div></div>
+		</div><!-- end #sidebar-2 -->
+		<div style="clear:both;"></div>
+			</div><!-- end #sidebar-2-wrap -->
+				
+			</div><!-- end #container -->
+			
+			<div style="clear:both;"></div>
+			
+						
+		</div><!-- end #container_wrap -->
+		
+		<div style="clear:both;"></div>
+
+		<div id="footer-wrap">
+<div id="footer" class="clearfix">
+<p class="footer-content footer-left"> <span class="footer-text"></span> <a href="http://sydneypadua.com/2dgoggles/wp-admin/">Admin Login</a> </p> <p class="footer-content footer-right"> <span class="powered-by">Powered by </span> <span class="catalyst-attribute"><a href="http://catalysttheme.com/" title="Catalyst Premium Wordpress Theme">Catalyst</a></span> </p>
+<p class="footer-content footer-center"> <span class="footer-copyright">Copyright &copy; 2012 2D Goggles</span> </p></div>
+</div>
+</div><!-- end #wrap -->
+				<script type='text/javascript'><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) { 
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "http://sydneypadua.com/2dgoggles//series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+			        <script type="text/javascript">
+          var pfHeaderImgUrl = "";
+          var pfHeaderTagline = "";
+          var pfdisableClickToDel = "0";
+
+          // PrintFriendly
+          var e = document.createElement('script'); e.type="text/javascript";
+          e.async = true;
+          e.src = '//cdn.printfriendly.com/printfriendly.js';
+          document.getElementsByTagName('head')[0].appendChild(e);
+      </script>
+<script type='text/javascript' src='http://platform.twitter.com/widgets.js?ver=1.0.0'></script>
+
+</body>
+
+</html>

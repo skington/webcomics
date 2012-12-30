@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en-US">
+<head>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>User Experience Page 8 | 2D Goggles</title>
+<link rel="Shortcut Icon" href="http://sydneypadua.com/2dgoggles/wp-content/themes/catalyst/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="http://sydneypadua.com/2dgoggles/wp-content/themes/2dgoggles/style.css" type="text/css" media="screen, projection" />
+<link rel="alternate" type="application/rss+xml" title="2D Goggles &raquo; Feed" href="http://sydneypadua.com/2dgoggles/feed/" />
+<link rel="alternate" type="application/rss+xml" title="2D Goggles &raquo; Comments Feed" href="http://sydneypadua.com/2dgoggles/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="2D Goggles &raquo; User Experience Page 8 Comments Feed" href="http://sydneypadua.com/2dgoggles/user-experience-page-8/feed/" />
+<script type='text/javascript' src='http://sydneypadua.com/2dgoggles/wp-includes/js/jquery/jquery.js?ver=1.7.1'></script>
+<script type='text/javascript' src='http://sydneypadua.com/2dgoggles/wp-includes/js/comment-reply.js?ver=20090102'></script>
+<script type='text/javascript' src='http://sydneypadua.com/2dgoggles/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=6.3.4'></script>
+<link rel="pingback" href="http://sydneypadua.com/2dgoggles/xmlrpc.php" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sydneypadua.com/2dgoggles/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sydneypadua.com/2dgoggles/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='User Experience Page 7' href='http://sydneypadua.com/2dgoggles/user-experience-page-7/' />
+<link rel='next' title='User Experience Page 9' href='http://sydneypadua.com/2dgoggles/user-experience-page-9/' />
+<link rel='shortlink' href='http://sydneypadua.com/2dgoggles/?p=1571' />
+<link rel="stylesheet" href="http://sydneypadua.com/2dgoggles/wp-content/plugins/organize-series/orgSeries.css" type="text/css" media="screen" />        <style type="text/css" media="screen">
+          div.printfriendly {
+            margin: 0px 0px 0px 0px;
+          }
+          .printfriendly a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #c74242;
+            vertical-align: bottom;
+          }
+          
+          .printfriendly a:hover {
+            cursor: pointer;
+          }
+
+          .printfriendly a img  {
+            border: none;
+            padding:0;
+            margin-right: 6px;
+          } 
+          .printfriendly a span{
+            vertical-align: bottom;
+          }        
+          .alignleft {
+              float:left;
+              margin: 5px 20px 20px 0;
+          }
+          .alignright {
+              float:right;
+              margin: 5px 0 20px 20px;
+          }
+          .aligncenter {
+            text-align: center;
+            margin: 5px auto 5px auto;
+          }
+        </style>
+        <style type="text/css" media="print">
+          .printfriendly {
+            display: none;
+          }
+        </style>
+<link rel="canonical" href="http://sydneypadua.com/2dgoggles/user-experience-page-8/" />
+<style type="text/css" media="all">
+/* <![CDATA[ */
+@import url("http://sydneypadua.com/2dgoggles/wp-content/plugins/wp-table-reloaded/css/plugin.css?ver=1.9.3");
+@import url("http://sydneypadua.com/2dgoggles/wp-content/plugins/wp-table-reloaded/css/datatables.css?ver=1.9.3");
+.wp-table-reloaded-id-3 .column-2 {
+  width: 280px;
+}
+.wp-table-reloaded-id-3, .wp-table-reloaded-id-3 td, .wp-table-reloaded-id-3 th {
+  border: none!important;
+  border-collapse: collapse!important;
+  border-spacing: 0px!important;
+}
+/* ]]> */
+</style>
+<!-- Begin Catalyst Custom CSS -->
+<style id="custom-css-echo" type="text/css">
+/* Our 'no sidebar' pages. */
+
+.no-sidebar #content {
+    width: 980px ! important;
+}
+
+/* Extra styles for slider page. */
+
+#slider { 
+    margin: auto ! important;
+    margin-top: -30px ! important;
+    margin-bottom: 20px ! important;
+}
+
+/* Making comments more readable. */
+.comment-body-text, .commentlist p, .reply {
+    font-family: Georgia, serif ! important;
+    font-size: 13px ! important;
+}
+
+/* Styling donations. */
+#donate:hover { 
+    background-position  : -0px -101px;
+} 
+.paypal-donations { 
+    margin: 0 0 0 10px;
+} 
+
+/* Fix for sidebar widths. */
+
+.double-sidebar #content-sidebar-wrap {
+    width: 795px !important;
+}
+.double-sidebar #sidebar-2-wrap {
+    margin-left: 0px ! important;
+    width: 180px ! important;
+}
+.double-sidebar #sidebar-1-wrap {
+    margin-right: 0px ! important;
+    width: 210px ! important;
+}*/
+#content .post {
+    padding-left: 5px ! important;
+    padding-right: 5px ! important;
+}
+</style>
+<!-- End Catalyst Custom CSS -->
+<!-- Google Analytics Tracking by Google Analyticator 6.3.4: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+	var analyticsFileTypes = [''];
+	var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-8821303-1']);
+        _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_trackPageLoadTime']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+	
+</head>
+
+<body class="single single-post postid-1571 single-format-standard unknown-os unknown-browser double-sidebar catalyst_default logo-image">
+
+<div id="wrap" class="clearfix">
+<div id="header-wrap">
+<div id="header">
+<div id="header-left">
+<p id="title"><a href="http://sydneypadua.com/2dgoggles/" title="2D Goggles">2D Goggles</a></p><p id="tagline">Dangerous experiments in comics</p></div>
+<div id="header-right">
+<a href="http://feeds2.feedburner.com/sydneypadua/yBZX" title="Subscribe to my feed" rel="alternate" type="application/rss+xml"><img src="http://sydneypadua.com/2dgoggles/wp-content/uploads/2011/01/2dgoggles-rss64.png" alt="RSS image" style="border:0"/></a></div>
+</div>
+</div>
+<div id="navbar-1-wrap"><div id="navbar-1" class="clearfix"><div id="navbar-1-left"><ul id="nav-1" class="nav-1"><li class="home"><a href="http://sydneypadua.com/2dgoggles/" title="Home">Home</a></li><li class="page_item page-item-1302"><a href="http://sydneypadua.com/2dgoggles/cast/">Cast</a></li><li class="page_item page-item-177"><a href="http://sydneypadua.com/2dgoggles/faq/">FAQ</a><ul class='children'><li class="page_item page-item-899"><a href="http://sydneypadua.com/2dgoggles/faq/about-the-author/">About the Author</a></li><li class="page_item page-item-521"><a href="http://sydneypadua.com/2dgoggles/faq/contact/">Contact</a></li><li class="page_item page-item-1120"><a href="http://sydneypadua.com/2dgoggles/faq/press/">Press</a></li></ul></li><li class="page_item page-item-1363"><a href="http://sydneypadua.com/2dgoggles/ipad-app/">iPad App</a></li><li class="page_item page-item-853"><a href="http://sydneypadua.com/2dgoggles/pocket-universe-pocket-guide/">Pocket Universe Guide</a></li><li class="page_item page-item-896"><a href="http://sydneypadua.com/2dgoggles/stories/">Stories</a></li><li class="page_item page-item-872"><a href="http://sydneypadua.com/2dgoggles/wallpapers-and-links/">Wallpapers, Links, and Extras</a></li></ul></div></div></div>
+
+		<div id="container-wrap">
+		
+			
+			<div id="container">
+			
+							
+				<div id="content-sidebar-wrap">
+				
+										
+					<div id="content-wrap">
+
+												
+						<div id="content" class="hfeed">
+						
+							
+		
+		
+	<div class="post-1571 post type-post status-publish format-standard hentry category-uncategorized">
+	
+				<h1 class="entry-title">User Experience Page 8</h1>
+
+		<div class="byline-meta">Written <em>by</em> <span class="author vcard"><span class="fn"><a href="http://sydneypadua.com/2dgoggles/author/sydney/" rel="author">sydney</a></span></span> <em>on</em> <span class="date time published" title="2012-11-21T15:28:16+0000">November 21, 2012</span>  <span class="post-comments"> &middot; <a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/#comments">8 Comments</a></span> </div>		
+				<div class="entry-content">
+		<div class="seriesmeta">This entry is part 8 of 9 in the series <a href="http://sydneypadua.com/2dgoggles/series/user-experience/" class="series-17" title="User Experience">User Experience</a></div><div class="seriesbox"><div class="center"><br /><a href="http://sydneypadua.com/2dgoggles/series/user-experience/" class="series-17" title="User Experience">User Experience</a></div><ul class="serieslist-ul"><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-first/" title="USER EXPERIENCE Page the FIRST">USER EXPERIENCE Page the FIRST</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-second/" title="User Experience, Page the Second">User Experience, Page the Second</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-3/" title="User Experience Page 3">User Experience Page 3</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-pg-4/" title="User Experience Pg 4">User Experience Pg 4</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-fifth/" title="User Experience Page the Fifth">User Experience Page the Fifth</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-6/" title="User Experience Page 6">User Experience Page 6</a></li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-7/" title="User Experience Page 7">User Experience Page 7</a></li><li class="serieslist-li-current">User Experience Page 8</li><li class="serieslist-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/" title="User Experience Page 9">User Experience Page 9</a></li></ul></div><p><img class="aligncenter size-full wp-image-1572" title="ux_008" src="http://sydneypadua.com/2dgoggles/wp-content/uploads/2012/11/ux_008.jpg" alt="" width="550" height="733" /></p>
+<p>&nbsp;</p>
+<p>Page 8! The ladies are the anonymous author of <a href="http://archive.org/stream/rankandbeautyor01rankgoog#page/n4/mode/2up">&#8220;Rank and Beauty&#8221;</a>, roundly mocked in <a href="http://www26.us.archive.org/stream/essaysreviewsofg00elioiala#page/156/mode/2up/search/silly">Silly Novels By Lady Novelists</a>, and Yours Truly, as though I&#8217;m debatably a lady my novel is beyond all doubt extremely silly.</p>
+<fieldset><legend>Series Navigation</legend><span class="series-nav-left"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-7/" title="Back to the Previous Gripping Episode!">Back to the Previous Gripping Episode!</a></span><span class="series-nav-right"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/" title="Next Thrilling Installment!">Next Thrilling Installment!</a></span></fieldset><div class="printfriendly alignleft"><a href="http://www.printfriendly.com/print/v2?url=http://sydneypadua.com/2dgoggles/user-experience-page-8/" rel="nofollow" onclick="window.print(); return false;"><span class="printfriendly-text2 printandpdf"><img style="border:none;margin-right:6px;" src="http://cdn.printfriendly.com/pf-print-icon.gif" width="16" height="15" alt="Print Friendly Version of this page" />Print <img style="border:none;margin:0 6px" src="http://cdn.printfriendly.com/pf-pdf-icon.gif" width="12" height="12" alt="Get a PDF version of this webpage" />PDF</span></a></div><div style="clear:both;"></div>
+<!--<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://sydneypadua.com/2dgoggles/user-experience-page-8/"
+    dc:identifier="http://sydneypadua.com/2dgoggles/user-experience-page-8/"
+    dc:title="User Experience Page 8"
+    trackback:ping="http://sydneypadua.com/2dgoggles/user-experience-page-8/trackback/" />
+</rdf:RDF>-->
+		</div>
+		<div class="custom-comment-link">
+        <p>
+            <a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/#comments" rel="nofollow">( 8 Comments )</a>
+        </p>
+        </div>
+<div class="post-meta"><p><span class="categories">Categories: <a href="http://sydneypadua.com/2dgoggles/category/uncategorized/" title="View all posts in Uncategorized" rel="category tag">Uncategorized</a></span> </p></div>		
+	</div>
+		
+	<div id="comment-wrap">
+		<div id="comments">
+			<h3 class="comment-heading">8 Responses to &#8220;User Experience Page 8&#8221;</h3>
+			<p class="commentlist comment-body-text">Read below or <a href="#respond" rel="nofollow">add a comment...</a></p>
+			<ol class="commentlist">
+				
+		<li class="comment even thread-even depth-1" id="li-comment-11175">
+		<div id="comment-11175">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/92beeb283a099b88399757a74cd7cbe8?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Anon, a Mouse</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/comment-page-1/#comment-11175" rel="nofollow">November 21, 2012 at 5:14 pm</a>			</div>
+			<p>Silliness is grossly underrated! 5 quid on Evans!!!</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-8/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11175#respond' onclick='return addComment.moveForm("comment-11175", "11175", "respond", "1571")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11176">
+		<div id="comment-11176">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/96e549fca31240046fe59e33d7a3b43c?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">JHB</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/comment-page-1/#comment-11176" rel="nofollow">November 21, 2012 at 6:58 pm</a>			</div>
+			<p>Oh, this is *just* a delight!  And the instalments are very 19th C; love &#8216;em to bits!  Thank you *so* much for the thrice-weeklies&#8230;</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-8/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11176#respond' onclick='return addComment.moveForm("comment-11176", "11176", "respond", "1571")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment even thread-even depth-1" id="li-comment-11178">
+		<div id="comment-11178">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/b74fe9fabe53d05269469aa5b045383d?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">MizKat</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/comment-page-1/#comment-11178" rel="nofollow">November 21, 2012 at 8:09 pm</a>			</div>
+			<p>I am LOVING this!  Thank you!  (Comes as much needed entertainment interlude in the midst of work overload!)</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-8/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11178#respond' onclick='return addComment.moveForm("comment-11178", "11178", "respond", "1571")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11197">
+		<div id="comment-11197">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/7ddc1d12add4e131f26348129bc81096?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Sharla</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/comment-page-1/#comment-11197" rel="nofollow">November 22, 2012 at 12:22 pm</a>			</div>
+			<p>I&#8217;m loving it too.  Sadly, a small part of me is also waiting for the tiger and free beer.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-8/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11197#respond' onclick='return addComment.moveForm("comment-11197", "11197", "respond", "1571")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment even thread-even depth-1" id="li-comment-11208">
+		<div id="comment-11208">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/b1087ef2cbab971279b6c39db6b9938e?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">=Tamar</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/comment-page-1/#comment-11208" rel="nofollow">November 23, 2012 at 5:38 am</a>			</div>
+			<p>Who is the short bearded gent?  For some reason he reminds me irresistibly of Sir Terry Pratchett.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-8/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11208#respond' onclick='return addComment.moveForm("comment-11208", "11208", "respond", "1571")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11210">
+		<div id="comment-11210">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/d933a49b9c7d118ecd200cf9366f4cd7?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Smallpotato</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/comment-page-1/#comment-11210" rel="nofollow">November 23, 2012 at 8:33 am</a>			</div>
+			<p>Dear Lord! &#8220;Silly Novels by Lady Novellists&#8221; could still be published today, but then under the name &#8220;Mary Sues and Other Atrocities Committed by (Mental) Thirteen Year Old (Female) Fanfic Writers&#8221;.  But having said that, I secretly rooted for the delightfully sarcastic Anonymous Lady Author (Fight! Fight!).</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-8/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11210#respond' onclick='return addComment.moveForm("comment-11210", "11210", "respond", "1571")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment even thread-even depth-1" id="li-comment-11211">
+		<div id="comment-11211">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/b102991866f9038cfa62d7ddc8f58a03?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">Telzey Amberdon</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/comment-page-1/#comment-11211" rel="nofollow">November 23, 2012 at 5:11 pm</a>			</div>
+			<p>I downloaded the mobi file on Rank and Beauty.  I&#8217;m sure I&#8217;ll regret it.</p>
+<p>Babbage had better be careful when messing about with authors!  They can be quite savage when cornered.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-8/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11211#respond' onclick='return addComment.moveForm("comment-11211", "11211", "respond", "1571")'>Reply</a>				</div>
+			</div>
+</li>
+
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-11212">
+		<div id="comment-11212">
+			<div class="comment-author vcard">
+				<img alt='' src='http://1.gravatar.com/avatar/b1087ef2cbab971279b6c39db6b9938e?s=96&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D96&amp;r=G' class='avatar avatar-96 photo' height='96' width='96' />				<cite class="fn">=Tamar</cite> <span class="says">says:</span>			</div>
+			
+				 
+			<div class="comment-meta commentmetadata">
+				<a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/comment-page-1/#comment-11212" rel="nofollow">November 23, 2012 at 6:02 pm</a>			</div>
+			<p>Ah, I see you have now identified the character as Wilkie Collins. TA.</p>
+				<div class="reply">
+				<a class='comment-reply-link' href='/2dgoggles/user-experience-page-8/?utm_source=feedburner&#038;utm_medium=feed&#038;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29&#038;replytocom=11212#respond' onclick='return addComment.moveForm("comment-11212", "11212", "respond", "1571")'>Reply</a>				</div>
+			</div>
+</li>
+			</ol>
+			<div class="comments-nav">
+				<div class="alignleft"></div>
+				<div class="alignright"></div>
+			</div>
+		</div>
+	<div id="trackbacks">
+</div>
+								<div id="respond">
+				<h3 id="reply-title">Leave A Comment... <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2dgoggles/user-experience-page-8/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+sydneypadua%2FyBZX+%282D+Goggles%29#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://sydneypadua.com/2dgoggles/wp-comments-post.php" method="post" id="commentform">
+																										<p class="comment-form-author"><input id="author" name="author" type="text" value="" size="22" tabindex="1" aria-required="true" /><label class="comment-body-text" for="author"><small>Name</small></label> <span class="required">*</span></p>
+<p class="comment-form-email"><input id="email" name="email" type="text" value="" size="22" tabindex="2" aria-required="true" /><label class="comment-body-text" for="email"><small>Email</small></label> <span class="required">*</span></p>
+<p class="comment-form-url"><input id="url" name="url" type="text" value="" size="22" tabindex="3" /><label class="comment-body-text" for="url"><small>Website</small></label></p>
+												<p class="comment-form-comment"><textarea id="comment" name="comment" cols="80" rows="10" tabindex="4" aria-required="true"></textarea></p>												<p class="form-submit">
+							<input name="submit" type="submit" id="submit" value="Submit" />
+							<input type='hidden' name='comment_post_ID' value='1571' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="538bca40e3" /></p>					</form>
+							</div><!-- #respond -->
+						<div style="clear:both;"></div>
+</div>
+
+	
+						</div><!-- end #content -->
+						
+						<div style="clear:both;"></div>
+						
+						
+					</div><!-- end #content-wrap -->
+					
+						<div id="sidebar-1-wrap">
+				<div id="sidebar-1">
+			<div id="php-text-3" class="widget php-text"><div class="widget-wrap">			
+			<div class="php-textwidget"><div class="sidebar-spacer"></div>
+<h4>A HIGHLY IRREGULAR webcomic, with footnotes<a href="#footnote">*</a></h4></div>
+		</div></div>
+<div id="text-5" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><a href="http://twitter.com/sydneypadua" title="Twitter bird" id="twitterbird" class="sidebar-poster-left"></a>
+<div><h2><span class='twitterwidget twitterwidget-title'>Twitter: sydneypadua</span></h2><ul><li><span class='entry-content'>Mo Farah is the worst kayaker I have ever seen. Feeling that warm Olympic glow again...</span> <span class='entry-meta'><span class='time-meta'><a href="http://twitter.com/sydneypadua/statuses/285101976319037440">about 5 hours ago</a></span> <span class='from-meta'>from <a href="https://mobile.twitter.com" rel="nofollow">Mobile Web (M5)</a></span></span> <span class="intent-meta"><a href="http://twitter.com/intent/tweet?in_reply_to=285101976319037440" data-lang="en" class="in-reply-to" title="Reply">Reply</a><a href="http://twitter.com/intent/retweet?tweet_id=285101976319037440" data-lang="en" class="retweet" title="Retweet">Retweet</a><a href="http://twitter.com/intent/favorite?tweet_id=285101976319037440" data-lang="en" class="favorite" title="Favorite">Favorite</a></span></li></ul><div class="follow-button"><a href="http://twitter.com/sydneypadua" class="twitter-follow-button" title="Follow @sydneypadua" data-lang="en">@sydneypadua</a></div></div>
+</div>
+		</div></div>
+<div id="php-text-4" class="widget php-text"><div class="widget-wrap">			
+			<div class="php-textwidget"><a href="http://www.zazzle.com/sydney_padua" title="Shop" id="shop" class="sidebar-poster-left"></a>
+<div class="sidebar-spacer"></div>
+<a href="http://sydneypadua.com/2dgoggles/wallpapers-and-links/" title="Wallpapers and links" id="wallpapers" class="sidebar-poster-left"></a>
+</div>
+		</div></div>
+<div id="php-text-5" class="widget php-text"><div class="widget-wrap">			
+			<div class="php-textwidget"><a name="footnote"></a>* If you checked down here for the footnote, you may be an appropriate audience for this comic.</div>
+		</div></div>
+		</div><!-- end #sidebar-1 -->
+		<div style="clear:both;"></div>
+			</div><!-- end #sidebar-1-wrap -->
+
+				</div><!-- end #content-sidebar-wrap -->
+				
+					<div id="sidebar-2-wrap">
+				<div id="sidebar-2">
+			<div id="text-6" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><a href="http://sydneypadua.com/2dgoggles/lovelace-the-origin-2/" title="Start here" id="starthere" class="sidebar-poster-right"></a>
+<div class="sidebar-spacer"></div>
+<a href="http://www.diigo.com/list/sydneypadua/lovelace-and-babbage" title="Primary documents" id="primarydocs" class="sidebar-poster-right"></a>
+</div>
+		</div></div>
+<div id="paypal_donations-4" class="widget widget_paypal_donations"><div class="widget-wrap">
+<!-- Begin PayPal Donations by http://wpstorm.net/ -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"><div class="paypal-donations"><input type="hidden" name="cmd" value="_donations" /><input type="hidden" name="business" value="sydney.padua@gmail.com" /><input type="hidden" name="currency_code" value="GBP" /><input type="image" src="http://sydneypadua.com/2dgoggles/wp-content/uploads/2011/01/2dgoggles-donateposter.jpg" name="submit" alt="PayPal - The safer, easier way to pay online." /><img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" /></div></form>
+<!-- End PayPal Donations -->
+</div></div>
+<div id="seriestoc-3" class="widget widget_seriestoc"><div class="widget-wrap"><h4 class="widgettitle">Series</h4>
+<ul>	<li class="cat-item cat-item-12"><a href="http://sydneypadua.com/2dgoggles/series/economicmodel/" title="Ripped from the headlines of 1837!">Lovelace and Babbage Vs The Economy</a> (3)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://sydneypadua.com/2dgoggles/series/meanwhile/" title="Inside the tortured brain of 2DGoggles">Meanwhile..</a> (11)
+</li>
+	<li class="cat-item cat-item-13"><a href="http://sydneypadua.com/2dgoggles/series/client/" title="A Tale Of Terror">The Client</a> (3)
+</li>
+	<li class="cat-item cat-item-14"><a href="http://sydneypadua.com/2dgoggles/series/organist/" title="An epic battle with Organized Crime">The Organist</a> (12)
+</li>
+	<li class="cat-item cat-item-17"><a href="http://sydneypadua.com/2dgoggles/series/user-experience/" title="View all posts filed under User Experience">User Experience</a> (9)
+</li>
+</ul><br /><br /><h4>Other posts belonging to the Series: User Experience</h4><ul><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-first/" title="USER EXPERIENCE Page the FIRST">USER EXPERIENCE Page the FIRST</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-second/" title="User Experience, Page the Second">User Experience, Page the Second</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-3/" title="User Experience Page 3">User Experience Page 3</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-pg-4/" title="User Experience Pg 4">User Experience Pg 4</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-the-fifth/" title="User Experience Page the Fifth">User Experience Page the Fifth</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-6/" title="User Experience Page 6">User Experience Page 6</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-7/" title="User Experience Page 7">User Experience Page 7</a></li><li class="serieslist-current-li"><a href="http://sydneypadua.com/2dgoggles/user-experience-page-8/" title="User Experience Page 8">User Experience Page 8</a></li><li><a href="http://sydneypadua.com/2dgoggles/user-experience-page-9/" title="User Experience Page 9">User Experience Page 9</a></li></ul></div></div>
+		</div><!-- end #sidebar-2 -->
+		<div style="clear:both;"></div>
+			</div><!-- end #sidebar-2-wrap -->
+				
+			</div><!-- end #container -->
+			
+			<div style="clear:both;"></div>
+			
+						
+		</div><!-- end #container_wrap -->
+		
+		<div style="clear:both;"></div>
+
+		<div id="footer-wrap">
+<div id="footer" class="clearfix">
+<p class="footer-content footer-left"> <span class="footer-text"></span> <a href="http://sydneypadua.com/2dgoggles/wp-admin/">Admin Login</a> </p> <p class="footer-content footer-right"> <span class="powered-by">Powered by </span> <span class="catalyst-attribute"><a href="http://catalysttheme.com/" title="Catalyst Premium Wordpress Theme">Catalyst</a></span> </p>
+<p class="footer-content footer-center"> <span class="footer-copyright">Copyright &copy; 2012 2D Goggles</span> </p></div>
+</div>
+</div><!-- end #wrap -->
+				<script type='text/javascript'><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) { 
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "http://sydneypadua.com/2dgoggles//series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+			        <script type="text/javascript">
+          var pfHeaderImgUrl = "";
+          var pfHeaderTagline = "";
+          var pfdisableClickToDel = "0";
+
+          // PrintFriendly
+          var e = document.createElement('script'); e.type="text/javascript";
+          e.async = true;
+          e.src = '//cdn.printfriendly.com/printfriendly.js';
+          document.getElementsByTagName('head')[0].appendChild(e);
+      </script>
+<script type='text/javascript' src='http://platform.twitter.com/widgets.js?ver=1.0.0'></script>
+
+</body>
+
+</html>
