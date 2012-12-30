@@ -220,7 +220,7 @@ sub _fetch_page {
     # Fetch the page, and remember this for later on.
     my $response = $self->user_agent->get($self->url);
     if (!$response->is_success) {
-        die "Couldn't fetch $self->url: ", $response->status_line;
+        die q{Couldn't fetch }, $self->url, ': ', $response->status_line;
     }
     $self->_http_response($response);
 
