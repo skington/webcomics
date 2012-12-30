@@ -176,21 +176,6 @@ sub get_feed_contents {
 sub analyse_feed_contents {
     my ($feed_contents) = @_;
 
-    # Prune our feeds beforehand if we can.
-    if (keys %$feed_contents > 1) {
-        for my $feed (keys %$feed_contents) {
-
-            # Discard out of hand any feed that doesn't even have dates.
-            # That means you, xkcd Atom feed.
-            delete $feed_contents->{$feed}
-                if !$feed_contents->{$feed}[0]{date};
-
-            # Ignore feeds that are blatantly comments-only feeds (e.g.
-            # Skin Horse).
-            delete $feed_contents->{$feed} if $feed =~ / \b comment s? \b /x;
-        }
-    }
-
     # Find regexstrs for link and title in all feeds.
     # Work out which has been more effective overall, if any.
     my (%feed_matches, %field_matches);
