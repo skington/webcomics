@@ -56,8 +56,8 @@ The date this entry was originally posted. A DateTime object.
 =cut
 
 has 'date' => (
-    is  => 'rw',
-    isa => 'DateTime',
+    is        => 'rw',
+    isa       => 'DateTime',
     predicate => 'has_date',
 );
 
