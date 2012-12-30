@@ -14,6 +14,7 @@ extends 'WWW::Webcomic::Page';
 
 use WWW::Webcomic::Entry;
 
+use Carp;
 use DateTime::Format::ISO8601;
 use XML::Feed;
 
@@ -49,7 +50,8 @@ sub _build_feed {
 
     my $contents = $self->contents;
     return if !$contents;
-    my $feed = XML::Feed->parse(\$contents)
+    my $feed;
+    eval { $feed = XML::Feed->parse(\$contents) }
         or die "Couldn't parse feed at " . $self->url;
     return $feed;
 }
@@ -93,7 +95,8 @@ sub _build_entries {
         next feed_entry if grep { $skip_category{$_} } $feed_entry->category;
 
         # Looks initially good, so add this to the list.
-        push @entries, $self->_entry_from_feed_entry($feed_entry);
+        my $entry = $self->_entry_from_feed_entry($feed_entry);
+        push @entries, $entry if $entry;
     }
 
     # Further stripping: strip anything that looks like a news post, or
@@ -120,13 +123,20 @@ sub _entry_from_feed_entry {
     my ($self, $feed_entry) = @_;
 
     # Build our entry; title is easy, and URL is fine but needs to be
-    # sanitised for various tracking crud.
-    my $entry = WWW::Webcomic::Entry->new(
-        title => $feed_entry->title,
-        page  => $self->page_with_same_options(
-            $self->_sanitised_url($feed_entry->link),
-        ),
-    );
+    # sanitised for various tracking crud. If this failed, assume it's
+    # a broken link which we can ignore.
+    my $entry;
+    eval {
+        $entry = WWW::Webcomic::Entry->new(
+            title => $feed_entry->title,
+            page  => $self->page_with_same_options(
+                $self->_sanitised_url($feed_entry->link),
+            ),
+        );
+    } or do {
+        carp "Couldn't create entry for " . $feed_entry->link;
+        return;
+    };
 
     # The date is normally straightforward, but The Trenches
     # decides to do things differently.
