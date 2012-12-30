@@ -74,6 +74,19 @@ has 'entries' => (
 sub _build_entries {
     my ($self) = @_;
 
+    # Grab all entries from the feed.
+    my @entries = $self->_entries_from_feed_filtered_by_category;
+
+    # Filter them by URL as well.
+    @entries = $self->_entries_filtered_by_url(@entries);
+
+    # Right, that's all we can do for now. Hope this is OK.
+    return \@entries;
+}
+
+sub _entries_from_feed_filtered_by_category {
+    my ($self) = @_;
+    
     # Find out which categories these entries implement. If we find
     # out that we have e.g. Comics and Blog entries, we'll use that to
     # discard blog entries.
@@ -99,8 +112,15 @@ sub _build_entries {
         push @entries, $entry if $entry;
     }
 
-    # Further stripping: strip anything that looks like a news post, or
-    # (if the URLs do this) isn't identified as being a comic.
+    return @entries;
+}
+
+# Further stripping: strip anything that looks like a news post, or
+# (if the URLs do this) isn't identified as being a comic.
+
+sub _entries_filtered_by_url {
+    my ($self, @entries)= @_;
+
     # Start with a strict regexp for matching 'comic' and then get
     # looser if that didn't help.
     my ($re_comic, $any_contain_comic);
@@ -110,14 +130,16 @@ sub _build_entries {
         $any_contain_comic = grep { $_->page->url =~ $re_comic } @entries;
         last re if $any_contain_comic;
     }
+
+    # Filter our entries.
     @entries = grep {
         !($_->page->url =~ m{ [/.] (?: forums | news ) [/.] }xi
             || ($any_contain_comic && $_->page->url !~ $re_comic));
     } @entries;
 
-    # Right, that's all we can do for now. Hope this is OK.
-    return \@entries;
+    return @entries;
 }
+
 
 sub _entry_from_feed_entry {
     my ($self, $feed_entry) = @_;
