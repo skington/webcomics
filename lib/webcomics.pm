@@ -231,9 +231,7 @@ sub analyse_feed_entries {
         my %total_match_length;
         for my $entry (@entries) {
             regexstr:
-            for my $regexstr (
-                identify_date_regexstr($entry->$field, $entry->date))
-            {
+            for my $regexstr (identify_date_regexstr($entry, $field)) {
                 my %match_term;
                 ## no critic (ErrorHandling::RequireCheckingReturnValueOfEval)
                 ## no critic (RegularExpressions::RequireExtendedFormatting)
@@ -300,15 +298,15 @@ sub analyse_feed_entries {
 # object.
 
 sub identify_date_regexstr {
-    my ($string, $datetime) = @_;
+    my ($entry, $field, $date) = @_;
 
     # If we weren't given a date, attempt to match on any date in the past
     # fortnight.
-    if (!$datetime) {
+    if (!$entry->date && !$date) {
         my @regexstr_guesses;
         for my $delta_days (0 .. 13) {
             push @regexstr_guesses,
-                identify_date_regexstr($string,
+                identify_date_regexstr($entry, $field,
                 DateTime->now->subtract(days => $delta_days));
         }
         return List::MoreUtils::uniq(@regexstr_guesses);
@@ -321,12 +319,16 @@ sub identify_date_regexstr {
     # not an actual regex object.
     # And using quotemeta because \Q and \E act after the parser has looked
     # for e.g. slashes, so saying qr/\Qhttp://...\E/ won't parse.
-    my @regexstr = ('^' . quotemeta($string) . '$');
+    my $raw_field = $entry->$field;
+    if (ref($raw_field) eq 'URI::http') {
+        $raw_field = $raw_field->as_string;
+    }
+    my @regexstr = ('^' . quotemeta($raw_field) . '$');
 
     # And here's a bunch of matches we'll look for.
     # Some of them will result in false positives, but with enough
     # strings to go by we should spot a common pattern.
-    my %match = WWW::Webcomic::Entry->date_match($datetime);
+    my %match = $entry->date_match($date);
 
     # Go through each of them looking for matches.
     # For efficiency, try the longest match values first, to reduce
