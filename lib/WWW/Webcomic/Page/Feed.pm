@@ -14,6 +14,7 @@ use WWW::Webcomic::Entry;
 
 use Carp;
 use DateTime::Format::ISO8601;
+use Text::Sequence;
 use XML::Feed;
 
 # Something in the list of modules above is turning these warnings on, so
@@ -257,7 +258,11 @@ sub _best_regexstr_for {
         }
     }
 
-    ### TODO: sequences
+    # Look for sequences as well.
+    if (my %sequence_match_length = $self->_sequence_regexstr($field)) {
+        @total_match_length{keys %sequence_match_length}
+            = values %sequence_match_length;
+    }
 
     # The best regexstr is the one that matches the most - or, if there are
     # ties, the most complex one.
@@ -274,6 +279,35 @@ sub _best_regexstr_for {
     ### need this any more?
 
     return $regexstr_bestmatch;
+}
+
+sub _sequence_regexstr {
+    my ($self, $field) = @_;
+
+    # Look for any numeric sequences in our entries.
+    my @values = map { $_->$field } $self->all_entries;
+    my ($sequences, $singletons) = Text::Sequence::find(@values);
+    return if @$sequences == 0;
+
+    # OK, remember how long they were - if they matched more than a
+    # majority of the entries.
+    my %sequence_regexstr_length;
+    sequence:
+    for my $sequence (@$sequences) {
+        (my $regexstr = $sequence->re) =~ s/[(]/(?<seq>/;
+        my ($length_match, $num_matches);
+        for my $value (@values) {
+            if (my ($match) = $value =~ /$regexstr/) {
+                $length_match += length($match);
+                $num_matches ++;
+            }
+        }
+        next sequence if $num_matches < scalar @values / 2;
+        $sequence_regexstr_length{$regexstr} = $length_match;
+    }
+
+    # And return this.
+    return %sequence_regexstr_length;
 }
 
 =item regexstr_title

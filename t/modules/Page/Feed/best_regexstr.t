@@ -99,6 +99,13 @@ my @feed_specs = (
         },
     },
     {
+        name => 'xkcd',
+        feed_url => 'http://xkcd.com/rss.xml',
+        best_regexstr => {
+            link => 'http://xkcd.com/(?<seq>\d+)/',
+        },
+    },
+    {
         name          => 'Scenes from a Multiverse',
         feed_url      => 'http://amultiverse.com/feed/',
         best_regexstr => {
