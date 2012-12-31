@@ -102,6 +102,9 @@ sub _build_feed_pages {
         @feeds = grep { $_->url !~ / \b comment s? \b /x } @feeds;
     }
 
+    # Also get rid of any feeds which only have one entry.
+    @feeds = grep { scalar $_->feed->entries > 1 } @feeds;
+
     return \@feeds;
 }
 

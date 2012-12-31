@@ -196,8 +196,8 @@ sub site_details {
         },
         'Sister Claire' => { url => 'http://www.sisterclaire.com/', },
 
-        ### FIXME: Something Positive's feed is for some reason the same as
-        ### Questionable Content's
+        ### FIXME: Something Positive's feed is for some reason a single
+        ### guest post he did for Questionable Content.
         'Something Positive' =>
             { url => 'http://www.somethingpositive.net/index.html' },
         'Scary-go-round' => {
