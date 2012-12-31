@@ -4,11 +4,14 @@ SMBC
 Frankenstein Superstar
 Evil Inc
 Girl Genius
+Wayward Sons
 Sheldon
 Cyanide & Happiness
 xkcd
 Order of the Stick
 Full Frontal Nerdity
+You Suck
+Nnewts
 Misfile
 Hark! A vagrant
 Perry Bible Fellowship
@@ -19,6 +22,7 @@ Working, with regexstrs that guess but don't predict URLs:
 Wonderalla
 Reptilis Rex
 Dresden Codak
+Lady Sabre
 Basic Instructions
 Scenes from a Multiverse
 The Abominable Charles Christopher
@@ -40,6 +44,7 @@ Wizard School has an RSS feed for Wizard School only (as opposed to
 all meetmyminion.com comics), but it's not the default. You want
 http://feeds.feedburner.com/MinionComicsWizardSchool
 Darths and droids finds the feeds for Irregular webcomic instead.
+No feed for Least I Could Do
 No feed for oglaf.
 No feed for sinfest.
 Gunnerkrigg Court has titles that are always the same, and links to the front page.
