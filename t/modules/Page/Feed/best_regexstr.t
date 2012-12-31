@@ -99,11 +99,16 @@ my @feed_specs = (
         },
     },
     {
-        name => 'xkcd',
-        feed_url => 'http://xkcd.com/rss.xml',
+        name          => 'xkcd',
+        feed_url      => 'http://xkcd.com/rss.xml',
+        best_regexstr => { link => 'http://xkcd.com/(?<seq>\d+)/', },
+    },
+    {
+        name => 'Order of the Stick',
+        feed_url => 'http://www.giantitp.com/comics/oots.rss',
         best_regexstr => {
-            link => 'http://xkcd.com/(?<seq>\d+)/',
-        },
+            link => 'http://www.GiantITP.com/comics/oots(?<seq>\d{4}).html',
+        }
     },
     {
         name          => 'Scenes from a Multiverse',
