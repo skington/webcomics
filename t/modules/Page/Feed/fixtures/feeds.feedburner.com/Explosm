@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><!-- generator="explosm" --><rss xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+
+<channel>
+	<title>Explosm.net</title>
+	<link>http://www.explosm.net</link>
+	<description>Flash Animations, Daily Comics and more!</description>
+	<pubDate>Mon, 31 Dec 2012 11:01:13 +0000</pubDate>
+	<generator>http://wordpress.org/?v=1.5.1.3</generator>
+	<language>en</language>
+
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/Explosm" /><feedburner:info uri="explosm" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><feedburner:browserFriendly>This is an XML content feed. It is intended to be viewed in a newsreader or syndicated to another site, subject to copyright and fair use.</feedburner:browserFriendly><item>
+		<title>12.31.2012</title>
+		<link>http://www.explosm.net/comics/3036/</link>
+		<pubDate>Mon, 31 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3036/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	<item>
+		<title>12.30.2012</title>
+		<link>http://www.explosm.net/comics/3035/</link>
+		<pubDate>Sun, 30 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3035/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	<item>
+		<title>12.29.2012</title>
+		<link>http://www.explosm.net/comics/3034/</link>
+		<pubDate>Sat, 29 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3034/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	<item>
+		<title>12.28.2012</title>
+		<link>http://www.explosm.net/comics/3033/</link>
+		<pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3033/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	<item>
+		<title>12.27.2012</title>
+		<link>http://www.explosm.net/comics/3032/</link>
+		<pubDate>Thu, 27 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3032/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	<item>
+		<title>12.26.2012</title>
+		<link>http://www.explosm.net/comics/3031/</link>
+		<pubDate>Wed, 26 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3031/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	<item>
+		<title>12.25.2012</title>
+		<link>http://www.explosm.net/comics/3030/</link>
+		<pubDate>Tue, 25 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3030/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	<item>
+		<title>12.24.2012</title>
+		<link>http://www.explosm.net/comics/3029/</link>
+		<pubDate>Mon, 24 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3029/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	<item>
+		<title>12.23.2012</title>
+		<link>http://www.explosm.net/comics/3028/</link>
+		<pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3028/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	<item>
+		<title>12.22.2012</title>
+		<link>http://www.explosm.net/comics/3027/</link>
+		<pubDate>Sat, 22 Dec 2012 00:00:00 +0000</pubDate>
+		<category>Comics</category>
+		<guid>http://www.explosm.net/comics/3027/</guid>
+		<description>New Cyanide and Happiness Comic.</description>
+	</item>
+	</channel>
+</rss>

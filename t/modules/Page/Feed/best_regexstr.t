@@ -91,6 +91,15 @@ my @feed_specs = (
                 . '(?^x:(?<d> \d{1,2} ))',
         },
     },
+    {
+        name          => 'Cyanide & Happiness',
+        feed_url      => 'http://feeds.feedburner.com/Explosm',
+        best_regexstr => {
+            link  => '^http\:\/\/www\.explosm\.net\/comics\/(?<seq>\d+)\/$',
+            title => '^(?^x:(?<m> \d{1,2} ))\.(?^x:(?<d> \d{1,2} ))\.'
+                . '(?^x:(?<yyyy> \d{4} ))$'
+        },
+    },
     # Help Desk has an RSS feed that shows the most recent entries, but
     # the titles are arbitrary and the URLs don't include the day of the
     # month. So it's not an error to expect no useful regexstrs.
