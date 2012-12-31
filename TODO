@@ -1,3 +1,36 @@
+Working, with predicting regexstrs:
+
+SMBC
+Frankenstein Superstar
+Evil Inc
+Girl Genius
+Sheldon
+Cyanide & Happiness
+xkcd
+Order of the Stick
+Full Frontal Nerdity
+Misfile
+Hark! A vagrant
+Perry Bible Fellowship
+Wondermark
+
+Working, with regexstrs that guess but don't predict URLs:
+
+Wonderalla
+Reptilis Rex
+Dresden Codak
+Basic Instructions
+Scenes from a Multiverse
+The Abominable Charles Christopher
+Penny Arcade
+PvP
+Partially Clips
+Three Panel Soul
+
+Working, with unguessable feed:
+
+Help Desk
+
 RSS feed issues:
 Doonesbury has a non-Doonesbury-related slate feed
 No feed for Dilbert (but there's a link to it).
