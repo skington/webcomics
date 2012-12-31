@@ -197,6 +197,10 @@ The name of the match. One of:
 
 A 4-digit year.
 
+=item yy
+
+A 2-digit year.
+
 =back
 
 =item months
@@ -253,11 +257,17 @@ sub date_matches {
 
     # OK, build our look-up table.
     return (
+
         # Years.
-        { name => 'yyyy', value => $date->year,  regexstr => '\d{4}' },
+        { name => 'yyyy', value => $date->year, regexstr => '\d{4}' },
+        {
+            name     => 'yy',
+            value    => sprintf('%02d', $date->year % 100),
+            regexstr => '\d{2}'
+        },
 
         # Months.
-        { name => 'm',    value => $date->month, regexstr => '\d{1,2}' },
+        { name => 'm', value => $date->month, regexstr => '\d{1,2}' },
         {
             name     => 'mm',
             value    => sprintf('%02d', $date->month),
@@ -281,8 +291,16 @@ sub date_matches {
             value    => sprintf('%02d', $date->day),
             regexstr => '\d{2}'
         },
-        { name => 'day_name', value => $date->day_name, regexstr => '\w+?' },
-        { name => 'day_abbr', value => $date->day_abbr, regexstr => '\w+?' },
+        {   
+            name     => 'day_name',
+            value    => $date->day_name,
+            regexstr => '\w+?'
+        },
+        {
+            name     => 'day_abbr',
+            value    => $date->day_abbr,
+            regexstr => '\w+?'
+        },
     );
 }
 
@@ -391,7 +409,7 @@ sub regexstrs_no_partial_dates {
         my $found_date_component = 0;
         date_component:
         for my $date_component (
-            ['yyyy'],
+            ['yyyy', 'yy'],
             [qw(m mm month_name month_abbr)],
             [qw(d dd day_name day_abbr)]
             )

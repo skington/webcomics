@@ -115,7 +115,8 @@ my @feed_specs = (
         feed_url      => 'http://www.sheldoncomics.com/index.xml',
         best_regexstr => {
             link => '^http\:\/\/www\.sheldoncomics\.com\/archive\/'
-                . '(?<seq>\d+)\.html$',
+                . '(?^x:(?<yy> \d{2} ))(?^x:(?<m> \d{1,2} ))'
+                . '(?^x:(?<d> \d{1,2} ))\.html$',
             title => '^strip\ for\ (?^x:(?<month_name> \w+? ))\ '
                 . '\/\ (?^x:(?<d> \d{1,2} ))\ \/\ (?^x:(?<yyyy> \d{4} ))$'
         }
