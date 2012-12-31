@@ -11,6 +11,8 @@ use Moose::Util::TypeConstraints;
 use MooseX::LazyRequire;
 use WWW::Webcomic::MooseTypes;
 
+use Carp;
+
 =head1 NAME
 
 WWW::Webcomic::Entry - an individual entry in a webcomic
@@ -18,7 +20,11 @@ WWW::Webcomic::Entry - an individual entry in a webcomic
 =head1 DESCRIPTION
 
 A Moose class representing an individual entry (typically a daily comic)
-belonging to a webcomic.
+belonging to a webcomic. It also knows how to generate regexes that match
+the components of an entry, either based on dates or sequences. It does
+so in the form of regexstrs - string representations of regexes -
+rather than regexes themselves, because regexstrs need to be able to be
+subsequently manipulated by regexes.
 
 =head2 Attributes
 
@@ -77,6 +83,36 @@ sub link {
     my ($self) = @_;
 
     return $self->page->url;
+}
+
+=item regexstr_literal
+
+ In: $field
+ Out: @regexstr
+
+Supplied with a field name - either title or link - returns a list of
+regexstrs that match it.
+
+### TODO: get rid of the link method, pass page->url or title directly.
+
+=cut
+
+sub regexstr_literal {
+    my ($self, $field) = @_;
+
+    if (!$field || !($field ~~ ['title', 'link'])) {
+        carp "Unexpected field [$field] supplied - expected title or link";
+        return;
+    }
+
+    # Using quotemeta here because \Q and \E act after the parser has looked
+    # for e.g. slashes, so saying qr/\Qhttp://...\E/ won't parse.
+    my $raw_field = $self->$field;
+    if (ref($raw_field) eq 'URI::http') {
+        $raw_field = $raw_field->as_string;
+    }
+    my @regexstr = ('^' . quotemeta($raw_field) . '$');
+    return @regexstr;
 }
 
 =item date_match

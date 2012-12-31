@@ -317,13 +317,7 @@ sub identify_date_regexstr {
     # more data parts.
     # "regexstr" because this is a string representing a regex,
     # not an actual regex object.
-    # And using quotemeta because \Q and \E act after the parser has looked
-    # for e.g. slashes, so saying qr/\Qhttp://...\E/ won't parse.
-    my $raw_field = $entry->$field;
-    if (ref($raw_field) eq 'URI::http') {
-        $raw_field = $raw_field->as_string;
-    }
-    my @regexstr = ('^' . quotemeta($raw_field) . '$');
+    my @regexstr = $entry->regexstr_literal($field);
 
     # And here's a bunch of matches we'll look for.
     # Some of them will result in false positives, but with enough
@@ -331,17 +325,7 @@ sub identify_date_regexstr {
     my %match = $entry->date_match($date);
 
     # Go through each of them looking for matches.
-    # For efficiency, try the longest match values first, to reduce
-    # false positives when e.g. the day of the month is 1 or something
-    # unhelpful like that.
-    # We'll maintain a cumulative list of regexstrs that match; at the end,
-    # the most complex *and* reliable will win out.
-    for my $match_term (
-        sort { length($match{$b}{value}) <=> length($match{$a}{value}) }
-        keys %match
-        )
-    {
-
+    for my $match_term (keys %match) {
         # Build a regex that will match the value we're looking for.
         ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
         my $regex_match = eval('qr/\Q' . $match{$match_term}{value} . '\E/i');
@@ -368,14 +352,13 @@ sub identify_date_regexstr {
                 # match for the term.
                 my $regexstr_matchterm = $regexstr;
                 substr($regexstr_matchterm, $LAST_MATCH_START[0],
-                    length($match{$match_term}{value}),
-                    $regexstr_match);
+                    length($match{$match_term}{value})) = $regexstr_match;
                 push @regexstr_revised, $regexstr_matchterm;
             }
         }
 
         # Add on these revised regex strings.
-        @regexstr = (@regexstr, @regexstr_revised);
+        push @regexstr, @regexstr_revised;
     }
 
     # URLs could have non-date-related content (e.g. PvP has a version
