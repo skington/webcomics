@@ -260,6 +260,12 @@ my @feed_specs = (
         best_regexstr =>
             { link => '^http\:\/\/wondermark\.com\/(?<seq>\d+)\/$', },
     },
+    # Tragedy Series is a tumblr, and the IDs are effectively random.
+    {
+        name => 'Tragedy Series',
+        feed_url => 'http://tragedyseries.tumblr.com/rss',
+        best_regexstr => {},
+    },
 );
 
 if ($ENV{TEST_FEED}) {

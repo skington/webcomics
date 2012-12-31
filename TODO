@@ -32,16 +32,26 @@ PvP
 Partially Clips
 Three Panel Soul
 
+Working, with regexstrs that predict the title:
+None.
+
+Do we even need a regexstr of the title, then? Some used to be useful before
+we had sequence matching (e.g. SMBC, Sheldon).
+
 Working, with unguessable feed:
 
 Help Desk
+Tragedy Series
 
 RSS feed issues:
 
 Doonesbury has a non-Doonesbury-related slate feed
 No feed for Dilbert (but there's a link to it).
+Monster of the week has sequentially-incrementing, but non-guessable,
+IDs. Currently the title is almost guessable, but it's guessed wrong.
+Do we need the title regexstr, really?
 No RSS for dinosaur comics.
-2D Goggles times out.
+2D Goggles has sequences mis-identified.
 Wizard School has an RSS feed for Wizard School only (as opposed to
 all meetmyminion.com comics), but it's not the default. You want
 http://feeds.feedburner.com/MinionComicsWizardSchool
@@ -53,6 +63,7 @@ No feed for El Goonish Shive. (And need a separate one for sketchbook in any
 case.)
 Sluggy only has one entry in the feed, and links to the front page.
 All of the posts in the Trenches are currently news posts.
+Tragedy series has essentially unguessable IDs misidentified as IDs.
 
 Non-RSS websites:
 Doonesbury: confused by useless RSS feed. Link title is 'Prev', href is /strip/archive/yyyy/mm/dd, today's link exists.

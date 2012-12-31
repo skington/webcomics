@@ -300,8 +300,11 @@ sub _sequence_regexstr {
     }
 
     # OK, remember how long each found sequence was - if they matched more
-    # than a majority of the entries.
+    # than a majority of the entries, and there weren't any gaps.
+    # If there were any gaps, this makes the regexstr useless at predicting
+    # previous and future entries.
     my %sequence_regexstr_length;
+    my $last_number;
     sequence:
     for my $sequence (@$sequences) {
         (my $regexstr = $sequence->re) =~ s/[(]/(?<seq>/;
@@ -310,6 +313,10 @@ sub _sequence_regexstr {
             if (my ($match) = ($value =~ /$regexstr/)) {
                 $length_match += length($match);
                 $num_matches ++;
+                if (defined $last_number) {
+                    next sequence if abs($match - $last_number) != 1;
+                }
+                $last_number = $match;
             }
         }
         next sequence if $num_matches < scalar @values / 2;
