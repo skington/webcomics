@@ -1,8 +1,6 @@
 package WWW::Webcomic::Page::Feed;
 
 use strict;
-use warnings;
-no warnings qw(uninitialized);
 use vars qw($VERSION);
 use English qw(-no_match_vars);
 
@@ -17,6 +15,11 @@ use WWW::Webcomic::Entry;
 use Carp;
 use DateTime::Format::ISO8601;
 use XML::Feed;
+
+# Something in the list of modules above is turning these warnings on, so
+# to be safe wait until everything's loaded before turning warnings on.
+use warnings;
+no warnings qw(uninitialized);
 
 =head1 NAME
 
@@ -203,6 +206,83 @@ sub _sanitised_url {
     return $url;
 }
 
+=item best_regexstr
+
+A hashref of type => regexstr, where type is one of C<title> or
+C<link>, and regexstr is a regexstr (i.e. a regex in string form)
+that best matches respectively the titles or URLs in the feed.
+There may not be an entry for each type if the URL or titles
+are arbitrary.
+
+FIXME: say url rather than link.
+
+=cut
+
+has 'best_regexstr' => (
+    is         => 'ro',
+    isa        => 'HashRef',
+    lazy_build => 1,
+);
+
+sub _build_best_regexstr {
+    my ($self) = @_;
+
+    my %best_regexstr;
+    for my $field (qw(title link)) {
+        my $regexstr = $self->_best_regexstr_for($field);
+        $best_regexstr{$field} = $regexstr if defined $regexstr;
+    }
+    return \%best_regexstr;
+}
+
+sub _best_regexstr_for {
+    my ($self, $field) = @_;
+
+    # Find all our date-based regexstrs, and remember how much they
+    # matched.
+    my %total_match_length;
+    for my $entry ($self->all_entries) {
+        regexstr:
+        for my $regexstr ($entry->regexstrs_date($field)) {
+            # %+ doesn't last beyond the block it's in, it would appear,
+            # which is why we don't just say %match_term = eval { ...; %+ }
+            my %match_term;
+            eval { $entry->$field =~ qr/$regexstr/; %match_term = %+; 1 }
+                or next regexstr;
+
+            # Right, remember how useful this regexstr was.
+            for my $match (grep { defined $_ } values %match_term) {
+                $total_match_length{$regexstr} += length($match);
+            }
+        }
+    }
+
+    ### TODO: sequences
+
+    # The best regexstr is the one that matches the most - or, if there are
+    # ties, the most complex one.
+    my $regexstr_bestmatch = (
+        sort {
+            $total_match_length{$b} <=> $total_match_length{$a}
+         || length($b) <=> length($a)
+        } keys %total_match_length
+    )[0];
+    return if $total_match_length{$regexstr_bestmatch} == 0;
+
+    ### TODO: write this data to entries, if we actually need to.
+    ### Maybe our news feed pruning code is good enough that we don't
+    ### need this any more?
+
+    return $regexstr_bestmatch;
+}
+
+=item regexstr_title
+
+A regexstr that best matches the titles in this feed. May not exist
+if the titles are arbitrary or blank.
+
+=cut
+
 =back
 
 =head2 Object methods
@@ -245,5 +325,6 @@ This is version 0.02.
 $VERSION = '0.02';
 
 __PACKAGE__->meta->make_immutable;
+
 1;
 
