@@ -24,6 +24,8 @@ my @feed_specs = (
         best_regexstr => {
             title => '^(?^x:(?<month_name> \w+? ))\ (?^x:(?<d> \d{1,2} ))\,\ '
                 . '(?^x:(?<yyyy> \d{4} ))$',
+            link => '^http\:\/\/www\.smbc\-comics\.com\/index\.php'
+                . '\?db\=comics\&id\=(?<seq>\d+)$'
         },
     },
     {
@@ -101,13 +103,14 @@ my @feed_specs = (
     {
         name          => 'xkcd',
         feed_url      => 'http://xkcd.com/rss.xml',
-        best_regexstr => { link => 'http://xkcd.com/(?<seq>\d+)/', },
+        best_regexstr => { link => '^http\:\/\/xkcd\.com\/(?<seq>\d+)\/$', },
     },
     {
-        name => 'Order of the Stick',
-        feed_url => 'http://www.giantitp.com/comics/oots.rss',
+        name          => 'Order of the Stick',
+        feed_url      => 'http://www.giantitp.com/comics/oots.rss',
         best_regexstr => {
-            link => 'http://www.GiantITP.com/comics/oots(?<seq>\d{4}).html',
+            link =>
+                '^http\:\/\/www\.GiantITP\.com\/comics\/oots(?<seq>\d{4})\.html$',
         }
     },
     {
@@ -171,16 +174,30 @@ my @feed_specs = (
         },
     },
     {
-        name          => 'Perry Bible Fellowship',
-        feed_url      => 'http://pbfcomics.com/feed/feed.xml',
-        best_regexstr => { link => 'http://pbfcomics.com/(?<seq>\d+)/', }
+        name          => 'Hark! A vagrant',
+        feed_url      => 'http://www.rsspect.com/rss/vagrant.xml',
+        best_regexstr => {
+            link =>
+                '^http\:\/\/www\.harkavagrant\.com\/index\.php\?id\=(?<seq>\d+)$',
+        }
     },
     {
-        name          => 'Wondermark',
-        feed_url      => 'http://feeds.feedburner.com/wondermark',
-        best_regexstr => { link => 'http://wondermark.com/(?<seq>\d+)/', },
+        name     => 'Perry Bible Fellowship',
+        feed_url => 'http://pbfcomics.com/feed/feed.xml',
+        best_regexstr =>
+            { link => '^http\:\/\/pbfcomics\.com\/(?<seq>\d+)\/$', }
+    },
+    {
+        name     => 'Wondermark',
+        feed_url => 'http://feeds.feedburner.com/wondermark',
+        best_regexstr =>
+            { link => '^http\:\/\/wondermark\.com\/(?<seq>\d+)\/$', },
     },
 );
+
+if ($ENV{TEST_FEED}) {
+    @feed_specs = grep { $_->{name} =~ /\Q$ENV{TEST_FEED}\E/i } @feed_specs;
+}
 
 for my $feed_spec (@feed_specs) {
 

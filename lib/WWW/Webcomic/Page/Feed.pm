@@ -285,19 +285,29 @@ sub _sequence_regexstr {
     my ($self, $field) = @_;
 
     # Look for any numeric sequences in our entries.
-    my @values = map { $_->$field } $self->all_entries;
-    my ($sequences, $singletons) = Text::Sequence::find(@values);
+    # We're first going to turn our values into their literal regexstrs
+    # as Text::Sequence uses that to build a regex, so we need to escape
+    # things like ? in URLs for it first.
+    my @regexstr = map { $_->regexstr_literal($field) } $self->all_entries;
+    my ($sequences, $singletons) = Text::Sequence::find(@regexstr);
     return if @$sequences == 0;
 
-    # OK, remember how long they were - if they matched more than a
-    # majority of the entries.
+    # We want to match our regexstr against the actual values, though,
+    # so fetch those.
+    my @values = map { $_->$field } $self->all_entries;
+    if ($field eq 'link') {
+        @values = map { $_->as_string } @values;
+    }
+
+    # OK, remember how long each found sequence was - if they matched more
+    # than a majority of the entries.
     my %sequence_regexstr_length;
     sequence:
     for my $sequence (@$sequences) {
         (my $regexstr = $sequence->re) =~ s/[(]/(?<seq>/;
         my ($length_match, $num_matches);
         for my $value (@values) {
-            if (my ($match) = $value =~ /$regexstr/) {
+            if (my ($match) = ($value =~ /$regexstr/)) {
                 $length_match += length($match);
                 $num_matches ++;
             }
