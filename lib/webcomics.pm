@@ -239,25 +239,6 @@ sub analyse_feed_entries {
                 eval { $entry->$field =~ qr/$regexstr/; %match_term = %+};
                 ## use critic
 
-                # To weed out false positives (e.g. 'Mnemonics' matching
-                # day_abbr), make sure we have a full date.
-                my $found_set_member;
-                match_set:
-                for my $match_set (
-                    ['yyyy'],
-                    [qw(m mm month_name month_abbr)],
-                    [qw(d dd day_name day_abbr)]
-                    )
-                {
-                    for my $match_term (@$match_set) {
-                        if ($match_term{$match_term}) {
-                            $found_set_member++;
-                            next match_set;
-                        }
-                    }
-                }
-                next regexstr if $found_set_member != 3;
-
                 # Right, remember how useful this regexstr was.
                 for my $match (values %match_term) {
                     $total_match_length{$regexstr} += length($match);
@@ -313,30 +294,9 @@ sub identify_date_regexstr {
         return List::MoreUtils::uniq(@regexstr_guesses);
     }
 
-    # Build up a list of regexes that match this string, starting with
-    # the obvious "it's this string" one, and cumulatively trying to match
-    # more data parts.
-    # "regexstr" because this is a string representing a regex,
-    # not an actual regex object.
-    my @regexstr = $entry->regexstr_literal($field);
-
-    # Go through all the regexstrs that match components of this date.
-    # Some of them will result in false positives, but with enough
-    # strings to go by we should spot a common pattern.
-    for my $match ($entry->date_matches($date)) {
-        push @regexstr, $entry->regexstr_matching(\@regexstr, $match);
-    }
-
-    # URLs could have non-date-related content (e.g. PvP has a version
-    # of the title in the URL), so make another less-specific version of
-    # the regex that only includes the matches.
-    my @regexstr_shorter;
-    for my $regexstr (@regexstr) {
-        push @regexstr_shorter, $regexstr =~ m{ ( [(] .+ [)] ) }x;
-    }
-
-    # Right, we're all done. Return this.
-    return @regexstr, @regexstr_shorter;
+    # OK, find regexstrs that match.
+    ### FIXME: this ignores the date.
+    return $entry->regexstrs_date($field);
 }
 
 # Supplied with a list of fields, attempts to identify sequences. If it finds
