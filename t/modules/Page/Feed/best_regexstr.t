@@ -170,6 +170,11 @@ my @feed_specs = (
                 . '(?^x:(?<dd> \d{2} ))'
         },
     },
+    {
+        name          => 'Perry Bible Fellowship',
+        feed_url      => 'http://pbfcomics.com/feed/feed.xml',
+        best_regexstr => { link => 'http://pbfcomics.com/(?<seq>\d+)/', }
+    },
 );
 
 for my $feed_spec (@feed_specs) {
