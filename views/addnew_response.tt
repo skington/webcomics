@@ -39,6 +39,7 @@ value="<% entry.url_entry %>" checked="checked" />
 value="<% entry.date_entry %>" />
 <% entry.date_entry %>:
 <a href="<% entry.url_entry %>"><% entry.url_entry %></a>
+<% entry.title_entry %>
 <br/>
 
 <% END %>

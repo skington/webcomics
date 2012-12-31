@@ -118,7 +118,8 @@ sub addnew {
                 url_entry  => $entry->page->url,
                 date_entry => $date
                 ? DateTime::Format::MySQL->format_datetime($date)
-                : ''
+                : '',
+                title_entry => $entry->title,
                 };
         }
         return template 'addnew_response', \%template_params;
