@@ -305,7 +305,9 @@ sub _build_canonical_url {
     # another file, so work out what the URL should be from the symlink
     # target.
     my $eventual_url = readlink($self->cached_file_path);
+    $eventual_url =~ s{^/}{};
     substr($eventual_url, 0, length($self->cache_directory)) = 'http://';
+    $eventual_url =~ s{/Index page}{/};
     return URI->new($eventual_url);
 }
 

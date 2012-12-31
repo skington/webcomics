@@ -180,5 +180,10 @@ sub check_redirected_website_is_cached {
         $short_link_page->contents, 'Its contents have changed');
     is($short_link_page_again->contents,
         $full_page->contents, 'The two pages are now identical');
+
+    # The canonical URL, as reported by the cached page, is the same as
+    # the one we expected.
+    is($short_link_page_again->canonical_url,
+        $long_url, 'The canonical URL was correctly reported by the cache');
 }
 
