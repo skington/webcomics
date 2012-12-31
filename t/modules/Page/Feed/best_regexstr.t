@@ -76,6 +76,17 @@ my @feed_specs = (
         },
     },
     {
+        name          => 'Wayward Sons',
+        feed_url      => 'http://waywardsons.keenspot.com/comic.rss',
+        best_regexstr => {
+            link => '^http\:\/\/waywardsons\.keenspot\.com\/d\/'
+                . '(?^x:(?<yyyy> \d{4} ))(?^x:(?<m> \d{1,2} ))'
+                . '(?^x:(?<d> \d{1,2} ))\.html$',
+            title => '^Wayward\ Sons\ \-\ (?^x:(?<month_abbr> \w+? ))\ '
+                . '(?^x:(?<d> \d{1,2} ))\,\ (?^x:(?<yyyy> \d{4} ))$',
+        },
+    },
+    {
         name          => 'Dresden Codak',
         feed_url      => 'http://dresdencodak.com/feed/',
         best_regexstr => {
