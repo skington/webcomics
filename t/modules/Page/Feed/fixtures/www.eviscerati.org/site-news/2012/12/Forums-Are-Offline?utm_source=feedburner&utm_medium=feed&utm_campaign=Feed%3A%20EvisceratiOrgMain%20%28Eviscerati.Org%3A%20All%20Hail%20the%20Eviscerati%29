@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400|Lato:300|Open+Sans:400|Mate|News+Cycle:400' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+(function(){function pw_load(){
+if(arguments.callee.z)return;else arguments.callee.z=true;
+var d=document;var s=d.createElement('script');
+var x=d.getElementsByTagName('script')[0];
+s.type='text/javascript';s.async=true;
+s.src='//www.projectwonderful.com/pwa.js';
+x.parentNode.insertBefore(s,x);}
+if (window.attachEvent){
+window.attachEvent('DOMContentLoaded',pw_load);
+window.attachEvent('onload',pw_load);}
+else{
+window.addEventListener('DOMContentLoaded',pw_load,false);
+window.addEventListener('load',pw_load,false);}})();
+</script>
+
+  <meta charset="utf-8" />
+<meta about="/site-news/2012/12/Forums-Are-Offline" property="sioc:num_replies" content="1" datatype="xsd:integer" />
+<link rel="shortcut icon" href="https://www.eviscerati.org/files/images/evorg_favicon.ico" type="image/vnd.microsoft.icon" />
+<meta content="Forums Are Offline" about="/site-news/2012/12/Forums-Are-Offline" property="dc:title" />
+<link rel="shortlink" href="/node/3026" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/site-news/2012/12/Forums-Are-Offline" />
+  <title>Site News | Eviscerati.org</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+  <link type="text/css" rel="stylesheet" href="https://www.eviscerati.org/files/css/css_791YXBaKKm1ORM_7huSKEsIV9tSWq6wmRkERhuXpN6w.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.eviscerati.org/files/css/css_EBFmzaz1D-tPhfjvgAy5BFuHLPdiIL0bgXWejuR7QQU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.eviscerati.org/files/css/css_g_UneL04I_By-JV5ryZJJWsDW1p5XeBj7jW6RhipZ48.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.eviscerati.org/files/css/css_8qjb_7sxaVtBASlwwOtKP6fonEBTXtcJdf5fKWKUWB4.css" media="all" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.eviscerati.org/files/js/js_4rPwjcsA1hzlHx2nz9_sLU0PwvjYpTcC3zy11uUsKH4.js"></script>
+<script src="https://www.eviscerati.org/files/js/js_dTzpEfg5C8aCKXF1xNgEebophY6fm3bvn1HT7ZtCxpM.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"razor7","theme_token":"4-l0QgbVIKxTovsOmzCyCV6f6fdsL9haJnLWu2CoaZk","js":{"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.5.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/panels\/js\/panels.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/footnotes\/footnotes.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/themes\/razor7\/system.menus.css":1,"sites\/all\/themes\/razor7\/css\/default\/normalize.css":1,"sites\/all\/themes\/razor7\/css\/default\/wireframes.css":1,"sites\/all\/themes\/razor7\/css\/default\/page-backgrounds.css":1,"sites\/all\/themes\/razor7\/css\/default\/tabs.css":1,"sites\/all\/themes\/razor7\/css\/default\/pages.css":1,"sites\/all\/themes\/razor7\/css\/default\/blocks.css":1,"sites\/all\/themes\/razor7\/css\/default\/navigation.css":1,"sites\/all\/themes\/razor7\/css\/default\/views-styles.css":1,"sites\/all\/themes\/razor7\/css\/default\/nodes.css":1,"sites\/all\/themes\/razor7\/css\/default\/comments.css":1,"sites\/all\/themes\/razor7\/css\/default\/forms.css":1,"sites\/all\/themes\/razor7\/css\/default\/fields.css":1,"sites\/all\/themes\/razor7\/css\/default\/print.css":1,"sites\/all\/themes\/razor7\/css\/razor7.css":1,"sites\/all\/themes\/razor7\/css\/structure.css":1,"sites\/all\/themes\/razor7\/css\/elements.css":1}}});</script>
+      <!--[if lt IE 9]>
+    <script src="/sites/all/themes/zen/js/html5-respond.js"></script>
+    <![endif]-->
+    
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-28796123-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-3026 node-type-site-news section-site-news" >
+      <p id="skip-link">
+      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+    </p>
+      
+<header id="header" role="banner">
+
+      <a href="/" title="Home" rel="home" id="logo"><img src="https://www.eviscerati.org/files/images/evorg_banner.png" alt="Home" /></a>
+  
+    <div id="navigation">
+        <div class="region region-navigation">
+    <div id="block-block-68" class="block block-block first odd">
+
+      
+  <div class="rssfeed">
+<a href="http://www.eviscerati.org/rss/rss.xml">
+<img title="Click here to subscribe to the main RSS Feed" alt="RSS Feed" src="/files/images/rss.png">
+</a>
+</div>
+
+
+</div><!-- /.block -->
+<div id="block-block-73" class="block block-block last even">
+
+      
+  <div class="login-block"><a class="login" href="/user/login">Login/Register</a> <a class="tracker" href="/tracker">Tracker</a></div>
+
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+    </div><!-- /#navigation -->
+
+        <nav id="secondary-menu" role="navigation">
+      <h2 class="element-invisible">Secondary menu</h2><ul class="links inline clearfix"><li class="menu-5114 first"><a href="/" title="">Home</a></li>
+<li class="menu-5117"><a href="/articles" title="">Articles</a></li>
+<li class="menu-3500"><a href="/comics" title="">Comics</a></li>
+<li class="menu-3710"><a href="/fiction" title="">Fiction</a></li>
+<li class="menu-5354"><a href="/podcasts" title="">Podcasts</a></li>
+<li class="menu-5458"><a href="/info/copyright-information" title="">Copyright</a></li>
+<li class="menu-5475"><a href="/store" title="">Store</a></li>
+<li class="menu-5459 last"><a href="/contact" title="">Contact</a></li>
+</ul>    </nav>
+  
+  
+</header>
+
+<nav class="breadcrumb" role="navigation"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a></li></ol></nav>
+<div id="page">
+
+  <div id="highlight">
+      <div class="region region-highlighted">
+    <div id="block-block-76" class="block block-block first last odd">
+
+      
+  <div class="rssfeed-sub">
+<h1><a href="http://www.eviscerati.org/rss/sitenews.xml"><img src="/files/images/rss.png" alt="RSS Feed" title="Click here to subscribe to the Eviscerati.Org Site News RSS Feed" /></a>Site News RSS</h1>
+</div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+  </div>
+
+  <div id="main">
+    <div id="content" class="column" role="main">
+      <a id="main-content"></a>
+                    <h1 class="title" id="page-title">Forums Are Offline</h1>
+                                          <article class="node-3026 node node-site-news view-mode-full clearfix" about="/site-news/2012/12/Forums-Are-Offline" typeof="sioc:Item foaf:Document">
+
+      <header>
+                  
+              <p class="submitted">
+                    <span property="dc:date dc:created" content="2012-12-19T13:25:02-05:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <span class="username" xml:lang="" about="/user/christopher-wright" typeof="sioc:UserAccount" property="foaf:name">Christopher Wright</span> on <time pubdate datetime="2012-12-19T13:25:02-05:00">Wed, 2012-12-19 13:25</time></span>        </p>
+      
+          </header>
+  
+  <div class="field field-name-field-site-news-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://www.eviscerati.org/files/default_images/evorg_newsbanner_1.png" alt="" /></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>In the continuing drama of "as soon as you fix one thing, two more things break" I've had to disable the forums. Today I started getting alerts that there were php errors in the forums, and reports of infinite loops... I went to check it out and some of the forum subsections were... well, not working right.</p>
+<p>Fortunately they haven't been used much. I say "fortunately" because it looks like the best way to fix the problem is "nuke and rebuild".</p>
+<p>Anyway, forums are offline until I online them again.</p>
+</div></div></div><div class="field field-name-taxonomy-vocabulary-2 field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/site-news/bugs" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Bugs</a></div></div></div>
+  
+  <ul class="links inline"><li class="comment-add first last"><a href="/comment/reply/3026#comment-form" title="Share your thoughts and opinions related to this posting.">Add new comment</a></li>
+</ul>
+  <section class="comments comment-wrapper">
+        <h2 class="title">Comments</h2>
+    
+  <a id="comment-22530"></a>
+<article class="comment comment-by-anonymous first last odd clearfix" about="/comment/22530#comment-22530" typeof="sioc:Post sioct:Comment">
+
+  <header>
+    <p class="submitted">
+            <span property="dc:date dc:created" content="2012-12-20T22:23:09-05:00" datatype="xsd:dateTime" rel="sioc:has_creator"><span class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name">Aaron C</span> replied on <time pubdate datetime="2012-12-20T22:23:09-05:00">Thu, 2012-12-20 22:23</time></span>      <a href="/comment/22530#comment-22530" class="permalink" rel="bookmark">Permalink</a>    </p>
+
+              <h3 property="dc:title" datatype="" class="comment-title">
+        <a href="/comment/22530#comment-22530" class="permalink" rel="bookmark">&quot;Until I online them again&quot;</a>              </h3>
+        
+      </header>
+
+  <span rel="sioc:reply_of" resource="/site-news/2012/12/Forums-Are-Offline" class="rdf-meta"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>"Until I online them again"</p>
+<p>In one of the online games I play the term "online" as a verb means "to attack and kill character while they are active". Online = online kill.</p>
+<p>Amusingly, using this meaning keeps your original comment's meaning mostly intact.</p>
+</div></div></div>
+  
+  <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/3026/22530">reply</a></li>
+</ul></article><!-- /.comment -->
+
+  </section>
+
+</article><!-- /.node -->
+          </div><!-- /#content -->
+
+    
+          <aside class="sidebars">
+                  <section class="region region-sidebar-second column sidebar">
+    <div id="block-search-form" class="block block-search first odd" role="search">
+
+      
+  <form action="/site-news/2012/12/Forums-Are-Offline?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A%20EvisceratiOrgMain%20%28Eviscerati.Org%3A%20All%20Hail%20the%20Eviscerati%29" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-CDS68AUJR6lqlo4qRKDuK2IH-L7XDfqTDef2M0ShDbE" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>
+</div><!-- /.block -->
+<div id="block-block-77" class="block block-block even">
+
+      
+  <div id="paypal"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="DZ4GRNVHPNQSE">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form></div>
+
+
+</div><!-- /.block -->
+<div id="block-block-46" class="block block-block odd">
+
+      
+  <div class="ebook-sidebar"><h2><a href="/store/pay-me-bug">Available Now</a></h2>
+<div class="promo"><a href="/store/pay-me-bug"><img src="/files/images/pmbcover.png" title="Pay Me, Bug! available now" alt="Pay Me, Bug! available now" /></a>
+<p>One cheerfully amoral smuggler, one despotic empire, one democratically elected republic not above dirty tricks... not to mention cybernetic cyborg slavers, insane telepaths, pirates, ruffians, and a two-and-a-half meter tall, hyperintelligent bug.</p></div>
+<p class="price"><strong>$3.50 (US)</strong></p>
+</div>
+
+
+</div><!-- /.block -->
+<div id="block-block-65" class="block block-block last even">
+
+      
+  <div class="ebook-sidebar">
+<h2><a href="/store/curveball">Available Now</a></h2>
+<div class="promo"><a href="/store/items/curveball"><img src="/files/novels/CBCoverMini.png" title="Curveball available now" alt="Curveball available now" /></a>
+<p>America's greatest hero lies dead, murdered in his home by an old enemy--but did his knowledge of Project Recall die with him? Meanwhile, in a city of corruption and excess, CB uncovers a strange series of killings the police are trying desperately to keep hidden.</p>
+<p>What is Project Recall?</p>
+</div>
+<p class="price"><strong>$1.50 (US)</strong></p>
+</div>
+
+</div><!-- /.block -->
+  </section><!-- region__sidebar -->
+      </aside><!-- /.sidebars -->
+    
+  </div><!-- /#main -->
+
+</div><!-- /#page -->
+
+  <footer id="footer" class="region region-footer">
+    <div id="block-menu-menu-footer-content" class="block block-menu first odd" role="navigation">
+
+        <h2 class="block-title">Site Content</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/articles" title="">Articles</a></li>
+<li class="leaf"><a href="/comics" title="">Comics</a></li>
+<li class="leaf"><a href="/fiction" title="">Fiction</a></li>
+<li class="leaf"><a href="/podcasts" title="">Podcasts</a></li>
+<li class="last leaf"><a href="/site-news" title="">Site News</a></li>
+</ul>
+</div><!-- /.block -->
+<div id="block-menu-menu-footer-comics" class="block block-menu even" role="navigation">
+
+        <h2 class="block-title">Comics</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/comics/comic/hd" title="">Help Desk</a></li>
+<li class="leaf"><a href="/comics/comic/kp" title="">Kernel Panic</a></li>
+<li class="leaf"><a href="/comics/comic/osw" title="">Old Skool Webcomic</a></li>
+<li class="last leaf"><a href="/comics/comic/pc" title="">PCtown</a></li>
+</ul>
+</div><!-- /.block -->
+<div id="block-menu-menu-footer-fiction" class="block block-menu odd" role="navigation">
+
+        <h2 class="block-title">Fiction</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/fiction/curveball" title="">Curveball</a></li>
+<li class="leaf"><a href="/fiction/pay-me-bug" title="">Pay Me, Bug!</a></li>
+<li class="last leaf"><a href="/fiction/points-between" title="">The Points Between</a></li>
+</ul>
+</div><!-- /.block -->
+<div id="block-menu-menu-footer-podcasts" class="block block-menu even" role="navigation">
+
+        <h2 class="block-title">Podcasts</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/podcasts" title="">All Podcasts</a></li>
+<li class="leaf"><a href="/fiction/curveball/podcast" title="">Curveball</a></li>
+<li class="leaf"><a href="/fiction/pay-me-bug/podcast" title="">Pay Me, Bug!</a></li>
+<li class="last leaf"><a href="/fiction/points-between/podcast" title="">The Points Between</a></li>
+</ul>
+</div><!-- /.block -->
+<div id="block-menu-menu-footer-information" class="block block-menu last odd" role="navigation">
+
+        <h2 class="block-title">Information</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/info/copyright-information" title="">Copyright</a></li>
+<li class="leaf"><a href="/store" title="">Store</a></li>
+<li class="last leaf"><a href="/contact" title="">Contact Form</a></li>
+</ul>
+</div><!-- /.block -->
+  </footer><!-- region__footer -->
+
+  </body>
+</html>

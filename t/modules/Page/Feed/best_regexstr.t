@@ -19,6 +19,49 @@ Utils::_directory_is_safe($cache_directory, 'fixture directory');
 # the main way of testing RSS feeds.
 my @feed_specs = (
     {
+        name          => 'Saturday Morning Breakfast Cereal',
+        feed_url      => 'http://www.smbc-comics.com/rss.php',
+        best_regexstr => {
+            title => '^(?^x:(?<month_name> \w+? ))\ (?^x:(?<d> \d{1,2} ))\,\ '
+                . '(?^x:(?<yyyy> \d{4} ))$',
+        },
+    },
+    {
+        name          => 'Frankenstein Superstar',
+        feed_url      => 'http://frankensteinsuperstar.com/feed/',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))'
+                . '\/(?^x:(?<dd> \d{2} ))'
+        },
+    },
+    {
+        name          => 'Evil Inc.',
+        feed_url      => 'http://www.evil-comic.com/index.xml',
+        best_regexstr => {
+            link => '^http\:\/\/www\.evil\-comic\.com\/archive\/'
+                . '(?^x:(?<yyyy> \d{4} ))(?^x:(?<m> \d{1,2} ))'
+                . '(?^x:(?<d> \d{1,2} ))\.html$',
+            title => '^strip\ for\ (?^x:(?<month_name> \w+? ))\ \/\ '
+                . '(?^x:(?<d> \d{1,2} ))\ \/\ (?^x:(?<yyyy> \d{4} ))$'
+        },
+    },
+    {
+        name          => 'The Non-Adventure of Wonderella',
+        feed_url      => 'http://nonadventures.com/feed/',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<dd> \d{2} ))'
+        },
+    },
+    {
+        name          => 'Reptilis Rex',
+        feed_url      => 'http://www.reptilisrex.com/feed/',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<dd> \d{2} ))'
+        },
+    },
+    {
         name          => 'Girl Genius',
         feed_url      => 'http://www.girlgeniusonline.com/ggmain.rss',
         best_regexstr => {
@@ -29,7 +72,92 @@ my @feed_specs = (
                 . '(?^x:(?<month_name> \w+? ))\ (?^x:(?<d> \d{1,2} ))\,\ '
                 . '(?^x:(?<yyyy> \d{4} ))$'
         },
-    }
+    },
+    {
+        name          => 'Dresden Codak',
+        feed_url      => 'http://dresdencodak.com/feed/',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<mm> \d{2} ))\/'
+                . '(?^x:(?<dd> \d{2} ))'
+        },
+    },
+    {
+        name     => 'Basic Instructions',
+        feed_url => 'http://basicinstructions.net/basic-instructions/rss.xml',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<d> \d{1,2} ))',
+        },
+    },
+    # Help Desk has an RSS feed that shows the most recent entries, but
+    # the titles are arbitrary and the URLs don't include the day of the
+    # month. So it's not an error to expect no useful regexstrs.
+    {
+        name => 'Help Desk',
+        feed_url => 'http://www.eviscerati.org/rss/rss.xml',
+        best_regexstr => {
+        },
+    },
+    {
+        name          => 'Scenes from a Multiverse',
+        feed_url      => 'http://amultiverse.com/feed/',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<dd> \d{2} ))'
+        },
+    },
+    {
+        name          => 'The Abominable Charles Christopher',
+        feed_url      => 'http://www.abominable.cc/feed/',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<dd> \d{2} ))'
+        },
+    },
+    {
+        name          => 'Misfile',
+        feed_url      => 'http://www.misfile.com/rss.php',
+        best_regexstr => {
+            link => '^http\:\/\/www\.misfile\.com\/\?date\='
+                . '(?^x:(?<yyyy> \d{4} ))\-(?^x:(?<m> \d{1,2} ))\-'
+                . '(?^x:(?<d> \d{1,2} ))\#comic$',
+            title => '^Comic\ Posted\:\ (?^x:(?<day_abbr> \w+? ))\,\ '
+                . '(?^x:(?<d> \d{1,2} ))\ (?^x:(?<month_abbr> \w+? ))\ '
+                . '(?^x:(?<yyyy> \d{4} ))$',
+        },
+    },
+    {
+        name          => 'Penny Arcade',
+        feed_url      => 'http://feeds.penny-arcade.com/pa-mainsite',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<d> \d{1,2} ))'
+        },
+    },
+    {
+        name          => 'PvP',
+        feed_url      => 'http://www.pvponline.com/feed',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<d> \d{1,2} ))'
+        },
+    },
+    {
+        name          => 'Partially Clips',
+        feed_url      => 'http://partiallyclips.com/feed/atom/',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<dd> \d{2} ))'
+        },
+    },
+    {
+        name          => 'Three Panel Soul',
+        feed_url      => 'http://threepanelsoul.com/feed/atom/',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<dd> \d{2} ))'
+        },
+    },
 );
 
 for my $feed_spec (@feed_specs) {

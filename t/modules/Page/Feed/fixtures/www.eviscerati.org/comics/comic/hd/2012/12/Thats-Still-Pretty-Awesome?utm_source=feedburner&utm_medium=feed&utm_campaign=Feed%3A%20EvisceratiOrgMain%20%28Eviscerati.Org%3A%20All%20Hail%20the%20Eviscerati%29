@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400|Lato:300|Open+Sans:400|Mate|News+Cycle:400' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+(function(){function pw_load(){
+if(arguments.callee.z)return;else arguments.callee.z=true;
+var d=document;var s=d.createElement('script');
+var x=d.getElementsByTagName('script')[0];
+s.type='text/javascript';s.async=true;
+s.src='//www.projectwonderful.com/pwa.js';
+x.parentNode.insertBefore(s,x);}
+if (window.attachEvent){
+window.attachEvent('DOMContentLoaded',pw_load);
+window.attachEvent('onload',pw_load);}
+else{
+window.addEventListener('DOMContentLoaded',pw_load,false);
+window.addEventListener('load',pw_load,false);}})();
+</script>
+
+  <meta charset="utf-8" />
+<meta about="/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome" property="sioc:num_replies" content="1" datatype="xsd:integer" />
+<link rel="shortcut icon" href="https://www.eviscerati.org/files/images/evorg_favicon.ico" type="image/vnd.microsoft.icon" />
+<meta content="That&amp;#039;s Still Pretty Awesome" about="/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome" property="dc:title" />
+<link rel="shortlink" href="/node/3028" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome" />
+  <title>Help Desk | Eviscerati.Org</title>
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+  <link type="text/css" rel="stylesheet" href="https://www.eviscerati.org/files/css/css_791YXBaKKm1ORM_7huSKEsIV9tSWq6wmRkERhuXpN6w.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.eviscerati.org/files/css/css_EBFmzaz1D-tPhfjvgAy5BFuHLPdiIL0bgXWejuR7QQU.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.eviscerati.org/files/css/css_NKSLlFtu6imOMv5ZWUKH5EGWmMwYCXuBNyCti2uEfy8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.eviscerati.org/files/css/css_8qjb_7sxaVtBASlwwOtKP6fonEBTXtcJdf5fKWKUWB4.css" media="all" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/jquery_update/replace/jquery/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.eviscerati.org/files/js/js_4rPwjcsA1hzlHx2nz9_sLU0PwvjYpTcC3zy11uUsKH4.js"></script>
+<script src="https://www.eviscerati.org/files/js/js_dTzpEfg5C8aCKXF1xNgEebophY6fm3bvn1HT7ZtCxpM.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script src="https://www.eviscerati.org/files/js/js_Fh9ZttA4qYyjc_I9Nr4UGBm6CaUF7yjU6csj-kkslMk.js"></script>
+<script src="https://apis.google.com/js/plusone.js"></script>
+<script src="https://www.eviscerati.org/files/js/js_z9VBIHy_IdpOft41qaK6SpnC3tlTigZat9lsHo5BMVs.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"razor7","theme_token":"ob9-bo0En0CdWCEnuxWBumYUTHWTCcilNlAVaevNZV0","js":{"https:\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.5.2\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/panels\/js\/panels.js":1,"https:\/\/platform.twitter.com\/widgets.js":1,"sites\/all\/modules\/service_links\/js\/facebook_like.js":1,"https:\/\/apis.google.com\/js\/plusone.js":1,"sites\/all\/modules\/service_links\/js\/google_plus_one.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/footnotes\/footnotes.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/flippy\/flippy.css":1,"sites\/all\/themes\/razor7\/system.menus.css":1,"sites\/all\/themes\/razor7\/css\/default\/normalize.css":1,"sites\/all\/themes\/razor7\/css\/default\/wireframes.css":1,"sites\/all\/themes\/razor7\/css\/default\/page-backgrounds.css":1,"sites\/all\/themes\/razor7\/css\/default\/tabs.css":1,"sites\/all\/themes\/razor7\/css\/default\/pages.css":1,"sites\/all\/themes\/razor7\/css\/default\/blocks.css":1,"sites\/all\/themes\/razor7\/css\/default\/navigation.css":1,"sites\/all\/themes\/razor7\/css\/default\/views-styles.css":1,"sites\/all\/themes\/razor7\/css\/default\/nodes.css":1,"sites\/all\/themes\/razor7\/css\/default\/comments.css":1,"sites\/all\/themes\/razor7\/css\/default\/forms.css":1,"sites\/all\/themes\/razor7\/css\/default\/fields.css":1,"sites\/all\/themes\/razor7\/css\/default\/print.css":1,"sites\/all\/themes\/razor7\/css\/razor7.css":1,"sites\/all\/themes\/razor7\/css\/structure.css":1,"sites\/all\/themes\/razor7\/css\/elements.css":1}},"ws_fl":{"width":100,"height":"21"},"ws_gpo":{"type":"","counter":true}});</script>
+      <!--[if lt IE 9]>
+    <script src="/sites/all/themes/zen/js/html5-respond.js"></script>
+    <![endif]-->
+    
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-28796123-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-second page-node page-node- page-node-3028 node-type-webcomic-hd section-comics" >
+      <p id="skip-link">
+      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+    </p>
+      
+<header id="header" role="banner">
+
+      <a href="/" title="Home" rel="home" id="logo"><img src="https://www.eviscerati.org/files/images/evorg_banner.png" alt="Home" /></a>
+  
+    <div id="navigation">
+        <div class="region region-navigation">
+    <div id="block-block-68" class="block block-block first odd">
+
+      
+  <div class="rssfeed">
+<a href="http://www.eviscerati.org/rss/rss.xml">
+<img title="Click here to subscribe to the main RSS Feed" alt="RSS Feed" src="/files/images/rss.png">
+</a>
+</div>
+
+
+</div><!-- /.block -->
+<div id="block-block-73" class="block block-block last even">
+
+      
+  <div class="login-block"><a class="login" href="/user/login">Login/Register</a> <a class="tracker" href="/tracker">Tracker</a></div>
+
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+    </div><!-- /#navigation -->
+
+        <nav id="secondary-menu" role="navigation">
+      <h2 class="element-invisible">Secondary menu</h2><ul class="links inline clearfix"><li class="menu-5114 first"><a href="/" title="">Home</a></li>
+<li class="menu-5117"><a href="/articles" title="">Articles</a></li>
+<li class="menu-3500"><a href="/comics" title="">Comics</a></li>
+<li class="menu-3710"><a href="/fiction" title="">Fiction</a></li>
+<li class="menu-5354"><a href="/podcasts" title="">Podcasts</a></li>
+<li class="menu-5458"><a href="/info/copyright-information" title="">Copyright</a></li>
+<li class="menu-5475"><a href="/store" title="">Store</a></li>
+<li class="menu-5459 last"><a href="/contact" title="">Contact</a></li>
+</ul>    </nav>
+  
+  
+</header>
+
+<nav class="breadcrumb" role="navigation"><h2 class="element-invisible">You are here</h2><ol><li><a href="/">Home</a> › </li><li><a href="/comics">Comics</a> › </li><li><a href="/comics/introduction/hd">Help Desk</a> › </li><li><a href="/comics/archives/hd">Help Desk Archives</a></li></ol></nav>
+<div id="page">
+
+  <div id="highlight">
+      <div class="region region-highlighted">
+    <div id="block-block-56" class="block block-block first last odd">
+
+      
+  <div class="rssfeed-sub">
+<h1><a href="http://www.eviscerati.org/rss/comics.xml"><img src="/files/images/rss.png" alt="RSS Feed" title="Click here to subscribe to the Eviscerati.Org Comics Only RSS Feed" /></a> Comics RSS</h1>
+</div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+  </div>
+
+  <div id="main">
+    <div id="content" class="column" role="main">
+      <a id="main-content"></a>
+                    <h1 class="title" id="page-title">That&#039;s Still Pretty Awesome</h1>
+                                          <div  about="/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome" typeof="sioc:Item foaf:Document" class="ds-1col node node-webcomic-hd view-mode-full clearfix">
+
+  
+  <div class="field field-name-post-date field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even">Monday, December 24, 2012 - 10:57</div></div></div><div class="field field-name-comic-menu-hd field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><p class="comicmenu">
+<a href="/comics/introduction/hd">Introduction</a>
+<a href="/comics/archives/hd">Archives</a>
+<a href="/comics/cast/hd">Cast</a>
+<a href="/comics/faq/hd">FAQ</a>
+</p>
+
+</div></div></div><div class="field field-name-taxonomy-vocabulary-3 field-type-taxonomy-term-reference field-label-inline clearfix"><div class="field-label">Webcomic Storyline:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="/comics/comic/storyline/one" typeof="skos:Concept" property="rdfs:label skos:prefLabel">One-Off</a></div></div></div><div class="field field-name-field-comic-image field-type-image field-label-hidden"><div class="field-items"><div class="field-item even"><img typeof="foaf:Image" src="https://www.eviscerati.org/files/comics/hd/hd20121224.png" width="600" height="1009" alt="Help Desk, by Christopher B. Wright" title="That&#039;s Still Pretty Awesome" /></div></div></div><div class="field field-name-creative-commons field-type-ds field-label-hidden"><div class="field-items"><div class="field-item even"><div class="cclicense">
+<div class="ccimage"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+<img alt="Creative Commons License" style="border-width:0" src="/files/cc.png" />
+</a></div>
+<div class="cctext">This 
+<span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/StillImage" rel="dc:type">work</span> is licensed under a 
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons<br />
+Attribution-Noncommercial-Share Alike 3.0 License</a>.</div>
+</div>
+
+</div></div></div><div class="field field-name-taxonomy-vocabulary-5 field-type-taxonomy-term-reference field-label-hidden"><div class="field-items"><div class="field-item even"><a href="/comics/comic/character/alex" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Alex</a></div><div class="field-item odd"><a href="/comics/comic/character/monk" typeof="skos:Concept" property="rdfs:label skos:prefLabel">Monk</a></div></div></div><ul class="links inline"><li class="service-links-delicious first"><a href="http://del.icio.us/post?url=https%3A//www.eviscerati.org/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome&amp;title=That%26%23039%3Bs%20Still%20Pretty%20Awesome" title="Bookmark this post on del.icio.us." class="service-links-delicious" rel="nofollow" target="_blank"><img typeof="foaf:Image" src="https://www.eviscerati.org/sites/all/modules/service_links/images/delicious.png" alt="del.icio.us" /></a></li>
+<li class="service-links-reddit"><a href="http://reddit.com/submit?url=https%3A//www.eviscerati.org/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome&amp;title=That%26%23039%3Bs%20Still%20Pretty%20Awesome" title="Submit this post on reddit.com." class="service-links-reddit" rel="nofollow" target="_blank"><img typeof="foaf:Image" src="https://www.eviscerati.org/sites/all/modules/service_links/images/reddit.png" alt="Reddit" /></a></li>
+<li class="service-links-stumbleupon"><a href="http://www.stumbleupon.com/submit?url=https%3A//www.eviscerati.org/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome&amp;title=That%26%23039%3Bs%20Still%20Pretty%20Awesome" title="Thumb this up at StumbleUpon" class="service-links-stumbleupon" rel="nofollow" target="_blank"><img typeof="foaf:Image" src="https://www.eviscerati.org/sites/all/modules/service_links/images/stumbleit.png" alt="StumbleUpon" /></a></li>
+<li class="service-links-facebook-like"><a href="http://www.facebook.com/plugins/like.php?href=https%3A//www.eviscerati.org/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome&amp;layout=button_count&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;width=100&amp;height=21&amp;font=&amp;locale=" title="I Like it" class="service-links-facebook-like" rel="nofollow" target="_blank"><span class="element-invisible">Facebook Like</span></a></li>
+<li class="service-links-google-plus-one"><a href="https://www.eviscerati.org/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome" title="Plus it" class="service-links-google-plus-one" rel="nofollow" target="_blank"><span class="element-invisible">Google Plus One</span></a></li>
+<li class="service-links-twitter-widget"><a href="http://twitter.com/share?url=https%3A//www.eviscerati.org/node/3028&amp;count=horizontal&amp;via=ubersoft&amp;text=That%26%23039%3Bs%20Still%20Pretty%20Awesome&amp;counturl=https%3A//www.eviscerati.org/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome" class="twitter-share-button service-links-twitter-widget" title="Tweet This" rel="nofollow" target="_blank"><span class="element-invisible">Tweet Widget</span></a></li>
+<li class="comment-add last"><a href="/comment/reply/3028#comment-form" title="Share your thoughts and opinions related to this posting.">Add new comment</a></li>
+</ul><ul class="flippy">
+	<li class="first"><a href="/comics/comic/hd/1996/03/alex-loss-words">« First</a></li>		<li class="previous"><a href="/comics/comic/hd/2012/12/Usability">‹ Previous</a></li>			<li class="next empty">Next</li>		<li class="last empty">Last</li></ul>
+<div class="field field-name-field-comictranscript field-type-text-long field-label-above"><div class="field-label">Comic Transcript:&nbsp;</div><div class="field-items"><div class="field-item even"><p>MONK: Alex! Looking forward to CHristmas dinner tonight. And to see what crazy animatronic display your dad put up this year.</p>
+<p>ALEX: Eh. I think it's going to disappoint.</p>
+<p>MONK: What are you talking about? This is the guy who put up a nativity scene featuring Herod's army slaughtering all the first-born children of Bethlehem!</p>
+<p>ALEX: True.</p>
+<p>MONK: And this is also the guy who put up a nativity scene featuring Checkov as the Baby Jesus and Kirk as the archangel Gabriel shouting "Khaaaan!" at the Christmas Star!</p>
+<p>ALEX: Also true.</p>
+<p>MONK: With a mind like that, this year will have to be nothing short of spectacular.</p>
+<p>ALEX: Not really. All he did was take both scenes and put them together. Only he made Herod's army Klingons.</p>
+<p>MONK: Really?</p>
+<p>ALEX: I think he's spending too much time on the Internet. He keeps calling it a "mashup."</p>
+</div></div></div><section class="comments comment-wrapper">
+        <h2 class="title">Comments</h2>
+    
+  <a id="comment-22534"></a>
+<article class="comment first last odd clearfix" about="/comment/22534#comment-22534" typeof="sioc:Post sioct:Comment">
+
+  <header>
+    <p class="submitted">
+            <span property="dc:date dc:created" content="2012-12-24T14:52:10-05:00" datatype="xsd:dateTime" rel="sioc:has_creator"><span class="username" xml:lang="" about="/user/david-nale" typeof="sioc:UserAccount" property="foaf:name">David Nale</span> replied on <time pubdate datetime="2012-12-24T14:52:10-05:00">Mon, 2012-12-24 14:52</time></span>      <a href="/comment/22534#comment-22534" class="permalink" rel="bookmark">Permalink</a>    </p>
+
+              <h3 property="dc:title" datatype="" class="comment-title">
+        <a href="/comment/22534#comment-22534" class="permalink" rel="bookmark">My wish is your command?</a>              </h3>
+        
+      </header>
+
+  <span rel="sioc:reply_of" resource="/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome" class="rdf-meta"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Thank you, thank you, thank you, Chris...</p>
+<p>All good wishes of the Holiday Season to you, your family and all of your creations in the Ubersoft Universe.</p>
+<p>Any remaining goes to my fellow fans...<br />
+Chris, you give us so much and ask of us so little...</p>
+</div></div></div>
+  
+  <ul class="links inline"><li class="comment-reply first last"><a href="/comment/reply/3028/22534">reply</a></li>
+</ul></article><!-- /.comment -->
+
+  </section>
+</div>
+
+          </div><!-- /#content -->
+
+    
+          <aside class="sidebars">
+                  <section class="region region-sidebar-second column sidebar">
+    <div id="block-search-form" class="block block-search first odd" role="search">
+
+      
+  <form action="/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A%20EvisceratiOrgMain%20%28Eviscerati.Org%3A%20All%20Hail%20the%20Eviscerati%29" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-Exhv-8q9LXS90mFlc-_4qYiijbKXWuLCcr0gJblZmcI" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>
+</div><!-- /.block -->
+<div id="block-block-77" class="block block-block even">
+
+      
+  <div id="paypal"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="DZ4GRNVHPNQSE">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form></div>
+
+
+</div><!-- /.block -->
+<div id="block-views-comicthumbnail-block" class="block block-views odd">
+
+      
+  <div class="view view-comicthumbnail view-id-comicthumbnail view-display-id-block comicthumbnail-block view-dom-id-e52cd8b4a57bf0974cbe5c54292a5f6b">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-created">        <span class="field-content"><em class="placeholder">6 days 23 hours</em> ago</span>  </div>  
+  <div class="views-field views-field-field-comic-image">        <div class="field-content"><a href="/comics/comic/hd/2012/12/Thats-Still-Pretty-Awesome" class="active"><img typeof="foaf:Image" src="https://www.eviscerati.org/files/styles/comicthumbnail/public/comics/hd/hd20121224.png" width="296" height="150" alt="Help Desk, by Christopher B. Wright" title="That&#039;s Still Pretty Awesome" /></a></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+</div><!-- /.block -->
+<div id="block-views-comicthumbnail-block-1" class="block block-views even">
+
+      
+  <div class="view view-comicthumbnail view-id-comicthumbnail view-display-id-block_1 comicthumbnail-block view-dom-id-465b0d4b033e088bca85764500e436d5">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-created">        <span class="field-content"><em class="placeholder">1 year 3 months</em> ago</span>  </div>  
+  <div class="views-field views-field-field-comic-image">        <div class="field-content"><a href="/comics/comic/kp/2011/09/there-are-limits"><img typeof="foaf:Image" src="https://www.eviscerati.org/files/styles/comicthumbnail/public/comics/kp/kp20110921_0.png" width="296" height="150" alt="Kernel Panic, by Christopher B. Wright" title="There Are Limits" /></a></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+</div><!-- /.block -->
+<div id="block-views-comicthumbnail-block-2" class="block block-views odd">
+
+      
+  <div class="view view-comicthumbnail view-id-comicthumbnail view-display-id-block_2 comicthumbnail-block view-dom-id-71a772bdcbaf2f75ed9f548aea2a2ec9">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-created">        <span class="field-content"><em class="placeholder">5 months 3 weeks</em> ago</span>  </div>  
+  <div class="views-field views-field-field-comic-image">        <div class="field-content"><a href="/comics/comic/osw/2012/07/quantum-entanglement-theatre"><img typeof="foaf:Image" src="https://www.eviscerati.org/files/styles/comicthumbnail/public/comics/osw/osw20120713.png" width="296" height="150" alt="Old Skool Webcomic, by Christopher B. Wright" title="Quantum Entanglement Theatre" /></a></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+</div><!-- /.block -->
+<div id="block-views-comicthumbnail-block-3" class="block block-views even">
+
+      
+  <div class="view view-comicthumbnail view-id-comicthumbnail view-display-id-block_3 comicthumbnail-block view-dom-id-c923a117b311143b687fcaaae17971e2">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-created">        <span class="field-content"><em class="placeholder">3 years 1 month</em> ago</span>  </div>  
+  <div class="views-field views-field-field-comic-image">        <div class="field-content"><a href="/comics/comic/pc/2009/12/complicated-guy"><img typeof="foaf:Image" src="https://www.eviscerati.org/files/styles/comicthumbnail/public/comics/pc/pc20091201_0.png" width="296" height="150" alt="PCtown, by Christopher B. Wright" title="A Complicated Guy" /></a></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+</div><!-- /.block -->
+<div id="block-block-46" class="block block-block odd">
+
+      
+  <div class="ebook-sidebar"><h2><a href="/store/pay-me-bug">Available Now</a></h2>
+<div class="promo"><a href="/store/pay-me-bug"><img src="/files/images/pmbcover.png" title="Pay Me, Bug! available now" alt="Pay Me, Bug! available now" /></a>
+<p>One cheerfully amoral smuggler, one despotic empire, one democratically elected republic not above dirty tricks... not to mention cybernetic cyborg slavers, insane telepaths, pirates, ruffians, and a two-and-a-half meter tall, hyperintelligent bug.</p></div>
+<p class="price"><strong>$3.50 (US)</strong></p>
+</div>
+
+
+</div><!-- /.block -->
+<div id="block-block-65" class="block block-block even">
+
+      
+  <div class="ebook-sidebar">
+<h2><a href="/store/curveball">Available Now</a></h2>
+<div class="promo"><a href="/store/items/curveball"><img src="/files/novels/CBCoverMini.png" title="Curveball available now" alt="Curveball available now" /></a>
+<p>America's greatest hero lies dead, murdered in his home by an old enemy--but did his knowledge of Project Recall die with him? Meanwhile, in a city of corruption and excess, CB uncovers a strange series of killings the police are trying desperately to keep hidden.</p>
+<p>What is Project Recall?</p>
+</div>
+<p class="price"><strong>$1.50 (US)</strong></p>
+</div>
+
+</div><!-- /.block -->
+<div id="block-block-5" class="block block-block last odd">
+
+        <h2 class="block-title">Endorsements</h2>
+    
+  <div class="endorsements">
+<div class="review">
+"Desperately Unfunny."
+<p><strong>Comment at <a href="http://www.reddit.com">Reddit</a></strong>
+</p></div>
+<div class="review">
+"Why has this been running since 1996? Who actually reads it? Who is the idiot who reads it every day and posts the 'good' ones up on reddit? Doesn't he realize he is wasting his time?"
+<p><strong>Another comment at <a href="http://www.reddit.com">Reddit</a></strong>
+</p></div>
+<div class="review">
+"Are there really 80 people who find any reference to Microsoft in a web comic funny?"
+<p><strong>Yet another comment at <a href="http://www.reddit.com">Reddit</a>, a site that truly appreciates what I do</strong>
+</p></div>
+<div class="review">
+"The artwork is lame and repetitive, the 'jokes' are either inside software industry jokes or thinly disguised anti-capitalist rantings."
+<p><strong>A conservative-leaning political discussion site that I can't remember the name of any more.</strong>
+</p></div>
+<div class="review">
+"It doesn't make me want to put my face in a belt sander."
+<p><strong>Eric Burns, <a href="http://new.websnark.com">Websnark</a></strong>
+</p></div>
+<div class="review">
+"Not notable."
+<p><strong><a href="http://www.wikipedia.org">Wikipedia</a></strong></p>
+<p>"Disagree."</p>
+<p><strong><a href="http://www.wikipedia.org">Wikipedia</a></strong></p>
+<p>"I don't think this comic meets the notability requirements for Wikipedia."</p>
+<p><strong><a href="http://www.wikipedia.org">Wikipedia</a></strong></p>
+<p>"It's been running since 1996. That's notable."</p>
+<p><strong><a href="http://www.wikipedia.org">Wikipedia</a></strong></p>
+<p>"You're such a bleeding heart. You'll call anything notable. It's editors like you who damage the high standards of quality Wikipedia strives to maintain each and every day."</p>
+<p><strong><a href="http://www.wikipedia.org">Wikipedia</a></strong></p>
+<p>"Stop being such an elitist."</p>
+<p><strong><a href="http://www.wikipedia.org">Wikipedia</a></strong></p>
+<p>"I'm not elitist! I'm for the people, baby! I just think the comic sucks."</p>
+<p><strong><a href="http://www.wikipedia.org">Wikipedia</a></strong></p>
+<p><strong>NOTE:</strong> Quotes from Wikipedia are subject to artistic interpretation and not necessarily representative of actual quotes from Wikipedia.
+</p></div>
+</div>
+
+</div><!-- /.block -->
+  </section><!-- region__sidebar -->
+      </aside><!-- /.sidebars -->
+    
+  </div><!-- /#main -->
+
+</div><!-- /#page -->
+
+  <footer id="footer" class="region region-footer">
+    <div id="block-menu-menu-footer-content" class="block block-menu first odd" role="navigation">
+
+        <h2 class="block-title">Site Content</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/articles" title="">Articles</a></li>
+<li class="leaf"><a href="/comics" title="">Comics</a></li>
+<li class="leaf"><a href="/fiction" title="">Fiction</a></li>
+<li class="leaf"><a href="/podcasts" title="">Podcasts</a></li>
+<li class="last leaf"><a href="/site-news" title="">Site News</a></li>
+</ul>
+</div><!-- /.block -->
+<div id="block-menu-menu-footer-comics" class="block block-menu even" role="navigation">
+
+        <h2 class="block-title">Comics</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/comics/comic/hd" title="">Help Desk</a></li>
+<li class="leaf"><a href="/comics/comic/kp" title="">Kernel Panic</a></li>
+<li class="leaf"><a href="/comics/comic/osw" title="">Old Skool Webcomic</a></li>
+<li class="last leaf"><a href="/comics/comic/pc" title="">PCtown</a></li>
+</ul>
+</div><!-- /.block -->
+<div id="block-menu-menu-footer-fiction" class="block block-menu odd" role="navigation">
+
+        <h2 class="block-title">Fiction</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/fiction/curveball" title="">Curveball</a></li>
+<li class="leaf"><a href="/fiction/pay-me-bug" title="">Pay Me, Bug!</a></li>
+<li class="last leaf"><a href="/fiction/points-between" title="">The Points Between</a></li>
+</ul>
+</div><!-- /.block -->
+<div id="block-menu-menu-footer-podcasts" class="block block-menu even" role="navigation">
+
+        <h2 class="block-title">Podcasts</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/podcasts" title="">All Podcasts</a></li>
+<li class="leaf"><a href="/fiction/curveball/podcast" title="">Curveball</a></li>
+<li class="leaf"><a href="/fiction/pay-me-bug/podcast" title="">Pay Me, Bug!</a></li>
+<li class="last leaf"><a href="/fiction/points-between/podcast" title="">The Points Between</a></li>
+</ul>
+</div><!-- /.block -->
+<div id="block-menu-menu-footer-information" class="block block-menu last odd" role="navigation">
+
+        <h2 class="block-title">Information</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="/info/copyright-information" title="">Copyright</a></li>
+<li class="leaf"><a href="/store" title="">Store</a></li>
+<li class="last leaf"><a href="/contact" title="">Contact Form</a></li>
+</ul>
+</div><!-- /.block -->
+  </footer><!-- region__footer -->
+
+  </body>
+</html>
