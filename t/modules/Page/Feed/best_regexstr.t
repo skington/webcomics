@@ -175,6 +175,11 @@ my @feed_specs = (
         feed_url      => 'http://pbfcomics.com/feed/feed.xml',
         best_regexstr => { link => 'http://pbfcomics.com/(?<seq>\d+)/', }
     },
+    {
+        name          => 'Wondermark',
+        feed_url      => 'http://feeds.feedburner.com/wondermark',
+        best_regexstr => { link => 'http://wondermark.com/(?<seq>\d+)/', },
+    },
 );
 
 for my $feed_spec (@feed_specs) {
