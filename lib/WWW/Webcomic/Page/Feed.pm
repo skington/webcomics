@@ -240,11 +240,13 @@ sub _best_regexstr_for {
     my ($self, $field) = @_;
 
     # Find all our date-based regexstrs, and remember how much they
-    # matched.
-    my %total_match_length;
+    # matched. Discard any regexstrs that don't match at least 50%
+    # of the total entries, though.
+    my (%total_match_length, %entries_matched);
     for my $entry ($self->all_entries) {
         regexstr:
         for my $regexstr ($entry->regexstrs_date($field)) {
+
             # %+ doesn't last beyond the block it's in, it would appear,
             # which is why we don't just say %match_term = eval { ...; %+ }
             my %match_term;
@@ -252,10 +254,19 @@ sub _best_regexstr_for {
                 or next regexstr;
 
             # Right, remember how useful this regexstr was.
-            for my $match (grep { defined $_ } values %match_term) {
-                $total_match_length{$regexstr} += length($match);
+            if (my @matches = grep { defined $_ } values %match_term) {
+                for my $match (@matches) {
+                    $total_match_length{$regexstr} += length($match);
+                }
+                $entries_matched{$regexstr}++;
             }
         }
+    }
+
+    my $minimum_cutoff = (scalar $self->all_entries) / 2;
+    for my $regexstr (keys %total_match_length) {
+        delete $total_match_length{$regexstr}
+            if $entries_matched{$regexstr} < $minimum_cutoff;
     }
 
     # Look for sequences as well.
