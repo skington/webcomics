@@ -128,9 +128,18 @@ my @feed_specs = (
         name          => 'Order of the Stick',
         feed_url      => 'http://www.giantitp.com/comics/oots.rss',
         best_regexstr => {
-            link =>
-                '^http\:\/\/www\.GiantITP\.com\/comics\/oots(?<seq>\d{4})\.html$',
+            link => '^http\:\/\/www\.GiantITP\.com\/comics\/'
+                . 'oots(?<seq>\d{4})\.html$',
         }
+    },
+    {
+        name          => 'Full Frontal Nerdity',
+        feed_url      => 'http://ffn.nodwick.com/?feed=rss2',
+        best_regexstr => {
+            link  => '^http\:\/\/ffn\.nodwick\.com\/\?p\=(?<seq>\d+)$',
+            title => '^(?^x:(?<m> \d{1,2} ))\/(?^x:(?<dd> \d{2} ))\/'
+                . '(?^x:(?<yyyy> \d{4} ))$'
+        },
     },
     {
         name          => 'Scenes from a Multiverse',
