@@ -95,6 +95,14 @@ my @feed_specs = (
         },
     },
     {
+        name          => 'Lady Sabre & The Pirates of the Ineffable Aether',
+        feed_url      => 'http://www.ineffableaether.com/feed/',
+        best_regexstr => {
+            link => '(?^x:(?<yyyy> \d{4} ))\/(?^x:(?<m> \d{1,2} ))\/'
+                . '(?^x:(?<d> \d{1,2} ))'
+        },
+    },
+    {
         name     => 'Basic Instructions',
         feed_url => 'http://basicinstructions.net/basic-instructions/rss.xml',
         best_regexstr => {
