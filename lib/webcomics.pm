@@ -326,23 +326,7 @@ sub identify_date_regexstr {
     # And here's a bunch of matches we'll look for.
     # Some of them will result in false positives, but with enough
     # strings to go by we should spot a common pattern.
-    my %match = (
-        yyyy => { value => $datetime->year,  regexstr => '\d{4}' },
-        m    => { value => $datetime->month, regexstr => '\d{1,2}' },
-        mm   => {
-            value    => sprintf('%02d', $datetime->month),
-            regexstr => '\d{2}'
-        },
-        d  => { value => $datetime->day, regexstr => '\d{1,2}' },
-        dd => {
-            value    => sprintf('%02d', $datetime->day),
-            regexstr => '\d{2}'
-        },
-        month_name => { value => $datetime->month_name, regexstr => '\w+?' },
-        month_abbr => { value => $datetime->month_abbr, regexstr => '\w+?' },
-        day_name   => { value => $datetime->day_name,   regexstr => '\w+?' },
-        day_abbr   => { value => $datetime->day_abbr,   regexstr => '\w+?' },
-    );
+    my %match = WWW::Webcomic::Entry->date_match($datetime);
 
     # Go through each of them looking for matches.
     # For efficiency, try the longest match values first, to reduce
