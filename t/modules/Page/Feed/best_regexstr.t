@@ -161,6 +161,12 @@ my @feed_specs = (
         },
     },
     {
+        name     => 'You suck',
+        feed_url => 'http://yousuckthecomic.com/index.xml',
+        best_regexstr =>
+            { link => '^http\:\/\/yousuckthecomic\.com\/go\/(?<seq>\d+)$' },
+    },
+    {
         name          => 'Scenes from a Multiverse',
         feed_url      => 'http://amultiverse.com/feed/',
         best_regexstr => {
