@@ -319,46 +319,11 @@ sub identify_date_regexstr {
     # not an actual regex object.
     my @regexstr = $entry->regexstr_literal($field);
 
-    # And here's a bunch of matches we'll look for.
+    # Go through all the regexstrs that match components of this date.
     # Some of them will result in false positives, but with enough
     # strings to go by we should spot a common pattern.
-    my %match = $entry->date_match($date);
-
-    # Go through each of them looking for matches.
-    for my $match_term (keys %match) {
-        # Build a regex that will match the value we're looking for.
-        ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
-        my $regex_match = eval('qr/\Q' . $match{$match_term}{value} . '\E/i');
-        ## use critic
-        my $regexstr_match = eval(
-            sprintf(
-                'qr/(?<%s> %s )/x',
-                $match_term, $match{$match_term}{regexstr}
-            )
-        );
-
-        # Build revised regexstrs that match this match term - there might
-        # be many, which is fine (for e.g. a value between 1 and 12 that
-        # can match both months and days). Some of these won't be valid,
-        # either - e.g. "(?<month>...)" will be in turn matched by
-        # day_abbr, becoming "(?<(?<day_abbr> \w+?)th...))".
-        # That's fine, we can catch errors; it's easier than not matching
-        # anything within brackets.
-        my @regexstr_revised;
-        for my $regexstr (@regexstr) {
-            while ($regexstr =~ m/$regex_match/g) {
-
-                # Replace the literal in the regex with a parametrised
-                # match for the term.
-                my $regexstr_matchterm = $regexstr;
-                substr($regexstr_matchterm, $LAST_MATCH_START[0],
-                    length($match{$match_term}{value})) = $regexstr_match;
-                push @regexstr_revised, $regexstr_matchterm;
-            }
-        }
-
-        # Add on these revised regex strings.
-        push @regexstr, @regexstr_revised;
+    for my $match ($entry->date_matches($date)) {
+        push @regexstr, $entry->regexstr_matching(\@regexstr, $match);
     }
 
     # URLs could have non-date-related content (e.g. PvP has a version

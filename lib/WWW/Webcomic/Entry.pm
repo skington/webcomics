@@ -115,37 +115,62 @@ sub regexstr_literal {
     return @regexstr;
 }
 
-=item date_match
+=item date_matches
 
  In: $date (optional)
- Out: %date_match
+ Out: @date_matches
 
-Returns a hash of date matches corresponding to a particular date - either
+Returns a list of date matches corresponding to a particular date - either
 the date supplied, or the entry's date. If no date can be found, returns
 an empty list.
 
-The keys of the hash are date part abbreviations:
+Date matches are hashes as follows:
 
 =over
 
-=item
+=item name
 
-C<yyyy> (four-digit year)
+The name of the match. One of:
 
-=item
+=over
 
-C<m>, C<mm>, C<month_name> and C<month_abbr>: month number, straight or
-padded with zeroes; month name, full or abbreviated
+=item years
 
-=item
+=over
 
-C<d>, C<dd>, C<day_name> and C<day_abbr>: as above, but for days
+=item yyyy
+
+A 4-digit year.
 
 =back
 
-The values are hashrefs with two fields:
+=item months
 
 =over
+
+=item m
+
+The month number.
+
+=item mm
+
+The month number, zero-padded.
+
+=item month_name
+
+The full name of the month.
+
+=item month_abbr
+
+An abbreviated version of the name of the month.
+
+=back
+
+=item days
+
+As months, but C<d>, C<dd>, C<day_name> and C<day_abbr>
+
+=back
 
 =item value
 
@@ -155,13 +180,14 @@ September for month_name, Sep for month_abbr etc.
 =item regexstr
 
 A string representing the snippet of a regex required to match such
-a value.
+a value. This is a named capture, whose name is the name of the date match.
+For instance: '(?<yyyy> \d{4} )' or '(?<mm> \d{2} )'
 
 =back
 
 =cut
 
-sub date_match {
+sub date_matches {
     my ($self, $date) = @_;
 
     # Make sure we have a date.
@@ -172,23 +198,103 @@ sub date_match {
 
     # OK, build our look-up table.
     return (
-        yyyy => { value => $date->year,  regexstr => '\d{4}' },
-        m    => { value => $date->month, regexstr => '\d{1,2}' },
-        mm   => {
+        # Years.
+        { name => 'yyyy', value => $date->year,  regexstr => '\d{4}' },
+
+        # Months.
+        { name => 'm',    value => $date->month, regexstr => '\d{1,2}' },
+        {
+            name     => 'mm',
             value    => sprintf('%02d', $date->month),
             regexstr => '\d{2}'
         },
-        d  => { value => $date->day, regexstr => '\d{1,2}' },
-        dd => {
+        {
+            name     => 'month_name',
+            value    => $date->month_name,
+            regexstr => '\w+?'
+        },
+        {
+            name     => 'month_abbr',
+            value    => $date->month_abbr,
+            regexstr => '\w+?'
+        },
+
+        # Days.
+        { name => 'd', value => $date->day, regexstr => '\d{1,2}' },
+        {
+            name     => 'dd',
             value    => sprintf('%02d', $date->day),
             regexstr => '\d{2}'
         },
-        month_name => { value => $date->month_name, regexstr => '\w+?' },
-        month_abbr => { value => $date->month_abbr, regexstr => '\w+?' },
-        day_name   => { value => $date->day_name,   regexstr => '\w+?' },
-        day_abbr   => { value => $date->day_abbr,   regexstr => '\w+?' },
+        { name => 'day_name', value => $date->day_name, regexstr => '\w+?' },
+        { name => 'day_abbr', value => $date->day_abbr, regexstr => '\w+?' },
     );
 }
+
+=item regexstr_matching
+
+ In: \@regexstr
+ In: \%match
+ Out: @regexstr_matching
+
+Supplied with an arrayref of regexstrs and a match hashref (as returned
+by date_match above), returns an additional list of regexstrs that match
+the match hashref.
+
+e.g. if supplied with
+
+ [ '^http::\/\/www.foo.com\/comic\/20121231$' ]
+
+and
+
+ {
+     name => 'm',
+     value => '12',
+     regexstr => '\d{1,2}'
+ }
+
+would return
+
+ (
+     '^http::\/\/www.foo.com\/comic\/20(?<m> \d{1,2} )1231$',
+     '^http::\/\/www.foo.com\/comic\/2012(?<m> \d{1,2} )31$',
+ )
+
+=cut
+
+sub regexstr_matching {
+    my ($self, $regexstr, $match) = @_;
+
+    # Build a regex that will match the value we're looking for.
+    ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
+    my $regex_match = eval('qr/\Q' . $match->{value} . '\E/i');
+    ## use critic
+    my $regexstr_match = eval(
+        sprintf('qr/(?<%s> %s )/x', $match->{name}, $match->{regexstr})
+    );
+
+    # Build revised regexstrs that match this match term - there might
+    # be many, which is fine (for e.g. a value between 1 and 12 that
+    # can match both months and days). Some of these won't be valid,
+    # either - e.g. "(?<month>...)" will be in turn matched by
+    # day_abbr, becoming "(?<(?<day_abbr> \w+?)th...))".
+    # That's fine, we can catch errors; it's easier than not matching
+    # anything within brackets.
+    my @regexstr_revised;
+    for my $regexstr (@$regexstr) {
+        while ($regexstr =~ m/$regex_match/g) {
+
+            # Replace the literal in the regex with a parametrised
+            # match for the term.
+            my $regexstr_matchterm = $regexstr;
+            substr($regexstr_matchterm, $LAST_MATCH_START[0],
+                length($match->{value})) = $regexstr_match;
+            push @regexstr_revised, $regexstr_matchterm;
+        }
+    }
+    return @regexstr_revised;
+}
+
 
 =back
 
