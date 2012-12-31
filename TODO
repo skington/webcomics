@@ -10,6 +10,7 @@ Cyanide & Happiness
 xkcd
 Order of the Stick
 Full Frontal Nerdity
+Darths & Droids
 You Suck
 Nnewts
 Misfile
@@ -36,6 +37,7 @@ Working, with unguessable feed:
 Help Desk
 
 RSS feed issues:
+
 Doonesbury has a non-Doonesbury-related slate feed
 No feed for Dilbert (but there's a link to it).
 No RSS for dinosaur comics.
@@ -43,12 +45,12 @@ No RSS for dinosaur comics.
 Wizard School has an RSS feed for Wizard School only (as opposed to
 all meetmyminion.com comics), but it's not the default. You want
 http://feeds.feedburner.com/MinionComicsWizardSchool
-Darths and droids finds the feeds for Irregular webcomic instead.
 No feed for Least I Could Do
 No feed for oglaf.
 No feed for sinfest.
 Gunnerkrigg Court has titles that are always the same, and links to the front page.
-No feed for El Goonish Shive.
+No feed for El Goonish Shive. (And need a separate one for sketchbook in any
+case.)
 Sluggy only has one entry in the feed, and links to the front page.
 All of the posts in the Trenches are currently news posts.
 

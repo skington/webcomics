@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>Darths &amp; Droids</title>
+    <link>http://www.darthsanddroids.net/</link>
+    <description>Star Wars as it would have been played as an RPG.</description>
+    <language>en-au</language>
+    <pubDate>Sun, 30 Dec 2012 10:11:01 +0000</pubDate>
+    <lastBuildDate>Sun, 30 Dec 2012 10:11:01 +0000</lastBuildDate>
+    <generator>make_darths_rss.pl</generator>
+    <image>
+      <title>Darths &amp; Droids</title>
+      <link>http://www.darthsanddroids.net/</link>
+      <url>http://www.darthsanddroids.net/logo88x31.png</url>
+      <width>88</width>
+      <height>31</height>
+    </image>
+
+    <item>
+      <title>Episode 825: Spanging Match</title>
+      <description>&lt;p&gt;&lt;img src=&quot;http://www.darthsanddroids.net/comics/darths0825.jpg&quot; width=&quot;600&quot; height=&quot;800&quot; alt=&quot;Episode 825: Spanging Match&quot;&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 30 Dec 2012 10:11:01 +0000</pubDate>
+      <link>http://www.darthsanddroids.net/episodes/0825.html</link>
+      <guid>http://www.darthsanddroids.net/episodes/0825.html</guid>
+    </item>
+
+    <item>
+      <title>Episode 824: A Roll Model, You Know What I Mean</title>
+      <description>&lt;p&gt;&lt;img src=&quot;http://www.darthsanddroids.net/comics/darths0824.jpg&quot; width=&quot;600&quot; height=&quot;800&quot; alt=&quot;Episode 824: A Roll Model, You Know What I Mean&quot;&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 27 Dec 2012 10:11:01 +0000</pubDate>
+      <link>http://www.darthsanddroids.net/episodes/0824.html</link>
+      <guid>http://www.darthsanddroids.net/episodes/0824.html</guid>
+    </item>
+
+    <item>
+      <title>Episode 823: And He Does His Little Turn on the Catwalk</title>
+      <description>&lt;p&gt;&lt;img src=&quot;http://www.darthsanddroids.net/comics/darths0823.jpg&quot; width=&quot;600&quot; height=&quot;800&quot; alt=&quot;Episode 823: And He Does His Little Turn on the Catwalk&quot;&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 25 Dec 2012 10:11:01 +0000</pubDate>
+      <link>http://www.darthsanddroids.net/episodes/0823.html</link>
+      <guid>http://www.darthsanddroids.net/episodes/0823.html</guid>
+    </item>
+
+    <item>
+      <title>Episode 822: I Am Inwincible!</title>
+      <description>&lt;p&gt;&lt;img src=&quot;http://www.darthsanddroids.net/comics/darths0822.jpg&quot; width=&quot;600&quot; height=&quot;800&quot; alt=&quot;Episode 822: I Am Inwincible!&quot;&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 23 Dec 2012 10:11:01 +0000</pubDate>
+      <link>http://www.darthsanddroids.net/episodes/0822.html</link>
+      <guid>http://www.darthsanddroids.net/episodes/0822.html</guid>
+    </item>
+
+    <item>
+      <title>Episode 821: You Wouldn't Steal a Peace Moon</title>
+      <description>&lt;p&gt;&lt;img src=&quot;http://www.darthsanddroids.net/comics/darths0821.jpg&quot; width=&quot;600&quot; height=&quot;800&quot; alt=&quot;Episode 821: You Wouldn't Steal a Peace Moon&quot;&gt;&lt;/p&gt;</description>
+      <pubDate>Thu, 20 Dec 2012 10:11:01 +0000</pubDate>
+      <link>http://www.darthsanddroids.net/episodes/0821.html</link>
+      <guid>http://www.darthsanddroids.net/episodes/0821.html</guid>
+    </item>
+
+  </channel>
+</rss>
+

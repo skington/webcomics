@@ -161,6 +161,14 @@ my @feed_specs = (
         },
     },
     {
+        name     => 'Darths & Droids',
+        feed_url => 'http://www.darthsanddroids.net/rss_noannotation.xml',
+        best_regexstr => {
+            link => '^http\:\/\/www\.darthsanddroids\.net\/episodes\/'
+                . '(?<seq>\d{4})\.html$'
+        },
+    },
+    {
         name     => 'You suck',
         feed_url => 'http://yousuckthecomic.com/index.xml',
         best_regexstr =>
