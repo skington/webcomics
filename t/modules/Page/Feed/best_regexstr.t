@@ -183,6 +183,12 @@ my @feed_specs = (
         },
     },
     {
+        name     => 'Nnewts',
+        feed_url => 'http://nnewts.com/feed/',
+        best_regexstr =>
+            { link => '^http\:\/\/nnewts\.com\/page\-(?<seq>\d+)\/$' },
+    },
+    {
         name          => 'Misfile',
         feed_url      => 'http://www.misfile.com/rss.php',
         best_regexstr => {
