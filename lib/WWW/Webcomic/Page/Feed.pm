@@ -247,7 +247,7 @@ sub _best_regexstr_for {
             # %+ doesn't last beyond the block it's in, it would appear,
             # which is why we don't just say %match_term = eval { ...; %+ }
             my %match_term;
-            eval { $entry->$field =~ qr/$regexstr/; %match_term = %+; 1 }
+            eval { $entry->$field =~ /$regexstr/; %match_term = %+; 1 }
                 or next regexstr;
 
             # Right, remember how useful this regexstr was.
