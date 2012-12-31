@@ -15,7 +15,7 @@ use_ok('WWW::Webcomic::Page');
 my $cache_directory = lib::abs::path('./');
 
 my %expected_components = (
-    'http://www.example.com/'        => ['www.example.com', 'index.html'],
+    'http://www.example.com/'        => ['www.example.com', 'Index page'],
     'http://www.example.com/foo'     => ['www.example.com', 'foo'],
     'http://www.example.com/foo/bar' => ['www.example.com', 'foo', 'bar'],
     'http://www.example.com/foo?q=search' =>

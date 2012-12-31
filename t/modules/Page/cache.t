@@ -37,9 +37,9 @@ sub read_prepared_directory {
     # system, so it's only if we've implemented caching that we know that it
     # worked.
     # Start off with a directory entry, ending with a slash. The leafname
-    # will be index.html, arbitrarily.
+    # will be Index page, arbitrarily.
     _directory_is_safe("$cache_directory/example.com", 'example.com website');
-    my $cached_file_path = "$cache_directory/example.com/index.html";
+    my $cached_file_path = "$cache_directory/example.com/Index page";
     _write_cached_file($cached_file_path, <<RAW_HTML);
 <html><head><title>example.com</title></head>
 <body><p>Lorem
@@ -66,7 +66,7 @@ RAW_HTML
 sub read_prepared_file {
 
     # As above, but using a URL that does not end with a slash, so
-    # no adding index.html here.
+    # no adding Index page here.
     _directory_is_safe("$cache_directory/example.com");
     _directory_is_safe("$cache_directory/example.com/foo");
     _directory_is_safe("$cache_directory/example.com/foo/bar");
@@ -146,7 +146,7 @@ sub check_redirected_website_is_cached {
     # We should expect a cached version of the long URL.
     my $long_url = 'http://www.bbc.co.uk/sport/0/formula1/';
     my $cached_file_path
-        = $cache_directory . $long_url =~ s{http://(.+)/}{/$1/index.html}r;
+        = $cache_directory . $long_url =~ s{http://(.+)/}{/$1/Index page}r;
     ok(-e $cached_file_path, 'We cached the resulting page');
 
     # OK, let's add some random gibberish to that file.

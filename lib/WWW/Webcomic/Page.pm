@@ -85,8 +85,12 @@ If a cache directory is set, and a request is made for a page that is not
 stored in the cache, the page contents will be stored in the cache.
 
 If cache_directory is /tmp/cache, http://example.com/ will be stored in
-/tmp/cache/example.com/index.html and http://example.com/foo/bar/baz.gif
+/tmp/cache/example.com/Index\ page and http://example.com/foo/bar/baz.gif
 will be stored in /tmp/cache/example.com/foo/bar/baz.gif
+
+(The leafname "Index page" is used to denote that it was fetched from
+a URL with a trailing slash, rather than a URL ending in /Index%20page
+or /Index+page .)
 
 No distinction is made between http and https, or any other URL protocols.
 
@@ -138,7 +142,7 @@ sub _file_path_for_uri {
         mkdir($target_directory, 0755)
             or die "Couldn't create $target_directory: $!";
     }
-    return $target_directory . '/' . (shift @components || 'index.html');
+    return $target_directory . '/' . (shift @components || 'Index page');
 }
 
 sub _cached_file_components {
@@ -150,7 +154,7 @@ sub _cached_file_components {
         shift @path_components;
         push @components, @path_components;
         if ($uri->path =~ m{ / $ }x) {
-            push @components, 'index.html';
+            push @components, 'Index page';
         }
     }
     if ($uri->query) {
