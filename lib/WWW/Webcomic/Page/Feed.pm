@@ -160,7 +160,7 @@ sub _entry_from_feed_entry {
         return;
     };
 
-    # The date is normally straightforward, but The Trenches
+    # The date is normally straightforward, if we have one, but The Trenches
     # decides to do things differently.
     my $date = $feed_entry->issued;
     if (!$date && $feed_entry->{entry}{pubDate}) {
