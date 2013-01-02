@@ -29,6 +29,13 @@ my @feed_specs = (
         },
     },
     {
+        name => 'Skin Horse',
+        feed_url => 'http://skin-horse.com/feed/',
+        best_regexstr => {
+            link => '(?<seq>\d+)'
+        },
+    },
+    {
         name          => 'Frankenstein Superstar',
         feed_url      => 'http://frankensteinsuperstar.com/feed/',
         best_regexstr => {
