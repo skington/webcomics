@@ -195,9 +195,7 @@ sub site_details {
             feed_url => 'http://www.rsspect.com/rss/gunner.xml'
         },
         'Sister Claire' => { url => 'http://www.sisterclaire.com/', },
-
-        ### FIXME: Something Positive's feed is for some reason a single
-        ### guest post he did for Questionable Content.
+        # Something Positive does in fact have a feed, but it's useless.
         'Something Positive' =>
             { url => 'http://www.somethingpositive.net/index.html' },
         'Scary-go-round' => {
@@ -217,8 +215,7 @@ sub site_details {
             feed_url => 'http://www.pvponline.com/feed'
         },
 
-        ### FIXME: Sluggy Freelance's feed contains only the most recent entry
-        ### rather than being useful as a feed.
+        # Sluggy Freelance has a feed, but it's useless - only one entry
         'Sluggy Freelance' => { url => 'http://www.sluggy.com/', },
         'El Goonish Shive' => { url => 'http://www.egscomics.com/', },
         'Spinnerette'      => {

@@ -61,7 +61,8 @@ No feed for sinfest.
 Gunnerkrigg Court has titles that are always the same, and links to the front page.
 No feed for El Goonish Shive. (And need a separate one for sketchbook in any
 case.)
-Sluggy only has one entry in the feed, and links to the front page.
+Sluggy only has one entry in the feed, and links to the front page. So we
+ignore it.
 All of the posts in the Trenches are currently news posts.
 Tragedy series has essentially unguessable IDs misidentified as IDs.
 
